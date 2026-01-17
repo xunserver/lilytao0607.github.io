@@ -1,0 +1,459 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import taichiLogo from '../../assets/image/taichi-logo.png';
+import { translations } from '../../lib/i18n';
+
+const currentLocale = (Astro.currentLocale || 'nl') as 'nl' | 'en' | 'zh';
+const t = translations[currentLocale];
+
+const pageTitles = {
+  nl: 'Tai Chi Cultuur - De weg naar harmonie van lichaam en geest',
+  en: 'Tai Chi Culture - The path to harmony of body and mind',
+  zh: '太极文化 - 身心和谐之道',
+};
+
+const heroQuotes = {
+  nl: {
+    main: 'Yin en Yang in harmonie, beweging en rust in evenwicht',
+    sub: 'De energie van hemel en aarde, één in perfectie',
+  },
+  en: {
+    main: 'Yin and Yang in harmony, movement and stillness in balance',
+    sub: 'Energy of heaven and earth, united in perfection',
+  },
+  zh: {
+    main: '阴阳调和，动静相宜',
+    sub: '天地之气，浑然一体',
+  },
+};
+
+const quoteCards = {
+  nl: [
+    {
+      char: '水',
+      color: 'accent',
+      quote: 'Het zachte overwint het harde, water voordeel alles zonder te strijden',
+      source: 'Laozi - Dao De Jing',
+    },
+    {
+      char: '易',
+      color: 'cyan',
+      quote: 'Yin en Yang samen vormen de Tao',
+      source: 'Boek der Veranderingen',
+    },
+    {
+      char: '禅',
+      color: 'secondary',
+      quote: 'Beweging en rust zijn één oorsprong',
+      source: 'Zhou Dunyi - Taiji Diagram Uitleg',
+    },
+  ],
+  en: [
+    {
+      char: 'Water',
+      color: 'accent',
+      quote: 'The soft overcomes the hard, water benefits all without contention',
+      source: 'Laozi - Tao Te Ching',
+    },
+    {
+      char: 'Yi',
+      color: 'cyan',
+      quote: 'Yin and Yang together form the Tao',
+      source: 'Book of Changes',
+    },
+    {
+      char: 'Zen',
+      color: 'secondary',
+      quote: 'Movement and stillness are one source',
+      source: 'Zhou Dunyi - Taiji Diagram Explanation',
+    },
+  ],
+  zh: [
+    {
+      char: '水',
+      color: 'accent',
+      quote: '上善若水，水善利万物而不争',
+      source: '—— 老子《道德经》',
+    },
+    {
+      char: '易',
+      color: 'cyan',
+      quote: '一阴一阳之谓道',
+      source: '—— 《周易·系辞上》',
+    },
+    {
+      char: '禅',
+      color: 'secondary',
+      quote: '动静一源，显微无间',
+      source: '—— 周敦颐《太极图说》',
+    },
+  ],
+};
+---
+
+<BaseLayout title={pageTitles[currentLocale]}>
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-20 pb-12">
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute inset-0 bg-gradient-to-br from-paper via-mist/30 to-paper"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-paper/90 via-paper/70 to-paper/95"></div>
+      <div class="absolute top-0 left-0 right-0 h-1/2 bg-gradient-to-b from-accent/5 to-transparent"></div>
+      <div class="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-secondary/10 to-transparent"></div>
+      <div class="absolute top-20 left-10 w-64 h-64 bg-accent/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 right-10 w-96 h-96 bg-cyan/5 rounded-full blur-3xl"></div>
+      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/3 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+      <div class="relative mb-12 animate-fade-in">
+        <div class="absolute inset-0 -z-10 flex items-center justify-center">
+          <div class="w-[120%] h-[120%] rounded-full border border-accent/20 animate-[spin_60s_linear_infinite]"></div>
+          <div class="absolute w-[140%] h-[140%] rounded-full border border-cyan/10 animate-[spin_80s_linear_infinite_reverse]"></div>
+        </div>
+
+        <Image
+          src={taichiLogo}
+          alt="Tai Chi"
+          width={400}
+          height={400}
+          class="w-64 h-64 md:w-80 md:h-80 object-contain drop-shadow-2xl animate-[float_6s_ease-in-out_infinite]"
+          format="png"
+        />
+      </div>
+
+      <div class="text-center space-y-6 animate-fade-in" style="animation-delay: 0.3s">
+        <h1 class="text-4xl md:text-5xl font-serif font-bold text-ink leading-relaxed">
+          {heroQuotes[currentLocale].main}
+        </h1>
+        <p class="text-xl md:text-2xl text-secondary font-light leading-relaxed max-w-3xl mx-auto">
+          {heroQuotes[currentLocale].sub}
+          {currentLocale === 'zh' && (<><br class="hidden sm:block" />刚柔并济，生生不息</>)}
+        </p>
+        <div class="w-24 h-0.5 bg-accent/50 mx-auto mt-8"></div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12 animate-fade-in" style="animation-delay: 0.6s">
+        <a
+          href="/movements"
+          class="group px-8 py-3 bg-accent hover:bg-primary text-paper rounded-lg font-medium transition-all duration-300 hover:scale-105 inline-flex items-center"
+        >
+          {t.hero.explore}
+          <span class="inline-block ml-2 transition-transform group-hover:translate-x-1">→</span>
+        </a>
+        <a
+          href="/about"
+          class="px-8 py-3 border-2 border-accent/30 text-accent hover:bg-accent/10 rounded-lg font-medium transition-all duration-300 hover:scale-105"
+        >
+          {t.nav.about}
+        </a>
+      </div>
+    </div>
+
+    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-paper to-transparent"></div>
+  </section>
+
+  <!-- Quote Cards Section -->
+  <section class="py-24 relative overflow-hidden">
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-paper to-mist/20"></div>
+      <div class="absolute top-1/4 right-0 w-96 h-96 bg-accent/3 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-1/4 left-0 w-96 h-96 bg-cyan/3 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 scroll-animate">
+        <div class="inline-block">
+          <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-4">
+            {t.quotes.title}
+          </h2>
+          <div class="w-32 h-1 bg-accent/50 mx-auto mt-4"></div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {quoteCards[currentLocale].map((card, index) => (
+          <div class="scroll-animate group relative" style={`animation-delay: ${index * 0.2}s`}>
+            <div class="relative bg-paper rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 p-8 border border-border/30 hover:border-accent/50 overflow-hidden">
+              <div class="absolute top-6 right-6 w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center group-hover:bg-accent/20 transition-colors duration-300">
+                <span class="text-accent text-2xl font-serif">{card.char}</span>
+              </div>
+
+              <div class="text-6xl text-accent/20 font-serif leading-none mb-4">"</div>
+
+              <blockquote class="relative z-10">
+                <p class="text-xl md:text-2xl font-serif text-ink leading-relaxed mb-6">
+                  {card.quote}
+                </p>
+                <footer class="flex items-center space-x-3">
+                  <div class="w-12 h-0.5 bg-accent/50"></div>
+                  <cite class="text-secondary not-italic font-medium">— {card.source}</cite>
+                </footer>
+              </blockquote>
+
+              <div class="absolute bottom-0 right-0 w-32 h-32 bg-accent/5 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500"></div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-16 flex justify-center items-center space-x-4 scroll-animate" style="animation-delay: 0.6s">
+        <div class="w-24 h-px bg-gradient-to-r from-transparent to-accent/30"></div>
+        <div class="w-2 h-2 rounded-full bg-accent/50"></div>
+        <div class="w-24 h-px bg-gradient-to-l from-transparent to-accent/30"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy Section -->
+  <section class="py-24 bg-mist/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="scroll-animate order-2 lg:order-1">
+          <div class="relative">
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-border/30">
+              <div class="aspect-[4/3] bg-gradient-to-br from-secondary/20 to-accent/20">
+                <div class="w-full h-full flex items-center justify-center p-12">
+                  <div class="relative">
+                    <div class="absolute inset-0 -m-8 flex items-center justify-center">
+                      <div class="w-80 h-80 rounded-full border-2 border-accent/30"></div>
+                    </div>
+                    <div class="absolute inset-0 -m-4 flex items-center justify-center">
+                      <div class="w-64 h-64 rounded-full border border-cyan/20"></div>
+                    </div>
+
+                    <div class="relative">
+                      <Image
+                        src={taichiLogo}
+                        alt="Tai Chi"
+                        width={300}
+                        height={300}
+                        class="w-56 h-56 object-contain drop-shadow-xl animate-[spin_30s_linear_infinite]"
+                        format="png"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-accent/10 rounded-full blur-2xl"></div>
+              <div class="absolute -top-4 -left-4 w-24 h-24 bg-cyan/10 rounded-full blur-2xl"></div>
+            </div>
+
+            <div class="absolute -bottom-6 -left-6 lg:left-0 bg-paper rounded-xl shadow-lg p-6 border border-border/50 max-w-xs">
+              <div class="flex items-center space-x-4">
+                <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span class="text-accent text-xl font-serif">阴</span>
+                </div>
+                <div>
+                  <p class="text-sm text-secondary">Yin Yang Harmony</p>
+                  <p class="text-lg font-serif font-bold text-ink">Balance</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="scroll-animate order-1 lg:order-2">
+          <div class="mb-8">
+            <span class="inline-block px-4 py-1 text-sm font-medium text-accent bg-accent/10 rounded-full mb-4">
+              {currentLocale === 'zh' ? '哲学思想' : (currentLocale === 'nl' ? 'Filosofie' : 'Philosophy')}
+            </span>
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6 leading-tight">
+              {currentLocale === 'zh' ? '太极之理' : (currentLocale === 'nl' ? 'Tai Chi Principes' : 'Tai Chi Principles')}
+            </h2>
+            <div class="w-20 h-1 bg-accent/50 mb-8"></div>
+          </div>
+
+          <div class="space-y-6 text-secondary">
+            <p class="text-lg leading-relaxed">
+              {currentLocale === 'zh' ? (
+                <>
+                  太极者，无极而生，动静之机，阴阳之母也。太极是中国传统文化的瑰宝，
+                  强调<span class="text-accent font-medium">阴阳调和</span>、<span class="text-accent font-medium">刚柔并济</span>。
+                </>
+              ) : currentLocale === 'nl' ? (
+                <>
+                  Tai Chi is een schat uit de traditionele Chinese cultuur, die de harmonie tussen
+                  Yin en Yang benadrukt, evenals de balans tussen zacht en hard.
+                </>
+              ) : (
+                <>
+                  Tai Chi is a treasure of traditional Chinese culture, emphasizing the harmony between
+                  Yin and Yang, and the balance between soft and hard.
+                </>
+              )}
+            </p>
+            <p class="text-lg leading-relaxed">
+              {currentLocale === 'zh' ? (
+                <>
+                  通过缓慢、流畅的动作，太极帮助我们达到身心的和谐统一。
+                  它不仅是武术，更是一种生活哲学，教导我们要顺应自然、保持平衡。
+                </>
+              ) : currentLocale === 'nl' ? (
+                <>
+                  Door langzame, vloeiende bewegingen helpt Tai Chi ons om harmonie te vinden tussen lichaam en geest.
+                  Het is niet alleen een krijgskunst, maar ook een levensfilosofie.
+                </>
+              ) : (
+                <>
+                  Through slow, flowing movements, Tai Chi helps us achieve harmony of body and mind.
+                  It is not only a martial art but also a life philosophy.
+                </>
+              )}
+            </p>
+          </div>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <span class="px-4 py-2 bg-paper border border-border/50 rounded-lg text-sm text-ink">
+              🧘 {currentLocale === 'zh' ? '内修心性' : (currentLocale === 'nl' ? 'Binnenste' : 'Inner Peace')}
+            </span>
+            <span class="px-4 py-2 bg-paper border border-border/50 rounded-lg text-sm text-ink">
+              💪 {currentLocale === 'zh' ? '外练筋骨' : (currentLocale === 'nl' ? 'Buitenste' : 'Physical Health')}
+            </span>
+            <span class="px-4 py-2 bg-paper border border-border/50 rounded-lg text-sm text-ink">
+              ☯️ {currentLocale === 'zh' ? '阴阳平衡' : (currentLocale === 'nl' ? 'Balans' : 'Balance')}
+            </span>
+          </div>
+
+          <a
+            href="/about"
+            class="inline-flex items-center mt-8 px-8 py-3 bg-accent hover:bg-primary text-paper rounded-lg font-medium transition-all duration-300 hover:scale-105"
+          >
+            {currentLocale === 'zh' ? '深入了解' : (currentLocale === 'nl' ? 'Meer Leren' : 'Learn More')}
+            <span class="ml-2">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="py-20 bg-mist/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 scroll-animate">
+        <h2 class="text-4xl font-serif font-bold text-ink mb-4">
+          {currentLocale === 'zh' ? '太极之益' : (currentLocale === 'nl' ? 'Voordelen' : 'Benefits')}
+        </h2>
+        <p class="text-lg text-secondary">
+          {currentLocale === 'zh' ? '身心合一，静心养性' : (currentLocale === 'nl' ? 'Lichaam en geest in harmonie' : 'Body and mind in harmony')}
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="scroll-animate bg-paper rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 border border-border/50">
+          <div class="w-16 h-16 bg-accent/10 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-serif font-bold text-ink mb-3">
+            {currentLocale === 'zh' ? '强身健体' : (currentLocale === 'nl' ? 'Fysieke Gezondheid' : 'Physical Health')}
+          </h3>
+          <p class="text-secondary">
+            {currentLocale === 'zh' ? '增强体质，调和气血，舒筋活络，延年益寿' : (currentLocale === 'nl' ? 'Versterk het lichaam en bevorder de gezondheid' : 'Strengthen body and promote health')}
+          </p>
+        </div>
+
+        <div class="scroll-animate bg-paper rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 border border-border/50" style="animation-delay: 0.2s">
+          <div class="w-16 h-16 bg-accent/10 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-serif font-bold text-ink mb-3">
+            {currentLocale === 'zh' ? '静心养神' : (currentLocale === 'nl' ? 'Geestelijke Rust' : 'Mental Peace')}
+          </h3>
+          <p class="text-secondary">
+            {currentLocale === 'zh' ? '调息凝神，宁静致远，化解烦恼，提升智慧' : (currentLocale === 'nl' ? 'Calm de geest en vind innerlijke rust' : 'Calm the mind and find inner peace')}
+          </p>
+        </div>
+
+        <div class="scroll-animate bg-paper rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 border border-border/50" style="animation-delay: 0.4s">
+          <div class="w-16 h-16 bg-accent/10 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-serif font-bold text-ink mb-3">
+            {currentLocale === 'zh' ? '以武会友' : (currentLocale === 'nl' ? 'Gemeenschap' : 'Community')}
+          </h3>
+          <p class="text-secondary">
+            {currentLocale === 'zh' ? '切磋技艺，交流心得，同修共进，传承文化' : (currentLocale === 'nl' ? 'Ontmoet gelijkgestemden en deel ervaringen' : 'Meet like-minded people and share experiences')}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center scroll-animate">
+      <h2 class="text-4xl font-serif font-bold text-ink mb-6">
+        {currentLocale === 'zh' ? '开启太极之旅' : (currentLocale === 'nl' ? 'Begin Uw Tai Chi Reis' : 'Begin Your Tai Chi Journey')}
+      </h2>
+      <p class="text-xl text-secondary mb-8">
+        {currentLocale === 'zh' ? '无论初学或进阶，皆可在此找到内心的宁静' : (currentLocale === 'nl' ? 'Voor beginners en gevorderden' : 'For beginners and advanced practitioners')}
+      </p>
+      <a
+        href="/courses"
+        class="inline-block px-10 py-4 bg-accent hover:bg-primary text-paper rounded-lg font-medium text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+      >
+        {t.courses.register}
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1,
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.addEventListener('astro:page-load', () => {
+    const animatedElements = document.querySelectorAll('.scroll-animate');
+    animatedElements.forEach((el) => observer.observe(el));
+  });
+
+  const animatedElements = document.querySelectorAll('.scroll-animate');
+  animatedElements.forEach((el) => observer.observe(el));
+</script>
+
+<style>
+  .scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .scroll-animate.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+  }
+</style>

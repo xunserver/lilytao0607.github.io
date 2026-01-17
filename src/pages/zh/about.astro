@@ -1,16 +1,16 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
-import taichiLogo from '../assets/image/taichi-logo.png';
-import bgMeditation from '../assets/image/tai-chi-meditation.jpg';
-import bgNature from '../assets/image/tai-chi-nature.jpg';
-import bgGroup from '../assets/image/tai-chi-group.jpg';
+import taichiLogo from '../../assets/image/taichi-logo.png';
+import bgMeditation from '../../assets/image/tai-chi-meditation.jpg';
+import bgNature from '../../assets/image/tai-chi-nature.jpg';
+import bgGroup from '../../assets/image/tai-chi-group.jpg';
 ---
 
-<BaseLayout title="Over Tai Chi - Eeuwenoude wijsheid ontdekken">
+<BaseLayout title="关于太极 - 探索千年智慧">
   <!-- Hero Section -->
   <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-    <!-- Achtergrond decoratie -->
+    <!-- 背景装饰 -->
     <div class="absolute inset-0 -z-10">
       <div class="absolute inset-0 bg-gradient-to-br from-mist/50 via-paper to-mist/30"></div>
       <div class="absolute top-20 right-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
@@ -20,76 +20,78 @@ import bgGroup from '../assets/image/tai-chi-group.jpg';
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
       <div class="animate-fade-in">
         <span class="inline-block px-4 py-2 text-sm font-medium text-accent bg-accent/10 rounded-full mb-6">
-          Eeuwenoude wijsheid
+          千年传承
         </span>
         <h1 class="text-5xl md:text-6xl font-serif font-bold text-ink mb-6">
-          Over Tai Chi
+          关于太极
         </h1>
         <p class="text-xl text-secondary max-w-3xl mx-auto">
-          Ontdek de oorsprong, filosofie en beoefening van Tai Chi, en ervaar deze schat van de Chinese cultuur
+          探索太极的起源、理念与实践，感受这一中华文化的瑰宝
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Oorsprong en geschiedenis -->
+  <!-- 起源与历史 -->
   <section class="py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <!-- Linker afbeelding -->
+        <!-- 左侧图片 -->
         <div class="scroll-animate">
           <div class="relative">
             <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src={bgMeditation}
-                alt="Tai Chi meditatie"
+                alt="太极冥想"
                 class="w-full h-full object-cover"
                 format="jpg"
               />
             </div>
-            <!-- Decoratieve rand -->
+            <!-- 装饰边框 -->
             <div class="absolute -bottom-6 -right-6 bg-paper border-2 border-accent/30 rounded-xl p-6 shadow-lg">
-              <p class="text-4xl font-serif text-accent font-bold">Eeuwen</p>
-              <p class="text-sm text-secondary">van erfgoed</p>
+              <p class="text-4xl font-serif text-accent font-bold">数百年</p>
+              <p class="text-sm text-secondary">传承历史</p>
             </div>
           </div>
         </div>
 
-        <!-- Rechter inhoud -->
+        <!-- 右侧内容 -->
         <div class="scroll-animate" style="animation-delay: 0.2s">
           <div class="mb-8">
             <span class="inline-block px-3 py-1 text-sm font-medium text-cyan bg-cyan/10 rounded-full mb-4">
-              Oorsprong
+              起源
             </span>
             <h2 class="text-4xl font-serif font-bold text-ink mb-6">
-              Historische oorsprong
+              历史渊源
             </h2>
             <div class="w-20 h-1 bg-accent/50 mb-8"></div>
           </div>
 
           <div class="space-y-6 text-secondary text-lg">
             <p class="leading-relaxed">
-              Tai Chi Chuan ontstond in China tijdens de Ming-dynastie, gecreëerd door <span class="text-accent font-medium">Zhang Sanfeng van de Wudang-sekte</span>.
-              Het integreert taoïstische filosofie, traditionele geneeskunde en de essentie van vechtkunsten, en vormt een belangrijk onderdeel van de Chinese traditionele cultuur.
+              太极拳，起源于中国明代，由<span class="text-accent font-medium">武当派张三丰</span>所创。
+              它融合了道家哲学、传统医学和武术精髓，是中国传统文化的重要组成部分。
             </p>
             <p class="leading-relaxed">
-              Genoemd naar "Tai Chi" (Het Opperste Principe), put het uit het filosofische concept in de "Boek van Veranderingen": "Tai Chi genereert de Twee Krachten (Yin en Yang), de Twee Krachten genereren de Vier Beelden, en de Vier Beelden genereren de Acht Trigrammen." Het benadrukt Yin-Yang balans, de wisselwerking van hardheid en zachtheid, en streeft naar harmonie tussen mens en natuur.
+              太极拳以"太极"命名，取意于《周易》中"太极生两仪，两仪生四象，
+              四象生八卦"的哲学思想。它强调阴阳平衡、刚柔并济，追求人与自然的和谐统一。
             </p>
             <p class="leading-relaxed">
-              Na eeuwen van overerving en ontwikkeling heeft Tai Chi meerdere scholen gevormd, waaronder Chen, Yang, Wu, Wu (Hao) en Sun. Elke school heeft zijn unieke stijl en kenmerken, maar volgt allemaal dezelfde kernfilosofie.
+              经过数百年的传承与发展，太极拳形成了陈、杨、吴、武、孙等多个流派，
+              每个流派都有其独特的风格和特点，但都遵循着相同的核心理念。
             </p>
           </div>
 
-          <!-- Trefwoord labels -->
+          <!-- 关键词标签 -->
           <div class="flex flex-wrap gap-3 mt-8">
             <span class="px-4 py-2 bg-mist border border-border rounded-lg text-sm text-ink">
-              📜 Ming-dynastie oorsprong
+              📜 明代起源
             </span>
             <span class="px-4 py-2 bg-mist border border-border rounded-lg text-sm text-ink">
-              ⛰️ Wudang erfgoed
+              ⛰️ 武当传承
             </span>
             <span class="px-4 py-2 bg-mist border border-border rounded-lg text-sm text-ink">
-              🌿 Taoïstische filosofie
+              🌿 道家思想
             </span>
           </div>
         </div>
@@ -97,80 +99,80 @@ import bgGroup from '../assets/image/tai-chi-group.jpg';
     </div>
   </section>
 
-  <!-- Kernfilosofie -->
+  <!-- 核心理念 -->
   <section class="py-24 bg-mist/20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16 scroll-animate">
         <span class="inline-block px-3 py-1 text-sm font-medium text-accent bg-accent/10 rounded-full mb-4">
-          Kernfilosofie
+              核心思想
             </span>
         <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
-          Tai Chi principes
+          太极理念
         </h2>
         <div class="w-32 h-1 bg-accent/50 mx-auto mb-6"></div>
         <p class="text-lg text-secondary max-w-2xl mx-auto">
-          Harmonie van Yin en Yang, beweging en stilte, hardheid en zachtheid
+          阴阳调和，动静相宜，刚柔并济
         </p>
       </div>
 
-      <!-- Filosofie kaarten grid -->
+      <!-- 理念卡片网格 -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Filosofie 1 -->
+        <!-- 理念1 -->
         <div class="scroll-animate group">
           <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-accent/50 h-full">
             <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
               <span class="text-3xl">☯️</span>
             </div>
             <h3 class="text-2xl font-serif font-bold text-ink mb-4">
-              Yin-Yang balans
+              阴阳调和
             </h3>
             <p class="text-secondary leading-relaxed">
-              De kern van Tai Chi is Yin-Yang balans. Door Yin-Yang overgangen in beweging, harmonie van lichaam en geest bereiken.
+              太极的核心是阴阳平衡。通过动作的阴阳转换，达到身体和心理的和谐统一。
             </p>
           </div>
         </div>
 
-        <!-- Filosofie 2 -->
+        <!-- 理念2 -->
         <div class="scroll-animate group" style="animation-delay: 0.1s">
           <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-cyan/50 h-full">
             <div class="w-16 h-16 bg-cyan/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-cyan/20 transition-colors">
               <span class="text-3xl">⚡</span>
             </div>
             <h3 class="text-2xl font-serif font-bold text-ink mb-4">
-              Beweging en stilte
+              动静结合
             </h3>
             <p class="text-secondary leading-relaxed">
-              Beweging in stilte, stilte in beweging. Tai Chi benadrukt continue beweging en innerlijke rust.
+              动中有静，静中有动。太极强调动作的连贯性和内在的宁静。
             </p>
           </div>
         </div>
 
-        <!-- Filosofie 3 -->
+        <!-- 理念3 -->
         <div class="scroll-animate group" style="animation-delay: 0.2s">
           <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-secondary/50 h-full">
             <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-secondary/20 transition-colors">
               <span class="text-3xl">💪</span>
             </div>
             <h3 class="text-2xl font-serif font-bold text-ink mb-4">
-              Hardheid en zachtheid
+              刚柔并济
             </h3>
             <p class="text-secondary leading-relaxed">
-              Hardheid met zachtheid, zachtheid met hardheid. De wisselwerking van hard en zacht is een belangrijk kenmerk van Tai Chi bewegingen.
+              刚中带柔，柔中带刚。刚柔相济，是太极动作的重要特点。
             </p>
           </div>
         </div>
 
-        <!-- Filosofie 4 -->
+        <!-- 理念4 -->
         <div class="scroll-animate group" style="animation-delay: 0.3s">
           <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-accent/50 h-full">
             <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
               <span class="text-3xl">🧘</span>
             </div>
             <h3 class="text-2xl font-serif font-bold text-ink mb-4">
-              Geest en adem eenheid
+              意气合一
             </h3>
             <p class="text-secondary leading-relaxed">
-              Geest leidt adem, adem beweegt lichaam. Perfecte coördinatie van intentie, adem en beweging.
+              意到气到，以意导气。心意与呼吸、动作的完美协调。
             </p>
           </div>
         </div>
@@ -178,102 +180,102 @@ import bgGroup from '../assets/image/tai-chi-group.jpg';
     </div>
   </section>
 
-  <!-- Tai Chi kenmerken -->
+  <!-- 太极的特点 -->
   <section class="py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <!-- Linker inhoud -->
+        <!-- 左侧内容 -->
         <div class="scroll-animate">
           <div class="mb-8">
             <span class="inline-block px-3 py-1 text-sm font-medium text-cyan bg-cyan/10 rounded-full mb-4">
-              Belangrijkste kenmerken
+              主要特点
             </span>
             <h2 class="text-4xl font-serif font-bold text-ink mb-6">
-              Tai Chi kenmerken
+              太极特色
             </h2>
             <div class="w-20 h-1 bg-accent/50 mb-8"></div>
           </div>
 
-          <!-- Kenmerken lijst -->
+          <!-- 特点列表 -->
           <div class="space-y-8">
-            <!-- Kenmerk 1 -->
+            <!-- 特点1 -->
             <div class="flex items-start space-x-4">
               <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
                 <span class="text-xl text-accent">1</span>
               </div>
               <div>
                 <h3 class="text-xl font-serif font-bold text-ink mb-2">
-                  Langzaam en vloeiend
+                  动作舒缓
                 </h3>
                 <p class="text-secondary">
-                  Bewegingen zijn traag, continu en circulair, als stromende wolken en water, ononderbroken
+                  动作缓慢、连贯、圆活，如行云流水，连绵不断
                 </p>
               </div>
             </div>
 
-            <!-- Kenmerk 2 -->
+            <!-- 特点2 -->
             <div class="flex items-start space-x-4">
               <div class="w-12 h-12 bg-cyan/10 rounded-full flex items-center justify-center flex-shrink-0">
                 <span class="text-xl text-cyan">2</span>
               </div>
               <div>
                 <h3 class="text-xl font-serif font-bold text-ink mb-2">
-                  Natuurlijke ademhaling
+                  呼吸自然
                 </h3>
                 <p class="text-secondary">
-                  Gecoördineerd met beweging, met behulp van buikademhaling om interne en externe cultivatie te bereiken
+                  配合动作，采用腹式呼吸，达到内外兼修的效果
                 </p>
               </div>
             </div>
 
-            <!-- Kenmerk 3 -->
+            <!-- 特点3 -->
             <div class="flex items-start space-x-4">
               <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0">
                 <span class="text-xl text-secondary">3</span>
               </div>
               <div>
                 <h3 class="text-xl font-serif font-bold text-ink mb-2">
-                  Geest rust, lichaam ontspannen
+                  心静体松
                 </h3>
                 <p class="text-secondary">
-                  Focus geest, ontspan lichaam, interne concentratie, elimineer afleidende gedachten
+                  思想集中，身体放松，精神内守，排除杂念
                 </p>
               </div>
             </div>
 
-            <!-- Kenmerk 4 -->
+            <!-- 特点4 -->
             <div class="flex items-start space-x-4">
               <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
                 <span class="text-xl text-accent">4</span>
               </div>
               <div>
                 <h3 class="text-xl font-serif font-bold text-ink mb-2">
-                  Gehele lichaam coördinatie
+                  整体协调
                 </h3>
                 <p class="text-secondary">
-                  Bovenste en onderste lichaam volgen elkaar, links en rechts verbonden, intern en extern één, hele lichaam coördinatie
+                  上下相随，左右相连，内外合一，周身协调
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Rechter afbeelding -->
+        <!-- 右侧图片 -->
         <div class="scroll-animate" style="animation-delay: 0.2s">
           <div class="relative">
             <div class="aspect-square rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src={bgNature}
-                alt="Tai Chi in de natuur"
+                alt="太极自然"
                 class="w-full h-full object-cover"
                 format="jpg"
               />
             </div>
-            <!-- Tai Chi logo decoratie -->
+            <!-- 太极logo装饰 -->
             <div class="absolute -top-6 -right-6 w-32 h-32 bg-paper border-2 border-accent/30 rounded-full p-3 shadow-lg flex items-center justify-center">
               <Image
                 src={taichiLogo}
-                alt="Tai Chi"
+                alt="太极"
                 class="w-full h-full object-contain animate-[spin_30s_linear_infinite]"
                 format="png"
               />
@@ -284,71 +286,74 @@ import bgGroup from '../assets/image/tai-chi-group.jpg';
     </div>
   </section>
 
-  <!-- Tai Chi en modern leven -->
+  <!-- 太极与现代生活 -->
   <section class="py-24 bg-mist/20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <!-- Linker inhoud -->
+        <!-- 左侧内容 -->
         <div class="scroll-animate order-2 lg:order-1">
           <div class="mb-8">
             <span class="inline-block px-3 py-1 text-sm font-medium text-accent bg-accent/10 rounded-full mb-4">
-              Moderne waarde
+              现代价值
             </span>
             <h2 class="text-4xl font-serif font-bold text-ink mb-6">
-              Tai Chi en modern leven
+              太极与现代生活
             </h2>
             <div class="w-20 h-1 bg-cyan/50 mb-8"></div>
           </div>
 
           <div class="space-y-6 text-secondary text-lg">
             <p class="leading-relaxed">
-              In het huidige snel-tempo moderne leven wordt Tai Chi steeds meer gewaardeerd en geliefd om zijn unieke fitness- en gezondheidsvoordelen.
+              在现代社会快节奏的生活中，太极拳以其独特的健身价值和养生功效，
+              越来越受到人们的喜爱和重视。
             </p>
             <p class="leading-relaxed">
-              <span class="text-accent font-medium">Wetenschappelijk onderzoek bevestigt</span>
-              dat langdurige Tai Chi-beoefening de hart- en longfunctie kan verbeteren, immuniteit versterken, stress en angst verlichten, slaapkwaliteit verbeteren en veroudering vertragen.
+              <span class="text-accent font-medium">科学研究证实</span>，
+              长期练习太极拳可以改善心肺功能，增强免疫力，缓解压力和焦虑，
+              提高睡眠质量，延缓衰老。
             </p>
             <p class="leading-relaxed">
-              Tai Chi is niet alleen een oefening, maar een levensstijl. Het leert ons om innerlijke rust te behouden te midden van drukte en gebalanceerde geest te behouden te midden van verandering.
+              太极拳不仅是一种运动方式，更是一种生活态度。
+              它教导我们在繁忙中保持内心的宁静，在变化中保持平衡的心态。
             </p>
           </div>
 
-          <!-- Voordelen lijst -->
+          <!-- 优势列表 -->
           <div class="grid grid-cols-2 gap-4 mt-8">
             <div class="flex items-center space-x-3">
               <div class="w-2 h-2 rounded-full bg-accent"></div>
-              <span class="text-ink font-medium">Lichamelijke fitness</span>
+              <span class="text-ink font-medium">强身健体</span>
             </div>
             <div class="flex items-center space-x-3">
               <div class="w-2 h-2 rounded-full bg-cyan"></div>
-              <span class="text-ink font-medium">Geestelijke cultivatie</span>
+              <span class="text-ink font-medium">修身养性</span>
             </div>
             <div class="flex items-center space-x-3">
               <div class="w-2 h-2 rounded-full bg-secondary"></div>
-              <span class="text-ink font-medium">Anti-veroudering</span>
+              <span class="text-ink font-medium">延缓衰老</span>
             </div>
             <div class="flex items-center space-x-3">
               <div class="w-2 h-2 rounded-full bg-accent"></div>
-              <span class="text-ink font-medium">Stressverlichting</span>
+              <span class="text-ink font-medium">缓解压力</span>
             </div>
           </div>
         </div>
 
-        <!-- Rechter afbeelding -->
+        <!-- 右侧图片 -->
         <div class="scroll-animate order-1 lg:order-2">
           <div class="relative">
             <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src={bgGroup}
-                alt="Tai Chi groepsbeoefening"
+                alt="太极集体练习"
                 class="w-full h-full object-cover"
                 format="jpg"
               />
             </div>
-            <!-- Decoratieve kaart -->
+            <!-- 装饰卡片 -->
             <div class="absolute -bottom-4 -right-4 lg:-bottom-6 lg:-right-6 bg-paper border-2 border-accent/30 rounded-xl p-6 shadow-lg">
-              <p class="text-3xl md:text-4xl font-serif text-accent font-bold mb-2">Wereldwijde verspreiding</p>
-              <p class="text-sm md:text-base text-secondary">Cultureel schat over vijf continenten</p>
+              <p class="text-3xl md:text-4xl font-serif text-accent font-bold mb-2">全球传播</p>
+              <p class="text-sm md:text-base text-secondary">跨越五大洲的文化瑰宝</p>
             </div>
           </div>
         </div>
@@ -356,168 +361,168 @@ import bgGroup from '../assets/image/tai-chi-group.jpg';
     </div>
   </section>
 
-  <!-- Tai Chi scholen -->
+  <!-- 太极流派介绍 -->
   <section class="py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16 scroll-animate">
         <span class="inline-block px-3 py-1 text-sm font-medium text-cyan bg-cyan/10 rounded-full mb-4">
-          Vijf grote scholen
+          五大流派
         </span>
         <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
-          Tai Chi scholen
+          太极流派
         </h2>
         <div class="w-32 h-1 bg-accent/50 mx-auto mb-6"></div>
         <p class="text-lg text-secondary max-w-2xl mx-auto">
-          Unieke kenmerken, gedeelde afkomst
+          各具特色，一脉相承
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Chen stijl -->
+        <!-- 陈式太极 -->
         <div class="scroll-animate group">
           <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-accent/50 h-full">
             <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
               <span class="text-3xl">🎋</span>
             </div>
             <h3 class="text-2xl font-serif font-bold text-ink mb-4">
-              Chen stijl
+              陈式太极
             </h3>
             <div class="mb-4">
               <span class="inline-block px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full">
-                Oorspronkelijke school
+                源头流派
               </span>
             </div>
             <p class="text-secondary leading-relaxed mb-4">
-              Gecreëerd door <span class="text-accent font-medium">Chen Wangting</span> in late Ming en vroege Qing-dynastie, de vroegste Tai Chi school. Bewegingen combineren hardheid en zachtheid, wisselen snel en langzaam, omvatten explosieve kracht en sprongen.
+              由<span class="text-accent font-medium">陈王廷</span>创于明末清初，是太极拳的最早流派。动作刚柔相济，快慢相间，有发力、跳跃等动作。
             </p>
             <div class="border-t border-border/30 pt-4 mt-4">
               <p class="text-sm text-secondary">
-                <span class="font-medium text-ink">Kenmerken:</span> Zij-rei energie, explosieve kracht, duidelijk onderscheid tussen leegte en volheid
+                <span class="font-medium text-ink">特点：</span>缠丝劲、爆发力、虚实分明
               </p>
             </div>
           </div>
         </div>
 
-        <!-- Yang stijl -->
+        <!-- 杨式太极 -->
         <div class="scroll-animate group" style="animation-delay: 0.1s">
           <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-cyan/50 h-full">
             <div class="w-16 h-16 bg-cyan/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-cyan/20 transition-colors">
               <span class="text-3xl">🌊</span>
             </div>
             <h3 class="text-2xl font-serif font-bold text-ink mb-4">
-              Yang stijl
+              杨式太极
             </h3>
             <div class="mb-4">
               <span class="inline-block px-3 py-1 text-xs font-medium text-cyan bg-cyan/10 rounded-full">
-                Meest verspreid
+                流传最广
               </span>
             </div>
             <p class="text-secondary leading-relaxed mb-4">
-              Aangepast door <span class="text-cyan font-medium">Yang Luchan</span> van Chen stijl. Bewegingen zijn ruim en gracieus, gelijkmatig tempo, mooie houdingen.
+              由<span class="text-cyan font-medium">杨露禅</span>在陈式太极基础上改编而来。动作舒展大方，速度均匀，姿势优美。
             </p>
             <div class="border-t border-border/30 pt-4 mt-4">
               <p class="text-sm text-secondary">
-                <span class="font-medium text-ink">Kenmerken:</span> Zacht en langzaam, circulair en vol, natuurlijk en elegant
+                <span class="font-medium text-ink">特点：</span>柔和缓慢、圆活饱满、潇洒自如
               </p>
             </div>
           </div>
         </div>
 
-        <!-- Wu stijl -->
+        <!-- 吴式太极 -->
         <div class="scroll-animate group" style="animation-delay: 0.2s">
           <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-secondary/50 h-full">
             <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-secondary/20 transition-colors">
               <span class="text-3xl">🎭</span>
             </div>
             <h3 class="text-2xl font-serif font-bold text-ink mb-4">
-              Wu stijl
+              吴式太极
             </h3>
             <div class="mb-4">
               <span class="inline-block px-3 py-1 text-xs font-medium text-secondary bg-secondary/10 rounded-full">
-                Compact en verfijnd
+                紧凑小巧
               </span>
             </div>
             <p class="text-secondary leading-relaxed mb-4">
-              Ontwikkeld door <span class="text-secondary font-medium">Wu Jianquan</span> van Yang stijl. Bewegingen zijn compact en verfijnd, benadrukken zachtheid, fijn en precies.
+              由<span class="text-secondary font-medium">吴鉴泉</span>在杨式太极基础上发展而成。动作小巧紧凑，柔化为主，细腻精巧。
             </p>
             <div class="border-t border-border/30 pt-4 mt-4">
               <p class="text-sm text-secondary">
-                <span class="font-medium text-ink">Kenmerken:</span> Compact en zacht, rechtop binnen hoeken, fijn en continu
+                <span class="font-medium text-ink">特点：</span>紧凑柔和、斜中寓正、细腻绵延
               </p>
             </div>
           </div>
         </div>
 
-        <!-- Wu/Hao stijl -->
+        <!-- 武式太极 -->
         <div class="scroll-animate group" style="animation-delay: 0.3s">
           <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-accent/50 h-full">
             <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
               <span class="text-3xl">⚔️</span>
             </div>
             <h3 class="text-2xl font-serif font-bold text-ink mb-4">
-              Wu (Hao) stijl
+              武式太极
             </h3>
             <div class="mb-4">
               <span class="inline-block px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full">
-                Interne focus
+                注重内涵
               </span>
             </div>
             <p class="text-secondary leading-relaxed mb-4">
-              Gecreëerd door <span class="text-accent font-medium">Wu Yuxiang</span>, benadrukt interne cultivatie. Bewegingen zijn compact, gericht op lichaamsmethode, benadrukt "geest leidt adem".
+              由<span class="text-accent font-medium">武禹襄</span>所创，强调内功修炼。动作小巧紧凑，注重身法，强调"以意导气"。
             </p>
             <div class="border-t border-border/30 pt-4 mt-4">
               <p class="text-sm text-secondary">
-                <span class="font-medium text-ink">Kenmerken:</span> Interne focus, strikte lichaamsmethode, duidelijk onderscheid van leegte en volheid
+                <span class="font-medium text-ink">特点：</span>内功为主、身法严谨、虚实分清
               </p>
             </div>
           </div>
         </div>
 
-        <!-- Sun stijl -->
+        <!-- 孙式太极 -->
         <div class="scroll-animate group" style="animation-delay: 0.4s">
           <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-cyan/50 h-full">
             <div class="w-16 h-16 bg-cyan/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-cyan/20 transition-colors">
               <span class="text-3xl">🏃</span>
             </div>
             <h3 class="text-2xl font-serif font-bold text-ink mb-4">
-              Sun stijl
+              孙式太极
             </h3>
             <div class="mb-4">
               <span class="inline-block px-3 py-1 text-xs font-medium text-cyan bg-cyan/10 rounded-full">
-                Openen en sluiten
+                开合相济
               </span>
             </div>
             <p class="text-secondary leading-relaxed mb-4">
-              Gecreëerd door <span class="text-cyan font-medium">Sun Lutang</span>, integrerend Xingyiquan en Baguazhang. Bewegingen zijn flexibel en gevarieerd, vooruit en achteren samen, ruim en circulair.
+              由<span class="text-cyan font-medium">孙禄堂</span>融合形意拳、八卦掌创编。动作灵活多变，进退相随，舒展圆活。
             </p>
             <div class="border-t border-border/30 pt-4 mt-4">
               <p class="text-sm text-secondary">
-                <span class="font-medium text-ink">Kenmerken:</span> Openen en sluiten gecombineerd, flexibel en gevarieerd, wendbare voetwerk
+                <span class="font-medium text-ink">特点：</span>开合相济、灵活多变、步法灵活
               </p>
             </div>
           </div>
         </div>
 
-        <!-- He stijl -->
+        <!-- 和式太极 -->
         <div class="scroll-animate group" style="animation-delay: 0.5s">
           <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-secondary/50 h-full">
             <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-secondary/20 transition-colors">
               <span class="text-3xl">☯️</span>
             </div>
             <h3 class="text-2xl font-serif font-bold text-ink mb-4">
-              He stijl
+              和式太极
             </h3>
             <div class="mb-4">
               <span class="inline-block px-3 py-1 text-xs font-medium text-secondary bg-secondary/10 rounded-full">
-                Traditioneel
+                古朴传统
               </span>
             </div>
             <p class="text-secondary leading-relaxed mb-4">
-              Gecreëerd door <span class="text-secondary font-medium">He Zhaoyuan</span>, behoudt vele traditionele kenmerken. Bewegingen zijn eenvoudig en onversierd, praktisch en effectief.
+              由<span class="text-secondary font-medium">和兆元</span>所创，保留了较多传统特色。动作古朴无华，朴实无华，注重实用。
             </p>
             <div class="border-t border-border/30 pt-4 mt-4">
               <p class="text-sm text-secondary">
-                <span class="font-medium text-ink">Kenmerken:</span> Traditioneel en eenvoudig, praktisch, sterke gevechtstoepassing
+                <span class="font-medium text-ink">特点：</span>古朴传统、朴实无华、技击性强
               </p>
             </div>
           </div>
@@ -526,186 +531,186 @@ import bgGroup from '../assets/image/tai-chi-group.jpg';
     </div>
   </section>
 
-  <!-- Algemene beoefeningsvormen -->
+  <!-- 常见套路介绍 -->
   <section class="py-24 bg-mist/20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16 scroll-animate">
         <span class="inline-block px-3 py-1 text-sm font-medium text-accent bg-accent/10 rounded-full mb-4">
-          Klassieke vormen
+          经典套路
         </span>
         <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
-          Tai Chi vormen
+          太极拳法
         </h2>
         <div class="w-32 h-1 bg-cyan/50 mx-auto mb-6"></div>
         <p class="text-lg text-secondary max-w-2xl mx-auto">
-          Van eenvoudig naar complex, stap-voor-stap progressie
+          从简到繁，循序渐进
         </p>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <!-- 24 vorm -->
+        <!-- 24式简化太极 -->
         <div class="scroll-animate">
           <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30">
             <div class="flex items-start justify-between mb-6">
               <div>
                 <span class="inline-block px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full mb-3">
-                  Beginnerskeuze
+                  入门首选
                 </span>
                 <h3 class="text-3xl font-serif font-bold text-ink mb-2">
-                  24-vorm Tai Chi
+                  24式太极拳
                 </h3>
-                <p class="text-secondary">Vereenvoudigde Tai Chi</p>
+                <p class="text-secondary">简化太极拳</p>
               </div>
               <div class="text-right">
                 <p class="text-4xl font-serif text-accent font-bold">24</p>
-                <p class="text-sm text-secondary">bewegingen</p>
+                <p class="text-sm text-secondary">个动作</p>
               </div>
             </div>
             <p class="text-secondary leading-relaxed mb-6">
-              Samengesteld in 1956 door de Nationale Sportcommissie, selecteerde 24 bewegingen uit Yang stijl. Bewegingen zijn gestandaardiseerd, structuur is redelijk, gemakkelijk te leren en te oefenen, de beste keuze voor Tai Chi beginners.
+              1956年由国家体委组织编写，从杨式太极中精选24个动作组成。动作规范、结构合理、易学易练，是太极拳入门的最佳选择。
             </p>
             <div class="grid grid-cols-2 gap-4">
               <div class="flex items-center space-x-2">
                 <div class="w-2 h-2 rounded-full bg-accent"></div>
-                <span class="text-sm text-ink">5-6 minuten</span>
+                <span class="text-sm text-ink">5-6分钟完成</span>
               </div>
               <div class="flex items-center space-x-2">
                 <div class="w-2 h-2 rounded-full bg-cyan"></div>
-                <span class="text-sm text-ink">Beginner vriendelijk</span>
+                <span class="text-sm text-ink">适合初学者</span>
               </div>
               <div class="flex items-center space-x-2">
                 <div class="w-2 h-2 rounded-full bg-secondary"></div>
-                <span class="text-sm text-ink">Ruime bewegingen</span>
+                <span class="text-sm text-ink">动作舒展大方</span>
               </div>
               <div class="flex items-center space-x-2">
                 <div class="w-2 h-2 rounded-full bg-accent"></div>
-                <span class="text-sm text-ink">Nationaal gepromoot</span>
+                <span class="text-sm text-ink">国家推广套路</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 42 vorm -->
+        <!-- 42式竞赛套路 -->
         <div class="scroll-animate" style="animation-delay: 0.1s">
           <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30">
             <div class="flex items-start justify-between mb-6">
               <div>
                 <span class="inline-block px-3 py-1 text-xs font-medium text-cyan bg-cyan/10 rounded-full mb-3">
-                  Competitie standaard
+                  竞赛标准
                 </span>
                 <h3 class="text-3xl font-serif font-bold text-ink mb-2">
-                  42-vorm Tai Chi
+                  42式太极拳
                 </h3>
-                <p class="text-secondary">Comprehensieve competitievorm</p>
+                <p class="text-secondary">综合竞赛套路</p>
               </div>
               <div class="text-right">
                 <p class="text-4xl font-serif text-cyan font-bold">42</p>
-                <p class="text-sm text-secondary">bewegingen</p>
+                <p class="text-sm text-secondary">个动作</p>
               </div>
             </div>
             <p class="text-secondary leading-relaxed mb-6">
-              Integreert kenmerken van Chen, Yang, Wu en Sun stijlen, wetenschappelijk gearrangeerd met hoog technisch gehalte, de standaard competitievorm voor diverse Tai Chi competities.
+              综合了陈、杨、吴、孙式太极的特点创编而成，动作编排科学合理，技术含量高，是各类太极拳比赛的竞赛套路。
             </p>
             <div class="grid grid-cols-2 gap-4">
               <div class="flex items-center space-x-2">
                 <div class="w-2 h-2 rounded-full bg-accent"></div>
-                <span class="text-sm text-ink">6-7 minuten</span>
+                <span class="text-sm text-ink">6-7分钟完成</span>
               </div>
               <div class="flex items-center space-x-2">
                 <div class="w-2 h-2 rounded-full bg-cyan"></div>
-                <span class="text-sm text-ink">Vereist basis</span>
+                <span class="text-sm text-ink">需要一定基础</span>
               </div>
               <div class="flex items-center space-x-2">
                 <div class="w-2 h-2 rounded-full bg-secondary"></div>
-                <span class="text-sm text-ink">Multi-stijl fusie</span>
+                <span class="text-sm text-ink">融合多流派</span>
               </div>
               <div class="flex items-center space-x-2">
                 <div class="w-2 h-2 rounded-full bg-cyan"></div>
-                <span class="text-sm text-ink">Competitievorm</span>
+                <span class="text-sm text-ink">比赛指定套路</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 48 vorm -->
+        <!-- 48式太极 -->
         <div class="scroll-animate" style="animation-delay: 0.2s">
           <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30">
             <div class="flex items-start justify-between mb-6">
               <div>
                 <span class="inline-block px-3 py-1 text-xs font-medium text-secondary bg-secondary/10 rounded-full mb-3">
-                  Geavanceerd niveau
+                  进阶提升
                 </span>
                 <h3 class="text-3xl font-serif font-bold text-ink mb-2">
-                  48-vorm Tai Chi
+                  48式太极拳
                 </h3>
-                <p class="text-secondary">Yang stijl geavanceerde vorm</p>
+                <p class="text-secondary">杨式进阶套路</p>
               </div>
               <div class="text-right">
                 <p class="text-4xl font-serif text-secondary font-bold">48</p>
-                <p class="text-sm text-secondary">bewegingen</p>
+                <p class="text-sm text-secondary">个动作</p>
               </div>
             </div>
             <p class="text-secondary leading-relaxed mb-6">
-              Gecreëerd op basis van Yang stijl, rijk aan inhoud en comprehensief in techniek, behoudt traditionele kenmerken met innovatie, geschikt voor beoefenaars met basis.
+              在杨式太极基础上创编，动作内容丰富，技术全面，既保留了传统特色，又有创新发展，适合有一定基础的练习者。
             </p>
             <div class="grid grid-cols-2 gap-4">
               <div class="flex items-center space-x-2">
                 <div class="w-2 h-2 rounded-full bg-accent"></div>
-                <span class="text-sm text-ink">7-8 minuten</span>
+                <span class="text-sm text-ink">7-8分钟完成</span>
               </div>
               <div class="flex items-center space-x-2">
                 <div class="w-2 h-2 rounded-full bg-cyan"></div>
-                <span class="text-sm text-ink">Geavanceerde oefening</span>
+                <span class="text-sm text-ink">适合进阶练习</span>
               </div>
               <div class="flex items-center space-x-2">
                 <div class="w-2 h-2 rounded-full bg-secondary"></div>
-                <span class="text-sm text-ink">Yang stijl</span>
+                <span class="text-sm text-ink">杨式风格</span>
               </div>
               <div class="flex items-center space-x-2">
                 <div class="w-2 h-2 rounded-full bg-accent"></div>
-                <span class="text-sm text-ink">Meer comprehensief</span>
+                <span class="text-sm text-ink">技术更全面</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Traditionele 108 vorm -->
+        <!-- 传统套路 -->
         <div class="scroll-animate" style="animation-delay: 0.3s">
           <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30">
             <div class="flex items-start justify-between mb-6">
               <div>
                 <span class="inline-block px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full mb-3">
-                  Traditioneel erfgoed
+                  传统传承
                 </span>
                 <h3 class="text-3xl font-serif font-bold text-ink mb-2">
-                  Traditionele 108 vorm
+                  传统108式
                 </h3>
-                <p class="text-secondary">Complete traditionele vorm</p>
+                <p class="text-secondary">完整传统套路</p>
               </div>
               <div class="text-right">
                 <p class="text-4xl font-serif text-accent font-bold">108</p>
-                <p class="text-sm text-secondary">bewegingen</p>
+                <p class="text-sm text-secondary">个动作</p>
               </div>
             </div>
             <p class="text-secondary leading-relaxed mb-6">
-              De complete traditionele Yang stijl vorm, comprehensief in bewegingen en rijk aan inhoud, bevat de kernfilosofie en technieken van Tai Chi, de klassieke keuze voor diep Tai Chi studie.
+              传统杨式太极的完整套路，动作全面，内涵丰富，包含了太极的核心理念和技法，是深入学习太极拳的经典选择。
             </p>
             <div class="grid grid-cols-2 gap-4">
               <div class="flex items-center space-x-2">
                 <div class="w-2 h-2 rounded-full bg-accent"></div>
-                <span class="text-sm text-ink">20-25 minuten</span>
+                <span class="text-sm text-ink">20-25分钟完成</span>
               </div>
               <div class="flex items-center space-x-2">
                 <div class="w-2 h-2 rounded-full bg-cyan"></div>
-                <span class="text-sm text-ink">Lange termijn oefening</span>
+                <span class="text-sm text-ink">适合长期练习</span>
               </div>
               <div class="flex items-center space-x-2">
                 <div class="w-2 h-2 rounded-full bg-secondary"></div>
-                <span class="text-sm text-ink">Traditionele Yang</span>
+                <span class="text-sm text-ink">传统杨式</span>
               </div>
               <div class="flex items-center space-x-2">
                 <div class="w-2 h-2 rounded-full bg-cyan"></div>
-                <span class="text-sm text-ink">Rijkste inhoud</span>
+                <span class="text-sm text-ink">内涵最丰富</span>
               </div>
             </div>
           </div>
@@ -714,192 +719,192 @@ import bgGroup from '../assets/image/tai-chi-group.jpg';
     </div>
   </section>
 
-  <!-- Gezondheidsvoordelen -->
+  <!-- 太极养生功效 -->
   <section class="py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16 scroll-animate">
         <span class="inline-block px-3 py-1 text-sm font-medium text-cyan bg-cyan/10 rounded-full mb-4">
-          Gezondheid en welzijn
+          健康养生
         </span>
         <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
-          Gezondheidsvoordelen
+          养生功效
         </h2>
         <div class="w-32 h-1 bg-accent/50 mx-auto mb-6"></div>
         <p class="text-lg text-secondary max-w-2xl mx-auto">
-          Wetenschappelijk gevalideerd, significante resultaten
+          科学验证，效果显著
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Hart- en longfunctie -->
+        <!-- 心肺功能 -->
         <div class="scroll-animate">
           <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-accent/50 transition-all duration-300 h-full">
             <div class="w-20 h-20 bg-gradient-to-br from-accent/20 to-accent/10 rounded-2xl flex items-center justify-center mb-6">
               <span class="text-4xl">❤️</span>
             </div>
             <h3 class="text-2xl font-serif font-bold text-ink mb-4">
-              Verbetert hart- en longfunctie
+              改善心肺功能
             </h3>
             <p class="text-secondary leading-relaxed mb-4">
-              Tai Chi's aeroebische oefening karakter versterkt hart- en longuithoudingsvermogen, verbetert bloedsomloop efficiëntie, en verlaagt cardiovasculaire ziekte risico.
+              太极拳的有氧运动特性可以增强心肺耐力，提高血液循环效率，降低心血管疾病风险。
             </p>
             <div class="space-y-2">
               <div class="flex items-center space-x-2 text-sm text-secondary">
                 <div class="w-1.5 h-1.5 rounded-full bg-accent"></div>
-                <span>Versterkt myocardcontractie</span>
+                <span>增强心肌收缩力</span>
               </div>
               <div class="flex items-center space-x-2 text-sm text-secondary">
                 <div class="w-1.5 h-1.5 rounded-full bg-accent"></div>
-                <span>Verhoogt longcapaciteit</span>
+                <span>提高肺活量</span>
               </div>
               <div class="flex items-center space-x-2 text-sm text-secondary">
                 <div class="w-1.5 h-1.5 rounded-full bg-accent"></div>
-                <span>Bevordert bloedsomloop</span>
+                <span>促进血液循环</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Balans -->
+        <!-- 平衡能力 -->
         <div class="scroll-animate" style="animation-delay: 0.1s">
           <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-cyan/50 transition-all duration-300 h-full">
             <div class="w-20 h-20 bg-gradient-to-br from-cyan/20 to-cyan/10 rounded-2xl flex items-center justify-center mb-6">
               <span class="text-4xl">⚖️</span>
             </div>
             <h3 class="text-2xl font-serif font-bold text-ink mb-4">
-              Verbetert balans
+              增强平衡能力
             </h3>
             <p class="text-secondary leading-relaxed mb-4">
-              Tai Chi's langzame bewegingen en gewichtsverplaatsing training verbeteren aanzienlijk lichaamsbalans en stabiliteit, vooral geschikt voor middelbare en ouderen.
+              太极拳的缓慢动作和重心转移训练，显著提高身体的平衡能力和稳定性，特别适合中老年人。
             </p>
             <div class="space-y-2">
               <div class="flex items-center space-x-2 text-sm text-secondary">
                 <div class="w-1.5 h-1.5 rounded-full bg-cyan"></div>
-                <span>Verbeterd lichaamsstabiliteit</span>
+                <span>提高身体稳定性</span>
               </div>
               <div class="flex items-center space-x-2 text-sm text-secondary">
                 <div class="w-1.5 h-1.5 rounded-full bg-cyan"></div>
-                <span>Verlaagt valrisico</span>
+                <span>减少跌倒风险</span>
               </div>
               <div class="flex items-center space-x-2 text-sm text-secondary">
                 <div class="w-1.5 h-1.5 rounded-full bg-cyan"></div>
-                <span>Verbetert gang coördinatie</span>
+                <span>改善步态协调</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Spierkracht -->
+        <!-- 肌肉力量 -->
         <div class="scroll-animate" style="animation-delay: 0.2s">
           <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-secondary/50 transition-all duration-300 h-full">
             <div class="w-20 h-20 bg-gradient-to-br from-secondary/20 to-secondary/10 rounded-2xl flex items-center justify-center mb-6">
               <span class="text-4xl">💪</span>
             </div>
             <h3 class="text-2xl font-serif font-bold text-ink mb-4">
-              Verhoogt spierkracht
+              增强肌肉力量
             </h3>
             <p class="text-secondary leading-relaxed mb-4">
-              Hoewel bewegingen langzaam zijn, vereist Tai Chi continue spiercontrole, versterkt effectief onderste ledemaat kracht en kernstabiliteit.
+              虽然动作缓慢，但太极拳需要持续的肌肉控制，能有效增强下肢力量和核心稳定性。
             </p>
             <div class="space-y-2">
               <div class="flex items-center space-x-2 text-sm text-secondary">
                 <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-                <span>Versterkt onderste ledematen</span>
+                <span>增强下肢力量</span>
               </div>
               <div class="flex items-center space-x-2 text-sm text-secondary">
                 <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-                <span>Verbeterd kernstabiliteit</span>
+                <span>改善核心稳定</span>
               </div>
               <div class="flex items-center space-x-2 text-sm text-secondary">
                 <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-                <span>Verhoogt gewricht flexibiliteit</span>
+                <span>提高关节灵活度</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Stressverlichting -->
+        <!-- 缓解压力 -->
         <div class="scroll-animate" style="animation-delay: 0.3s">
           <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-accent/50 transition-all duration-300 h-full">
             <div class="w-20 h-20 bg-gradient-to-br from-accent/20 to-accent/10 rounded-2xl flex items-center justify-center mb-6">
               <span class="text-4xl">🧘</span>
             </div>
             <h3 class="text-2xl font-serif font-bold text-ink mb-4">
-              Verlicht stress en angst
+              缓解压力焦虑
             </h3>
             <p class="text-secondary leading-relaxed mb-4">
-              Tai Chi combineert meditatie en beweging, verlaagt effectief stress hormoon niveaus, verlicht angst en depressie, verbetert mentale gezondheid.
+              太极拳结合冥想和运动，能有效降低压力激素水平，缓解焦虑和抑郁情绪，提升心理健康。
             </p>
             <div class="space-y-2">
               <div class="flex items-center space-x-2 text-sm text-secondary">
                 <div class="w-1.5 h-1.5 rounded-full bg-accent"></div>
-                <span>Verlaagt cortisol niveaus</span>
+                <span>降低皮质醇水平</span>
               </div>
               <div class="flex items-center space-x-2 text-sm text-secondary">
                 <div class="w-1.5 h-1.5 rounded-full bg-accent"></div>
-                <span>Verbeterd mentale toestand</span>
+                <span>提升心理状态</span>
               </div>
               <div class="flex items-center space-x-2 text-sm text-secondary">
                 <div class="w-1.5 h-1.5 rounded-full bg-accent"></div>
-                <span>Verbetert slaapkwaliteit</span>
+                <span>改善睡眠质量</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Immuniteit -->
+        <!-- 免疫力 -->
         <div class="scroll-animate" style="animation-delay: 0.4s">
           <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-cyan/50 transition-all duration-300 h-full">
             <div class="w-20 h-20 bg-gradient-to-br from-cyan/20 to-cyan/10 rounded-2xl flex items-center justify-center mb-6">
               <span class="text-4xl">🛡️</span>
             </div>
             <h3 class="text-2xl font-serif font-bold text-ink mb-4">
-              Versterkt immuniteit
+              提升免疫力
             </h3>
             <p class="text-secondary leading-relaxed mb-4">
-              Langdurige Tai Chi beoefening versterkt immuunsysteem functie, verbetert lichaamsweerstand, vermindert ziekte voorkomen.
+              长期练习太极拳可以增强免疫系统功能，提高身体抵抗力，减少疾病发生。
             </p>
             <div class="space-y-2">
               <div class="flex items-center space-x-2 text-sm text-secondary">
                 <div class="w-1.5 h-1.5 rounded-full bg-cyan"></div>
-                <span>Versterkt immuuncel activiteit</span>
+                <span>增强免疫细胞活性</span>
               </div>
               <div class="flex items-center space-x-2 text-sm text-secondary">
                 <div class="w-1.5 h-1.5 rounded-full bg-cyan"></div>
-                <span>Verhoogt ziekteweerstand</span>
+                <span>提高抗病能力</span>
               </div>
               <div class="flex items-center space-x-2 text-sm text-secondary">
                 <div class="w-1.5 h-1.5 rounded-full bg-cyan"></div>
-                <span>Bevordert lichaams Herstel</span>
+                <span>促进身体康复</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Anti-veroudering -->
+        <!-- 延缓衰老 -->
         <div class="scroll-animate" style="animation-delay: 0.5s">
           <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-secondary/50 transition-all duration-300 h-full">
             <div class="w-20 h-20 bg-gradient-to-br from-secondary/20 to-secondary/10 rounded-2xl flex items-center justify-center mb-6">
               <span class="text-4xl">✨</span>
             </div>
             <h3 class="text-2xl font-serif font-bold text-ink mb-4">
-              Vertraagt verouderingsproces
+              延缓衰老进程
             </h3>
             <p class="text-secondary leading-relaxed mb-4">
-              Tai Chi's comprehensieve oefening effecten helpen vertraging van fysieke achteruitgang, behouden van jeugdige vitaliteit, verbeteren van levenskwaliteit.
+              太极拳的综合锻炼效果有助于延缓身体机能衰退，保持年轻活力，提高生活质量。
             </p>
             <div class="space-y-2">
               <div class="flex items-center space-x-2 text-sm text-secondary">
                 <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-                <span>Vertraagt osteoporose</span>
+                <span>延缓骨质疏松</span>
               </div>
               <div class="flex items-center space-x-2 text-sm text-secondary">
                 <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-                <span>Verbeterd lichaamsflexibiliteit</span>
+                <span>改善身体柔韧性</span>
               </div>
               <div class="flex items-center space-x-2 text-sm text-secondary">
                 <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-                <span>Behoudt cognitieve functie</span>
+                <span>保持认知功能</span>
               </div>
             </div>
           </div>
@@ -908,95 +913,95 @@ import bgGroup from '../assets/image/tai-chi-group.jpg';
     </div>
   </section>
 
-  <!-- Beoefeningsmethoden -->
+  <!-- 太极练习方法 -->
   <section class="py-24 bg-mist/20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16 scroll-animate">
         <span class="inline-block px-3 py-1 text-sm font-medium text-accent bg-accent/10 rounded-full mb-4">
-          Beoefeningsgids
+          练习指南
         </span>
         <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
-          Beoefening essenties
+          练习要领
         </h2>
         <div class="w-32 h-1 bg-cyan/50 mx-auto mb-6"></div>
         <p class="text-lg text-secondary max-w-2xl mx-auto">
-          Beheer de juiste methode, bereik tweemaal het resultaat met de helft van de inspanning
+          掌握正确方法，事半功倍
         </p>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <!-- Links: Kern essenties -->
+        <!-- 左侧：核心要领 -->
         <div class="space-y-6">
-          <!-- Essentie 1 -->
+          <!-- 要领1 -->
           <div class="scroll-animate">
             <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-accent/50 transition-all duration-300">
               <div class="flex items-start space-x-6">
                 <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span class="text-2xl font-serif text-accent font-bold">I</span>
+                  <span class="text-2xl font-serif text-accent font-bold">一</span>
                 </div>
                 <div>
                   <h3 class="text-2xl font-serif font-bold text-ink mb-3">
-                    Rechtop houding
+                    身法中正
                   </h3>
                   <p class="text-secondary leading-relaxed">
-                    Houd het lichaam natuurlijk rechtop, hoofd recht, nek ontspannen, wervelkolom natuurlijk uitgestrekt. Alle lichaamsdelen gecoördineerd, gecentreerd, als een hangende klok.
+                    保持身体中正自然，头部正直，颈部放松，脊柱保持自然伸展。身体各部位协调一致，不偏不倚，如立身中正，如钟悬。
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Essentie 2 -->
+          <!-- 要领2 -->
           <div class="scroll-animate" style="animation-delay: 0.1s">
             <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-cyan/50 transition-all duration-300">
               <div class="flex items-start space-x-6">
                 <div class="w-16 h-16 bg-cyan/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span class="text-2xl font-serif text-cyan font-bold">II</span>
+                  <span class="text-2xl font-serif text-cyan font-bold">二</span>
                 </div>
                 <div>
                   <h3 class="text-2xl font-serif font-bold text-ink mb-3">
-                    Duidelijk onderscheid van leegte en volheid
+                    虚实分明
                   </h3>
                   <p class="text-secondary leading-relaxed">
-                    Onderscheid duidelijk leegte en volheid in het lichaam, gewichtsverplaatsing moet duidelijk zijn. Scheid leegte en volheid in beide voeten, juiste gewichtsverdeling, natuurlijke en vloeiende overgangen.
+                    明确身体的虚实转换，重心转移清晰。两脚分清虚实，身体重量分配得当，动作转换时虚实变化要自然流畅。
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Essentie 3 -->
+          <!-- 要领3 -->
           <div class="scroll-animate" style="animation-delay: 0.2s">
             <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-secondary/50 transition-all duration-300">
               <div class="flex items-start space-x-6">
                 <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span class="text-2xl font-serif text-secondary font-bold">III</span>
+                  <span class="text-2xl font-serif text-secondary font-bold">三</span>
                 </div>
                 <div>
                   <h3 class="text-2xl font-serif font-bold text-ink mb-3">
-                    Geest en adem samen
+                    意气相随
                   </h3>
                   <p class="text-secondary leading-relaxed">
-                    Geest leidt adem, adem beweegt lichaam. Geest als gids, adem coördineert met beweging, waar geest gaat, adem gaat, waar adem gaat, kracht gaat. Eenheid van intern en extern, vorm en geest.
+                    以意导气，以气运身。心意为主导，呼吸配合动作，意到气到，气到力到。内外合一，形神兼备。
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Essentie 4 -->
+          <!-- 要领4 -->
           <div class="scroll-animate" style="animation-delay: 0.3s">
             <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-accent/50 transition-all duration-300">
               <div class="flex items-start space-x-6">
                 <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span class="text-2xl font-serif text-accent font-bold">IV</span>
+                  <span class="text-2xl font-serif text-accent font-bold">四</span>
                 </div>
                 <div>
                   <h3 class="text-2xl font-serif font-bold text-ink mb-3">
-                    Continu en circulair
+                    连贯圆活
                   </h3>
                   <p class="text-secondary leading-relaxed">
-                    Bewegingen moeten continu en circulair zijn, als stromende wolken en water, ononderbroken. Natuurlijke overgangen tussen bewegingen, geen pauzes of onderbrekingen, hele lichaam coördinatie, bovenste en onderste lichaam volgend elkaar.
+                    动作要连贯圆活，如行云流水，连绵不断。动作之间衔接自然，没有停顿和断续，周身协调，上下相随。
                   </p>
                 </div>
               </div>
@@ -1004,76 +1009,76 @@ import bgGroup from '../assets/image/tai-chi-group.jpg';
           </div>
         </div>
 
-        <!-- Rechts: Beoefenings aanbevelingen -->
+        <!-- 右侧：练习建议 -->
         <div class="scroll-animate" style="animation-delay: 0.2s">
           <div class="bg-paper rounded-2xl shadow-xl p-8 border border-border/30 sticky top-24">
             <div class="mb-8">
               <h3 class="text-3xl font-serif font-bold text-ink mb-4">
-                Beoefenings aanbevelingen
+                练习建议
               </h3>
               <div class="w-16 h-1 bg-accent/50"></div>
             </div>
 
             <div class="space-y-6">
-              <!-- Frequentie -->
+              <!-- 频率 -->
               <div class="border-b border-border/30 pb-6">
                 <div class="flex items-center space-x-3 mb-3">
                   <span class="text-2xl">📅</span>
-                  <h4 class="text-xl font-serif font-bold text-ink">Beoefeningsfrequentie</h4>
+                  <h4 class="text-xl font-serif font-bold text-ink">练习频率</h4>
                 </div>
                 <p class="text-secondary leading-relaxed">
-                  Beveel 3-5 keer per week te oefenen, 30-60 minuten per sessie. Langdurige consistente beoefening geeft betere resultaten. Beginners kunnen beginnen met 15-20 minuten per sessie.
+                  建议每周练习3-5次，每次30-60分钟。坚持长期练习，效果更佳。初学者可从每次15-20分钟开始。
                 </p>
               </div>
 
-              <!-- Tijd -->
+              <!-- 时间 -->
               <div class="border-b border-border/30 pb-6">
                 <div class="flex items-center space-x-3 mb-3">
                   <span class="text-2xl">⏰</span>
-                  <h4 class="text-xl font-serif font-bold text-ink">Beste tijd</h4>
+                  <h4 class="text-xl font-serif font-bold text-ink">最佳时间</h4>
                 </div>
                 <p class="text-secondary leading-relaxed">
-                  Vroege ochtend 5-7 uur of avond 4-6 uur is optimaal, wanneer lucht fris is en lichaamsconditie goed is. Vermijd direct na maaltijden te oefenen.
+                  早晨5-7点或傍晚4-6点最佳，此时空气清新，身体状态良好。避免饭后立即练习。
                 </p>
               </div>
 
-              <!-- Locatie -->
+              <!-- 场地 -->
               <div class="border-b border-border/30 pb-6">
                 <div class="flex items-center space-x-3 mb-3">
                   <span class="text-2xl">🌳</span>
-                  <h4 class="text-xl font-serif font-bold text-ink">Beoefeningslocatie</h4>
+                  <h4 class="text-xl font-serif font-bold text-ink">练习场地</h4>
                 </div>
                 <p class="text-secondary leading-relaxed">
-                  Kies locaties met frisse lucht en stille omgeving. Parken, binnenplaatsen, meerzijden zijn allemaal geschikt. Grond moet vlak zijn, vermijd oppervlakken die te hard of te zacht zijn.
+                  选择空气清新、环境安静的场地。公园、庭院、湖边等皆可。地面平整，避免在过硬或过软地面练习。
                 </p>
               </div>
 
-              <!-- Voorzorgsmaatregelen -->
+              <!-- 注意事项 -->
               <div>
                 <div class="flex items-center space-x-3 mb-3">
                   <span class="text-2xl">⚠️</span>
-                  <h4 class="text-xl font-serif font-bold text-ink">Voorzorgsmaatregelen</h4>
+                  <h4 class="text-xl font-serif font-bold text-ink">注意事项</h4>
                 </div>
                 <ul class="space-y-2 text-secondary">
                   <li class="flex items-start space-x-2">
                     <span class="text-accent mt-1">•</span>
-                    <span>Draag losse, comfortabele sportkleding</span>
+                    <span>穿着宽松舒适的运动服装</span>
                   </li>
                   <li class="flex items-start space-x-2">
                     <span class="text-accent mt-1">•</span>
-                    <span>Warm-up goed voor oefening</span>
+                    <span>练习前做好热身运动</span>
                   </li>
                   <li class="flex items-start space-x-2">
                     <span class="text-accent mt-1">•</span>
-                    <span>Oefen volgens vermogen, progressief</span>
+                    <span>量力而行，循序渐进</span>
                   </li>
                   <li class="flex items-start space-x-2">
                     <span class="text-accent mt-1">•</span>
-                    <span>Bewegingen moeten zacht zijn, vermijd overdreven kracht</span>
+                    <span>动作要轻柔，避免用力过猛</span>
                   </li>
                   <li class="flex items-start space-x-2">
                     <span class="text-accent mt-1">•</span>
-                    <span>Stop onmiddellijk bij ongemak</span>
+                    <span>如有不适，应立即停止练习</span>
                   </li>
                 </ul>
               </div>
@@ -1084,27 +1089,27 @@ import bgGroup from '../assets/image/tai-chi-group.jpg';
     </div>
   </section>
 
-  <!-- CTA Sectie -->
+  <!-- CTA Section -->
   <section class="py-24">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center scroll-animate">
       <h2 class="text-4xl font-serif font-bold text-ink mb-6">
-        Begin uw Tai Chi reis
+        开启太极之旅
       </h2>
       <p class="text-xl text-secondary mb-12">
-        Ervaar de charme van Tai Chi firsthand en ontdek de moderne overerving van eeuwenoude wijsheid
+        亲身体验太极的魅力，感受千年智慧的现代传承
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
         <a
           href="/courses"
           class="px-8 py-4 bg-accent hover:bg-primary text-paper hover:text-paper border-2 border-accent hover:border-primary rounded-lg font-medium text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
         >
-          Bekijk cursussen
+          查看课程
         </a>
         <a
           href="/movements"
           class="px-8 py-4 border-2 border-accent/30 text-accent hover:bg-accent/10 rounded-lg font-medium text-lg transition-all duration-300 hover:scale-105"
         >
-          Ontdek bewegingen
+          了解招式
         </a>
       </div>
     </div>
@@ -1112,7 +1117,7 @@ import bgGroup from '../assets/image/tai-chi-group.jpg';
 </BaseLayout>
 
 <script>
-  // Scroll-geactiveerde animatie
+  // 滚动触发动画
   const observerOptions = {
     root: null,
     rootMargin: '0px',

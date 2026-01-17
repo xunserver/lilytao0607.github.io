@@ -1,17 +1,17 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
-import taichiLogo from '../../assets/image/taichi-logo.png';
-import poseImage from '../../assets/image/tai-chi-pose.jpg';
-import silhouetteImage from '../../assets/image/tai-chi-silhouette.jpg';
-import standingImage from '../../assets/image/tai-chi-standing.jpg';
-import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
+import taichiLogo from '../../../assets/image/taichi-logo.png';
+import poseImage from '../../../assets/image/tai-chi-pose.jpg';
+import silhouetteImage from '../../../assets/image/tai-chi-silhouette.jpg';
+import standingImage from '../../../assets/image/tai-chi-standing.jpg';
+import kungFuImage from '../../../assets/image/tai-chi-kung-fu.jpg';
 ---
 
-<BaseLayout title="Tai Chi bewegingen - Klassieke bewegingen">
+<BaseLayout title="Tai Chi Movements - Classic Forms Showcase">
   <!-- Hero Section -->
   <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-    <!-- Achtergrond decoratie -->
+    <!-- Background decoration -->
     <div class="absolute inset-0 -z-10">
       <div class="absolute inset-0 bg-gradient-to-br from-paper via-mist/30 to-paper"></div>
       <div class="absolute top-20 left-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
@@ -21,129 +21,129 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
       <div class="animate-fade-in">
         <span class="inline-block px-4 py-2 text-sm font-medium text-accent bg-accent/10 rounded-full mb-6">
-          Prachtige bewegingen
+          Exquisite Movements
         </span>
         <h1 class="text-5xl md:text-6xl font-serif font-bold text-ink mb-6">
-          Tai Chi bewegingen
+          Tai Chi Movements
         </h1>
         <p class="text-xl text-secondary max-w-3xl mx-auto">
-          Ontdek klassieke Tai Chi bewegingen en voel de wijsheid en kracht in elke beweging
+          Explore classic Tai Chi movements and discover the wisdom and power in every gesture
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Beweging categorieën -->
+  <!-- Movement Categories -->
   <section class="py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16 scroll-animate">
         <span class="inline-block px-3 py-1 text-sm font-medium text-cyan bg-cyan/10 rounded-full mb-4">
-          Bewegingssysteem
+          Movement System
         </span>
         <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
-          Bewegingscategorieën
+          Movement Categories
         </h2>
         <div class="w-32 h-1 bg-accent/50 mx-auto mb-6"></div>
         <p class="text-lg text-secondary max-w-2xl mx-auto">
-          Van basis naar meesterschap, stap voor stap
+          Progress from basics to mastery, step by step
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Basis bewegingen -->
+        <!-- Basic Movements -->
         <div class="scroll-animate group">
           <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-accent/50 h-full">
             <div class="w-20 h-20 bg-gradient-to-br from-accent/20 to-accent/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
               <span class="text-4xl">🌱</span>
             </div>
             <h3 class="text-3xl font-serif font-bold text-ink mb-4">
-              Basis bewegingen
+              Basic Movements
             </h3>
             <p class="text-secondary leading-relaxed mb-6">
-              Essentiële fundamentele technieken voor Tai Chi beginners, inclusief staande houdingen, basis voetenwerk, handposities en technieken. Bouw een solide basis om de kunst te beheersen.
+              Essential fundamental techniques for Tai Chi beginners, including standing postures, basic footwork, hand positions, and techniques. Build a solid foundation to master the art.
             </p>
             <div class="space-y-3">
               <div class="flex items-center space-x-3">
                 <div class="w-2 h-2 rounded-full bg-accent"></div>
-                <span class="text-sm text-ink">Wu Ji Houding</span>
+                <span class="text-sm text-ink">Wu Ji Stance</span>
               </div>
               <div class="flex items-center space-x-3">
                 <div class="w-2 h-2 rounded-full bg-accent"></div>
-                <span class="text-sm text-ink">Openingsvorm</span>
+                <span class="text-sm text-ink">Opening Form</span>
               </div>
               <div class="flex items-center space-x-3">
                 <div class="w-2 h-2 rounded-full bg-accent"></div>
-                <span class="text-sm text-ink">Sluitingsvorm</span>
+                <span class="text-sm text-ink">Closing Form</span>
               </div>
               <div class="flex items-center space-x-3">
                 <div class="w-2 h-2 rounded-full bg-accent"></div>
-                <span class="text-sm text-ink">Basis voetenwerk</span>
+                <span class="text-sm text-ink">Basic Footwork</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Klassieke bewegingen -->
+        <!-- Classic Movements -->
         <div class="scroll-animate group" style="animation-delay: 0.1s">
           <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-cyan/50 h-full">
             <div class="w-20 h-20 bg-gradient-to-br from-cyan/20 to-cyan/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
               <span class="text-4xl">🌿</span>
             </div>
             <h3 class="text-3xl font-serif font-bold text-ink mb-4">
-              Klassieke bewegingen
+              Classic Movements
             </h3>
             <p class="text-secondary leading-relaxed mb-6">
-              Klassieke bewegingen uit de 24-vorm en 42-vorm Tai Chi, integrerende kern combat principes en gezondheidsvoordelen. Dit zijn de meest representatieve vormen van de kunst.
+              Classic movements from the 24-form and 42-form Tai Chi, integrating core combat principles and health benefits. These are the most representative forms of the art.
             </p>
             <div class="space-y-3">
               <div class="flex items-center space-x-3">
                 <div class="w-2 h-2 rounded-full bg-cyan"></div>
-                <span class="text-sm text-ink">De manen van het wilde paard scheiden</span>
+                <span class="text-sm text-ink">Parting the Wild Horse's Mane</span>
               </div>
               <div class="flex items-center space-x-3">
                 <div class="w-2 h-2 rounded-full bg-cyan"></div>
-                <span class="text-sm text-ink">Witte kraanvogel spreidt vleugels</span>
+                <span class="text-sm text-ink">White Crane Spreads Wings</span>
               </div>
               <div class="flex items-center space-x-3">
                 <div class="w-2 h-2 rounded-full bg-cyan"></div>
-                <span class="text-sm text-ink">Knie borstelen en draaiende stap</span>
+                <span class="text-sm text-ink">Brush Knee and Twist Step</span>
               </div>
               <div class="flex items-center space-x-3">
                 <div class="w-2 h-2 rounded-full bg-cyan"></div>
-                <span class="text-sm text-ink">Pipa spelen</span>
+                <span class="text-sm text-ink">Playing the Pipa</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Geavanceerde bewegingen -->
+        <!-- Advanced Movements -->
         <div class="scroll-animate group" style="animation-delay: 0.2s">
           <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-secondary/50 h-full">
             <div class="w-20 h-20 bg-gradient-to-br from-secondary/20 to-secondary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
               <span class="text-4xl">🎋</span>
             </div>
             <h3 class="text-3xl font-serif font-bold text-ink mb-4">
-              Geavanceerde bewegingen
+              Advanced Movements
             </h3>
             <p class="text-secondary leading-relaxed mb-6">
-              Traditionele 108-vorm en gespecialiseerde bewegingen uit verschillende scholen, vereist diepe basis en interne cultivering, belichamend de diepe essentie van Tai Chi.
+              Traditional 108-form and specialized movements from various schools, requiring profound foundation and internal cultivation, embodying the deep essence of Tai Chi.
             </p>
             <div class="space-y-3">
               <div class="flex items-center space-x-3">
                 <div class="w-2 h-2 rounded-full bg-secondary"></div>
-                <span class="text-sm text-ink">Wolkende handen</span>
+                <span class="text-sm text-ink">Cloud Hands</span>
               </div>
               <div class="flex items-center space-x-3">
                 <div class="w-2 h-2 rounded-full bg-secondary"></div>
-                <span class="text-sm text-ink">Gekruiste handen</span>
+                <span class="text-sm text-ink">Cross Hands</span>
               </div>
               <div class="flex items-center space-x-3">
                 <div class="w-2 h-2 rounded-full bg-secondary"></div>
-                <span class="text-sm text-ink">Pareer en stoot</span>
+                <span class="text-sm text-ink">Parry and Punch</span>
               </div>
               <div class="flex items-center space-x-3">
                 <div class="w-2 h-2 rounded-full bg-secondary"></div>
-                <span class="text-sm text-ink">Schijnbare sluiting</span>
+                <span class="text-sm text-ink">Apparent Close-Up</span>
               </div>
             </div>
           </div>
@@ -152,30 +152,30 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
     </div>
   </section>
 
-  <!-- Klassieke bewegingen gedetailleerd -->
+  <!-- Classic Movements Detailed -->
   <section class="py-24 bg-mist/20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16 scroll-animate">
         <span class="inline-block px-3 py-1 text-sm font-medium text-accent bg-accent/10 rounded-full mb-4">
-          Diepgaande analyse
+          In-Depth Analysis
         </span>
         <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
-          Klassieke bewegingen uitgelegd
+          Classic Movements Explained
         </h2>
         <div class="w-32 h-1 bg-cyan/50 mx-auto mb-6"></div>
         <p class="text-lg text-secondary max-w-2xl mx-auto">
-          Elke beweging heeft een diepe betekenis
+          Every movement holds profound meaning
         </p>
       </div>
 
-      <!-- Beweging 1: De manen van het wilde paard scheiden -->
+      <!-- Movement 1: Parting the Wild Horse's Mane -->
       <div class="scroll-animate mb-16">
         <div class="bg-paper rounded-2xl shadow-xl overflow-hidden border border-border/30">
           <div class="grid grid-cols-1 lg:grid-cols-2">
             <div class="aspect-[4/3] overflow-hidden">
               <Image
                 src={poseImage}
-                alt="De manen van het wilde paard scheiden"
+                alt="Parting the Wild Horse's Mane"
                 class="w-full h-full object-cover"
                 format="jpg"
               />
@@ -183,43 +183,43 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
             <div class="p-8 md:p-12 flex flex-col justify-center">
               <div class="mb-6">
                 <span class="inline-block px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full mb-4">
-                  Beweging 1
+                  Movement 1
                 </span>
                 <h3 class="text-4xl font-serif font-bold text-ink mb-3">
-                  De manen van het wilde paard scheiden
+                  Parting the Wild Horse's Mane
                 </h3>
                 <p class="text-secondary">Ye Ma Fen Zong</p>
               </div>
               <p class="text-secondary leading-relaxed mb-6">
-                Het lichaam draait, armen scheiden als de manen van een wild paard, één hand omhoog werend terwijl de andere omlaag drukt. Deze beweging belichaamt het gebruik van "Peng" energie, een klassieke actie in de 24-vorm Tai Chi.
+                The body turns, arms separate like a wild horse's mane, one hand wards upward while the other presses down. This movement embodies the use of "Peng" energy, a classic action in the 24-form Tai Chi.
               </p>
               <div class="grid grid-cols-2 gap-4">
                 <div class="flex items-start space-x-2">
                   <div class="w-1.5 h-1.5 rounded-full bg-accent mt-2"></div>
                   <div>
-                    <p class="text-sm font-medium text-ink">Moeilijkheidsgraad</p>
+                    <p class="text-sm font-medium text-ink">Difficulty</p>
                     <p class="text-xs text-secondary">⭐⭐</p>
                   </div>
                 </div>
                 <div class="flex items-start space-x-2">
                   <div class="w-1.5 h-1.5 rounded-full bg-cyan mt-2"></div>
                   <div>
-                    <p class="text-sm font-medium text-ink">Kernenergie</p>
-                    <p class="text-xs text-secondary">Afweren</p>
+                    <p class="text-sm font-medium text-ink">Core Energy</p>
+                    <p class="text-xs text-secondary">Ward Off</p>
                   </div>
                 </div>
                 <div class="flex items-start space-x-2">
                   <div class="w-1.5 h-1.5 rounded-full bg-secondary mt-2"></div>
                   <div>
-                    <p class="text-sm font-medium text-ink">Kernpunt</p>
-                    <p class="text-xs text-secondary">Schouders laten zakken</p>
+                    <p class="text-sm font-medium text-ink">Key Point</p>
+                    <p class="text-xs text-secondary">Sink Shoulders</p>
                   </div>
                 </div>
                 <div class="flex items-start space-x-2">
                   <div class="w-1.5 h-1.5 rounded-full bg-accent mt-2"></div>
                   <div>
-                    <p class="text-sm font-medium text-ink">Toepassing</p>
-                    <p class="text-xs text-secondary">Aanval afweren</p>
+                    <p class="text-sm font-medium text-ink">Application</p>
+                    <p class="text-xs text-secondary">Deflect Attack</p>
                   </div>
                 </div>
               </div>
@@ -228,50 +228,50 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
         </div>
       </div>
 
-      <!-- Beweging 2: Witte kraanvogel spreidt vleugels -->
+      <!-- Movement 2: White Crane Spreads Wings -->
       <div class="scroll-animate mb-16">
         <div class="bg-paper rounded-2xl shadow-xl overflow-hidden border border-border/30">
           <div class="grid grid-cols-1 lg:grid-cols-2">
             <div class="p-8 md:p-12 flex flex-col justify-center order-2 lg:order-1">
               <div class="mb-6">
                 <span class="inline-block px-3 py-1 text-xs font-medium text-cyan bg-cyan/10 rounded-full mb-4">
-                  Beweging 2
+                  Movement 2
                 </span>
                 <h3 class="text-4xl font-serif font-bold text-ink mb-3">
-                  Witte kraanvogel spreidt vleugels
+                  White Crane Spreads Wings
                 </h3>
                 <p class="text-secondary">Bai He Liang Chi</p>
               </div>
               <p class="text-secondary leading-relaxed mb-6">
-                Armen scheiden boven en onder zoals een witte kraanvogel die vleugels spreidt om te vliegen. Eén hand ondersteunt omhoog terwijl de andere omlaag drukt. Lichaam gecentreerd, duidelijk onderscheid tussen substantieel en insubstantieel. Prachtig en gracieus, een van de meest decoratieve bewegingen in Tai Chi.
+                Arms separate up and down like a white crane spreading wings to fly. One hand supports upward while the other presses down. Body centered, clear distinction between substantial and insubstantial. Beautiful and graceful, one of the most ornamental movements in Tai Chi.
               </p>
               <div class="grid grid-cols-2 gap-4">
                 <div class="flex items-start space-x-2">
                   <div class="w-1.5 h-1.5 rounded-full bg-cyan mt-2"></div>
                   <div>
-                    <p class="text-sm font-medium text-ink">Moeilijkheidsgraad</p>
+                    <p class="text-sm font-medium text-ink">Difficulty</p>
                     <p class="text-xs text-secondary">⭐⭐⭐</p>
                   </div>
                 </div>
                 <div class="flex items-start space-x-2">
                   <div class="w-1.5 h-1.5 rounded-full bg-accent mt-2"></div>
                   <div>
-                    <p class="text-sm font-medium text-ink">Kernenergie</p>
-                    <p class="text-xs text-secondary">Plukken</p>
+                    <p class="text-sm font-medium text-ink">Core Energy</p>
+                    <p class="text-xs text-secondary">Pluck</p>
                   </div>
                 </div>
                 <div class="flex items-start space-x-2">
                   <div class="w-1.5 h-1.5 rounded-full bg-secondary mt-2"></div>
                   <div>
-                    <p class="text-sm font-medium text-ink">Kernpunt</p>
-                    <p class="text-xs text-secondary">Duidelijk substantieel</p>
+                    <p class="text-sm font-medium text-ink">Key Point</p>
+                    <p class="text-xs text-secondary">Clear Substantial</p>
                   </div>
                 </div>
                 <div class="flex items-start space-x-2">
                   <div class="w-1.5 h-1.5 rounded-full bg-cyan mt-2"></div>
                   <div>
-                    <p class="text-sm font-medium text-ink">Toepassing</p>
-                    <p class="text-xs text-secondary">Afweren & heffen</p>
+                    <p class="text-sm font-medium text-ink">Application</p>
+                    <p class="text-xs text-secondary">Deflect & Lift</p>
                   </div>
                 </div>
               </div>
@@ -279,7 +279,7 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
             <div class="aspect-[4/3] overflow-hidden order-1 lg:order-2">
               <Image
                 src={silhouetteImage}
-                alt="Witte kraanvogel spreidt vleugels"
+                alt="White Crane Spreads Wings"
                 class="w-full h-full object-cover"
                 format="jpg"
               />
@@ -288,14 +288,14 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
         </div>
       </div>
 
-      <!-- Beweging 3: Knie borstelen en draaiende stap -->
+      <!-- Movement 3: Brush Knee and Twist Step -->
       <div class="scroll-animate mb-16">
         <div class="bg-paper rounded-2xl shadow-xl overflow-hidden border border-border/30">
           <div class="grid grid-cols-1 lg:grid-cols-2">
             <div class="aspect-[4/3] overflow-hidden">
               <Image
                 src={standingImage}
-                alt="Knie borstelen en draaiende stap"
+                alt="Brush Knee and Twist Step"
                 class="w-full h-full object-cover"
                 format="jpg"
               />
@@ -303,43 +303,43 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
             <div class="p-8 md:p-12 flex flex-col justify-center">
               <div class="mb-6">
                 <span class="inline-block px-3 py-1 text-xs font-medium text-secondary bg-secondary/10 rounded-full mb-4">
-                  Beweging 3
+                  Movement 3
                 </span>
                 <h3 class="text-4xl font-serif font-bold text-ink mb-3">
-                  Knie borstelen en draaiende stap
+                  Brush Knee and Twist Step
                 </h3>
                 <p class="text-secondary">Lou Xi Ao Bu</p>
               </div>
               <p class="text-secondary leading-relaxed mb-6">
-                Eén hand borstelt de knie terwijl de andere naar voren duwt, tegelijkertijd optredend in boogstand. Deze beweging belichaamt de kern Tai Chi concept van "hardheid overwinnen met zachtheid", de aanval van de tegenstander afwerend en soepel tegenaanvalend.
+                One hand brushes the knee while the other pushes forward simultaneously, advancing in bow stance. This movement embodies the core Tai Chi concept of "overcoming hardness with softness," deflecting the opponent's attack and counter-attacking smoothly.
               </p>
               <div class="grid grid-cols-2 gap-4">
                 <div class="flex items-start space-x-2">
                   <div class="w-1.5 h-1.5 rounded-full bg-secondary mt-2"></div>
                   <div>
-                    <p class="text-sm font-medium text-ink">Moeilijkheidsgraad</p>
+                    <p class="text-sm font-medium text-ink">Difficulty</p>
                     <p class="text-xs text-secondary">⭐⭐⭐</p>
                   </div>
                 </div>
                 <div class="flex items-start space-x-2">
                   <div class="w-1.5 h-1.5 rounded-full bg-accent mt-2"></div>
                   <div>
-                    <p class="text-sm font-medium text-ink">Kernenergie</p>
-                    <p class="text-xs text-secondary">Terugrollen</p>
+                    <p class="text-sm font-medium text-ink">Core Energy</p>
+                    <p class="text-xs text-secondary">Roll Back</p>
                   </div>
                 </div>
                 <div class="flex items-start space-x-2">
                   <div class="w-1.5 h-1.5 rounded-full bg-cyan mt-2"></div>
                   <div>
-                    <p class="text-sm font-medium text-ink">Kernpunt</p>
-                    <p class="text-xs text-secondary">Boven/onder coördineren</p>
+                    <p class="text-sm font-medium text-ink">Key Point</p>
+                    <p class="text-xs text-secondary">Coordinate Up/Down</p>
                   </div>
                 </div>
                 <div class="flex items-start space-x-2">
                   <div class="w-1.5 h-1.5 rounded-full bg-secondary mt-2"></div>
                   <div>
-                    <p class="text-sm font-medium text-ink">Toepassing</p>
-                    <p class="text-xs text-secondary">Borstelen & slaan</p>
+                    <p class="text-sm font-medium text-ink">Application</p>
+                    <p class="text-xs text-secondary">Brush & Strike</p>
                   </div>
                 </div>
               </div>
@@ -348,50 +348,50 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
         </div>
       </div>
 
-      <!-- Beweging 4: Pipa spelen -->
+      <!-- Movement 4: Playing the Pipa -->
       <div class="scroll-animate">
         <div class="bg-paper rounded-2xl shadow-xl overflow-hidden border border-border/30">
           <div class="grid grid-cols-1 lg:grid-cols-2">
             <div class="p-8 md:p-12 flex flex-col justify-center order-2 lg:order-1">
               <div class="mb-6">
                 <span class="inline-block px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full mb-4">
-                  Beweging 4
+                  Movement 4
                 </span>
                 <h3 class="text-4xl font-serif font-bold text-ink mb-3">
-                  Pipa spelen
+                  Playing the Pipa
                 </h3>
                 <p class="text-secondary">Shou Hui Pi Pa</p>
               </div>
               <p class="text-secondary leading-relaxed mb-6">
-                Handen gepositioneerd alsof een pipa (luit) vasthoudend, één arm werend naar voren terwijl de andere de borst beschermt. Vorm ontleend aan het spelen van dit traditionele instrument, gracieus in houding en rijk aan betekenis, belichamend het Tai Chi principe van het centrum bewaken.
+                Hands positioned as if holding a pipa (lute), one arm wards forward while the other protects the chest. Taking form from playing this traditional instrument, graceful in posture and rich in meaning, embodying the Tai Chi principle of guarding the center.
               </p>
               <div class="grid grid-cols-2 gap-4">
                 <div class="flex items-start space-x-2">
                   <div class="w-1.5 h-1.5 rounded-full bg-accent mt-2"></div>
                   <div>
-                    <p class="text-sm font-medium text-ink">Moeilijkheidsgraad</p>
+                    <p class="text-sm font-medium text-ink">Difficulty</p>
                     <p class="text-xs text-secondary">⭐⭐⭐⭐</p>
                   </div>
                 </div>
                 <div class="flex items-start space-x-2">
                   <div class="w-1.5 h-1.5 rounded-full bg-cyan mt-2"></div>
                   <div>
-                    <p class="text-sm font-medium text-ink">Kernenergie</p>
-                    <p class="text-xs text-secondary">Drukken</p>
+                    <p class="text-sm font-medium text-ink">Core Energy</p>
+                    <p class="text-xs text-secondary">Press</p>
                   </div>
                 </div>
                 <div class="flex items-start space-x-2">
                   <div class="w-1.5 h-1.5 rounded-full bg-secondary mt-2"></div>
                   <div>
-                    <p class="text-sm font-medium text-ink">Kernpunt</p>
-                    <p class="text-xs text-secondary">Schouders laten zakken</p>
+                    <p class="text-sm font-medium text-ink">Key Point</p>
+                    <p class="text-xs text-secondary">Sink Shoulders</p>
                   </div>
                 </div>
                 <div class="flex items-start space-x-2">
                   <div class="w-1.5 h-1.5 rounded-full bg-accent mt-2"></div>
                   <div>
-                    <p class="text-sm font-medium text-ink">Toepassing</p>
-                    <p class="text-xs text-secondary">Beschermen & tegenaanvallen</p>
+                    <p class="text-sm font-medium text-ink">Application</p>
+                    <p class="text-xs text-secondary">Guard & Counter</p>
                   </div>
                 </div>
               </div>
@@ -399,7 +399,7 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
             <div class="aspect-[4/3] overflow-hidden order-1 lg:order-2">
               <Image
                 src={kungFuImage}
-                alt="Pipa spelen"
+                alt="Playing the Pipa"
                 class="w-full h-full object-cover"
                 format="jpg"
               />
@@ -410,29 +410,29 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
     </div>
   </section>
 
-  <!-- Meer klassieke bewegingen -->
+  <!-- More Classic Movements -->
   <section class="py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16 scroll-animate">
         <span class="inline-block px-3 py-1 text-sm font-medium text-cyan bg-cyan/10 rounded-full mb-4">
-          Bewegingsoverzicht
+          Movement Overview
         </span>
         <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
-          Meer klassieke bewegingen
+          More Classic Movements
         </h2>
         <div class="w-32 h-1 bg-accent/50 mx-auto mb-6"></div>
         <p class="text-lg text-secondary max-w-2xl mx-auto">
-          Tai Chi bewegingen zijn rijk en gevarieerd, elk met unieke kenmerken
+          Tai Chi movements are rich and varied, each with unique characteristics
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Bewegingskaart -->
+        <!-- Movement Card -->
         <div class="scroll-animate">
           <div class="bg-paper rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 border border-border/30 hover:border-accent/50">
             <div class="flex items-center justify-between mb-4">
               <div>
-                <h3 class="text-xl font-serif font-bold text-ink">Achteruit stappen en aap afweren</h3>
+                <h3 class="text-xl font-serif font-bold text-ink">Step Back and Repulse Monkey</h3>
                 <p class="text-sm text-secondary">Dao Juan Gong</p>
               </div>
               <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
@@ -440,11 +440,11 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
               </div>
             </div>
             <p class="text-sm text-secondary mb-4">
-              Stap terug terwijl lichaam draait, armen zwaaien afwisselend zoals rollend doek. Belichamend Tai Chi's concept van vooruitgang door terugtrekking.
+              Step back while turning body, arms swing alternately like rolling cloth. Embodying Tai Chi's concept of advancing through retreat.
             </p>
             <div class="flex items-center space-x-2">
-              <span class="px-2 py-1 text-xs bg-accent/10 text-accent rounded">Moeilijkheid ⭐⭐⭐</span>
-              <span class="px-2 py-1 text-xs bg-cyan/10 text-cyan rounded">Terugrollen</span>
+              <span class="px-2 py-1 text-xs bg-accent/10 text-accent rounded">Difficulty ⭐⭐⭐</span>
+              <span class="px-2 py-1 text-xs bg-cyan/10 text-cyan rounded">Roll Back</span>
             </div>
           </div>
         </div>
@@ -453,7 +453,7 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
           <div class="bg-paper rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 border border-border/30 hover:border-cyan/50">
             <div class="flex items-center justify-between mb-4">
               <div>
-                <h3 class="text-xl font-serif font-bold text-ink">De staart van de sprinkhaan grijpen</h3>
+                <h3 class="text-xl font-serif font-bold text-ink">Grasp the Sparrow's Tail</h3>
                 <p class="text-sm text-secondary">Zuo Lan Que Wei</p>
               </div>
               <div class="w-12 h-12 bg-cyan/10 rounded-full flex items-center justify-center">
@@ -461,11 +461,11 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
               </div>
             </div>
             <p class="text-sm text-secondary mb-4">
-              Afweren, terugrollen, drukken en duwen gecombineerd in één, een van de belangrijkste bewegingen in Tai Chi.
+              Ward, Roll Back, Press, and Push combined into one, one of the most important movements in Tai Chi.
             </p>
             <div class="flex items-center space-x-2">
-              <span class="px-2 py-1 text-xs bg-cyan/10 text-cyan rounded">Moeilijkheid ⭐⭐⭐⭐</span>
-              <span class="px-2 py-1 text-xs bg-accent/10 text-accent rounded">Vier methoden</span>
+              <span class="px-2 py-1 text-xs bg-cyan/10 text-cyan rounded">Difficulty ⭐⭐⭐⭐</span>
+              <span class="px-2 py-1 text-xs bg-accent/10 text-accent rounded">Four Methods</span>
             </div>
           </div>
         </div>
@@ -474,7 +474,7 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
           <div class="bg-paper rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 border border-border/30 hover:border-secondary/50">
             <div class="flex items-center justify-between mb-4">
               <div>
-                <h3 class="text-xl font-serif font-bold text-ink">Enkele zweep</h3>
+                <h3 class="text-xl font-serif font-bold text-ink">Single Whip</h3>
                 <p class="text-sm text-secondary">Dan Bian</p>
               </div>
               <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center">
@@ -482,11 +482,11 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
               </div>
             </div>
             <p class="text-sm text-secondary mb-4">
-              Eén hand haakt, één hand drukt, lichaam gecentreerd als een zweep laat knallen.
+              One hand hooks, one hand presses, body centered like cracking a whip.
             </p>
             <div class="flex items-center space-x-2">
-              <span class="px-2 py-1 text-xs bg-secondary/10 text-secondary rounded">Moeilijkheid ⭐⭐⭐</span>
-              <span class="px-2 py-1 text-xs bg-accent/10 text-accent rounded">Drukken</span>
+              <span class="px-2 py-1 text-xs bg-secondary/10 text-secondary rounded">Difficulty ⭐⭐⭐</span>
+              <span class="px-2 py-1 text-xs bg-accent/10 text-accent rounded">Press</span>
             </div>
           </div>
         </div>
@@ -495,7 +495,7 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
           <div class="bg-paper rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 border border-border/30 hover:border-accent/50">
             <div class="flex items-center justify-between mb-4">
               <div>
-                <h3 class="text-xl font-serif font-bold text-ink">Wolkende handen</h3>
+                <h3 class="text-xl font-serif font-bold text-ink">Cloud Hands</h3>
                 <p class="text-sm text-secondary">Yun Shou</p>
               </div>
               <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
@@ -503,11 +503,11 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
               </div>
             </div>
             <p class="text-sm text-secondary mb-4">
-              Handen bewegen als roterende wolken, continu en ononderbroken, lichaam en handen als één, circulair en natuurlijk.
+              Hands move like rotating clouds, continuous and unbroken, body and hands as one, circular and natural.
             </p>
             <div class="flex items-center space-x-2">
-              <span class="px-2 py-1 text-xs bg-accent/10 text-accent rounded">Moeilijkheid ⭐⭐⭐⭐</span>
-              <span class="px-2 py-1 text-xs bg-cyan/10 text-cyan rounded">Circulair</span>
+              <span class="px-2 py-1 text-xs bg-accent/10 text-accent rounded">Difficulty ⭐⭐⭐⭐</span>
+              <span class="px-2 py-1 text-xs bg-cyan/10 text-cyan rounded">Circular</span>
             </div>
           </div>
         </div>
@@ -516,7 +516,7 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
           <div class="bg-paper rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 border border-border/30 hover:border-cyan/50">
             <div class="flex items-center justify-between mb-4">
               <div>
-                <h3 class="text-xl font-serif font-bold text-ink">Hogere tik op het paard</h3>
+                <h3 class="text-xl font-serif font-bold text-ink">High Pat on Horse</h3>
                 <p class="text-sm text-secondary">Gao Tan Ma</p>
               </div>
               <div class="w-12 h-12 bg-cyan/10 rounded-full flex items-center justify-center">
@@ -524,11 +524,11 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
               </div>
             </div>
             <p class="text-sm text-secondary mb-4">
-              Eén hand reikt hoog, één hand drukt ter bescherming, als een paard aait dat vooruitgaat, duidelijk onderscheid tussen substantieel en insubstantieel.
+              One hand reaches high, one hand presses to protect, like patting a horse forward, clear distinction between substantial and insubstantial.
             </p>
             <div class="flex items-center space-x-2">
-              <span class="px-2 py-1 text-xs bg-cyan/10 text-cyan rounded">Moeilijkheid ⭐⭐⭐</span>
-              <span class="px-2 py-1 text-xs bg-secondary/10 text-secondary rounded">Onderzoeken</span>
+              <span class="px-2 py-1 text-xs bg-cyan/10 text-cyan rounded">Difficulty ⭐⭐⭐</span>
+              <span class="px-2 py-1 text-xs bg-secondary/10 text-secondary rounded">Probe</span>
             </div>
           </div>
         </div>
@@ -537,7 +537,7 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
           <div class="bg-paper rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 border border-border/30 hover:border-secondary/50">
             <div class="flex items-center justify-between mb-4">
               <div>
-                <h3 class="text-xl font-serif font-bold text-ink">Oren slaan met vuisten</h3>
+                <h3 class="text-xl font-serif font-bold text-ink">Strike Ears with Fists</h3>
                 <p class="text-sm text-secondary">Shuang Feng Guan Er</p>
               </div>
               <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center">
@@ -545,11 +545,11 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
               </div>
             </div>
             <p class="text-sm text-secondary mb-4">
-              Beide vuisten als tweelingpieken die de oren van de tegenstander slaan, hardheid en zachtheid combinerend.
+              Both fists like twin peaks striking opponent's ears, combining hardness and softness.
             </p>
             <div class="flex items-center space-x-2">
-              <span class="px-2 py-1 text-xs bg-secondary/10 text-secondary rounded">Moeilijkheid ⭐⭐⭐⭐</span>
-              <span class="px-2 py-1 text-xs bg-accent/10 text-accent rounded">Slaan</span>
+              <span class="px-2 py-1 text-xs bg-secondary/10 text-secondary rounded">Difficulty ⭐⭐⭐⭐</span>
+              <span class="px-2 py-1 text-xs bg-accent/10 text-accent rounded">Strike</span>
             </div>
           </div>
         </div>
@@ -558,7 +558,7 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
           <div class="bg-paper rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 border border-border/30 hover:border-accent/50">
             <div class="flex items-center justify-between mb-4">
               <div>
-                <h3 class="text-xl font-serif font-bold text-ink">Naald op zeebodem</h3>
+                <h3 class="text-xl font-serif font-bold text-ink">Needle at Sea Bottom</h3>
                 <p class="text-sm text-secondary">Hai Di Zhen</p>
               </div>
               <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
@@ -566,11 +566,11 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
               </div>
             </div>
             <p class="text-sm text-secondary mb-4">
-              Eén hand stoot neer als een naald naar de zeebodem, lichaam zinkt, hardheid overwinnend met zachtheid.
+              One hand thrusts down like a needle to the sea bottom, body sinks, overcoming hardness with softness.
             </p>
             <div class="flex items-center space-x-2">
-              <span class="px-2 py-1 text-xs bg-accent/10 text-accent rounded">Moeilijkheid ⭐⭐⭐</span>
-              <span class="px-2 py-1 text-xs bg-cyan/10 text-cyan rounded">Plukken</span>
+              <span class="px-2 py-1 text-xs bg-accent/10 text-accent rounded">Difficulty ⭐⭐⭐</span>
+              <span class="px-2 py-1 text-xs bg-cyan/10 text-cyan rounded">Pluck</span>
             </div>
           </div>
         </div>
@@ -579,7 +579,7 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
           <div class="bg-paper rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 border border-border/30 hover:border-cyan/50">
             <div class="flex items-center justify-between mb-4">
               <div>
-                <h3 class="text-xl font-serif font-bold text-ink">De arm laten flitsen</h3>
+                <h3 class="text-xl font-serif font-bold text-ink">Flash the Arm</h3>
                 <p class="text-sm text-secondary">Shan Tong Bi</p>
               </div>
               <div class="w-12 h-12 bg-cyan/10 rounded-full flex items-center justify-center">
@@ -587,11 +587,11 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
               </div>
             </div>
             <p class="text-sm text-secondary mb-4">
-              Ontwijk en strek armen uit, handen en voeten coördineren, snelle overgangen, Tai Chi's behendigheid belichamend.
+              Dodge and extend arms, hands and feet coordinate, rapid transitions, embodying Tai Chi's agility.
             </p>
             <div class="flex items-center space-x-2">
-              <span class="px-2 py-1 text-xs bg-cyan/10 text-cyan rounded">Moeilijkheid ⭐⭐⭐⭐</span>
-              <span class="px-2 py-1 text-xs bg-secondary/10 text-secondary rounded">Overgang</span>
+              <span class="px-2 py-1 text-xs bg-cyan/10 text-cyan rounded">Difficulty ⭐⭐⭐⭐</span>
+              <span class="px-2 py-1 text-xs bg-secondary/10 text-secondary rounded">Transition</span>
             </div>
           </div>
         </div>
@@ -600,7 +600,7 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
           <div class="bg-paper rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 border border-border/30 hover:border-secondary/50">
             <div class="flex items-center justify-between mb-4">
               <div>
-                <h3 class="text-xl font-serif font-bold text-ink">Pareer, blokkeer en stoot</h3>
+                <h3 class="text-xl font-serif font-bold text-ink">Parry, Block, and Punch</h3>
                 <p class="text-sm text-secondary">Ban Lan Chui</p>
               </div>
               <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center">
@@ -608,11 +608,11 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
               </div>
             </div>
             <p class="text-sm text-secondary mb-4">
-              Pareer, blokkeer en stoot in opeenvolging, aanval en verdediging combinerend, hardheid en zachtheid in balans brengend.
+              Parry, block, and punch in sequence, combining offense and defense, balancing hardness and softness.
             </p>
             <div class="flex items-center space-x-2">
-              <span class="px-2 py-1 text-xs bg-secondary/10 text-secondary rounded">Moeilijkheid ⭐⭐⭐⭐</span>
-              <span class="px-2 py-1 text-xs bg-accent/10 text-accent rounded">Aanval & verdediging</span>
+              <span class="px-2 py-1 text-xs bg-secondary/10 text-secondary rounded">Difficulty ⭐⭐⭐⭐</span>
+              <span class="px-2 py-1 text-xs bg-accent/10 text-accent rounded">Attack & Defend</span>
             </div>
           </div>
         </div>
@@ -620,26 +620,26 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
     </div>
   </section>
 
-  <!-- Oefeningspunten -->
+  <!-- Practice Points -->
   <section class="py-24 bg-mist/20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16 scroll-animate">
         <span class="inline-block px-3 py-1 text-sm font-medium text-accent bg-accent/10 rounded-full mb-4">
-          Oefengids
+          Practice Guide
         </span>
         <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
-          Oefeningskernpunten
+          Practice Key Points
         </h2>
         <div class="w-32 h-1 bg-cyan/50 mx-auto mb-6"></div>
         <p class="text-lg text-secondary max-w-2xl mx-auto">
-          Beheers de essentie, vermenigvuldig uw resultaten
+          Master the essentials, multiply your results
         </p>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <!-- Links: Kernpunten -->
+        <!-- Left: Core Points -->
         <div class="space-y-6">
-          <!-- Punt 1 -->
+          <!-- Point 1 -->
           <div class="scroll-animate">
             <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-accent/50 transition-all duration-300">
               <div class="flex items-start space-x-6">
@@ -648,17 +648,17 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
                 </div>
                 <div>
                   <h3 class="text-2xl font-serif font-bold text-ink mb-3">
-                    Lichaam gecentreerd, duidelijk substantieel en insubstantieel
+                    Body Centered, Clear Substantial and Insubstantial
                   </h3>
                   <p class="text-secondary leading-relaxed">
-                    Houd het lichaam gecentreerd en natuurlijk, niet leunend. Onderscheid duidelijk tussen substantieel en insubstantieel in beide voeten, met duidelijke gewichtsoverdrachten. Elke beweging moet identificeren wat substantieel is en wat insubstantieel, duidelijk onderscheid bereikend en natuurlijke overgang.
+                    Keep the body centered and natural, not leaning. Distinguish clearly between substantial and insubstantial in both feet, with clear weight transitions. Each movement must identify what is substantial and what is insubstantial, achieving clear distinction and natural transition.
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Punt 2 -->
+          <!-- Point 2 -->
           <div class="scroll-animate" style="animation-delay: 0.1s">
             <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-cyan/50 transition-all duration-300">
               <div class="flex items-start space-x-6">
@@ -667,17 +667,17 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
                 </div>
                 <div>
                   <h3 class="text-2xl font-serif font-bold text-ink mb-3">
-                    Geest leidt Qi, Qi beweegt lichaam
+                    Mind Leads Qi, Qi Moves Body
                   </h3>
                   <p class="text-secondary leading-relaxed">
-                    Geest als gids, ademhaling coördineert met beweging. Intentie leidt energie, energie leidt kracht. Bewegingen moeten interne verbinding en continuïteit hebben, niet overdreven kracht gebruikend, zachtheid hardheid bevattend.
+                    Mind as the guide, breathing coordinates with movement. Intent leads energy, energy leads power. Movements must have internal connection and continuity, not using excessive force, softness containing hardness.
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Punt 3 -->
+          <!-- Point 3 -->
           <div class="scroll-animate" style="animation-delay: 0.2s">
             <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-secondary/50 transition-all duration-300">
               <div class="flex items-start space-x-6">
@@ -686,10 +686,10 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
                 </div>
                 <div>
                   <h3 class="text-2xl font-serif font-bold text-ink mb-3">
-                    Continu en circulair, boven en onder coördineren
+                    Continuous and Circular, Upper and Lower Coordinate
                   </h3>
                   <p class="text-secondary leading-relaxed">
-                    Bewegingen moeten continu en circulair zijn, als drijvende wolken en stromend water. Bovenlichaam en onderlichaam moeten coördineren, handen en voeten werken samen, heel lichaam als één eenheid. Elke beweging moet compleet zijn, niet gebroken of intermitterend.
+                    Movements should be continuous and circular, like floating clouds and flowing water. Upper body and lower body must coordinate, hands and feet work together, whole body as one unit. Each movement must be complete, not broken or intermittent.
                   </p>
                 </div>
               </div>
@@ -697,66 +697,66 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
           </div>
         </div>
 
-        <!-- Rechts: Veelvoorkomende vragen -->
+        <!-- Right: Common Questions -->
         <div class="scroll-animate" style="animation-delay: 0.2s">
           <div class="bg-paper rounded-2xl shadow-xl p-8 border border-border/30 sticky top-24">
             <div class="mb-8">
               <h3 class="text-3xl font-serif font-bold text-ink mb-4">
-                Veelvoorkomende vragen
+                Common Questions
               </h3>
               <div class="w-16 h-1 bg-accent/50"></div>
             </div>
 
             <div class="space-y-6">
-              <!-- Vraag 1 -->
+              <!-- Question 1 -->
               <div class="border-b border-border/30 pb-6">
                 <div class="flex items-start space-x-3 mb-3">
                   <span class="text-accent text-xl">❓</span>
                   <h4 class="text-lg font-serif font-bold text-ink">
-                    Wat als bewegingen stijf aanvoelen?
+                    What if movements feel stiff?
                   </h4>
                 </div>
                 <p class="text-secondary leading-relaxed text-sm">
-                  Ontspan lichaam en geest, doe meer warming-up oefeningen. Bij het oefenen, focus op schouders laten zakken en ellebogen laten vallen, gebruik geen overdreven kracht. Begin met langzame bewegingen, spieren geleidelijk ontspannend.
+                  Relax body and mind, do more warm-up exercises. When practicing, focus on sinking shoulders and dropping elbows, don't use excessive force. Start with slow movements, gradually relaxing muscles.
                 </p>
               </div>
 
-              <!-- Vraag 2 -->
+              <!-- Question 2 -->
               <div class="border-b border-border/30 pb-6">
                 <div class="flex items-start space-x-3 mb-3">
                   <span class="text-cyan text-xl">❓</span>
                   <h4 class="text-lg font-serif font-bold text-ink">
-                    Hoe stabiliteit verbeteren?
+                    How to improve stability?
                   </h4>
                 </div>
                 <p class="text-secondary leading-relaxed text-sm">
-                  Versterk houdingoefeningen zoals Wu Ji Houding. Focus op onderscheid maken tussen substantieel en insubstantieel, langzame gewichtsoverdrachten. Versterk training van onderlichaam om stabiliteit te verbeteren.
+                  Strengthen stance practice like Wu Ji Stance. Focus on distinguishing substantial and insubstantial, slow weight transitions. Strengthen lower body training to improve stability.
                 </p>
               </div>
 
-              <!-- Vraag 3 -->
+              <!-- Question 3 -->
               <div class="border-b border-border/30 pb-6">
                 <div class="flex items-start space-x-3 mb-3">
                   <span class="text-secondary text-xl">❓</span>
                   <h4 class="text-lg font-serif font-bold text-ink">
-                    Hoe continuïteit bereiken?
+                    How to achieve continuity?
                   </h4>
                 </div>
                 <p class="text-secondary leading-relaxed text-sm">
-                  Beheers het begin, de overgang en de conclusie van elke beweging. Bij het oefenen, let op verbindingen tussen bewegingen, vermijd pauzes. Oefen regelmatig complete sets om spiergeheugen op te bouwen.
+                  Master the beginning, transition, and conclusion of each movement. When practicing, pay attention to connections between movements, avoid pauses. Practice complete sets frequently to build muscle memory.
                 </p>
               </div>
 
-              <!-- Vraag 4 -->
+              <!-- Question 4 -->
               <div>
                 <div class="flex items-start space-x-3 mb-3">
                   <span class="text-accent text-xl">❓</span>
                   <h4 class="text-lg font-serif font-bold text-ink">
-                    Hoe ademhaling coördineren?
+                    How to coordinate breathing?
                   </h4>
                 </div>
                 <p class="text-secondary leading-relaxed text-sm">
-                  Gebruik ademhaling via de buik, inademen bij opstaan, uitademen bij zakken, inademen bij openen, uitademen bij sluiten. Beginners kunnen eerst natuurlijk ademen, daarna ademhaling coördineren na vaardigheid. Houd nooit uw adem in.
+                  Use abdominal breathing, inhale when rising, exhale when sinking, inhale when opening, exhale when closing. Beginners can breathe naturally first, then coordinate breathing after becoming proficient. Never hold your breath.
                 </p>
               </div>
             </div>
@@ -766,27 +766,27 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
     </div>
   </section>
 
-  <!-- CTA Sectie -->
+  <!-- CTA Section -->
   <section class="py-24">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center scroll-animate">
       <h2 class="text-4xl font-serif font-bold text-ink mb-6">
-        Begin met het leren van Tai Chi bewegingen
+        Start Learning Tai Chi Movements
       </h2>
       <p class="text-xl text-secondary mb-12">
-        Begin met basis bewegingen en beheers geleidelijk de essentie van Tai Chi
+        Begin with basic movements and gradually master the essence of Tai Chi
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
         <a
-          href="/courses"
+          href="/en/courses"
           class="px-8 py-4 bg-accent hover:bg-primary text-paper hover:text-paper border-2 border-accent hover:border-primary rounded-lg font-medium text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
         >
-          Bekijk cursussen
+          View Courses
         </a>
         <a
-          href="/about"
+          href="/en/about"
           class="px-8 py-4 border-2 border-accent/30 text-accent hover:bg-accent/10 rounded-lg font-medium text-lg transition-all duration-300 hover:scale-105"
         >
-          Leer over Tai Chi
+          Learn About Tai Chi
         </a>
       </div>
     </div>
@@ -794,7 +794,7 @@ import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
 </BaseLayout>
 
 <script>
-  // Scroll trigger animatie
+  // Scroll trigger animation
   const observerOptions = {
     root: null,
     rootMargin: '0px',

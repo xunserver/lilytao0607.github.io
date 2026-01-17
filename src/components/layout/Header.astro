@@ -7,23 +7,47 @@ import { translations } from '../../lib/i18n';
 const currentLocale = (Astro.currentLocale || 'nl') as 'nl' | 'en' | 'zh';
 const t = translations[currentLocale];
 
+// 根据语言生成链接
+const getLocalizedHref = (path: string) => {
+  if (currentLocale === 'nl') {
+    return path;
+  }
+  return `/${currentLocale}${path}`;
+};
+
+// 网站名称翻译
+const siteNames = {
+  nl: 'Tai Chi Cultuur',
+  en: 'Tai Chi Culture',
+  zh: '太极文化',
+};
+
 const navigation = [
-  { name: t.nav.home, href: '/' },
-  { name: t.nav.about, href: '/about' },
-  { name: t.nav.movements, href: '/movements' },
-  { name: t.nav.courses, href: '/courses' },
-  { name: t.nav.blog, href: '/blog' },
+  { name: t.nav.home, href: getLocalizedHref('/') },
+  { name: t.nav.about, href: getLocalizedHref('/about') },
+  { name: t.nav.movements, href: getLocalizedHref('/movements') },
+  { name: t.nav.courses, href: getLocalizedHref('/courses') },
+  { name: t.nav.blog, href: getLocalizedHref('/blog') },
 ];
+
+// 按钮标签翻译
+const buttonLabels = {
+  nl: { menu: 'Open menu', logo: 'Tai Chi Cultuur' },
+  en: { menu: 'Open menu', logo: 'Tai Chi Culture' },
+  zh: { menu: '打开菜单', logo: '太极文化' },
+};
+
+const labels = buttonLabels[currentLocale];
 ---
 
 <header class="fixed top-0 left-0 right-0 z-40 transition-all duration-300">
   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <!-- Logo -->
-      <a href="/" class="flex items-center space-x-3 group">
+      <a href={getLocalizedHref('/')} class="flex items-center space-x-3 group">
         <Image
           src={taichiLogo}
-          alt="太极文化"
+          alt={labels.logo}
           width={40}
           height={40}
           class="h-10 w-10 object-contain group-hover:rotate-180 transition-transform duration-700"
@@ -32,7 +56,7 @@ const navigation = [
         <span
           class="text-xl font-serif font-bold text-ink group-hover:text-accent transition-colors"
         >
-          太极文化
+          {siteNames[currentLocale]}
         </span>
       </a>
 
@@ -61,7 +85,7 @@ const navigation = [
         <button
           id="mobile-menu-button"
           class="text-ink hover:text-accent transition-colors p-2"
-          aria-label="打开菜单"
+          aria-label={labels.menu}
         >
           <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />

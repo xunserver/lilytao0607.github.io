@@ -1,19 +1,19 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
-import taichiLogo from '../../assets/image/taichi-logo.png';
-import groupImage from '../../assets/image/tai-chi-group.jpg';
-import standingImage from '../../assets/image/tai-chi-standing.jpg';
-import parkImage from '../../assets/image/tai-chi-park.jpg';
-import wellnessImage from '../../assets/image/tai-chi-wellness.jpg';
-import meditationImage from '../../assets/image/tai-chi-meditation.jpg';
-import natureImage from '../../assets/image/tai-chi-nature.jpg';
+import taichiLogo from '../../../assets/image/taichi-logo.png';
+import groupImage from '../../../assets/image/tai-chi-group.jpg';
+import standingImage from '../../../assets/image/tai-chi-standing.jpg';
+import parkImage from '../../../assets/image/tai-chi-park.jpg';
+import wellnessImage from '../../../assets/image/tai-chi-wellness.jpg';
+import meditationImage from '../../../assets/image/tai-chi-meditation.jpg';
+import natureImage from '../../../assets/image/tai-chi-nature.jpg';
 ---
 
-<BaseLayout title="Onze leerlingen - Tai Chi beoefenaars">
+<BaseLayout title="Student Spotlight - Tai Chi Inheritors">
   <!-- Hero Section -->
   <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-    <!-- Achtergrond decoratie -->
+    <!-- Background decoration -->
     <div class="absolute inset-0 -z-10">
       <div class="absolute inset-0 bg-gradient-to-br from-paper via-mist/30 to-paper"></div>
       <div class="absolute top-20 left-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
@@ -23,43 +23,43 @@ import natureImage from '../../assets/image/tai-chi-nature.jpg';
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
       <div class="animate-fade-in">
         <span class="inline-block px-4 py-2 text-sm font-medium text-accent bg-accent/10 rounded-full mb-6">
-          Beoefenaars
+          Inheritors
         </span>
         <h1 class="text-5xl md:text-6xl font-serif font-bold text-ink mb-6">
-          Onze leerlingen
+          Student Spotlight
         </h1>
         <p class="text-xl text-secondary max-w-3xl mx-auto">
-          Getuige de groei en vooruitgang van elke leerling op hun Tai Chi reis
+          Witness the growth and harvest of every student on their Tai Chi journey
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Uitgelichte leerlingverhalen -->
+  <!-- Featured Student Stories -->
   <section class="py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16 scroll-animate">
         <span class="inline-block px-3 py-1 text-sm font-medium text-cyan bg-cyan/10 rounded-full mb-4">
-          Echte verhalen
+          Real Stories
         </span>
         <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
-          Leerlingervaringen
+          Student Experiences
         </h2>
         <div class="w-32 h-1 bg-accent/50 mx-auto mb-6"></div>
         <p class="text-lg text-secondary max-w-2xl mx-auto">
-          Luister naar hun verhalen met Tai Chi
+          Hear their stories with Tai Chi
         </p>
       </div>
 
-      <!-- Uitgelichte leerlingverhalen -->
+      <!-- Featured student stories -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-        <!-- Leerlingverhaal 1 -->
+        <!-- Student Story 1 -->
         <div class="scroll-animate">
           <div class="bg-paper rounded-2xl shadow-xl overflow-hidden border border-border/30 hover:shadow-2xl transition-all duration-300">
             <div class="aspect-[16/9] overflow-hidden">
               <Image
                 src={parkImage}
-                alt="Mevrouw Zhang"
+                alt="Ms. Zhang"
                 class="w-full h-full object-cover"
                 format="jpg"
               />
@@ -70,38 +70,38 @@ import natureImage from '../../assets/image/tai-chi-nature.jpg';
                   <span class="text-2xl">👩</span>
                 </div>
                 <div>
-                  <h3 class="text-xl font-serif font-bold text-ink">Mevrouw Zhang</h3>
-                  <p class="text-sm text-secondary">Studeert 2 jaar · 42-vorm Tai Chi klas</p>
+                  <h3 class="text-xl font-serif font-bold text-ink">Ms. Zhang</h3>
+                  <p class="text-sm text-secondary">Studying 2 years · 42-Form Tai Chi Class</p>
                 </div>
               </div>
               <blockquote class="text-secondary leading-relaxed mb-6">
-                "Twee jaar geleden ben ik begonnen met het leren van Tai Chi, oorspronkelijk alleen om de nekklachten te verbeteren die werden veroorzaakt door langdurig bureauwerk. Onverwacht niet alleen mijn nekpijn werd verlicht, maar mijn geestelijke toestand onderging ook significante veranderingen. Nu elke ochtend Tai Chi beoefenen is een onmisbaar onderdeel van mijn leven geworden."
+                "I started learning Tai Chi two years ago, initially just to improve the neck problems caused by long-term desk work. Unexpectedly, not only was my neck pain relieved, but my mental state also underwent significant changes. Now practicing Tai Chi every morning has become an indispensable part of my life."
               </blockquote>
               <div class="flex items-center space-x-4 text-sm">
                 <div class="flex items-center space-x-2">
                   <div class="w-2 h-2 rounded-full bg-accent"></div>
-                  <span class="text-secondary">Nekverbetering</span>
+                  <span class="text-secondary">Neck Improvement</span>
                 </div>
                 <div class="flex items-center space-x-2">
                   <div class="w-2 h-2 rounded-full bg-cyan"></div>
-                  <span class="text-secondary">Mentale versterking</span>
+                  <span class="text-secondary">Mental Enhancement</span>
                 </div>
                 <div class="flex items-center space-x-2">
                   <div class="w-2 h-2 rounded-full bg-secondary"></div>
-                  <span class="text-secondary">Gewoontevorming</span>
+                  <span class="text-secondary">Habit Formation</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Leerlingverhaal 2 -->
+        <!-- Student Story 2 -->
         <div class="scroll-animate" style="animation-delay: 0.1s">
           <div class="bg-paper rounded-2xl shadow-xl overflow-hidden border border-border/30 hover:shadow-2xl transition-all duration-300">
             <div class="aspect-[16/9] overflow-hidden">
               <Image
                 src={standingImage}
-                alt="Meneer Li"
+                alt="Mr. Li"
                 class="w-full h-full object-cover"
                 format="jpg"
               />
@@ -112,25 +112,25 @@ import natureImage from '../../assets/image/tai-chi-nature.jpg';
                   <span class="text-2xl">👨</span>
                 </div>
                 <div>
-                  <h3 class="text-xl font-serif font-bold text-ink">Meneer Li</h3>
-                  <p class="text-sm text-secondary">Studeert 5 jaar · Traditionele 108-vorm seminar</p>
+                  <h3 class="text-xl font-serif font-bold text-ink">Mr. Li</h3>
+                  <p class="text-sm text-secondary">Studying 5 years · Traditional 108-Form Seminar</p>
                 </div>
               </div>
               <blockquote class="text-secondary leading-relaxed mb-6">
-                "Na mijn pensioen voelde ik dat mijn leven zijn focus had verloren. Ik kwam toevallig in aanraking met Tai Chi en vond een nieuwe richting in mijn leven. Van 24-vorm naar 42-vorm, naar nu 108-vorm, elke vooruitgang is een verheffing van lichaam en geest geweest. Tai Chi heeft me niet alleen fysiek gezond gehouden, maar me ook geholpen innerlijke rust te vinden."
+                "After retirement, I felt my life had lost its focus. I came across Tai Chi by chance and found a new direction in life. From 24-form to 42-form, to now 108-form, each advancement has been a sublimation of body and mind. Tai Chi has not only kept me physically healthy but also helped me find inner peace."
               </blockquote>
               <div class="flex items-center space-x-4 text-sm">
                 <div class="flex items-center space-x-2">
                   <div class="w-2 h-2 rounded-full bg-accent"></div>
-                  <span class="text-secondary">Fysieke & mentale gezondheid</span>
+                  <span class="text-secondary">Physical & Mental Health</span>
                 </div>
                 <div class="flex items-center space-x-2">
                   <div class="w-2 h-2 rounded-full bg-cyan"></div>
-                  <span class="text-secondary">Vervuld leven</span>
+                  <span class="text-secondary">Fulfilled Life</span>
                 </div>
                 <div class="flex items-center space-x-2">
                   <div class="w-2 h-2 rounded-full bg-secondary"></div>
-                  <span class="text-secondary">Innerlijke rust</span>
+                  <span class="text-secondary">Inner Peace</span>
                 </div>
               </div>
             </div>
@@ -140,24 +140,24 @@ import natureImage from '../../assets/image/tai-chi-nature.jpg';
     </div>
   </section>
 
-  <!-- Meer leerlingstemmen -->
+  <!-- More Student Voices -->
   <section class="py-24 bg-mist/20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16 scroll-animate">
         <span class="inline-block px-3 py-1 text-sm font-medium text-accent bg-accent/10 rounded-full mb-4">
-          Leerlingstemmen
+          Student Voices
         </span>
         <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
-          Meer feedback
+          More Feedback
         </h2>
         <div class="w-32 h-1 bg-cyan/50 mx-auto mb-6"></div>
         <p class="text-lg text-secondary max-w-2xl mx-auto">
-          Elke leerling heeft unieke winsten
+          Every student has unique gains
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Leerlingkaart 1 -->
+        <!-- Student Card 1 -->
         <div class="scroll-animate">
           <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-accent/50 h-full">
             <div class="flex items-center space-x-4 mb-6">
@@ -165,12 +165,12 @@ import natureImage from '../../assets/image/tai-chi-nature.jpg';
                 <span class="text-2xl">👩‍💼</span>
               </div>
               <div>
-                <h3 class="text-lg font-serif font-bold text-ink">Mevrouw Wang</h3>
-                <p class="text-xs text-secondary">Executieve · Studeert 8 maanden</p>
+                <h3 class="text-lg font-serif font-bold text-ink">Ms. Wang</h3>
+                <p class="text-xs text-secondary">Executive · Studying 8 months</p>
               </div>
             </div>
             <p class="text-secondary leading-relaxed text-sm">
-              "Als zakelijk leiding stond ik altijd onder hoge druk. Na het leren van Tai Chi heb ik geleerd om innerlijke kalmte te behouden midden in de drukte, en mijn werkefficiëntie is actually verbeterd. De instructeur is zeer geduldig, en de lesmethoden zijn wetenschappelijk en effectief."
+              "As a corporate executive, stress has always been high. After learning Tai Chi, I learned to maintain inner tranquility amidst busyness, and my work efficiency actually improved. The instructor is very patient, and the teaching methods are scientific and effective."
             </p>
             <div class="mt-6 pt-6 border-t border-border/30">
               <div class="flex items-center space-x-1">
@@ -180,7 +180,7 @@ import natureImage from '../../assets/image/tai-chi-nature.jpg';
           </div>
         </div>
 
-        <!-- Leerlingkaart 2 -->
+        <!-- Student Card 2 -->
         <div class="scroll-animate" style="animation-delay: 0.05s">
           <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-cyan/50 h-full">
             <div class="flex items-center space-x-4 mb-6">
@@ -189,11 +189,11 @@ import natureImage from '../../assets/image/tai-chi-nature.jpg';
               </div>
               <div>
                 <h3 class="text-lg font-serif font-bold text-ink">Student Chen</h3>
-                <p class="text-xs text-secondary">Student · Studeert 1 jaar</p>
+                <p class="text-xs text-secondary">College Student · Studying 1 year</p>
               </div>
             </div>
             <p class="text-secondary leading-relaxed text-sm">
-              "In het begin dacht ik dat Tai Chi voor ouderen was, maar na het te proberen ontdekte ik de diepe aard ervan. Nu oefen ik dagelijks en mijn fysieke conditie is aanzienlijk verbeterd. Zelfs mijn kamergenoot is met mij gaan leren."
+              "At first, I thought Tai Chi was for seniors, but after trying it, I discovered its profound nature. Now I practice daily, and my physical fitness has significantly improved. Even my roommate has started learning with me."
             </p>
             <div class="mt-6 pt-6 border-t border-border/30">
               <div class="flex items-center space-x-1">
@@ -203,7 +203,7 @@ import natureImage from '../../assets/image/tai-chi-nature.jpg';
           </div>
         </div>
 
-        <!-- Leerlingkaart 3 -->
+        <!-- Student Card 3 -->
         <div class="scroll-animate" style="animation-delay: 0.1s">
           <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-secondary/50 h-full">
             <div class="flex items-center space-x-4 mb-6">
@@ -211,12 +211,12 @@ import natureImage from '../../assets/image/tai-chi-nature.jpg';
                 <span class="text-2xl">👴</span>
               </div>
               <div>
-                <h3 class="text-lg font-serif font-bold text-ink">Opa Liu</h3>
-                <p class="text-xs text-secondary">Gepensioneerde leraar · Studeert 3 jaar</p>
+                <h3 class="text-lg font-serif font-bold text-ink">Grandpa Liu</h3>
+                <p class="text-xs text-secondary">Retired Teacher · Studying 3 years</p>
               </div>
             </div>
             <p class="text-secondary leading-relaxed text-sm">
-              "Op 70-jarige leeftijd kan ik nog steeds Tai Chi leren, en ik voel me overall jonger. Mijn balans is veel verbeterd. Vroeger maakte ik me zorgen over vallen tijdens het lopen, maar nu zijn mijn stappen stevig. Ik heb een groep gelijkgestemde vrienden ontmoet, en het leven is plezieriger."
+              "At 70, I can still learn Tai Chi, and I feel younger overall. My balance has improved a lot. I used to worry about falling when walking, but now my steps are steady. I've met a group of like-minded friends, and life is more enjoyable."
             </p>
             <div class="mt-6 pt-6 border-t border-border/30">
               <div class="flex items-center space-x-1">
@@ -226,7 +226,7 @@ import natureImage from '../../assets/image/tai-chi-nature.jpg';
           </div>
         </div>
 
-        <!-- Leerlingkaart 4 -->
+        <!-- Student Card 4 -->
         <div class="scroll-animate" style="animation-delay: 0.15s">
           <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-accent/50 h-full">
             <div class="flex items-center space-x-4 mb-6">
@@ -234,12 +234,12 @@ import natureImage from '../../assets/image/tai-chi-nature.jpg';
                 <span class="text-2xl">👩‍⚕️</span>
               </div>
               <div>
-                <h3 class="text-lg font-serif font-bold text-ink">Dokter Zhao</h3>
-                <p class="text-xs text-secondary">Medisch professional · Studeert 2 jaar</p>
+                <h3 class="text-lg font-serif font-bold text-ink">Dr. Zhao</h3>
+                <p class="text-xs text-secondary">Medical Professional · Studying 2 years</p>
               </div>
             </div>
             <p class="text-secondary leading-relaxed text-sm">
-              "Vanuit een medisch perspectief verbetert Tai Chi het cardiovasculaire systeem, respiratoire systeem en balans aanzienlijk. Ik heb dit persoonlijk ervaren door mijn eigen beoefening en beveel vaak patiënten aan om Tai Chi te leren ter ondersteuning van herstel."
+              "From a medical perspective, Tai Chi significantly improves the cardiovascular system, respiratory system, and balance. I've experienced this personally through my own practice and often recommend patients learn Tai Chi to aid recovery."
             </p>
             <div class="mt-6 pt-6 border-t border-border/30">
               <div class="flex items-center space-x-1">
@@ -249,7 +249,7 @@ import natureImage from '../../assets/image/tai-chi-nature.jpg';
           </div>
         </div>
 
-        <!-- Leerlingkaart 5 -->
+        <!-- Student Card 5 -->
         <div class="scroll-animate" style="animation-delay: 0.2s">
           <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-cyan/50 h-full">
             <div class="flex items-center space-x-4 mb-6">
@@ -257,12 +257,12 @@ import natureImage from '../../assets/image/tai-chi-nature.jpg';
                 <span class="text-2xl">👨‍💻</span>
               </div>
               <div>
-                <h3 class="text-lg font-serif font-bold text-ink">Meneer Zhou</h3>
-                <p class="text-xs text-secondary">Programmeur · Studeert 1,5 jaar</p>
+                <h3 class="text-lg font-serif font-bold text-ink">Mr. Zhou</h3>
+                <p class="text-xs text-secondary">Programmer · Studying 1.5 years</p>
               </div>
             </div>
             <p class="text-secondary leading-relaxed text-sm">
-              "Elke dag meer dan tien uur achter een computer zitten, rug- en nekpijn was de norm. Na het leren van Tai Chi zijn deze symptomen aanzienlijk verbeterd. Ik geniet vooral van de ochtendoefening sfeer in het park - frisse lucht en een ontspannen stemming."
+              "Sitting at a computer for over ten hours every day, back and neck pain was the norm. After learning Tai Chi, these symptoms have improved significantly. I especially enjoy the morning practice atmosphere in the park - fresh air and a relaxed mood."
             </p>
             <div class="mt-6 pt-6 border-t border-border/30">
               <div class="flex items-center space-x-1">
@@ -272,7 +272,7 @@ import natureImage from '../../assets/image/tai-chi-nature.jpg';
           </div>
         </div>
 
-        <!-- Leerlingkaart 6 -->
+        <!-- Student Card 6 -->
         <div class="scroll-animate" style="animation-delay: 0.25s">
           <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-secondary/50 h-full">
             <div class="flex items-center space-x-4 mb-6">
@@ -280,12 +280,12 @@ import natureImage from '../../assets/image/tai-chi-nature.jpg';
                 <span class="text-2xl">👩‍🏫</span>
               </div>
               <div>
-                <h3 class="text-lg font-serif font-bold text-ink">Juf Sun</h3>
-                <p class="text-xs text-secondary">Leraar · Studeert 4 jaar</p>
+                <h3 class="text-lg font-serif font-bold text-ink">Teacher Sun</h3>
+                <p class="text-xs text-secondary">Teacher · Studying 4 years</p>
               </div>
             </div>
             <p class="text-secondary leading-relaxed text-sm">
-              "Tijdens de zomer- en wintervakanties breng ik mijn kinderen mee om Tai Chi te leren, drie generaties samen, het is vreugdevol. Tai Chi versterkt niet alleen het lichaam, maar is ook een culturele overdracht die het hele leven lang waard is om te leren."
+              "Bringing my children to learn Tai Chi during summer and winter vacations, three generations together, it's joyful. Tai Chi not only strengthens the body but is also a cultural inheritance worth lifelong learning."
             </p>
             <div class="mt-6 pt-6 border-t border-border/30">
               <div class="flex items-center space-x-1">
@@ -298,131 +298,131 @@ import natureImage from '../../assets/image/tai-chi-nature.jpg';
     </div>
   </section>
 
-  <!-- Leerlingstatistieken -->
+  <!-- Student Statistics -->
   <section class="py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16 scroll-animate">
         <span class="inline-block px-3 py-1 text-sm font-medium text-cyan bg-cyan/10 rounded-full mb-4">
-          Laat de cijfers spreken
+          Let the Numbers Speak
         </span>
         <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
-          Leerlingstatistieken
+          Student Statistics
         </h2>
         <div class="w-32 h-1 bg-accent/50 mx-auto mb-6"></div>
       </div>
 
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Statistiek 1 -->
+        <!-- Stat 1 -->
         <div class="scroll-animate text-center">
           <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-accent/50 transition-all duration-300">
             <p class="text-5xl md:text-6xl font-serif font-bold text-accent mb-4">500+</p>
-            <p class="text-lg text-secondary">Totaal leerlingen</p>
+            <p class="text-lg text-secondary">Total Students</p>
           </div>
         </div>
 
-        <!-- Statistiek 2 -->
+        <!-- Stat 2 -->
         <div class="scroll-animate" style="animation-delay: 0.1s">
           <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-cyan/50 transition-all duration-300">
             <p class="text-5xl md:text-6xl font-serif font-bold text-cyan mb-4">98%</p>
-            <p class="text-lg text-secondary">Tevredenheid</p>
+            <p class="text-lg text-secondary">Satisfaction</p>
           </div>
         </div>
 
-        <!-- Statistiek 3 -->
+        <!-- Stat 3 -->
         <div class="scroll-animate" style="animation-delay: 0.2s">
           <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-secondary/50 transition-all duration-300">
             <p class="text-5xl md:text-6xl font-serif font-bold text-secondary mb-4">85%</p>
-            <p class="text-lg text-secondary">Behoudingspercentage</p>
+            <p class="text-lg text-secondary">Retention Rate</p>
           </div>
         </div>
 
-        <!-- Statistiek 4 -->
+        <!-- Stat 4 -->
         <div class="scroll-animate" style="animation-delay: 0.3s">
           <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-accent/50 transition-all duration-300">
-            <p class="text-5xl md:text-6xl font-serif font-bold text-accent mb-4">10 jaar</p>
-            <p class="text-lg text-secondary">Onderwijservaring</p>
+            <p class="text-5xl md:text-6xl font-serif font-bold text-accent mb-4">10 Years</p>
+            <p class="text-lg text-secondary">Teaching Experience</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Leerlingactiviteiten showcase -->
+  <!-- Student Activities Showcase -->
   <section class="py-24 bg-mist/20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16 scroll-animate">
         <span class="inline-block px-3 py-1 text-sm font-medium text-accent bg-accent/10 rounded-full mb-4">
-          Onvergetelijke momenten
+          Memorable Moments
         </span>
         <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
-          Leerlingactiviteiten
+          Student Activities
         </h2>
         <div class="w-32 h-1 bg-cyan/50 mx-auto mb-6"></div>
         <p class="text-lg text-secondary max-w-2xl mx-auto">
-          Onvergetelijke momenten van leerlingen op hun Tai Chi reis vastleggen
+          Recording memorable moments of students on their Tai Chi journey
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Activiteit 1 -->
+        <!-- Activity 1 -->
         <div class="scroll-animate group">
           <div class="bg-paper rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
             <div class="aspect-[4/3] overflow-hidden">
               <Image
                 src={groupImage}
-                alt="Groepsoefening"
+                alt="Group Practice"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 format="jpg"
               />
             </div>
             <div class="p-6">
               <span class="inline-block px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full mb-3">
-                Dagelijkse activiteit
+                Daily Activity
               </span>
-              <h3 class="text-xl font-serif font-bold text-ink mb-2">Ochtendoefening in park</h3>
-              <p class="text-sm text-secondary">Elke ochtend verzamelen leerlingen zich in het park om hun Tai Chi oefening te beginnen met de opkomende zon</p>
+              <h3 class="text-xl font-serif font-bold text-ink mb-2">Morning Practice in Park</h3>
+              <p class="text-sm text-secondary">Every morning, students gather in the park to start their Tai Chi practice with the rising sun</p>
             </div>
           </div>
         </div>
 
-        <!-- Activiteit 2 -->
+        <!-- Activity 2 -->
         <div class="scroll-animate group" style="animation-delay: 0.1s">
           <div class="bg-paper rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
             <div class="aspect-[4/3] overflow-hidden">
               <Image
                 src={meditationImage}
-                alt="Tai Chi meditatie"
+                alt="Tai Chi Meditation"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 format="jpg"
               />
             </div>
             <div class="p-6">
               <span class="inline-block px-3 py-1 text-xs font-medium text-cyan bg-cyan/10 rounded-full mb-3">
-                Aanbevolen cursus
+                Featured Course
               </span>
-              <h3 class="text-xl font-serif font-bold text-ink mb-2">Tai Chi meditatie</h3>
-              <p class="text-sm text-secondary">Tai Chi oefening gecombineerd met meditatie helpt leerlingen lichaam-geest eenheid te bereiken</p>
+              <h3 class="text-xl font-serif font-bold text-ink mb-2">Tai Chi Meditation</h3>
+              <p class="text-sm text-secondary">Tai Chi practice combined with meditation helps students achieve body-mind unity</p>
             </div>
           </div>
         </div>
 
-        <!-- Activiteit 3 -->
+        <!-- Activity 3 -->
         <div class="scroll-animate" style="animation-delay: 0.2s">
           <div class="bg-paper rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
             <div class="aspect-[4/3] overflow-hidden">
               <Image
                 src={wellnessImage}
-                alt="Buitenexcursie"
+                alt="Outdoor Excursion"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 format="jpg"
               />
             </div>
             <div class="p-6">
               <span class="inline-block px-3 py-1 text-xs font-medium text-secondary bg-secondary/10 rounded-full mb-3">
-                Kwartaalactiviteit
+                Quarterly Activity
               </span>
-              <h3 class="text-xl font-serif font-bold text-ink mb-2">Buitenexcursie</h3>
-              <p class="text-sm text-secondary">Kwartaalorganisatie van leerlingen om te oefenen in schilderachtige locaties, de fusie van natuur en Tai Chi ervaren</p>
+              <h3 class="text-xl font-serif font-bold text-ink mb-2">Outdoor Excursion</h3>
+              <p class="text-sm text-secondary">Quarterly organization of students to practice in scenic locations, experiencing the fusion of nature and Tai Chi</p>
             </div>
           </div>
         </div>
@@ -430,98 +430,98 @@ import natureImage from '../../assets/image/tai-chi-nature.jpg';
     </div>
   </section>
 
-  <!-- Leerresultaten showcase -->
+  <!-- Learning Outcomes Showcase -->
   <section class="py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <!-- Linker afbeelding -->
+        <!-- Left Image -->
         <div class="scroll-animate order-2 lg:order-1">
           <div class="relative">
             <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src={natureImage}
-                alt="Tai Chi oefening"
+                alt="Tai Chi Practice"
                 class="w-full h-full object-cover"
                 format="jpg"
               />
             </div>
-            <!-- Decoratieve kaart -->
+            <!-- Decorative Card -->
             <div class="absolute -bottom-6 -right-6 bg-paper border-2 border-accent/30 rounded-xl p-6 shadow-lg max-w-xs">
-              <p class="text-3xl font-serif text-accent font-bold mb-2">Getuige groei</p>
-              <p class="text-sm text-secondary">De vooruitgang van elke leerling is onze trots</p>
+              <p class="text-3xl font-serif text-accent font-bold mb-2">Witness Growth</p>
+              <p class="text-sm text-secondary">Every student's progress is our pride</p>
             </div>
           </div>
         </div>
 
-        <!-- Rechter inhoud -->
+        <!-- Right Content -->
         <div class="scroll-animate order-1 lg:order-2">
           <div class="mb-8">
             <span class="inline-block px-3 py-1 text-sm font-medium text-accent bg-accent/10 rounded-full mb-4">
-              Leerresultaten
+              Learning Outcomes
             </span>
             <h2 class="text-4xl font-serif font-bold text-ink mb-6">
-              Leerlingwinsten
+              Student Gains
             </h2>
             <div class="w-20 h-1 bg-accent/50 mb-8"></div>
           </div>
 
           <div class="space-y-6">
-            <!-- Winst 1 -->
+            <!-- Gain 1 -->
             <div class="flex items-start space-x-4">
               <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
                 <span class="text-xl text-accent">💪</span>
               </div>
               <div>
                 <h3 class="text-xl font-serif font-bold text-ink mb-2">
-                  Verbeterde fysieke gezondheid
+                  Improved Physical Health
                 </h3>
                 <p class="text-secondary">
-                  90% van de leerlingen rapporteert significante verbetering in fysieke fitheid, inclusief verlichting van nek- en rugpijn, verbeterde balans en versterkte immuniteit
+                  90% of students report significant improvement in physical fitness, including relief from neck and back pain, enhanced balance, and strengthened immunity
                 </p>
               </div>
             </div>
 
-            <!-- Winst 2 -->
+            <!-- Gain 2 -->
             <div class="flex items-start space-x-4">
               <div class="w-12 h-12 bg-cyan/10 rounded-full flex items-center justify-center flex-shrink-0">
                 <span class="text-xl text-cyan">🧘</span>
               </div>
               <div>
                 <h3 class="text-xl font-serif font-bold text-ink mb-2">
-                  Verbeterde mentale toestand
+                  Improved Mental State
                 </h3>
                 <p class="text-secondary">
-                  Leerlingen rapporteren veelvuldig verlichting van stress en angst, verbeterde slaapkwaliteit en een meer vredige en positieve mindset
+                  Students普遍 report relief from stress and anxiety, improved sleep quality, and a more peaceful and positive mindset
                 </p>
               </div>
             </div>
 
-            <!-- Winst 3 -->
+            <!-- Gain 3 -->
             <div class="flex items-start space-x-4">
               <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0">
                 <span class="text-xl text-secondary">👥</span>
               </div>
               <div>
                 <h3 class="text-xl font-serif font-bold text-ink mb-2">
-                  Uitgebreide sociale kring
+                  Expanded Social Circle
                 </h3>
                 <p class="text-secondary">
-                  Een groep gelijkgestemde vrienden ontmoet, vormend een warme en ondersteunende Tai Chi gemeenschap voor wederzijds leren en vooruitgang
+                  Met a group of like-minded friends, forming a warm and supportive Tai Chi community for mutual learning and progress
                 </p>
               </div>
             </div>
 
-            <!-- Winst 4 -->
+            <!-- Gain 4 -->
             <div class="flex items-start space-x-4">
               <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
                 <span class="text-xl text-accent">🎯</span>
               </div>
               <div>
                 <h3 class="text-xl font-serif font-bold text-ink mb-2">
-                  Verhoogde levenskwaliteit
+                  Enhanced Quality of Life
                 </h3>
                 <p class="text-secondary">
-                  Gezonde levensstijlgewoontes ontwikkeld, regelmatigere routines en dieper begrip van traditionele cultuur
+                  Developed healthy lifestyle habits, more regular routines, and deeper understanding of traditional culture
                 </p>
               </div>
             </div>
@@ -531,27 +531,27 @@ import natureImage from '../../assets/image/tai-chi-nature.jpg';
     </div>
   </section>
 
-  <!-- CTA Sectie -->
+  <!-- CTA Section -->
   <section class="py-24">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center scroll-animate">
       <h2 class="text-4xl font-serif font-bold text-ink mb-6">
-        Word onze leerling
+        Become Our Student
       </h2>
       <p class="text-xl text-secondary mb-12">
-        Begin uw Tai Chi reis en ontdek gezondheid en geluk
+        Start your Tai Chi journey and discover health and happiness
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
         <a
-          href="/courses"
+          href="/en/courses"
           class="px-8 py-4 bg-accent hover:bg-primary text-paper hover:text-paper border-2 border-accent hover:border-primary rounded-lg font-medium text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
         >
-          Nu inschrijven
+          Register Now
         </a>
         <a
-          href="/movements"
+          href="/en/movements"
           class="px-8 py-4 border-2 border-accent/30 text-accent hover:bg-accent/10 rounded-lg font-medium text-lg transition-all duration-300 hover:scale-105"
         >
-          Meer over cursussen
+          Learn About Courses
         </a>
       </div>
     </div>
@@ -559,7 +559,7 @@ import natureImage from '../../assets/image/tai-chi-nature.jpg';
 </BaseLayout>
 
 <script>
-  // Scroll-triggered animatie
+  // Scroll-triggered animation
   const observerOptions = {
     root: null,
     rootMargin: '0px',

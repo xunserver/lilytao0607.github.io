@@ -1,19 +1,83 @@
 ---
 import { Image } from 'astro:assets';
 import taichiLogo from '../../assets/image/taichi-logo.png';
+import { getRelativeLocaleUrl } from 'astro:i18n';
 
 const currentYear = new Date().getFullYear();
+const currentLocale = (Astro.currentLocale || 'nl') as 'nl' | 'en' | 'zh';
+
+// 根据语言生成链接
+const getLocalizedHref = (path: string) => {
+  if (currentLocale === 'nl') {
+    return path;
+  }
+  return `/${currentLocale}${path}`;
+};
+
+// 翻译内容
+const footerContent = {
+  nl: {
+    siteName: 'Tai Chi Cultuur',
+    description: 'Ontdek de oude wijsheid van Tai Chi, en streef naar harmonie tussen lichaam en geest.',
+    tagline: 'Eeuwenoude wijsheid · Tai Chi cultuur',
+    explore: 'Verkennen',
+    community: 'Gemeenschap',
+    contact: 'Contact',
+    phone: 'Advieslijn',
+    email: 'E-mail',
+    address: 'Adres',
+    location: 'Tai Chi Training Centrum',
+    copyright: `© ${currentYear} Tai Chi Cultuur. Alle rechten voorbehouden.`,
+    privacy: 'Privacybeleid',
+    terms: 'Gebruiksvoorwaarden',
+    tagline2: 'Eeuwenoude wijsheid · Tai Chi cultuur',
+  },
+  en: {
+    siteName: 'Tai Chi Culture',
+    description: 'Explore the ancient wisdom of Tai Chi, and pursue harmony between body and mind.',
+    tagline: 'Centuries of Wisdom · Tai Chi Culture',
+    explore: 'Explore',
+    community: 'Community',
+    contact: 'Contact',
+    phone: 'Hotline',
+    email: 'Email',
+    address: 'Address',
+    location: 'Tai Chi Training Center',
+    copyright: `© ${currentYear} Tai Chi Culture. All rights reserved.`,
+    privacy: 'Privacy Policy',
+    terms: 'Terms of Service',
+    tagline2: 'Centuries of Wisdom · Tai Chi Culture',
+  },
+  zh: {
+    siteName: '太极文化',
+    description: '探索太极的古老智慧，追求身心和谐与健康养生之道。',
+    tagline: '传承千年智慧 · 弘扬太极文化',
+    explore: '探索',
+    community: '社区',
+    contact: '联系',
+    phone: '咨询热线',
+    email: '电子邮箱',
+    address: '地址',
+    location: '太极拳训练中心',
+    copyright: `© ${currentYear} 太极文化. 保留所有权利.`,
+    privacy: '隐私政策',
+    terms: '使用条款',
+    tagline2: '传承千年智慧 · 弘扬太极文化',
+  },
+};
+
+const t = footerContent[currentLocale];
 
 const footerLinks = {
   about: [
-    { name: '关于太极', href: '/about' },
-    { name: '招式展示', href: '/movements' },
-    { name: '课程报名', href: '/courses' },
+    { name: currentLocale === 'zh' ? '关于太极' : (currentLocale === 'nl' ? 'Over Tai Chi' : 'About Tai Chi'), href: getLocalizedHref('/about') },
+    { name: currentLocale === 'zh' ? '招式展示' : (currentLocale === 'nl' ? 'Bewegingen' : 'Movements'), href: getLocalizedHref('/movements') },
+    { name: currentLocale === 'zh' ? '课程报名' : (currentLocale === 'nl' ? 'Cursussen' : 'Courses'), href: getLocalizedHref('/courses') },
   ],
   community: [
-    { name: '学员风采', href: '/blog' },
-    { name: '太极哲学', href: '/about#philosophy' },
-    { name: '联系方式', href: '/about#contact' },
+    { name: currentLocale === 'zh' ? '学员风采' : (currentLocale === 'nl' ? 'Leerlingen' : 'Students'), href: getLocalizedHref('/blog') },
+    { name: currentLocale === 'zh' ? '太极哲学' : (currentLocale === 'nl' ? 'Filosofie' : 'Philosophy'), href: getLocalizedHref('/about#philosophy') },
+    { name: currentLocale === 'zh' ? '联系方式' : (currentLocale === 'nl' ? 'Contact' : 'Contact'), href: getLocalizedHref('/about#contact') },
   ],
 };
 ---
@@ -29,22 +93,21 @@ const footerLinks = {
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
       <!-- Logo 和简介 -->
       <div class="lg:col-span-1">
-        <a href="/" class="flex items-center space-x-3 mb-6 group">
+        <a href={getLocalizedHref('/')} class="flex items-center space-x-3 mb-6 group">
           <Image
             src={taichiLogo}
-            alt="太极文化"
+            alt={t.siteName}
             width={48}
             height={48}
             class="h-12 w-12 object-contain group-hover:rotate-180 transition-transform duration-700"
             format="png"
           />
           <span class="text-xl font-serif font-bold text-paper">
-            太极文化
+            {t.siteName}
           </span>
         </a>
         <p class="text-sm text-ink-light leading-relaxed mb-6">
-          探索太极的古老智慧，追求身心和谐与健康养生之道。<br />
-          传承千年文化，弘扬太极精神。
+          {t.description}
         </p>
 
         <!-- 社交链接 -->
@@ -71,7 +134,7 @@ const footerLinks = {
       <div>
         <h3 class="text-sm font-semibold text-paper uppercase tracking-wider mb-6 flex items-center">
           <span class="w-8 h-0.5 bg-accent mr-3"></span>
-          探索
+          {t.explore}
         </h3>
         <ul class="space-y-4">
           {footerLinks.about.map((link) => (
@@ -92,7 +155,7 @@ const footerLinks = {
       <div>
         <h3 class="text-sm font-semibold text-paper uppercase tracking-wider mb-6 flex items-center">
           <span class="w-8 h-0.5 bg-cyan mr-3"></span>
-          社区
+          {t.community}
         </h3>
         <ul class="space-y-4">
           {footerLinks.community.map((link) => (
@@ -113,28 +176,28 @@ const footerLinks = {
       <div>
         <h3 class="text-sm font-semibold text-paper uppercase tracking-wider mb-6 flex items-center">
           <span class="w-8 h-0.5 bg-secondary mr-3"></span>
-          联系
+          {t.contact}
         </h3>
         <ul class="space-y-4">
           <li class="flex items-start space-x-3">
             <span class="text-accent mt-0.5">📞</span>
             <div>
-              <p class="text-xs text-ink-light">咨询热线</p>
+              <p class="text-xs text-ink-light">{t.phone}</p>
               <p class="text-sm text-paper font-medium">400-123-4567</p>
             </div>
           </li>
           <li class="flex items-start space-x-3">
             <span class="text-cyan mt-0.5">📧</span>
             <div>
-              <p class="text-xs text-ink-light">电子邮箱</p>
+              <p class="text-xs text-ink-light">{t.email}</p>
               <p class="text-sm text-paper font-medium">info@taichi.com</p>
             </div>
           </li>
           <li class="flex items-start space-x-3">
             <span class="text-secondary mt-0.5">📍</span>
             <div>
-              <p class="text-xs text-ink-light">地址</p>
-              <p class="text-sm text-paper font-medium">某市某区<br />太极拳训练中心</p>
+              <p class="text-xs text-ink-light">{t.address}</p>
+              <p class="text-sm text-paper font-medium">{t.location}</p>
             </div>
           </li>
         </ul>
@@ -145,14 +208,14 @@ const footerLinks = {
     <div class="mt-16 pt-8 border-t border-paper/10">
       <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
         <p class="text-sm text-ink-light">
-          &copy; {currentYear} 太极文化. 保留所有权利.
+          {t.copyright}
         </p>
         <div class="flex items-center space-x-6 text-sm text-ink-light">
-          <a href="/privacy" class="hover:text-accent transition-colors duration-300">隐私政策</a>
-          <a href="/terms" class="hover:text-accent transition-colors duration-300">使用条款</a>
+          <a href={getLocalizedHref('/privacy')} class="hover:text-accent transition-colors duration-300">{t.privacy}</a>
+          <a href={getLocalizedHref('/terms')} class="hover:text-accent transition-colors duration-300">{t.terms}</a>
         </div>
         <p class="text-sm text-ink-light">
-          传承千年智慧 · 弘扬太极文化
+          {t.tagline2}
         </p>
       </div>
     </div>

@@ -1,17 +1,17 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
-import RegistrationForm from '../../components/course/RegistrationForm.vue';
-import taichiLogo from '../../assets/image/taichi-logo.png';
-import meditationImage from '../../assets/image/tai-chi-meditation.jpg';
-import parkImage from '../../assets/image/tai-chi-park.jpg';
-import wellnessImage from '../../assets/image/tai-chi-wellness.jpg';
+import RegistrationForm from '../../../components/course/RegistrationForm.vue';
+import taichiLogo from '../../../assets/image/taichi-logo.png';
+import meditationImage from '../../../assets/image/tai-chi-meditation.jpg';
+import parkImage from '../../../assets/image/tai-chi-park.jpg';
+import wellnessImage from '../../../assets/image/tai-chi-wellness.jpg';
 ---
 
-<BaseLayout title="Cursusinschrijving - Begin uw Tai Chi reis">
+<BaseLayout title="Course Registration - Begin Your Tai Chi Journey">
   <!-- Hero Section -->
   <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-    <!-- Achtergrond decoratie -->
+    <!-- Background decoration -->
     <div class="absolute inset-0 -z-10">
       <div class="absolute inset-0 bg-gradient-to-br from-paper via-mist/30 to-paper"></div>
       <div class="absolute top-20 left-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
@@ -21,19 +21,19 @@ import wellnessImage from '../../assets/image/tai-chi-wellness.jpg';
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
       <div class="animate-fade-in">
         <span class="inline-block px-4 py-2 text-sm font-medium text-accent bg-accent/10 rounded-full mb-6">
-          Professioneel Onderwijs
+          Professional Teaching
         </span>
         <h1 class="text-5xl md:text-6xl font-serif font-bold text-ink mb-6">
-          Cursusinschrijving
+          Course Registration
         </h1>
         <p class="text-xl text-secondary max-w-3xl mx-auto mb-8">
-          Professionele Tai Chi Chuan instructie om u te helpen de wijsheid van lichaam-geest harmonie te meesteren
+          Professional Tai Chi Chuan instruction to help you master the wisdom of mind-body harmony
         </p>
         <a
-          href="#inschrijvingsformulier"
+          href="#registration-form"
           class="inline-flex items-center space-x-2 px-8 py-4 bg-accent hover:bg-primary text-paper hover:text-paper border-2 border-accent hover:border-primary rounded-lg font-medium text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
         >
-          <span>Schrijf Nu In</span>
+          <span>Register Now</span>
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
           </svg>
@@ -42,24 +42,24 @@ import wellnessImage from '../../assets/image/tai-chi-wellness.jpg';
     </div>
   </section>
 
-  <!-- Cursus Introductie -->
+  <!-- Course Introduction -->
   <section class="py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16 scroll-animate">
         <span class="inline-block px-3 py-1 text-sm font-medium text-cyan bg-cyan/10 rounded-full mb-4">
-          Cursussysteem
+          Course System
         </span>
         <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
-          Onze Cursussen
+          Our Courses
         </h2>
         <div class="w-32 h-1 bg-accent/50 mx-auto mb-6"></div>
         <p class="text-lg text-secondary max-w-2xl mx-auto">
-          Van basis tot gevorderd, stap-voor-stap leren geschikt voor studenten van alle niveaus
+          From basics to advanced, step-by-step learning suitable for students of all levels
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Cursus 1: Beginner -->
+        <!-- Course 1: Beginner -->
         <div class="scroll-animate group">
           <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-accent/50 h-full flex flex-col">
             <div class="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/10 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -67,33 +67,33 @@ import wellnessImage from '../../assets/image/tai-chi-wellness.jpg';
             </div>
             <div class="mb-4">
               <span class="inline-block px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full">
-                Beginnerscursus
+                Beginner Course
               </span>
             </div>
             <h3 class="text-2xl font-serif font-bold text-ink mb-3">
-              24-Vorm Tai Chi
+              24-Form Tai Chi
             </h3>
             <p class="text-secondary text-sm leading-relaxed mb-6 flex-grow">
-              Geschikt voor beginners zonder ervaring. Begin bij de basis en leer systematisch de 24-vorm vereenvoudigde Tai Chi, met beheersing van fundamentele essenties en ademhalingstechnieken.
+              Suitable for beginners with zero experience. Start from basics and systematically learn the 24-form simplified Tai Chi, mastering fundamental essentials and breathing techniques.
             </p>
             <div class="space-y-3 border-t border-border/30 pt-6">
               <div class="flex items-center justify-between text-sm">
-                <span class="text-secondary">Lessen</span>
-                <span class="font-medium text-ink">12 lessen</span>
+                <span class="text-secondary">Sessions</span>
+                <span class="font-medium text-ink">12 classes</span>
               </div>
               <div class="flex items-center justify-between text-sm">
-                <span class="text-secondary">Duur</span>
-                <span class="font-medium text-ink">60 min/les</span>
+                <span class="text-secondary">Duration</span>
+                <span class="font-medium text-ink">60 min/class</span>
               </div>
               <div class="flex items-center justify-between text-sm">
-                <span class="text-secondary">Moeilijkheid</span>
+                <span class="text-secondary">Difficulty</span>
                 <span class="font-medium text-accent">⭐⭐</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Cursus 2: Intermediate -->
+        <!-- Course 2: Intermediate -->
         <div class="scroll-animate group" style="animation-delay: 0.1s">
           <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-cyan/50 h-full flex flex-col">
             <div class="w-16 h-16 bg-gradient-to-br from-cyan/20 to-cyan/10 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -101,33 +101,33 @@ import wellnessImage from '../../assets/image/tai-chi-wellness.jpg';
             </div>
             <div class="mb-4">
               <span class="inline-block px-3 py-1 text-xs font-medium text-cyan bg-cyan/10 rounded-full">
-                Voortgezette Cursus
+                Intermediate Course
               </span>
             </div>
             <h3 class="text-2xl font-serif font-bold text-ink mb-3">
-              42-Vorm Tai Chi
+              42-Form Tai Chi
             </h3>
             <p class="text-secondary text-sm leading-relaxed mb-6 flex-grow">
-              Geschikt voor studenten met enige basis. Leer de 42-vorm competitieroutine, integrerend kenmerken van meerdere scholen met hoger technisch gehalte.
+              Suitable for students with some foundation. Learn the 42-form competition routine, integrating characteristics from multiple schools with higher technical content.
             </p>
             <div class="space-y-3 border-t border-border/30 pt-6">
               <div class="flex items-center justify-between text-sm">
-                <span class="text-secondary">Lessen</span>
-                <span class="font-medium text-ink">16 lessen</span>
+                <span class="text-secondary">Sessions</span>
+                <span class="font-medium text-ink">16 classes</span>
               </div>
               <div class="flex items-center justify-between text-sm">
-                <span class="text-secondary">Duur</span>
-                <span class="font-medium text-ink">90 min/les</span>
+                <span class="text-secondary">Duration</span>
+                <span class="font-medium text-ink">90 min/class</span>
               </div>
               <div class="flex items-center justify-between text-sm">
-                <span class="text-secondary">Moeilijkheid</span>
+                <span class="text-secondary">Difficulty</span>
                 <span class="font-medium text-cyan">⭐⭐⭐</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Cursus 3: Gevorderd -->
+        <!-- Course 3: Advanced -->
         <div class="scroll-animate group" style="animation-delay: 0.2s">
           <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-secondary/50 h-full flex flex-col">
             <div class="w-16 h-16 bg-gradient-to-br from-secondary/20 to-secondary/10 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -135,33 +135,33 @@ import wellnessImage from '../../assets/image/tai-chi-wellness.jpg';
             </div>
             <div class="mb-4">
               <span class="inline-block px-3 py-1 text-xs font-medium text-secondary bg-secondary/10 rounded-full">
-                Gevorderde Cursus
+                Advanced Course
               </span>
             </div>
             <h3 class="text-2xl font-serif font-bold text-ink mb-3">
-              Traditionele 108-Vorm
+              Traditional 108-Form
             </h3>
             <p class="text-secondary text-sm leading-relaxed mb-6 flex-grow">
-              Geschikt voor langdurige beoefenaars. Diepgaande studie van traditionele Yang-stijl 108-vorm, verkennend van diepe betekenissen en interne praktijken van Tai Chi.
+              Suitable for long-term practitioners. Deep study of traditional Yang-style 108-form, exploring profound meanings and internal practices of Tai Chi.
             </p>
             <div class="space-y-3 border-t border-border/30 pt-6">
               <div class="flex items-center justify-between text-sm">
-                <span class="text-secondary">Lessen</span>
-                <span class="font-medium text-ink">24 lessen</span>
+                <span class="text-secondary">Sessions</span>
+                <span class="font-medium text-ink">24 classes</span>
               </div>
               <div class="flex items-center justify-between text-sm">
-                <span class="text-secondary">Duur</span>
-                <span class="font-medium text-ink">120 min/les</span>
+                <span class="text-secondary">Duration</span>
+                <span class="font-medium text-ink">120 min/class</span>
               </div>
               <div class="flex items-center justify-between text-sm">
-                <span class="text-secondary">Moeilijkheid</span>
+                <span class="text-secondary">Difficulty</span>
                 <span class="font-medium text-secondary">⭐⭐⭐⭐</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Cursus 4: Privé -->
+        <!-- Course 4: Private -->
         <div class="scroll-animate group" style="animation-delay: 0.3s">
           <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-accent/50 h-full flex flex-col">
             <div class="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/10 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -169,27 +169,27 @@ import wellnessImage from '../../assets/image/tai-chi-wellness.jpg';
             </div>
             <div class="mb-4">
               <span class="inline-block px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full">
-                Aangepaste Cursus
+                Custom Course
               </span>
             </div>
             <h3 class="text-2xl font-serif font-bold text-ink mb-3">
-              Een-op-een Privé
+              One-on-One Private
             </h3>
             <p class="text-secondary text-sm leading-relaxed mb-6 flex-grow">
-              Gegeneraliseerde lesplannen op basis van individuele omstandigheden, gerichte oplossingen voor oefenproblemen, snelle verbetering van Tai Chi vaardigheden.
+              Customized teaching plans based on individual conditions, targeted solutions for practice issues, rapid improvement of Tai Chi skills.
             </p>
             <div class="space-y-3 border-t border-border/30 pt-6">
               <div class="flex items-center justify-between text-sm">
-                <span class="text-secondary">Lessen</span>
-                <span class="font-medium text-ink">Flexibel</span>
+                <span class="text-secondary">Sessions</span>
+                <span class="font-medium text-ink">Flexible</span>
               </div>
               <div class="flex items-center justify-between text-sm">
-                <span class="text-secondary">Duur</span>
+                <span class="text-secondary">Duration</span>
                 <span class="font-medium text-ink">60-90 min</span>
               </div>
               <div class="flex items-center justify-between text-sm">
-                <span class="text-secondary">Moeilijkheid</span>
-                <span class="font-medium text-accent">Aangepast</span>
+                <span class="text-secondary">Difficulty</span>
+                <span class="font-medium text-accent">Customized</span>
               </div>
             </div>
           </div>
@@ -198,98 +198,98 @@ import wellnessImage from '../../assets/image/tai-chi-wellness.jpg';
     </div>
   </section>
 
-  <!-- Cursuskenmerken -->
+  <!-- Course Features -->
   <section class="py-24 bg-mist/20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <!-- Linker afbeelding -->
+        <!-- Left image -->
         <div class="scroll-animate order-2 lg:order-1">
           <div class="relative">
             <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src={parkImage}
-                alt="Tai Chi Chuan Cursus"
+                alt="Tai Chi Chuan Course"
                 class="w-full h-full object-cover"
                 format="jpg"
               />
             </div>
-            <!-- Decoratieve kaart -->
+            <!-- Decorative card -->
             <div class="absolute -bottom-6 -right-6 bg-paper border-2 border-accent/30 rounded-xl p-6 shadow-lg max-w-xs">
-              <p class="text-3xl font-serif text-accent font-bold mb-2">10+ Jaar</p>
-              <p class="text-sm text-secondary">Onderwijservaring</p>
+              <p class="text-3xl font-serif text-accent font-bold mb-2">10+ Years</p>
+              <p class="text-sm text-secondary">Teaching Experience</p>
             </div>
           </div>
         </div>
 
-        <!-- Rechter inhoud -->
+        <!-- Right content -->
         <div class="scroll-animate order-1 lg:order-2">
           <div class="mb-8">
             <span class="inline-block px-3 py-1 text-sm font-medium text-accent bg-accent/10 rounded-full mb-4">
-              Waarom Ons Kiezen
+              Why Choose Us
             </span>
             <h2 class="text-4xl font-serif font-bold text-ink mb-6">
-              Cursuskenmerken
+              Course Features
             </h2>
             <div class="w-20 h-1 bg-accent/50 mb-8"></div>
           </div>
 
           <div class="space-y-6">
-            <!-- Kenmerk 1 -->
+            <!-- Feature 1 -->
             <div class="flex items-start space-x-4">
               <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
                 <span class="text-xl text-accent">✓</span>
               </div>
               <div>
                 <h3 class="text-xl font-serif font-bold text-ink mb-2">
-                  Professionele Instructeurs
+                  Professional Instructors
                 </h3>
                 <p class="text-secondary">
-                  Ervaren professionele Tai Chi instructeurs met nationaal gecertificeerde coachkwalificaties
+                  Experienced professional Tai Chi instructors with nationally certified coaching qualifications
                 </p>
               </div>
             </div>
 
-            <!-- Kenmerk 2 -->
+            <!-- Feature 2 -->
             <div class="flex items-start space-x-4">
               <div class="w-12 h-12 bg-cyan/10 rounded-full flex items-center justify-center flex-shrink-0">
                 <span class="text-xl text-cyan">✓</span>
               </div>
               <div>
                 <h3 class="text-xl font-serif font-bold text-ink mb-2">
-                  Kleine Klasgrootte
+                  Small Class Size
                 </h3>
                 <p class="text-secondary">
-                  Kleine klas onderwijs zorgt ervoor dat elke student voldoende begeleiding en aandacht ontvangt
+                  Small class teaching ensures every student receives adequate guidance and attention
                 </p>
               </div>
             </div>
 
-            <!-- Kenmerk 3 -->
+            <!-- Feature 3 -->
             <div class="flex items-start space-x-4">
               <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0">
                 <span class="text-xl text-secondary">✓</span>
               </div>
               <div>
                 <h3 class="text-xl font-serif font-bold text-ink mb-2">
-                  Flexibele Rooster
+                  Flexible Schedule
                 </h3>
                 <p class="text-secondary">
-                  Meerdere tijdst beschikbaar, weekday en weekend lessen om aan verschillende behoeften te voldoen
+                  Multiple time slots available, weekday and weekend classes to meet different needs
                 </p>
               </div>
             </div>
 
-            <!-- Kenmerk 4 -->
+            <!-- Feature 4 -->
             <div class="flex items-start space-x-4">
               <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
                 <span class="text-xl text-accent">✓</span>
               </div>
               <div>
                 <h3 class="text-xl font-serif font-bold text-ink mb-2">
-                  Stijlvolle Omgeving
+                  Elegant Environment
                 </h3>
                 <p class="text-secondary">
-                  Leslokalen nabij parken met rustige omgeving en frisse lucht, ideaal voor Tai Chi beoefening
+                  Classrooms near parks with quiet surroundings and fresh air, ideal for Tai Chi practice
                 </p>
               </div>
             </div>
@@ -299,88 +299,88 @@ import wellnessImage from '../../assets/image/tai-chi-wellness.jpg';
     </div>
   </section>
 
-  <!-- Inschrijvingsformulier Gebied -->
-  <section id="inschrijvingsformulier" class="py-24 scroll-mt-20">
+  <!-- Registration Form Area -->
+  <section id="registration-form" class="py-24 scroll-mt-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-        <!-- Links: Cursusvoordelen -->
+        <!-- Left: Course Benefits -->
         <div class="scroll-animate">
           <div class="mb-8">
             <span class="inline-block px-3 py-1 text-sm font-medium text-cyan bg-cyan/10 rounded-full mb-4">
-              Schrijf Nu In
+              Register Now
             </span>
             <h2 class="text-4xl font-serif font-bold text-ink mb-6">
-              Begin uw Tai Chi Reis
+              Start Your Tai Chi Journey
             </h2>
             <div class="w-20 h-1 bg-cyan/50 mb-8"></div>
           </div>
 
           <div class="space-y-6 mb-8">
             <p class="text-secondary text-lg leading-relaxed">
-              Vul het inschrijvingsformulier aan de rechterkant in, en onze cursusadviseur neemt binnen <span class="text-accent font-medium">24 uur</span> contact met u op om de meest geschikte cursus aan te bevelen.
+              Fill out the registration form on the right, and our course consultant will contact you within <span class="text-accent font-medium">24 hours</span> to recommend the most suitable course.
             </p>
           </div>
 
-          <!-- Lesrooster -->
+          <!-- Class Schedule -->
           <div class="bg-mist/20 rounded-xl p-6 mb-6">
             <h3 class="text-xl font-serif font-bold text-ink mb-4 flex items-center">
               <span class="mr-2">📅</span>
-              Lesrooster
+              Class Schedule
             </h3>
             <div class="space-y-3 text-secondary">
               <div class="flex items-center space-x-3">
                 <div class="w-2 h-2 rounded-full bg-accent"></div>
-                <span>Weekdag Lessen: Ma-Vr 9:00-11:00, 14:00-16:00</span>
+                <span>Weekday Classes: Mon-Fri 9:00-11:00 AM, 14:00-16:00 PM</span>
               </div>
               <div class="flex items-center space-x-3">
                 <div class="w-2 h-2 rounded-full bg-cyan"></div>
-                <span>Weekend Lessen: Za-Zo 9:00-11:00, 14:00-16:00</span>
+                <span>Weekend Classes: Sat-Sun 9:00-11:00 AM, 14:00-16:00 PM</span>
               </div>
               <div class="flex items-center space-x-3">
                 <div class="w-2 h-2 rounded-full bg-secondary"></div>
-                <span>Avond Lessen: Ma-Vr 19:00-21:00</span>
+                <span>Evening Classes: Mon-Fri 19:00-21:00</span>
               </div>
             </div>
           </div>
 
-          <!-- Cursusprijzen -->
+          <!-- Course Pricing -->
           <div class="bg-mist/20 rounded-xl p-6 mb-6">
             <h3 class="text-xl font-serif font-bold text-ink mb-4 flex items-center">
               <span class="mr-2">💰</span>
-              Cursusprijzen
+              Course Pricing
             </h3>
             <div class="space-y-3 text-secondary">
               <div class="flex items-center justify-between">
-                <span>24-Vorm Beginnerscursus</span>
-                <span class="font-medium text-ink">¥1.200/termijn</span>
+                <span>24-Form Beginner Course</span>
+                <span class="font-medium text-ink">¥1,200/term</span>
               </div>
               <div class="flex items-center justify-between">
-                <span>42-Vorm Voortgezette Cursus</span>
-                <span class="font-medium text-ink">¥1.800/termijn</span>
+                <span>42-Form Intermediate Course</span>
+                <span class="font-medium text-ink">¥1,800/term</span>
               </div>
               <div class="flex items-center justify-between">
-                <span>Traditionele 108-Vorm Gevorderde Cursus</span>
-                <span class="font-medium text-ink">¥2.800/termijn</span>
+                <span>Traditional 108-Form Advanced Course</span>
+                <span class="font-medium text-ink">¥2,800/term</span>
               </div>
               <div class="flex items-center justify-between">
-                <span>Een-op-een Privécursus</span>
-                <span class="font-medium text-ink">¥300/uur</span>
+                <span>One-on-One Private Course</span>
+                <span class="font-medium text-ink">¥300/hour</span>
               </div>
             </div>
             <p class="text-sm text-secondary mt-4 pt-4 border-t border-border/30">
-              * Eerste proefles voor nieuwe studenten slechts ¥99, inschrijven wanneer tevreden
+              * First trial class for new students only ¥99, register when satisfied
             </p>
           </div>
 
-          <!-- Contactgegevens -->
+          <!-- Contact Information -->
           <div class="bg-mist/20 rounded-xl p-6">
             <h3 class="text-xl font-serif font-bold text-ink mb-4 flex items-center">
               <span class="mr-2">📞</span>
-              Andere Contactmethoden
+              Other Contact Methods
             </h3>
             <div class="space-y-3 text-secondary">
               <div class="flex items-center space-x-3">
-                <span class="text-accent">Telefoon:</span>
+                <span class="text-accent">Phone:</span>
                 <span class="font-medium text-ink">400-123-4567</span>
               </div>
               <div class="flex items-center space-x-3">
@@ -388,14 +388,14 @@ import wellnessImage from '../../assets/image/tai-chi-wellness.jpg';
                 <span class="font-medium text-ink">taichi_wx</span>
               </div>
               <div class="flex items-center space-x-3">
-                <span class="text-secondary">Adres:</span>
-                <span class="font-medium text-ink">Tai Chi Trainingscentrum, Wijk, Stad</span>
+                <span class="text-secondary">Address:</span>
+                <span class="font-medium text-ink">Tai Chi Training Center, District, City</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Rechts: Inschrijvingsformulier -->
+        <!-- Right: Registration Form -->
         <div class="scroll-animate" style="animation-delay: 0.2s">
           <RegistrationForm client:load />
         </div>
@@ -411,56 +411,56 @@ import wellnessImage from '../../assets/image/tai-chi-wellness.jpg';
           FAQ
         </span>
         <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
-          Veelgestelde Vragen
+          Frequently Asked Questions
         </h2>
         <div class="w-32 h-1 bg-accent/50 mx-auto mb-6"></div>
       </div>
 
       <div class="space-y-6">
-        <!-- Vraag 1 -->
+        <!-- Question 1 -->
         <div class="scroll-animate">
           <div class="bg-paper rounded-xl shadow-lg p-8 border border-border/30">
             <h3 class="text-xl font-serif font-bold text-ink mb-4">
-              Ik heb geen ervaring. Kan ik Tai Chi leren?
+              I have zero experience. Can I learn Tai Chi?
             </h3>
             <p class="text-secondary leading-relaxed">
-              Absoluut! Onze 24-vorm beginnerscursus is speciaal ontworpen voor studenten zonder ervaring. Instructeurs beginnen bij de meest basische standen en voetwerk, progressief om ervoor te zorgen dat elke student kan bijbenen. Tai Chi bewegingen zijn zacht en traag, geschikt voor mensen van elke leeftijd en fitnessniveau.
+              Absolutely! Our 24-form beginner course is specifically designed for students with zero experience. Instructors start from the most basic stances and footwork, progressing gradually to ensure every student can keep up. Tai Chi movements are gentle and slow, suitable for people of any age and fitness level.
             </p>
           </div>
         </div>
 
-        <!-- Vraag 2 -->
+        <!-- Question 2 -->
         <div class="scroll-animate" style="animation-delay: 0.1s">
           <div class="bg-paper rounded-xl shadow-lg p-8 border border-border/30">
             <h3 class="text-xl font-serif font-bold text-ink mb-4">
-              Welke uitrusting heb ik nodig voor de cursus?
+              What equipment do I need for the course?
             </h3>
             <p class="text-secondary leading-relaxed">
-              We raden aan om losse, comfortabele sportkleding en sportschoenen te dragen. We bieden professionele Tai Chi trainingspakken te koop aan, maar deze zijn niet verplicht. Het belangrijkste is het dragen van kleding die gemakkelijke beweging mogelijk maakt. Dames wordt aangeraden om geen rokken te dragen. Ook raden we aan om uw eigen waterfles mee te nemen om gehydrateerd te blijven tijdens de oefening.
+              We recommend wearing loose, comfortable sportswear and athletic shoes. We provide professional Tai Chi practice uniforms for purchase, but they're not required. The most important thing is to wear clothes that allow easy movement. Ladies should avoid wearing skirts. Also, we recommend bringing your own water bottle to stay hydrated during practice.
             </p>
           </div>
         </div>
 
-        <!-- Vraag 3 -->
+        <!-- Question 3 -->
         <div class="scroll-animate" style="animation-delay: 0.2s">
           <div class="bg-paper rounded-xl shadow-lg p-8 border border-border/30">
             <h3 class="text-xl font-serif font-bold text-ink mb-4">
-              Wat als ik de cursus niet in één termijn kan beheersen?
+              What if I can't master the course in one term?
             </h3>
             <p class="text-secondary leading-relaxed">
-              Maak u geen zorgen! Ons cursusontwerp houdt rekening met de leercurve van de meeste mensen. Als u meer oefening nodig heeft na het voltooien van één termijn, kunt u dezelfde cursus herhalen (met voorafgaande boeking). We bieden ook oefenvideo's na de les voor uw thuisoefening.
+              Don't worry! Our course design takes most people's learning progress into account. If you need more practice after completing one term, you can repeat the same level course for free (with advance booking). We also provide after-class tutorial videos for your home practice.
             </p>
           </div>
         </div>
 
-        <!-- Vraag 4 -->
+        <!-- Question 4 -->
         <div class="scroll-animate" style="animation-delay: 0.3s">
           <div class="bg-paper rounded-xl shadow-lg p-8 border border-border/30">
             <h3 class="text-xl font-serif font-bold text-ink mb-4">
-              Is er een leeftijdsgrens?
+              Is there an age limit?
             </h3>
             <p class="text-secondary leading-relaxed">
-              Tai Chi is een sport geschikt voor alle leeftijden. Onze studenten variëren van 18 tot meer dan 70 jaar. Voor tieners (12-18 jaar) raden we ouderlijke begeleiding aan of deelnemen aan gespecialiseerde jeugd Tai Chi lessen. Zolang u gezond bent en in staat tot matige oefening, kunt u Tai Chi leren.
+              Tai Chi is a sport suitable for all ages. Our students range from 18 to over 70 years old. For teenagers (12-18 years), we recommend parental accompaniment or joining specialized youth Tai Chi classes. As long as you're healthy and capable of moderate exercise, you can learn Tai Chi.
             </p>
           </div>
         </div>
@@ -468,27 +468,27 @@ import wellnessImage from '../../assets/image/tai-chi-wellness.jpg';
     </div>
   </section>
 
-  <!-- CTA Sectie -->
+  <!-- CTA Section -->
   <section class="py-24">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center scroll-animate">
       <h2 class="text-4xl font-serif font-bold text-ink mb-6">
-        Schrijf Nu In, Begin een Gezond Leven
+        Register Now, Start Your Healthy Life
       </h2>
       <p class="text-xl text-secondary mb-12">
-        Eerste proefles voor nieuwe studenten slechts ¥99
+        First trial class for new students only ¥99
       </p>
       <a
-        href="#inschrijvingsformulier"
+        href="#registration-form"
         class="inline-block px-8 py-4 bg-accent hover:bg-primary text-paper hover:text-paper border-2 border-accent hover:border-primary rounded-lg font-medium text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
       >
-        Schrijf Nu In
+        Register Now
       </a>
     </div>
   </section>
 </BaseLayout>
 
 <script>
-  // Scroll trigger animatie
+  // Scroll trigger animation
   const observerOptions = {
     root: null,
     rootMargin: '0px',
