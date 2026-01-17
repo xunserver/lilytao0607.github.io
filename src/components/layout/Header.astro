@@ -149,11 +149,33 @@ const labels = buttonLabels[currentLocale];
   }
 </style>
 
-<script>
-  // 监听滚动事件,添加背景模糊效果
-  const header = document.querySelector('header');
+<script define:vars={{ currentLocale: Astro.currentLocale || 'nl' }}>
+  // 移动端菜单切换 - 使用事件委托确保在View Transitions后仍然工作
+  document.addEventListener('click', (e) => {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-  const handleScroll = () => {
+    // 检查点击的是否是菜单按钮
+    if (mobileMenuButton && (e.target === mobileMenuButton || mobileMenuButton.contains(e.target))) {
+      mobileMenu?.classList.toggle('hidden');
+      e.preventDefault();
+      e.stopPropagation();
+    }
+
+    // 点击菜单项后关闭菜单
+    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+      const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+      mobileMenuLinks.forEach((link) => {
+        if (e.target === link || link.contains(e.target)) {
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    }
+  });
+
+  // 滚动效果处理
+  let scrollHandler = () => {
+    const header = document.querySelector('header');
     if (window.scrollY > 10) {
       header?.classList.add('scrolled');
     } else {
@@ -161,25 +183,10 @@ const labels = buttonLabels[currentLocale];
     }
   };
 
-  window.addEventListener('scroll', handleScroll, { passive: true });
+  window.addEventListener('scroll', scrollHandler, { passive: true });
+  scrollHandler();
 
-  // 移动端菜单切换
-  const mobileMenuButton = document.getElementById('mobile-menu-button');
-  const mobileMenu = document.getElementById('mobile-menu');
-
-  mobileMenuButton?.addEventListener('click', () => {
-    mobileMenu?.classList.toggle('hidden');
-  });
-
-  // 点击菜单项后关闭菜单
-  const mobileMenuLinks = mobileMenu?.querySelectorAll('a');
-  mobileMenuLinks?.forEach((link) => {
-    link.addEventListener('click', () => {
-      mobileMenu?.classList.add('hidden');
-    });
-  });
-
-  // 确保只有一个语言切换器可见
+  // 语言切换器可见性
   function updateLanguageSwitcherVisibility() {
     const desktopSwitcher = document.getElementById('desktop-language-switcher');
     const mobileSwitcher = document.getElementById('mobile-language-switcher');
@@ -194,7 +201,6 @@ const labels = buttonLabels[currentLocale];
     }
   }
 
-  // 初始化和窗口大小改变时更新
   updateLanguageSwitcherVisibility();
   window.addEventListener('resize', updateLanguageSwitcherVisibility);
 </script>

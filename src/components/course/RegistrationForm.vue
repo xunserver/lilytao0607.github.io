@@ -2,11 +2,11 @@
   <div class="bg-paper rounded-2xl shadow-xl p-8 md:p-12 border border-border/30">
     <div class="mb-8">
       <h3 class="text-3xl font-serif font-bold text-ink mb-4">
-        课程报名
+        {{ t.title }}
       </h3>
       <div class="w-16 h-1 bg-accent/50"></div>
       <p class="text-secondary mt-4">
-        填写下方信息，我们将尽快与您联系
+        {{ t.subtitle }}
       </p>
     </div>
 
@@ -14,14 +14,14 @@
       <!-- 姓名 -->
       <div>
         <label for="name" class="block text-sm font-medium text-ink mb-2">
-          您的称呼 <span class="text-accent">*</span>
+          {{ t.nameLabel }} <span class="text-accent">*</span>
         </label>
         <input
           id="name"
           v-model="formData.name"
           type="text"
           required
-          placeholder="请输入您的称呼"
+          :placeholder="t.namePlaceholder"
           class="w-full px-4 py-3 rounded-lg border border-border/50 bg-paper text-ink placeholder:text-secondary/50 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all"
           :disabled="isSubmitting"
         />
@@ -30,14 +30,14 @@
       <!-- 邮箱 -->
       <div>
         <label for="email" class="block text-sm font-medium text-ink mb-2">
-          电子邮箱 <span class="text-accent">*</span>
+          {{ t.emailLabel }} <span class="text-accent">*</span>
         </label>
         <input
           id="email"
           v-model="formData.email"
           type="email"
           required
-          placeholder="请输入您的邮箱地址"
+          :placeholder="t.emailPlaceholder"
           class="w-full px-4 py-3 rounded-lg border border-border/50 bg-paper text-ink placeholder:text-secondary/50 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all"
           :disabled="isSubmitting"
         />
@@ -46,13 +46,13 @@
       <!-- 电话（可选） -->
       <div>
         <label for="phone" class="block text-sm font-medium text-ink mb-2">
-          联系电话 <span class="text-secondary">(可选)</span>
+          {{ t.phoneLabel }} <span class="text-secondary">({{ props.locale === 'zh' ? '可选' : props.locale === 'nl' ? 'optioneel' : 'optional' }})</span>
         </label>
         <input
           id="phone"
           v-model="formData.phone"
           type="tel"
-          placeholder="请输入您的联系电话"
+          :placeholder="t.phonePlaceholder"
           class="w-full px-4 py-3 rounded-lg border border-border/50 bg-paper text-ink placeholder:text-secondary/50 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all"
           :disabled="isSubmitting"
         />
@@ -61,7 +61,7 @@
       <!-- 课程选择 -->
       <div>
         <label for="course" class="block text-sm font-medium text-ink mb-2">
-          意向课程 <span class="text-accent">*</span>
+          {{ t.courseLabel }} <span class="text-accent">*</span>
         </label>
         <select
           id="course"
@@ -70,24 +70,24 @@
           class="w-full px-4 py-3 rounded-lg border border-border/50 bg-paper text-ink focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all"
           :disabled="isSubmitting"
         >
-          <option value="">请选择课程</option>
-          <option value="beginner">24式太极拳入门班</option>
-          <option value="intermediate">42式太极拳进阶班</option>
-          <option value="advanced">传统108式研修班</option>
-          <option value="private">一对一私教课程</option>
+          <option value="">{{ t.coursePlaceholder }}</option>
+          <option value="beginner">{{ t.courses.beginner }}</option>
+          <option value="intermediate">{{ t.courses.intermediate }}</option>
+          <option value="advanced">{{ t.courses.advanced }}</option>
+          <option value="private">{{ t.courses.private }}</option>
         </select>
       </div>
 
       <!-- 备注 -->
       <div>
         <label for="message" class="block text-sm font-medium text-ink mb-2">
-          留言 <span class="text-secondary">(可选)</span>
+          {{ t.messageLabel }} <span class="text-secondary">({{ props.locale === 'zh' ? '可选' : props.locale === 'nl' ? 'optioneel' : 'optional' }})</span>
         </label>
         <textarea
           id="message"
           v-model="formData.message"
           rows="4"
-          placeholder="请告诉我们您的学习目标或其他需求..."
+          :placeholder="t.messagePlaceholder"
           class="w-full px-4 py-3 rounded-lg border border-border/50 bg-paper text-ink placeholder:text-secondary/50 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all resize-none"
           :disabled="isSubmitting"
         ></textarea>
@@ -116,19 +116,119 @@
           <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
           <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
         </svg>
-        <span>{{ isSubmitting ? '提交中...' : '提交报名' }}</span>
+        <span>{{ isSubmitting ? t.submittingButton : t.submitButton }}</span>
       </button>
 
       <p class="text-xs text-secondary text-center">
-        提交即表示您同意我们的隐私政策。我们将保护您的个人信息安全。
+        {{ t.privacyText }}
       </p>
     </form>
   </div>
 </template>
 
 <script setup>
-import { reactive, ref } from 'vue';
+import { reactive, ref, computed } from 'vue';
 import emailjs from '@emailjs/browser';
+
+// 定义 props
+const props = defineProps({
+  locale: {
+    type: String,
+    default: 'zh',
+    validator: (value) => ['nl', 'en', 'zh'].includes(value)
+  }
+});
+
+// 翻译对象
+const translations = {
+  nl: {
+    title: 'Cursusinschrijving',
+    subtitle: 'Vul onderstaande informatie in, wij nemen zo snel mogelijk contact met u op',
+    nameLabel: 'Uw naam',
+    emailLabel: 'E-mailadres',
+    phoneLabel: 'Telefoonnummer (optioneel)',
+    courseLabel: 'Gewenste cursus',
+    messageLabel: 'Bericht (optioneel)',
+    namePlaceholder: 'Voer uw naam in',
+    emailPlaceholder: 'Voer uw e-mailadres in',
+    phonePlaceholder: 'Voer uw telefoonnummer in',
+    coursePlaceholder: 'Selecteer een cursus',
+    messagePlaceholder: 'Vertel ons uw leerdoelen of andere behoeften...',
+    submitButton: 'Indienen',
+    submittingButton: 'Indienen...',
+    privacyText: 'Door in te dienen gaat u akkoord met ons privacybeleid. Wij beschermen uw persoonlijke gegevens.',
+    successMessage: '✓ Inschrijving succesvol! We hebben uw informatie ontvangen en nemen binnen 24 uur contact met u op.',
+    errorMessage: '✗ Indienen mislukt, probeer het later opnieuw of neem rechtstreeks contact met ons op. Foutinformatie:',
+    noPhone: 'Niet voorzien',
+    noMessage: 'Geen',
+    fromName: 'Tai Chi Cultuur website',
+    courses: {
+      beginner: '24-vorm Tai Chi beginnerscursus',
+      intermediate: '42-vorm Tai Chi voortgezette cursus',
+      advanced: 'Traditionele 108-vorm studiegroep',
+      private: 'Eén-op-één privéles'
+    }
+  },
+  en: {
+    title: 'Course Registration',
+    subtitle: 'Fill in the information below, and we will contact you as soon as possible',
+    nameLabel: 'Your Name',
+    emailLabel: 'Email Address',
+    phoneLabel: 'Phone Number (optional)',
+    courseLabel: 'Desired Course',
+    messageLabel: 'Message (optional)',
+    namePlaceholder: 'Enter your name',
+    emailPlaceholder: 'Enter your email address',
+    phonePlaceholder: 'Enter your phone number',
+    coursePlaceholder: 'Select a course',
+    messagePlaceholder: 'Tell us your learning goals or other requirements...',
+    submitButton: 'Submit',
+    submittingButton: 'Submitting...',
+    privacyText: 'By submitting, you agree to our privacy policy. We will protect your personal information.',
+    successMessage: '✓ Registration successful! We have received your information and will contact you within 24 hours.',
+    errorMessage: '✗ Submission failed, please try again later or contact us directly. Error:',
+    noPhone: 'Not provided',
+    noMessage: 'None',
+    fromName: 'Tai Chi Culture website',
+    courses: {
+      beginner: '24-Form Tai Chi Beginner Course',
+      intermediate: '42-Form Tai Chi Intermediate Course',
+      advanced: 'Traditional 108-Form Advanced Course',
+      private: 'One-on-One Private Lesson'
+    }
+  },
+  zh: {
+    title: '课程报名',
+    subtitle: '填写下方信息，我们将尽快与您联系',
+    nameLabel: '您的称呼',
+    emailLabel: '电子邮箱',
+    phoneLabel: '联系电话',
+    courseLabel: '意向课程',
+    messageLabel: '留言',
+    namePlaceholder: '请输入您的称呼',
+    emailPlaceholder: '请输入您的邮箱地址',
+    phonePlaceholder: '请输入您的联系电话',
+    coursePlaceholder: '请选择课程',
+    messagePlaceholder: '请告诉我们您的学习目标或其他需求...',
+    submitButton: '提交报名',
+    submittingButton: '提交中...',
+    privacyText: '提交即表示您同意我们的隐私政策。我们将保护您的个人信息安全。',
+    successMessage: '✓ 报名成功！我们已收到您的信息，将在24小时内与您联系。',
+    errorMessage: '✗ 提交失败，请稍后重试或直接联系我们。错误信息：',
+    noPhone: '未提供',
+    noMessage: '无',
+    fromName: '太极文化官网',
+    courses: {
+      beginner: '24式太极拳入门班',
+      intermediate: '42式太极拳进阶班',
+      advanced: '传统108式研修班',
+      private: '一对一私教课程'
+    }
+  }
+};
+
+// 计算当前语言的翻译
+const t = computed(() => translations[props.locale] || translations.zh);
 
 // 表单数据
 const formData = reactive({
@@ -158,10 +258,10 @@ const handleSubmit = async () => {
     const templateParams = {
       to_name: formData.name,
       to_email: formData.email,
-      phone: formData.phone || '未提供',
-      course: getCourseName(formData.course),
-      message: formData.message || '无',
-      from_name: '太极文化官网',
+      phone: formData.phone || t.value.noPhone,
+      course: t.value.courses[formData.course],
+      message: formData.message || t.value.noMessage,
+      from_name: t.value.fromName,
       reply_to: formData.email
     };
 
@@ -176,7 +276,7 @@ const handleSubmit = async () => {
     // 成功
     submitStatus.value = {
       type: 'success',
-      message: '✓ 报名成功！我们已收到您的信息，将在24小时内与您联系。'
+      message: t.value.successMessage
     };
 
     // 重置表单
@@ -188,20 +288,10 @@ const handleSubmit = async () => {
     console.error('EmailJS Error:', error);
     submitStatus.value = {
       type: 'error',
-      message: '✗ 提交失败，请稍后重试或直接联系我们。错误信息：' + (error.text || error.message)
+      message: t.value.errorMessage + (error.text || error.message)
     };
   } finally {
     isSubmitting.value = false;
   }
-};
-
-const getCourseName = (value) => {
-  const courses = {
-    'beginner': '24式太极拳入门班',
-    'intermediate': '42式太极拳进阶班',
-    'advanced': '传统108式研修班',
-    'private': '一对一私教课程'
-  };
-  return courses[value] || value;
 };
 </script>
