@@ -7,7 +7,14 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   integrations: [vue()],
 
-  site: 'https://taichi.astro', // 添加 site 配置（用于 i18n）
+  // 使用 base 配置支持部署到任意子目录
+  // 部署到根目录: base: '/'
+  // 部署到子目录: base: '/your-subdirectory/'
+  // 可以通过环境变量 ASTRO_BASE 动态配置
+  base: import.meta.env.ASTRO_BASE || './',
+
+  // 如果需要生成 sitemap 或 RSS，取消注释并设置正确的 site
+  // site: 'https://your-domain.com',
 
   server: {
     host: '0.0.0.0',
