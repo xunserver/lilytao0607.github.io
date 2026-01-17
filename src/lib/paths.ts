@@ -51,3 +51,59 @@ export function localizedPath(path: string, locale: string): string {
   // Add locale prefix with slash
   return withBase(`/${locale}/${cleanPath}`);
 }
+
+/**
+ * Extract base path and remaining path from a full URL
+ * Used for language switching to preserve the base path
+ * @param fullPath - The full path (e.g., '/taichi/en/about')
+ * @returns Object with basePath and pathWithoutLocale
+ */
+export function parsePath(fullPath: string): { basePath: string; pathWithoutLocale: string } {
+  const base = getBasePath();
+
+  // Remove base path from the full path
+  let pathWithoutBase = fullPath;
+  if (base !== '/') {
+    // Remove base path (e.g., '/taichi/') from the beginning
+    if (fullPath.startsWith(base)) {
+      pathWithoutBase = fullPath.slice(base.length - 1); // Keep the leading slash
+    }
+  }
+
+  // Remove locale prefix if present
+  const localeMatch = pathWithoutBase.match(/^\/(nl|en|zh)(\/|$)/);
+  if (localeMatch) {
+    return {
+      basePath: base,
+      pathWithoutLocale: pathWithoutBase.replace(/^\/(nl|en|zh)/, '') || '/'
+    };
+  }
+
+  return {
+    basePath: base,
+    pathWithoutLocale: pathWithoutBase
+  };
+}
+
+/**
+ * Build a full path with base and locale
+ * @param pathWithoutLocale - Path without locale (e.g., '/about')
+ * @param locale - The locale ('nl', 'en', 'zh')
+ * @returns Full path with base and locale
+ */
+export function buildPath(pathWithoutLocale: string, locale: string): string {
+  const base = getBasePath();
+
+  // For default locale (nl), don't add locale prefix
+  if (locale === 'nl') {
+    return base === '/' ? pathWithoutLocale : `${base.slice(0, -1)}${pathWithoutLocale}`;
+  }
+
+  // Add locale prefix
+  const cleanPath = pathWithoutLocale.startsWith('/') ? pathWithoutLocale : `/${pathWithoutLocale}`;
+  if (base === '/') {
+    return `/${locale}${cleanPath}`;
+  }
+
+  return `${base.slice(0, -1)}/${locale}${cleanPath}`;
+}

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from 'vue';
+import { parsePath, buildPath } from '../../lib/paths';
 
 const locales = [
   { code: 'nl', name: 'Nederlands', flag: '🇳🇱' },
@@ -12,8 +13,16 @@ const isOpen = ref(false);
 
 onMounted(() => {
   const currentPath = window.location.pathname;
-  const matches = currentPath.match(/^\/(nl|en|zh)(\/|$)/);
-  currentLocale.value = matches ? matches[1] : 'nl';
+  // Use parsePath to extract the current locale from the full path
+  const localeMatch = currentPath.match(/^\/([^\/]*)/);
+  const possibleLocale = localeMatch ? localeMatch[1] : '';
+
+  // Check if the first segment is a valid locale
+  if (possibleLocale && ['nl', 'en', 'zh'].includes(possibleLocale)) {
+    currentLocale.value = possibleLocale;
+  } else {
+    currentLocale.value = 'nl';
+  }
 
   // 点击外部关闭菜单
   document.addEventListener('click', handleClickOutside);
@@ -33,8 +42,10 @@ const handleClickOutside = (event: MouseEvent) => {
 
 const switchLanguage = (localeCode: string) => {
   const currentPath = window.location.pathname;
-  const pathWithoutLocale = currentPath.replace(/^\/(nl|en|zh)/, '') || '/';
-  const newPath = localeCode === 'nl' ? pathWithoutLocale : `/${localeCode}${pathWithoutLocale}`;
+  // Use parsePath to extract path without locale
+  const { pathWithoutLocale } = parsePath(currentPath);
+  // Use buildPath to build the new path with correct base and locale
+  const newPath = buildPath(pathWithoutLocale, localeCode);
   window.location.href = newPath;
 };
 
