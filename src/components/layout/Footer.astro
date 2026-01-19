@@ -1,6 +1,4 @@
 ---
-import { Image } from 'astro:assets';
-import taichiLogo from '../../assets/image/taichi-logo.png';
 import { localizedPath } from '../../lib/paths';
 
 const currentYear = new Date().getFullYear();
@@ -86,13 +84,12 @@ const footerLinks = {
       <!-- Logo 和简介 -->
       <div class="lg:col-span-1">
         <a href={localizedPath('/', currentLocale)} class="flex items-center space-x-3 mb-6 group">
-          <Image
-            src={taichiLogo}
+          <img
+            src="/image/taichi-logo.png"
             alt={t.siteName}
-            width={48}
-            height={48}
+            width="48"
+            height="48"
             class="h-12 w-12 object-contain group-hover:rotate-180 transition-transform duration-700"
-            format="png"
           />
           <span class="text-xl font-serif font-bold text-paper">
             {t.siteName}

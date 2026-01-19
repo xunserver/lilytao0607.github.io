@@ -1,13 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
-import taichiLogo from '../../assets/image/taichi-logo.png';
-import groupImage from '../../assets/image/tai-chi-group.jpg';
-import standingImage from '../../assets/image/tai-chi-standing.jpg';
-import parkImage from '../../assets/image/tai-chi-park.jpg';
-import wellnessImage from '../../assets/image/tai-chi-wellness.jpg';
-import meditationImage from '../../assets/image/tai-chi-meditation.jpg';
-import natureImage from '../../assets/image/tai-chi-nature.jpg';
 import { withBase } from '../../lib/paths';
 ---
 
@@ -58,11 +51,10 @@ import { withBase } from '../../lib/paths';
         <div class="scroll-animate">
           <div class="bg-paper rounded-2xl shadow-xl overflow-hidden border border-border/30 hover:shadow-2xl transition-all duration-300">
             <div class="aspect-[16/9] overflow-hidden">
-              <Image
-                src={parkImage}
+              <img
+                src="/image/tai-chi-park.jpg"
                 alt="Mevrouw Zhang"
                 class="w-full h-full object-cover"
-                format="jpg"
               />
             </div>
             <div class="p-8">
@@ -100,11 +92,10 @@ import { withBase } from '../../lib/paths';
         <div class="scroll-animate" style="animation-delay: 0.1s">
           <div class="bg-paper rounded-2xl shadow-xl overflow-hidden border border-border/30 hover:shadow-2xl transition-all duration-300">
             <div class="aspect-[16/9] overflow-hidden">
-              <Image
-                src={standingImage}
+              <img
+                src="/image/tai-chi-standing.jpg"
                 alt="Meneer Li"
                 class="w-full h-full object-cover"
-                format="jpg"
               />
             </div>
             <div class="p-8">
@@ -369,11 +360,10 @@ import { withBase } from '../../lib/paths';
         <div class="scroll-animate group">
           <div class="bg-paper rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
             <div class="aspect-[4/3] overflow-hidden">
-              <Image
-                src={groupImage}
+              <img
+                src="/image/tai-chi-group.jpg"
                 alt="Groepsoefening"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                format="jpg"
               />
             </div>
             <div class="p-6">
@@ -390,11 +380,10 @@ import { withBase } from '../../lib/paths';
         <div class="scroll-animate group" style="animation-delay: 0.1s">
           <div class="bg-paper rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
             <div class="aspect-[4/3] overflow-hidden">
-              <Image
-                src={meditationImage}
+              <img
+                src="/image/tai-chi-meditation.jpg"
                 alt="Tai Chi meditatie"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                format="jpg"
               />
             </div>
             <div class="p-6">
@@ -411,11 +400,10 @@ import { withBase } from '../../lib/paths';
         <div class="scroll-animate" style="animation-delay: 0.2s">
           <div class="bg-paper rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
             <div class="aspect-[4/3] overflow-hidden">
-              <Image
-                src={wellnessImage}
+              <img
+                src="/image/tai-chi-wellness.jpg"
                 alt="Buitenexcursie"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                format="jpg"
               />
             </div>
             <div class="p-6">
@@ -439,11 +427,10 @@ import { withBase } from '../../lib/paths';
         <div class="scroll-animate order-2 lg:order-1">
           <div class="relative">
             <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src={natureImage}
+              <img
+                src="/image/tai-chi-nature.jpg"
                 alt="Tai Chi oefening"
                 class="w-full h-full object-cover"
-                format="jpg"
               />
             </div>
             <!-- Decoratieve kaart -->

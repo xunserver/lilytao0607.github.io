@@ -1,8 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { Image } from 'astro:assets';
-import taichiLogo from '../assets/image/taichi-logo.png';
-import photoTaoli from '../assets/image/tai-chi-taoli.jpg';
 import { withBase, localizedPath } from '../lib/paths';
 ---
 
@@ -40,11 +37,10 @@ import { withBase, localizedPath } from '../lib/paths';
         <div class="scroll-animate">
           <div class="relative">
             <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl bg-mist/30">
-              <Image
-                src={photoTaoli}
+              <img
+                src="/image/tai-chi-taoli.jpg"
                 alt="Lily Tao"
                 class="w-full h-full object-contain"
-                format="jpg"
               />
             </div>
             <div class="absolute bottom-4 right-4 bg-paper border-2 border-accent/30 rounded-xl p-4 shadow-lg">
@@ -313,11 +309,10 @@ import { withBase, localizedPath } from '../lib/paths';
         </p>
         <div class="flex justify-center mt-8">
           <div class="w-24 h-24 bg-mist/50 rounded-full p-3">
-            <Image
-              src={taichiLogo}
+            <img
+              src="/image/taichi-logo.png"
               alt="Tai Chi"
               class="w-full h-full object-contain animate-[spin_30s_linear_infinite]"
-              format="png"
             />
           </div>
         </div>

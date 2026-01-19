@@ -1,6 +1,4 @@
 ---
-import { Image } from 'astro:assets';
-import taichiLogo from '../../assets/image/taichi-logo.png';
 import LanguageSwitcher from '../ui/LanguageSwitcher.vue';
 import { translations } from '../../lib/i18n';
 import { localizedPath } from '../../lib/paths';
@@ -39,13 +37,12 @@ const labels = buttonLabels[currentLocale];
     <div class="flex items-center justify-between h-16">
       <!-- Logo -->
       <a href={localizedPath('/', currentLocale)} class="flex items-center space-x-3 group">
-        <Image
-          src={taichiLogo}
+        <img
+          src="/image/taichi-logo.png"
           alt={labels.logo}
-          width={40}
-          height={40}
+          width="40"
+          height="40"
           class="h-10 w-10 object-contain group-hover:rotate-180 transition-transform duration-700"
-          format="png"
         />
         <span
           class="text-xl font-serif font-bold text-ink group-hover:text-accent transition-colors"

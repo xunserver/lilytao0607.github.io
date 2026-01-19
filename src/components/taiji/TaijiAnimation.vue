@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue';
-import taichiLogoUrl from '../../assets/image/taichi-logo.png';
 
 const isPlaying = ref(true);
 const speed = ref(8); // 旋转周期(秒)
@@ -71,7 +70,7 @@ const stopAnimation = () => {
       }"
     >
       <img
-        :src="taichiLogoUrl"
+        src="/image/taichi-logo.png"
         alt="太极"
         class="w-full h-full object-contain drop-shadow-2xl"
       />

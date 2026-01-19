@@ -1,11 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
-import taichiLogo from '../../assets/image/taichi-logo.png';
-import poseImage from '../../assets/image/tai-chi-pose.jpg';
-import silhouetteImage from '../../assets/image/tai-chi-silhouette.jpg';
-import standingImage from '../../assets/image/tai-chi-standing.jpg';
-import kungFuImage from '../../assets/image/tai-chi-kung-fu.jpg';
 import { withBase } from '../../lib/paths';
 ---
 
@@ -174,11 +169,10 @@ import { withBase } from '../../lib/paths';
         <div class="bg-paper rounded-2xl shadow-xl overflow-hidden border border-border/30">
           <div class="grid grid-cols-1 lg:grid-cols-2">
             <div class="aspect-[4/3] overflow-hidden">
-              <Image
-                src={poseImage}
+              <img
+                src="/image/tai-chi-pose.jpg"
                 alt="De manen van het wilde paard scheiden"
                 class="w-full h-full object-cover"
-                format="jpg"
               />
             </div>
             <div class="p-8 md:p-12 flex flex-col justify-center">
@@ -278,11 +272,10 @@ import { withBase } from '../../lib/paths';
               </div>
             </div>
             <div class="aspect-[4/3] overflow-hidden order-1 lg:order-2">
-              <Image
-                src={silhouetteImage}
+              <img
+                src="/image/tai-chi-silhouette.jpg"
                 alt="Witte kraanvogel spreidt vleugels"
                 class="w-full h-full object-cover"
-                format="jpg"
               />
             </div>
           </div>
@@ -294,11 +287,10 @@ import { withBase } from '../../lib/paths';
         <div class="bg-paper rounded-2xl shadow-xl overflow-hidden border border-border/30">
           <div class="grid grid-cols-1 lg:grid-cols-2">
             <div class="aspect-[4/3] overflow-hidden">
-              <Image
-                src={standingImage}
+              <img
+                src="/image/tai-chi-standing.jpg"
                 alt="Knie borstelen en draaiende stap"
                 class="w-full h-full object-cover"
-                format="jpg"
               />
             </div>
             <div class="p-8 md:p-12 flex flex-col justify-center">
@@ -398,11 +390,10 @@ import { withBase } from '../../lib/paths';
               </div>
             </div>
             <div class="aspect-[4/3] overflow-hidden order-1 lg:order-2">
-              <Image
-                src={kungFuImage}
+              <img
+                src="/image/tai-chi-kung-fu.jpg"
                 alt="Pipa spelen"
                 class="w-full h-full object-cover"
-                format="jpg"
               />
             </div>
           </div>

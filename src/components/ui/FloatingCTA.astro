@@ -1,6 +1,4 @@
 ---
-import { Image } from 'astro:assets';
-import taichiLogo from '../../assets/image/taichi-logo.png';
 import { localizedPath } from '../../lib/paths';
 
 const currentPath = Astro.url.pathname;
@@ -29,14 +27,13 @@ const shouldShow = !currentPath.includes('/courses');
     >
       <!-- Tai Chi Logo Container -->
       <div class="w-16 h-16 border-accent/30 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 flex items-center justify-center">
-        <Image
-          src={taichiLogo}
+        <img
+          src="/image/taichi-logo.png"
           alt="Tai Chi"
-          width={64}
-          height={64}
+          width="64"
+          height="64"
           class="w-12 h-12 object-contain animate-spin"
           style="animation-duration: 8s;"
-          format="png"
         />
       </div>
 

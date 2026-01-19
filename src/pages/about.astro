@@ -1,10 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { Image } from 'astro:assets';
-import taichiLogo from '../assets/image/taichi-logo.png';
-import bgMeditation from '../assets/image/tai-chi-meditation.jpg';
-import bgNature from '../assets/image/tai-chi-nature.jpg';
-import bgGroup from '../assets/image/tai-chi-group.jpg';
 import { withBase, localizedPath } from '../lib/paths';
 
 const currentLocale = 'nl' as const;
@@ -43,11 +38,10 @@ const currentLocale = 'nl' as const;
         <div class="scroll-animate">
           <div class="relative">
             <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src={bgMeditation}
+              <img
+                src="/image/tai-chi-meditation.jpg"
                 alt="Tai Chi meditatie"
                 class="w-full h-full object-cover"
-                format="jpg"
               />
             </div>
             <!-- Decoratieve rand -->
@@ -265,20 +259,18 @@ const currentLocale = 'nl' as const;
         <div class="scroll-animate" style="animation-delay: 0.2s">
           <div class="relative">
             <div class="aspect-square rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src={bgNature}
+              <img
+                src="/image/tai-chi-nature.jpg"
                 alt="Tai Chi in de natuur"
                 class="w-full h-full object-cover"
-                format="jpg"
               />
             </div>
             <!-- Tai Chi logo decoratie -->
             <div class="absolute -top-6 -right-6 w-32 h-32 bg-paper border-2 border-accent/30 rounded-full p-3 shadow-lg flex items-center justify-center">
-              <Image
-                src={taichiLogo}
+              <img
+                src="/image/taichi-logo.png"
                 alt="Tai Chi"
                 class="w-full h-full object-contain animate-[spin_30s_linear_infinite]"
-                format="png"
               />
             </div>
           </div>
@@ -341,11 +333,10 @@ const currentLocale = 'nl' as const;
         <div class="scroll-animate order-1 lg:order-2">
           <div class="relative">
             <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src={bgGroup}
+              <img
+                src="/image/tai-chi-group.jpg"
                 alt="Tai Chi groepsbeoefening"
                 class="w-full h-full object-cover"
-                format="jpg"
               />
             </div>
             <!-- Decoratieve kaart -->

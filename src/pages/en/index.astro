@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
-import taichiLogo from '../../assets/image/taichi-logo.png';
 import { translations } from '../../lib/i18n';
 import { localizedPath } from '../../lib/paths';
 
@@ -113,13 +112,12 @@ const quoteCards = {
           <div class="absolute w-[140%] h-[140%] rounded-full border border-cyan/10 animate-[spin_80s_linear_infinite_reverse]"></div>
         </div>
 
-        <Image
-          src={taichiLogo}
+        <img
+          src="/image/taichi-logo.png"
           alt="Tai Chi"
           width={400}
           height={400}
           class="w-64 h-64 md:w-80 md:h-80 object-contain drop-shadow-2xl animate-[float_6s_ease-in-out_infinite]"
-          format="png"
         />
       </div>
 
@@ -223,13 +221,12 @@ const quoteCards = {
                     </div>
 
                     <div class="relative">
-                      <Image
-                        src={taichiLogo}
+                      <img
+                        src="/image/taichi-logo.png"
                         alt="Tai Chi"
                         width={300}
                         height={300}
                         class="w-56 h-56 object-contain drop-shadow-xl animate-[spin_30s_linear_infinite]"
-                        format="png"
                       />
                     </div>
                   </div>
