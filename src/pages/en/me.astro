@@ -1,0 +1,370 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import taichiLogo from '../../assets/image/taichi-logo.png';
+import bgMeditation from '../../assets/image/tai-chi-meditation.jpg';
+import { withBase } from '../../lib/paths';
+---
+
+<BaseLayout title="About Me - Lily Tao | Yang Style Tai Chi Chuan Bearer">
+  <!-- Hero Section -->
+  <section class="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute inset-0 bg-gradient-to-br from-mist/50 via-paper to-mist/30"></div>
+      <div class="absolute top-20 right-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 left-20 w-96 h-96 bg-cyan/5 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div class="animate-fade-in">
+        <span class="inline-block px-4 py-2 text-sm font-medium text-accent bg-accent/10 rounded-full mb-6">
+          Yang Style Tai Chi Chuan Heritage
+        </span>
+        <h1 class="text-5xl md:text-6xl font-serif font-bold text-ink mb-6">
+          Lily Tao
+        </h1>
+        <p class="text-2xl text-secondary max-w-3xl mx-auto mb-4">
+          Bearer of Yang Style Tai Chi Chuan in Netherlands
+        </p>
+        <p class="text-lg text-secondary/80 max-w-2xl mx-auto">
+          Disciple of Master He Shaojun | 18 years Tai Chi practice | Dedicated to spiritual cultivation path
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Master-Disciple Relationship -->
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="scroll-animate">
+          <div class="relative">
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+              <Image
+                src={bgMeditation}
+                alt="Tai Chi meditation"
+                class="w-full h-full object-cover"
+                format="jpg"
+              />
+            </div>
+            <div class="absolute -bottom-6 -right-6 bg-paper border-2 border-accent/30 rounded-xl p-6 shadow-lg">
+              <p class="text-4xl font-serif text-accent font-bold">18+</p>
+              <p class="text-sm text-secondary">Years continuous study</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="scroll-animate" style="animation-delay: 0.2s">
+          <div class="mb-8">
+            <span class="inline-block px-3 py-1 text-sm font-medium text-cyan bg-cyan/10 rounded-full mb-4">
+              Master-Disciple Relationship
+            </span>
+            <h2 class="text-4xl font-serif font-bold text-ink mb-6">
+              Disciple of Master He Shaojun
+            </h2>
+            <div class="w-20 h-1 bg-accent/50 mb-8"></div>
+          </div>
+
+          <div class="space-y-6 text-secondary text-lg">
+            <p class="leading-relaxed">
+              In <span class="text-accent font-medium">2011</span>, Lily Tao was officially accepted as a disciple by <span class="text-accent font-medium">Master He Shaojun</span>, receiving systematic, complete, and rigorous training in traditional Yang Style Tai Chi.
+            </p>
+            <p class="leading-relaxed">
+              Following her master's spirit, she treats Tai Chi as a path of spiritual cultivation and sees dissemination as her mission. She now teaches traditional Yang Style Tai Chi in Netherlands and is beloved by European students.
+            </p>
+            <p class="leading-relaxed">
+              As a bearer of Yang Style Tai Chi, Instructor Tao is dedicated to passing on the most traditional and authentic Tai Chi culture to every student.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap gap-3 mt-8">
+            <span class="px-4 py-2 bg-mist border border-border rounded-lg text-sm text-ink">
+              🎯 Inner Disciple of Master He Shaojun
+            </span>
+            <span class="px-4 py-2 bg-mist border border-border rounded-lg text-sm text-ink">
+              📚 Traditional Yang Style Tai Chi
+            </span>
+            <span class="px-4 py-2 bg-mist border border-border rounded-lg text-sm text-ink">
+              🌍 Spreading in Netherlands
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Philosophy -->
+  <section class="py-24 bg-mist/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 scroll-animate">
+        <span class="inline-block px-3 py-1 text-sm font-medium text-accent bg-accent/10 rounded-full mb-4">
+          Core Philosophy
+        </span>
+        <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
+          Basic Skills as Foundation
+        </h2>
+        <div class="w-32 h-1 bg-accent/50 mx-auto mb-6"></div>
+        <p class="text-lg text-secondary max-w-3xl mx-auto">
+          Focus of Master He Shaojun × Instructor Tao
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-paper rounded-2xl shadow-xl p-8 md:p-12 border-2 border-accent/30 scroll-animate">
+          <div class="flex items-start space-x-4 mb-6">
+            <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
+              <span class="text-2xl">🧨</span>
+            </div>
+            <div>
+              <h3 class="text-2xl font-serif font-bold text-ink mb-4">
+                Master's Words
+              </h3>
+            </div>
+          </div>
+
+          <blockquote class="text-2xl md:text-3xl font-serif text-accent leading-relaxed mb-8 border-l-4 border-accent/30 pl-6">
+            "Practicing Tai Chi forms is only the exterior. Real skill lies in basic skills. Without basic skills, all forms, push hands, and applications are like a house without foundation."
+          </blockquote>
+
+          <p class="text-lg text-secondary leading-relaxed">
+            In decades of teaching experience worldwide, Master He Shaojun always emphasizes the importance of basic skills. Instructor Tao inherits this philosophy in Netherlands and strictly implements the master's order, considering "basic skill training" as the most important, most fundamental, and indispensable core content of the courses.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Basic Skills System -->
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 scroll-animate">
+        <span class="inline-block px-3 py-1 text-sm font-medium text-cyan bg-cyan/10 rounded-full mb-4">
+          Core System
+        </span>
+        <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
+          Tai Chi Basic Skills System
+        </h2>
+        <div class="w-32 h-1 bg-cyan/50 mx-auto mb-6"></div>
+        <p class="text-lg text-secondary max-w-2xl mx-auto">
+          The complete core system for domestic and international teaching
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- 1. Zhan Zhuang -->
+        <div class="scroll-animate">
+          <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-accent/50 h-full">
+            <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-6">
+              <span class="text-2xl font-serif text-accent font-bold">1</span>
+            </div>
+            <h3 class="text-2xl font-serif font-bold text-ink mb-4">
+              Zhan Zhuang (Standing)
+            </h3>
+            <p class="text-secondary mb-4">The root of the entire system</p>
+            <p class="text-sm text-secondary/80">
+              Cultivates Song (Relaxation) - Jing (Stillness) - Wen (Stability)
+            </p>
+          </div>
+        </div>
+
+        <!-- 2. Song Yao -->
+        <div class="scroll-animate" style="animation-delay: 0.1s">
+          <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-cyan/50 h-full">
+            <div class="w-16 h-16 bg-cyan/10 rounded-full flex items-center justify-center mb-6">
+              <span class="text-2xl font-serif text-cyan font-bold">2</span>
+            </div>
+            <h3 class="text-2xl font-serif font-bold text-ink mb-4">
+              Song Yao Song Kua
+            </h3>
+            <p class="text-secondary mb-4">The "engine" of power</p>
+            <p class="text-sm text-secondary/80">
+              Relaxing waist and hips, rounding crotch, natural center of gravity
+            </p>
+          </div>
+        </div>
+
+        <!-- 3. Footwork -->
+        <div class="scroll-animate" style="animation-delay: 0.2s">
+          <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-secondary/50 h-full">
+            <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mb-6">
+              <span class="text-2xl font-serif text-secondary font-bold">3</span>
+            </div>
+            <h3 class="text-2xl font-serif font-bold text-ink mb-4">
+              Footwork Training
+            </h3>
+            <p class="text-secondary mb-4">The skeleton of Tai Chi body work</p>
+            <p class="text-sm text-secondary/80">
+              Bow step, empty step, various transitions and movements
+            </p>
+          </div>
+        </div>
+
+        <!-- 4. Single Forms -->
+        <div class="scroll-animate" style="animation-delay: 0.3s">
+          <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-accent/50 h-full">
+            <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-6">
+              <span class="text-2xl font-serif text-accent font-bold">4</span>
+            </div>
+            <h3 class="text-2xl font-serif font-bold text-ink mb-4">
+              Single Forms
+            </h3>
+            <p class="text-secondary mb-4">Dismantling and refinement of forms</p>
+            <p class="text-sm text-secondary/80">
+              Independent practice of individual movements for precision
+            </p>
+          </div>
+        </div>
+
+        <!-- 5. Breathing -->
+        <div class="scroll-animate" style="animation-delay: 0.4s">
+          <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-cyan/50 h-full">
+            <div class="w-16 h-16 bg-cyan/10 rounded-full flex items-center justify-center mb-6">
+              <span class="text-2xl font-serif text-cyan font-bold">5</span>
+            </div>
+            <h3 class="text-2xl font-serif font-bold text-ink mb-4">
+              Breathing & Intention
+            </h3>
+            <p class="text-secondary mb-4">Activation of internal power</p>
+            <p class="text-sm text-secondary/80">
+              Natural abdominal breathing, Yi leads Qi, Qi moves form
+            </p>
+          </div>
+        </div>
+
+        <!-- 6. Push Hands -->
+        <div class="scroll-animate" style="animation-delay: 0.5s">
+          <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-secondary/50 h-full">
+            <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mb-6">
+              <span class="text-2xl font-serif text-secondary font-bold">6</span>
+            </div>
+            <h3 class="text-2xl font-serif font-bold text-ink mb-4">
+              Push Hands
+            </h3>
+            <p class="text-secondary mb-4">Test of true skill</p>
+            <p class="text-sm text-secondary/80">
+              Sticking, connecting, following, listening to force, understanding force
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Basic Skills -->
+  <section class="py-24 bg-mist/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 scroll-animate">
+        <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
+          Why Basic Skills Matter
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div class="scroll-animate">
+          <div class="bg-paper rounded-xl p-6 border border-border/30">
+            <div class="flex items-start space-x-3">
+              <span class="text-accent text-xl">✔</span>
+              <p class="text-secondary">Source of "Jin" (power)</p>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-animate" style="animation-delay: 0.1s">
+          <div class="bg-paper rounded-xl p-6 border border-border/30">
+            <div class="flex items-start space-x-3">
+              <span class="text-cyan text-xl">✔</span>
+              <p class="text-secondary">Source of body work</p>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-animate" style="animation-delay: 0.2s">
+          <div class="bg-paper rounded-xl p-6 border border-border/30">
+            <div class="flex items-start space-x-3">
+              <span class="text-secondary text-xl">✔</span>
+              <p class="text-secondary">Prerequisite for push hands</p>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-animate" style="animation-delay: 0.3s">
+          <div class="bg-paper rounded-xl p-6 border border-border/30">
+            <div class="flex items-start space-x-3">
+              <span class="text-accent text-xl">✔</span>
+              <p class="text-secondary">Source of health benefits</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conclusion -->
+  <section class="py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center scroll-animate">
+      <h2 class="text-4xl font-serif font-bold text-ink mb-6">
+        Root as Foundation, Transmission Continues
+      </h2>
+      <div class="bg-paper rounded-2xl shadow-xl p-8 md:p-12 border-2 border-accent/30">
+        <p class="text-xl text-secondary leading-relaxed mb-6">
+          Six generations of Yang Style Tai Chi heritage, through Master He Shaojun to overseas, continued by Lily Tao in Netherlands.
+        </p>
+        <p class="text-2xl font-serif text-accent leading-relaxed">
+          Basic skills are the root of Tai Chi.<br />
+          Root stable, then branches flourish.<br />
+          Root deep, then Tai Chi truly enters body and mind.
+        </p>
+        <div class="flex justify-center mt-8">
+          <div class="w-24 h-24 bg-mist/50 rounded-full p-3">
+            <Image
+              src={taichiLogo}
+              alt="Tai Chi"
+              class="w-full h-full object-contain animate-[spin_30s_linear_infinite]"
+              format="png"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-mist/20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center scroll-animate">
+      <h2 class="text-4xl font-serif font-bold text-ink mb-6">
+        Begin Your Tai Chi Journey
+      </h2>
+      <p class="text-xl text-secondary mb-12">
+        From basic skills to mastery, experience authentic traditional Yang Style Tai Chi
+      </p>
+      <a
+        href={withBase("/courses")}
+        class="inline-block px-8 py-4 bg-accent hover:bg-primary text-paper rounded-lg font-medium text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+      >
+        View Courses
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1,
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.addEventListener('astro:page-load', () => {
+    const animatedElements = document.querySelectorAll('.scroll-animate');
+    animatedElements.forEach((el) => observer.observe(el));
+  });
+
+  const animatedElements = document.querySelectorAll('.scroll-animate');
+  animatedElements.forEach((el) => observer.observe(el));
+</script>

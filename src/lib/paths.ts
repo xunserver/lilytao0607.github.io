@@ -1,21 +1,21 @@
 /**
  * Path utility functions for handling base URL in Astro
- * When deploying to a subdirectory like /taichi/, all internal links need to include the base path
+ * When deploying to a subdirectory, all internal links need to include the base path
  */
 
-// Get the base path from environment or default to '/taichi/'
+// Get the base path from environment or default to '/'
 // This must match the base config in astro.config.mjs
 export const getBasePath = (): string => {
   const envBase = import.meta.env.ASTRO_BASE;
   if (envBase) return envBase;
-  // Default to '/taichi/' to match astro.config.mjs
-  return '/taichi/';
+  // Default to '/' to match astro.config.mjs
+  return '/';
 };
 
 /**
  * Build a URL with the base path prefix
  * @param path - The path (e.g., '/about', '/zh/courses')
- * @returns Full path with base prefix (e.g., '/taichi/about', '/taichi/zh/courses')
+ * @returns Full path with base prefix
  */
 export function withBase(path: string): string {
   const base = getBasePath();
@@ -55,7 +55,7 @@ export function localizedPath(path: string, locale: string): string {
 /**
  * Extract base path and remaining path from a full URL
  * Used for language switching to preserve the base path
- * @param fullPath - The full path (e.g., '/taichi/en/about')
+ * @param fullPath - The full path (e.g., '/en/about')
  * @returns Object with basePath and pathWithoutLocale
  */
 export function parsePath(fullPath: string): { basePath: string; pathWithoutLocale: string } {
@@ -64,7 +64,7 @@ export function parsePath(fullPath: string): { basePath: string; pathWithoutLoca
   // Remove base path from the full path
   let pathWithoutBase = fullPath;
   if (base !== '/') {
-    // Remove base path (e.g., '/taichi/') from the beginning
+    // Remove base path from the beginning
     if (fullPath.startsWith(base)) {
       pathWithoutBase = fullPath.slice(base.length - 1); // Keep the leading slash
     }

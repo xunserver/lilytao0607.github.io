@@ -3,6 +3,7 @@ export const translations = {
     nav: {
       home: 'Home',
       about: 'Over Tai Chi',
+      me: 'Over Mij',
       movements: 'Bewegingen',
       courses: 'Cursussen',
       blog: 'Leerlingen',
@@ -60,6 +61,7 @@ export const translations = {
     nav: {
       home: 'Home',
       about: 'About Tai Chi',
+      me: 'About Me',
       movements: 'Movements',
       courses: 'Courses',
       blog: 'Students',
@@ -117,6 +119,7 @@ export const translations = {
     nav: {
       home: '首页',
       about: '关于太极',
+      me: '关于我',
       movements: '招式展示',
       courses: '课程',
       blog: '学员风采',

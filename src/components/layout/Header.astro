@@ -10,14 +10,15 @@ const t = translations[currentLocale];
 
 // 网站名称翻译
 const siteNames = {
-  nl: 'Tai Chi Cultuur',
-  en: 'Tai Chi Culture',
-  zh: '太极文化',
+  nl: 'Yang Style Tai Chi * Lily Tao',
+  en: 'Yang Style Tai Chi * Lily Tao',
+  zh: '杨氏太极 * 陶莉',
 };
 
 const navigation = [
   { name: t.nav.home, href: localizedPath('/', currentLocale) },
   { name: t.nav.about, href: localizedPath('/about', currentLocale) },
+  { name: t.nav.me, href: localizedPath('/me', currentLocale) },
   { name: t.nav.movements, href: localizedPath('/movements', currentLocale) },
   { name: t.nav.courses, href: localizedPath('/courses', currentLocale) },
   { name: t.nav.blog, href: localizedPath('/blog', currentLocale) },

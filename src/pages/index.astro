@@ -136,17 +136,17 @@ const quoteCards = {
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12 animate-fade-in" style="animation-delay: 0.6s">
         <a
-          href={localizedPath('/movements', currentLocale)}
+          href={localizedPath('/about', currentLocale)}
           class="group px-8 py-3 bg-accent hover:bg-primary text-paper rounded-lg font-medium transition-all duration-300 hover:scale-105 inline-flex items-center"
         >
           {t.hero.explore}
           <span class="inline-block ml-2 transition-transform group-hover:translate-x-1">→</span>
         </a>
         <a
-          href={localizedPath('/about', currentLocale)}
+          href={localizedPath('/me', currentLocale)}
           class="px-8 py-3 border-2 border-accent/30 text-accent hover:bg-accent/10 rounded-lg font-medium transition-all duration-300 hover:scale-105"
         >
-          {t.nav.about}
+          {t.nav.me}
         </a>
       </div>
     </div>
@@ -318,7 +318,7 @@ const quoteCards = {
           </div>
 
           <a
-            href={localizedPath('/about', currentLocale)}
+            href={localizedPath('/me', currentLocale)}
             class="inline-flex items-center mt-8 px-8 py-3 bg-accent hover:bg-primary text-paper rounded-lg font-medium transition-all duration-300 hover:scale-105"
           >
             {currentLocale === 'zh' ? '深入了解' : (currentLocale === 'nl' ? 'Meer Leren' : 'Learn More')}

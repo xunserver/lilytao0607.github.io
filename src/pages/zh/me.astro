@@ -1,0 +1,554 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import taichiLogo from '../../assets/image/taichi-logo.png';
+import bgMeditation from '../../assets/image/tai-chi-meditation.jpg';
+import { withBase } from '../../lib/paths';
+---
+
+<BaseLayout title="关于我 - 陶莉 | 荷兰杨氏太极拳传承人">
+  <!-- Hero Section -->
+  <section class="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
+    <!-- 背景装饰 -->
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute inset-0 bg-gradient-to-br from-mist/50 via-paper to-mist/30"></div>
+      <div class="absolute top-20 right-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 left-20 w-96 h-96 bg-cyan/5 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div class="animate-fade-in">
+        <span class="inline-block px-4 py-2 text-sm font-medium text-accent bg-accent/10 rounded-full mb-6">
+          杨氏太极拳传承
+        </span>
+        <h1 class="text-5xl md:text-6xl font-serif font-bold text-ink mb-6">
+          陶莉（Lily Tao）
+        </h1>
+        <p class="text-2xl text-secondary max-w-3xl mx-auto mb-4">
+          荷兰杨氏太极拳传承人
+        </p>
+        <p class="text-lg text-secondary/80 max-w-2xl mx-auto">
+          何绍君大师入室弟子｜18年太极修习经验｜心性修行之路
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 师承背景 -->
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <!-- 左侧图片 -->
+        <div class="scroll-animate">
+          <div class="relative">
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+              <Image
+                src={bgMeditation}
+                alt="太极冥想"
+                class="w-full h-full object-cover"
+                format="jpg"
+              />
+            </div>
+            <!-- 装饰卡片 -->
+            <div class="absolute -bottom-6 -right-6 bg-paper border-2 border-accent/30 rounded-xl p-6 shadow-lg">
+              <p class="text-4xl font-serif text-accent font-bold">18+</p>
+              <p class="text-sm text-secondary">年持续学习</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 右侧内容 -->
+        <div class="scroll-animate" style="animation-delay: 0.2s">
+          <div class="mb-8">
+            <span class="inline-block px-3 py-1 text-sm font-medium text-cyan bg-cyan/10 rounded-full mb-4">
+              师承渊源
+            </span>
+            <h2 class="text-4xl font-serif font-bold text-ink mb-6">
+              拜入何绍君大师门下
+            </h2>
+            <div class="w-20 h-1 bg-accent/50 mb-8"></div>
+          </div>
+
+          <div class="space-y-6 text-secondary text-lg">
+            <p class="leading-relaxed">
+              <span class="text-accent font-medium">陶莉于 2011 年正式拜入何绍君大师门下</span>，接受系统、完整、严格的传统杨氏太极训练，至今持续学习超过 18 年。
+            </p>
+            <p class="leading-relaxed">
+              她遵循师父的精神，<span class="text-accent font-medium">以太极为心性修行之道，以推广为使命</span>，现长期在荷兰教授传统杨氏太极拳，深受欧洲学员喜爱。
+            </p>
+            <p class="leading-relaxed">
+              作为杨氏太极拳的传承者，陶莉老师致力于将最传统、最正宗的太极文化传授给每一位学员，让这份中华文化的瑰宝在海外生根发芽。
+            </p>
+          </div>
+
+          <!-- 关键标签 -->
+          <div class="flex flex-wrap gap-3 mt-8">
+            <span class="px-4 py-2 bg-mist border border-border rounded-lg text-sm text-ink">
+              🎯 何绍君大师入室弟子
+            </span>
+            <span class="px-4 py-2 bg-mist border border-border rounded-lg text-sm text-ink">
+              📚 传统杨氏太极拳
+            </span>
+            <span class="px-4 py-2 bg-mist border border-border rounded-lg text-sm text-ink">
+              🌍 荷兰传承推广
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 教学理念 -->
+  <section class="py-24 bg-mist/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 scroll-animate">
+        <span class="inline-block px-3 py-1 text-sm font-medium text-accent bg-accent/10 rounded-full mb-4">
+          核心理念
+        </span>
+        <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
+          太极"基本功"为根本功夫
+        </h2>
+        <div class="w-32 h-1 bg-accent/50 mx-auto mb-6"></div>
+        <p class="text-lg text-secondary max-w-3xl mx-auto">
+          何绍君大师 × 陶莉老师亲授重点
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-paper rounded-2xl shadow-xl p-8 md:p-12 border-2 border-accent/30 scroll-animate">
+          <div class="flex items-start space-x-4 mb-6">
+            <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
+              <span class="text-2xl">🧨</span>
+            </div>
+            <div>
+              <h3 class="text-2xl font-serif font-bold text-ink mb-4">
+                师父教诲
+              </h3>
+            </div>
+          </div>
+
+          <blockquote class="text-2xl md:text-3xl font-serif text-accent leading-relaxed mb-8 border-l-4 border-accent/30 pl-6">
+            "太极拳练拳架只是外形，真正的功夫在基本功。基本功不到位，一切拳架、推手、应用都如空中楼阁。"
+          </blockquote>
+
+          <p class="text-lg text-secondary leading-relaxed">
+            在全球数十年的教学经验中，无论在中国还是海外，何绍君大师始终强调基本功的重要性。陶莉在荷兰继承这一理念，<span class="text-accent font-medium">严格执行师门教学顺序</span>，把"基本功训练"作为课程中最重要、最基础、最不可跳过的核心内容。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 基本功体系 -->
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 scroll-animate">
+        <span class="inline-block px-3 py-1 text-sm font-medium text-cyan bg-cyan/10 rounded-full mb-4">
+          核心体系
+        </span>
+        <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
+          太极基本功教学体系
+        </h2>
+        <div class="w-32 h-1 bg-cyan/50 mx-auto mb-6"></div>
+        <p class="text-lg text-secondary max-w-2xl mx-auto">
+          海内外教学的核心完整体系
+        </p>
+      </div>
+
+      <div class="space-y-8">
+        <!-- 1. 站桩功 -->
+        <div class="scroll-animate">
+          <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-accent/50">
+            <div class="flex items-start space-x-6">
+              <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl font-serif text-accent font-bold">1</span>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-2xl font-serif font-bold text-ink mb-4">
+                  站桩功（整个体系的根）
+                </h3>
+                <p class="text-lg text-secondary mb-4">
+                  培养太极的三大根基：<span class="text-accent font-medium">松——静——稳</span>
+                </p>
+                <div class="bg-mist/50 rounded-lg p-6 space-y-2">
+                  <p class="text-secondary">• 中正安舒、虚灵顶劲</p>
+                  <p class="text-secondary">• 松肩坠肘、沉气丹田</p>
+                  <p class="text-secondary">• 尾闾中正、脊柱如悬丝</p>
+                </div>
+                <p class="text-sm text-secondary/80 mt-4 italic">
+                  任何太极进阶训练都必须建立在站桩基础之上。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. 松腰松胯 -->
+        <div class="scroll-animate" style="animation-delay: 0.1s">
+          <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-cyan/50">
+            <div class="flex items-start space-x-6">
+              <div class="w-16 h-16 bg-cyan/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl font-serif text-cyan font-bold">2</span>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-2xl font-serif font-bold text-ink mb-4">
+                  松腰松胯（劲路的"发动机"）
+                </h3>
+                <p class="text-lg text-secondary mb-4">
+                  杨式太极强调<span class="text-cyan font-medium">"松胯圆裆、松沉重心"</span>
+                </p>
+                <div class="bg-mist/50 rounded-lg p-6 space-y-2">
+                  <p class="text-secondary">• 松胯开合</p>
+                  <p class="text-secondary">• 松腰转动</p>
+                  <p class="text-secondary">• 裆部撑圆</p>
+                  <p class="text-secondary">• 重心转移自然柔和</p>
+                </div>
+                <p class="text-sm text-secondary/80 mt-4 italic">
+                  这是太极身法的根本，也是推手理解"转、化、随"的关键。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. 步法训练 -->
+        <div class="scroll-animate" style="animation-delay: 0.2s">
+          <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-secondary/50">
+            <div class="flex items-start space-x-6">
+              <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl font-serif text-secondary font-bold">3</span>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-2xl font-serif font-bold text-ink mb-4">
+                  步法训练（太极身法的骨架）
+                </h3>
+                <div class="bg-mist/50 rounded-lg p-6 space-y-2">
+                  <p class="text-secondary">• 弓步</p>
+                  <p class="text-secondary">• 虚步</p>
+                  <p class="text-secondary">• 歇步</p>
+                  <p class="text-secondary">• 转步、开步</p>
+                  <p class="text-secondary">• 前进后退的连贯性训练</p>
+                </div>
+                <p class="text-sm text-secondary/80 mt-4 italic">
+                  步稳，则身稳；身稳，则劲稳。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. 单式训练 -->
+        <div class="scroll-animate" style="animation-delay: 0.3s">
+          <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-accent/50">
+            <div class="flex items-start space-x-6">
+              <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl font-serif text-accent font-bold">4</span>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-2xl font-serif font-bold text-ink mb-4">
+                  单式训练（拳架的拆解与精修）
+                </h3>
+                <p class="text-lg text-secondary mb-4">
+                  在拳架练习前必须独立练习单式，拆解训练比整体套路更重要
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                  <div class="bg-mist/50 rounded-lg px-4 py-3 text-center text-secondary">
+                    起势
+                  </div>
+                  <div class="bg-mist/50 rounded-lg px-4 py-3 text-center text-secondary">
+                    揽雀尾
+                  </div>
+                  <div class="bg-mist/50 rounded-lg px-4 py-3 text-center text-secondary">
+                    单鞭
+                  </div>
+                  <div class="bg-mist/50 rounded-lg px-4 py-3 text-center text-secondary">
+                    白鹤亮翅
+                  </div>
+                  <div class="bg-mist/50 rounded-lg px-4 py-3 text-center text-secondary">
+                    手挥琵琶
+                  </div>
+                  <div class="bg-mist/50 rounded-lg px-4 py-3 text-center text-secondary">
+                    搂膝拗步
+                  </div>
+                  <div class="bg-mist/50 rounded-lg px-4 py-3 text-center text-secondary">
+                    云手
+                  </div>
+                  <div class="bg-mist/50 rounded-lg px-4 py-3 text-center text-secondary">
+                    如封似闭
+                  </div>
+                  <div class="bg-mist/50 rounded-lg px-4 py-3 text-center text-secondary">
+                    十字手
+                  </div>
+                </div>
+                <p class="text-sm text-secondary/80 mt-4 italic">
+                  是劲路、方向、身法的精炼过程。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. 呼吸与意念训练 -->
+        <div class="scroll-animate" style="animation-delay: 0.4s">
+          <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-cyan/50">
+            <div class="flex items-start space-x-6">
+              <div class="w-16 h-16 bg-cyan/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl font-serif text-cyan font-bold">5</span>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-2xl font-serif font-bold text-ink mb-4">
+                  呼吸与意念训练（内劲的启动方式）
+                </h3>
+                <div class="bg-mist/50 rounded-lg p-6 space-y-2">
+                  <p class="text-secondary">• 自然腹式呼吸</p>
+                  <p class="text-secondary">• 呼吸与动作协调</p>
+                  <p class="text-secondary">• "以意领气，以气催形"</p>
+                  <p class="text-secondary">• 心静体松，意气贯通</p>
+                </div>
+                <p class="text-sm text-secondary/80 mt-4 italic">
+                  这是太极从"练形"到"练意"的关键桥梁。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. 推手入门 -->
+        <div class="scroll-animate" style="animation-delay: 0.5s">
+          <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-secondary/50">
+            <div class="flex items-start space-x-6">
+              <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl font-serif text-secondary font-bold">6</span>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-2xl font-serif font-bold text-ink mb-4">
+                  推手入门（检验太极是否"真的会"）
+                </h3>
+                <blockquote class="text-lg text-accent mb-4 border-l-4 border-accent/30 pl-4">
+                  "太极不是跳舞，必须用推手检验练拳成果。"
+                </blockquote>
+                <p class="text-lg text-secondary mb-4">初级推手包括：</p>
+                <div class="bg-mist/50 rounded-lg p-6 space-y-2">
+                  <p class="text-secondary">• 粘、连、黏、随</p>
+                  <p class="text-secondary">• 听劲（感知劲力方向与大小）</p>
+                  <p class="text-secondary">• 懂劲（化力、借力、发力的基础）</p>
+                  <p class="text-secondary">• 单手、双手推手圆</p>
+                </div>
+                <p class="text-sm text-secondary/80 mt-4 italic">
+                  陶莉在荷兰的教学路线也严格遵从此体系：<span class="text-secondary font-medium">拳架为体，推手为用，基本功为根。</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 为什么基本功重要 -->
+  <section class="py-24 bg-mist/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 scroll-animate">
+        <span class="inline-block px-3 py-1 text-sm font-medium text-accent bg-accent/10 rounded-full mb-4">
+          教学核心
+        </span>
+        <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
+          为什么基本功是核心？
+        </h2>
+        <div class="w-32 h-1 bg-accent/50 mx-auto mb-6"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- 原因 1 -->
+        <div class="scroll-animate">
+          <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-accent/50 transition-all duration-300 h-full">
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center">
+                <span class="text-accent text-xl">✔</span>
+              </div>
+              <h3 class="text-xl font-serif font-bold text-ink">
+                基本功是"劲"的来源
+              </h3>
+            </div>
+            <p class="text-secondary leading-relaxed">
+              没有松沉、开胯、虚实转换，就没有太极劲。
+            </p>
+          </div>
+        </div>
+
+        <!-- 原因 2 -->
+        <div class="scroll-animate" style="animation-delay: 0.1s">
+          <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-cyan/50 transition-all duration-300 h-full">
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="w-10 h-10 bg-cyan/10 rounded-full flex items-center justify-center">
+                <span class="text-cyan text-xl">✔</span>
+              </div>
+              <h3 class="text-xl font-serif font-bold text-ink">
+                基本功是"身法"的来源
+              </h3>
+            </div>
+            <p class="text-secondary leading-relaxed">
+              太极的身法不是招式，而是从松、圆、沉中自然生出的身体结构。
+            </p>
+          </div>
+        </div>
+
+        <!-- 原因 3 -->
+        <div class="scroll-animate" style="animation-delay: 0.2s">
+          <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-secondary/50 transition-all duration-300 h-full">
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="w-10 h-10 bg-secondary/10 rounded-full flex items-center justify-center">
+                <span class="text-secondary text-xl">✔</span>
+              </div>
+              <h3 class="text-xl font-serif font-bold text-ink">
+                基本功是"推手"的前提
+              </h3>
+            </div>
+            <p class="text-secondary leading-relaxed">
+              很多海外学生喜欢推手，但没有基本功根本无法"听劲"与"化劲"。
+            </p>
+          </div>
+        </div>
+
+        <!-- 原因 4 -->
+        <div class="scroll-animate" style="animation-delay: 0.3s">
+          <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-accent/50 transition-all duration-300 h-full">
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center">
+                <span class="text-accent text-xl">✔</span>
+              </div>
+              <h3 class="text-xl font-serif font-bold text-ink">
+                基本功是"养生功效"的源头
+              </h3>
+            </div>
+            <p class="text-secondary leading-relaxed">
+              太极的松、稳、呼吸、沉气丹田，本质上都是基本功的功效。
+            </p>
+          </div>
+        </div>
+
+        <!-- 原因 5 -->
+        <div class="scroll-animate" style="animation-delay: 0.4s">
+          <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-cyan/50 transition-all duration-300 h-full md:col-span-2 lg:col-span-2">
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="w-10 h-10 bg-cyan/10 rounded-full flex items-center justify-center">
+                <span class="text-cyan text-xl">✔</span>
+              </div>
+              <h3 class="text-xl font-serif font-bold text-ink">
+                基本功决定未来是否能进阶到真正的传统太极
+              </h3>
+            </div>
+            <p class="text-secondary leading-relaxed">
+              没有扎实的基本功，后期"懂劲""发劲""化劲"完全无从谈起。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16 max-w-4xl mx-auto scroll-animate" style="animation-delay: 0.5s">
+        <div class="bg-gradient-to-br from-accent/10 to-cyan/10 rounded-2xl p-8 border-2 border-accent/20">
+          <p class="text-lg text-secondary text-center leading-relaxed">
+            因此，无论是在中国、荷兰、欧洲、美国……<br class="hidden md:block" />
+            <span class="text-accent font-bold text-xl">何绍君大师与陶莉老师都将"基本功训练"放在所有课程的第一位</span>，<br class="hidden md:block" />
+            也是训练量最大的一部分。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 结语 -->
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto scroll-animate">
+        <div class="text-center mb-12">
+          <span class="inline-block px-3 py-1 text-sm font-medium text-accent bg-accent/10 rounded-full mb-4">
+            结语
+          </span>
+          <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
+            以根为本，承上启下 · 传承不断
+          </h2>
+        </div>
+
+        <div class="bg-paper rounded-2xl shadow-xl p-8 md:p-12 border-2 border-accent/30">
+          <div class="prose prose-lg max-w-none">
+            <p class="text-xl text-secondary leading-relaxed mb-6">
+              杨氏太极拳六代传承，经由何绍君大师传入海外，由陶莉在荷兰继续传承。
+            </p>
+            <p class="text-xl text-secondary leading-relaxed mb-6">
+              他们以最传统的方式教授太极核心基础，将 <span class="text-accent font-medium">稳、松、沉、圆</span> 的训练作为太极体系的灵魂。
+            </p>
+            <p class="text-2xl font-serif text-accent leading-relaxed text-center mt-8">
+              基本功是太极之根，根稳，则枝繁。<br />
+              根深，则太极真正进入身心。
+            </p>
+          </div>
+
+          <!-- 太极logo装饰 -->
+          <div class="flex justify-center mt-12">
+            <div class="w-32 h-32 bg-mist/50 rounded-full p-4 flex items-center justify-center">
+              <Image
+                src={taichiLogo}
+                alt="Tai Chi"
+                class="w-full h-full object-contain animate-[spin_30s_linear_infinite]"
+                format="png"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24 bg-mist/20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center scroll-animate">
+      <h2 class="text-4xl font-serif font-bold text-ink mb-6">
+        加入我们的太极课程
+      </h2>
+      <p class="text-xl text-secondary mb-12">
+        从基本功开始，体验最正宗的传统杨氏太极拳
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+        <a
+          href={withBase("/courses")}
+          class="px-8 py-4 bg-accent hover:bg-primary text-paper hover:text-paper border-2 border-accent hover:border-primary rounded-lg font-medium text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+        >
+          查看课程
+        </a>
+        <a
+          href={withBase("/movements")}
+          class="px-8 py-4 border-2 border-accent/30 text-accent hover:bg-accent/10 rounded-lg font-medium text-lg transition-all duration-300 hover:scale-105"
+        >
+          了解招式
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  // Scroll-geactiveerde animatie
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1,
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.addEventListener('astro:page-load', () => {
+    const animatedElements = document.querySelectorAll('.scroll-animate');
+    animatedElements.forEach((el) => observer.observe(el));
+  });
+
+  const animatedElements = document.querySelectorAll('.scroll-animate');
+  animatedElements.forEach((el) => observer.observe(el));
+</script>

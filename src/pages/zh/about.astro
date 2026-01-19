@@ -4,16 +4,12 @@ import { Image } from 'astro:assets';
 import taichiLogo from '../../assets/image/taichi-logo.png';
 import bgMeditation from '../../assets/image/tai-chi-meditation.jpg';
 import bgNature from '../../assets/image/tai-chi-nature.jpg';
-import bgGroup from '../../assets/image/tai-chi-group.jpg';
-import { localizedPath } from '../../lib/paths';
-
-const currentLocale = (Astro.currentLocale || 'nl') as 'nl' | 'en' | 'zh';
+import { withBase } from '../../lib/paths';
 ---
 
-<BaseLayout title="关于太极 - 探索千年智慧">
+<BaseLayout title="关于太极 - 四川杨式太极拳专题">
   <!-- Hero Section -->
   <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-    <!-- 背景装饰 -->
     <div class="absolute inset-0 -z-10">
       <div class="absolute inset-0 bg-gradient-to-br from-mist/50 via-paper to-mist/30"></div>
       <div class="absolute top-20 right-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
@@ -23,78 +19,71 @@ const currentLocale = (Astro.currentLocale || 'nl') as 'nl' | 'en' | 'zh';
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
       <div class="animate-fade-in">
         <span class="inline-block px-4 py-2 text-sm font-medium text-accent bg-accent/10 rounded-full mb-6">
-          千年传承
+          正宗传承
         </span>
         <h1 class="text-5xl md:text-6xl font-serif font-bold text-ink mb-6">
-          关于太极
+          四川杨式太极拳
         </h1>
-        <p class="text-xl text-secondary max-w-3xl mx-auto">
-          探索太极的起源、理念与实践，感受这一中华文化的瑰宝
+        <p class="text-2xl text-secondary max-w-3xl mx-auto mb-4">
+          从陈家沟到四川 · 奠基于李雅轩 · 传承至今的正宗杨式体系
+        </p>
+        <p class="text-lg text-secondary/80 max-w-2xl mx-auto">
+          探索太极拳的完整传承脉络，感受中华武术的深厚底蕴
         </p>
       </div>
     </div>
   </section>
 
-  <!-- 起源与历史 -->
+  <!-- 一、太极拳源自陈家沟 -->
   <section class="py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <!-- 左侧图片 -->
         <div class="scroll-animate">
           <div class="relative">
             <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src={bgMeditation}
-                alt="太极冥想"
+                alt="太极发源地"
                 class="w-full h-full object-cover"
                 format="jpg"
               />
             </div>
-            <!-- 装饰边框 -->
             <div class="absolute -bottom-6 -right-6 bg-paper border-2 border-accent/30 rounded-xl p-6 shadow-lg">
-              <p class="text-4xl font-serif text-accent font-bold">数百年</p>
-              <p class="text-sm text-secondary">传承历史</p>
+              <p class="text-3xl font-serif text-accent font-bold">陈家沟</p>
+              <p class="text-sm text-secondary">太极拳发源地</p>
             </div>
           </div>
         </div>
 
-        <!-- 右侧内容 -->
         <div class="scroll-animate" style="animation-delay: 0.2s">
           <div class="mb-8">
             <span class="inline-block px-3 py-1 text-sm font-medium text-cyan bg-cyan/10 rounded-full mb-4">
-              起源
+              第一章
             </span>
             <h2 class="text-4xl font-serif font-bold text-ink mb-6">
-              历史渊源
+              太极拳源自陈家沟
             </h2>
             <div class="w-20 h-1 bg-accent/50 mb-8"></div>
           </div>
 
           <div class="space-y-6 text-secondary text-lg">
             <p class="leading-relaxed">
-              太极拳，起源于中国明代，由<span class="text-accent font-medium">武当派张三丰</span>所创。
-              它融合了道家哲学、传统医学和武术精髓，是中国传统文化的重要组成部分。
+              太极拳的<span class="text-accent font-medium">公认发源地</span>是河南温县陈家沟，由<span class="text-accent font-medium">陈王廷</span>于明末清初创编。
             </p>
             <p class="leading-relaxed">
-              太极拳以"太极"命名，取意于《周易》中"太极生两仪，两仪生四象，
-              四象生八卦"的哲学思想。它强调阴阳平衡、刚柔并济，追求人与自然的和谐统一。
-            </p>
-            <p class="leading-relaxed">
-              经过数百年的传承与发展，太极拳形成了陈、杨、吴、武、孙等多个流派，
-              每个流派都有其独特的风格和特点，但都遵循着相同的核心理念。
+              后发展出陈式、杨式、武式、吴式、孙式等重要流派。陈家沟被官方认定为"中国太极拳发源地"，其文化至今影响世界。
             </p>
           </div>
 
-          <!-- 关键词标签 -->
           <div class="flex flex-wrap gap-3 mt-8">
             <span class="px-4 py-2 bg-mist border border-border rounded-lg text-sm text-ink">
-              📜 明代起源
+              📜 明末清初创立
             </span>
             <span class="px-4 py-2 bg-mist border border-border rounded-lg text-sm text-ink">
-              ⛰️ 武当传承
+              ⛰️ 河南温县陈家沟
             </span>
             <span class="px-4 py-2 bg-mist border border-border rounded-lg text-sm text-ink">
-              🌿 道家思想
+              🌿 所有流派的共同根
             </span>
           </div>
         </div>
@@ -102,183 +91,110 @@ const currentLocale = (Astro.currentLocale || 'nl') as 'nl' | 'en' | 'zh';
     </div>
   </section>
 
-  <!-- 核心理念 -->
+  <!-- 二、杨露禅三下陈家沟 -->
   <section class="py-24 bg-mist/20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16 scroll-animate">
         <span class="inline-block px-3 py-1 text-sm font-medium text-accent bg-accent/10 rounded-full mb-4">
-              核心思想
-            </span>
+          第二章
+        </span>
         <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
-          太极理念
+          杨露禅"三下陈家沟"
         </h2>
         <div class="w-32 h-1 bg-accent/50 mx-auto mb-6"></div>
         <p class="text-lg text-secondary max-w-2xl mx-auto">
-          阴阳调和，动静相宜，刚柔并济
+          杨式太极拳的形成
         </p>
       </div>
 
-      <!-- 理念卡片网格 -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- 理念1 -->
-        <div class="scroll-animate group h-full flex flex-col">
-          <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-accent/50 h-full flex flex-col">
-            <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
-              <span class="text-3xl">☯️</span>
+      <div class="max-w-4xl mx-auto scroll-animate">
+        <div class="bg-paper rounded-2xl shadow-xl p-8 md:p-12 border-2 border-accent/30">
+          <div class="flex items-start space-x-4 mb-6">
+            <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
+              <span class="text-2xl">🥋</span>
             </div>
-            <h3 class="text-2xl font-serif font-bold text-ink mb-4">
-              阴阳调和
-            </h3>
-            <p class="text-secondary leading-relaxed">
-              太极的核心是阴阳平衡。通过动作的阴阳转换，达到身体和心理的和谐统一。
-            </p>
+            <div>
+              <h3 class="text-2xl font-serif font-bold text-ink mb-4">
+                杨露禅创立杨式太极拳
+              </h3>
+            </div>
           </div>
-        </div>
 
-        <!-- 理念2 -->
-        <div class="scroll-animate group" style="animation-delay: 0.1s">
-          <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-cyan/50 h-full flex flex-col">
-            <div class="w-16 h-16 bg-cyan/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-cyan/20 transition-colors">
-              <span class="text-3xl">⚡</span>
-            </div>
-            <h3 class="text-2xl font-serif font-bold text-ink mb-4">
-              动静结合
-            </h3>
-            <p class="text-secondary leading-relaxed">
-              动中有静，静中有动。太极强调动作的连贯性和内在的宁静。
+          <div class="space-y-4 text-secondary text-lg">
+            <p class="leading-relaxed">
+              杨式太极拳由<span class="text-accent font-medium">杨露禅</span>创立。他<span class="text-accent font-medium">三次进入陈家沟</span>，向陈长兴学习十余年，深得陈式太极拳要领。
             </p>
-          </div>
-        </div>
-
-        <!-- 理念3 -->
-        <div class="scroll-animate group" style="animation-delay: 0.2s">
-          <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-secondary/50 h-full flex flex-col">
-            <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-secondary/20 transition-colors">
-              <span class="text-3xl">💪</span>
-            </div>
-            <h3 class="text-2xl font-serif font-bold text-ink mb-4">
-              刚柔并济
-            </h3>
-            <p class="text-secondary leading-relaxed">
-              刚中带柔，柔中带刚。刚柔相济，是太极动作的重要特点。
+            <p class="leading-relaxed">
+              他以<span class="text-accent font-medium">柔和、舒展的风格</span>自成体系，被誉为<span class="text-accent font-bold">"杨无敌"</span>。
             </p>
-          </div>
-        </div>
-
-        <!-- 理念4 -->
-        <div class="scroll-animate group" style="animation-delay: 0.3s">
-          <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-accent/50 h-full flex flex-col">
-            <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
-              <span class="text-3xl">🧘</span>
+            <div class="bg-mist/50 rounded-lg p-6 mt-6">
+              <p class="text-sm text-secondary/80 italic">
+                史料明确记载杨露禅"就学于陈长兴"。
+              </p>
             </div>
-            <h3 class="text-2xl font-serif font-bold text-ink mb-4">
-              意气合一
-            </h3>
-            <p class="text-secondary leading-relaxed">
-              意到气到，以意导气。心意与呼吸、动作的完美协调。
-            </p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 太极的特点 -->
+  <!-- 三、杨澄甫定型杨式大架 -->
   <section class="py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <!-- 左侧内容 -->
-        <div class="scroll-animate">
+        <div class="scroll-animate order-2 lg:order-1">
           <div class="mb-8">
             <span class="inline-block px-3 py-1 text-sm font-medium text-cyan bg-cyan/10 rounded-full mb-4">
-              主要特点
+              第三章
             </span>
             <h2 class="text-4xl font-serif font-bold text-ink mb-6">
-              太极特色
+              杨澄甫定型杨式大架
             </h2>
-            <div class="w-20 h-1 bg-accent/50 mb-8"></div>
+            <div class="w-20 h-1 bg-cyan/50 mb-8"></div>
           </div>
 
-          <!-- 特点列表 -->
-          <div class="space-y-8">
-            <!-- 特点1 -->
-            <div class="flex items-start space-x-4">
-              <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
-                <span class="text-xl text-accent">1</span>
-              </div>
-              <div>
-                <h3 class="text-xl font-serif font-bold text-ink mb-2">
-                  动作舒缓
-                </h3>
-                <p class="text-secondary">
-                  动作缓慢、连贯、圆活，如行云流水，连绵不断
-                </p>
-              </div>
-            </div>
+          <div class="space-y-6 text-secondary text-lg">
+            <p class="leading-relaxed">
+              <span class="text-cyan font-medium">杨露禅之孙杨澄甫</span>将杨式太极拳<span class="text-accent font-medium">标准化、系统化、柔化</span>，使拳架更加适合普通群众练习。
+            </p>
+            <p class="leading-relaxed">
+              他在<span class="text-accent font-medium">北京、上海、南京</span>等地公开授拳，是现代杨式大架形成和传播的关键人物。
+            </p>
+          </div>
 
-            <!-- 特点2 -->
-            <div class="flex items-start space-x-4">
-              <div class="w-12 h-12 bg-cyan/10 rounded-full flex items-center justify-center flex-shrink-0">
-                <span class="text-xl text-cyan">2</span>
-              </div>
-              <div>
-                <h3 class="text-xl font-serif font-bold text-ink mb-2">
-                  呼吸自然
-                </h3>
-                <p class="text-secondary">
-                  配合动作，采用腹式呼吸，达到内外兼修的效果
-                </p>
-              </div>
-            </div>
-
-            <!-- 特点3 -->
-            <div class="flex items-start space-x-4">
-              <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                <span class="text-xl text-secondary">3</span>
-              </div>
-              <div>
-                <h3 class="text-xl font-serif font-bold text-ink mb-2">
-                  心静体松
-                </h3>
-                <p class="text-secondary">
-                  思想集中，身体放松，精神内守，排除杂念
-                </p>
-              </div>
-            </div>
-
-            <!-- 特点4 -->
-            <div class="flex items-start space-x-4">
-              <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
-                <span class="text-xl text-accent">4</span>
-              </div>
-              <div>
-                <h3 class="text-xl font-serif font-bold text-ink mb-2">
-                  整体协调
-                </h3>
-                <p class="text-secondary">
-                  上下相随，左右相连，内外合一，周身协调
-                </p>
-              </div>
-            </div>
+          <div class="mt-8 p-6 bg-gradient-to-br from-cyan/10 to-accent/10 rounded-xl border border-cyan/20">
+            <h4 class="text-xl font-serif font-bold text-ink mb-4">历史贡献</h4>
+            <ul class="space-y-2 text-secondary">
+              <li class="flex items-start space-x-2">
+                <span class="text-cyan mt-1">•</span>
+                <span>标准化杨式太极拳体系</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-cyan mt-1">•</span>
+                <span>柔化拳架，适合大众练习</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-cyan mt-1">•</span>
+                <span>全国范围传播推广</span>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <!-- 右侧图片 -->
-        <div class="scroll-animate" style="animation-delay: 0.2s">
+        <div class="scroll-animate order-1 lg:order-2">
           <div class="relative">
             <div class="aspect-square rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src={bgNature}
-                alt="太极自然"
+                alt="杨式太极拳"
                 class="w-full h-full object-cover"
                 format="jpg"
               />
             </div>
-            <!-- 太极logo装饰 -->
-            <div class="absolute -top-6 -right-6 w-32 h-32 bg-paper border-2 border-accent/30 rounded-full p-3 shadow-lg flex items-center justify-center">
+            <div class="absolute -top-6 -left-6 w-32 h-32 bg-paper border-2 border-cyan/30 rounded-full p-3 shadow-lg flex items-center justify-center">
               <Image
                 src={taichiLogo}
-                alt="太极"
+                alt="Tai Chi"
                 class="w-full h-full object-contain animate-[spin_30s_linear_infinite]"
                 format="png"
               />
@@ -289,432 +205,89 @@ const currentLocale = (Astro.currentLocale || 'nl') as 'nl' | 'en' | 'zh';
     </div>
   </section>
 
-  <!-- 太极与现代生活 -->
-  <section class="py-24 bg-mist/20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <!-- 左侧内容 -->
-        <div class="scroll-animate order-2 lg:order-1">
-          <div class="mb-8">
-            <span class="inline-block px-3 py-1 text-sm font-medium text-accent bg-accent/10 rounded-full mb-4">
-              现代价值
-            </span>
-            <h2 class="text-4xl font-serif font-bold text-ink mb-6">
-              太极与现代生活
-            </h2>
-            <div class="w-20 h-1 bg-cyan/50 mb-8"></div>
-          </div>
-
-          <div class="space-y-6 text-secondary text-lg">
-            <p class="leading-relaxed">
-              在现代社会快节奏的生活中，太极拳以其独特的健身价值和养生功效，
-              越来越受到人们的喜爱和重视。
-            </p>
-            <p class="leading-relaxed">
-              <span class="text-accent font-medium">科学研究证实</span>，
-              长期练习太极拳可以改善心肺功能，增强免疫力，缓解压力和焦虑，
-              提高睡眠质量，延缓衰老。
-            </p>
-            <p class="leading-relaxed">
-              太极拳不仅是一种运动方式，更是一种生活态度。
-              它教导我们在繁忙中保持内心的宁静，在变化中保持平衡的心态。
-            </p>
-          </div>
-
-          <!-- 优势列表 -->
-          <div class="grid grid-cols-2 gap-4 mt-8">
-            <div class="flex items-center space-x-3">
-              <div class="w-2 h-2 rounded-full bg-accent"></div>
-              <span class="text-ink font-medium">强身健体</span>
-            </div>
-            <div class="flex items-center space-x-3">
-              <div class="w-2 h-2 rounded-full bg-cyan"></div>
-              <span class="text-ink font-medium">修身养性</span>
-            </div>
-            <div class="flex items-center space-x-3">
-              <div class="w-2 h-2 rounded-full bg-secondary"></div>
-              <span class="text-ink font-medium">延缓衰老</span>
-            </div>
-            <div class="flex items-center space-x-3">
-              <div class="w-2 h-2 rounded-full bg-accent"></div>
-              <span class="text-ink font-medium">缓解压力</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 右侧图片 -->
-        <div class="scroll-animate order-1 lg:order-2">
-          <div class="relative">
-            <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src={bgGroup}
-                alt="太极集体练习"
-                class="w-full h-full object-cover"
-                format="jpg"
-              />
-            </div>
-            <!-- 装饰卡片 -->
-            <div class="absolute -bottom-4 -right-4 lg:-bottom-6 lg:-right-6 bg-paper border-2 border-accent/30 rounded-xl p-6 shadow-lg">
-              <p class="text-3xl md:text-4xl font-serif text-accent font-bold mb-2">全球传播</p>
-              <p class="text-sm md:text-base text-secondary">跨越五大洲的文化瑰宝</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 太极流派介绍 -->
-  <section class="py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16 scroll-animate">
-        <span class="inline-block px-3 py-1 text-sm font-medium text-cyan bg-cyan/10 rounded-full mb-4">
-          五大流派
-        </span>
-        <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
-          太极流派
-        </h2>
-        <div class="w-32 h-1 bg-accent/50 mx-auto mb-6"></div>
-        <p class="text-lg text-secondary max-w-2xl mx-auto">
-          各具特色，一脉相承
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- 陈式太极 -->
-        <div class="scroll-animate group h-full flex flex-col">
-          <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-accent/50 h-full flex flex-col">
-            <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
-              <span class="text-3xl">🎋</span>
-            </div>
-            <h3 class="text-2xl font-serif font-bold text-ink mb-4">
-              陈式太极
-            </h3>
-            <div class="mb-4">
-              <span class="inline-block px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full">
-                源头流派
-              </span>
-            </div>
-            <p class="text-secondary leading-relaxed mb-4">
-              由<span class="text-accent font-medium">陈王廷</span>创于明末清初，是太极拳的最早流派。动作刚柔相济，快慢相间，有发力、跳跃等动作。
-            </p>
-            <div class="border-t border-border/30 pt-4 mt-4">
-              <p class="text-sm text-secondary">
-                <span class="font-medium text-ink">特点：</span>缠丝劲、爆发力、虚实分明
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 杨式太极 -->
-        <div class="scroll-animate group" style="animation-delay: 0.1s">
-          <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-cyan/50 h-full flex flex-col">
-            <div class="w-16 h-16 bg-cyan/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-cyan/20 transition-colors">
-              <span class="text-3xl">🌊</span>
-            </div>
-            <h3 class="text-2xl font-serif font-bold text-ink mb-4">
-              杨式太极
-            </h3>
-            <div class="mb-4">
-              <span class="inline-block px-3 py-1 text-xs font-medium text-cyan bg-cyan/10 rounded-full">
-                流传最广
-              </span>
-            </div>
-            <p class="text-secondary leading-relaxed mb-4">
-              由<span class="text-cyan font-medium">杨露禅</span>在陈式太极基础上改编而来。动作舒展大方，速度均匀，姿势优美。
-            </p>
-            <div class="border-t border-border/30 pt-4 mt-4">
-              <p class="text-sm text-secondary">
-                <span class="font-medium text-ink">特点：</span>柔和缓慢、圆活饱满、潇洒自如
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 吴式太极 -->
-        <div class="scroll-animate group" style="animation-delay: 0.2s">
-          <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-secondary/50 h-full flex flex-col">
-            <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-secondary/20 transition-colors">
-              <span class="text-3xl">🎭</span>
-            </div>
-            <h3 class="text-2xl font-serif font-bold text-ink mb-4">
-              吴式太极
-            </h3>
-            <div class="mb-4">
-              <span class="inline-block px-3 py-1 text-xs font-medium text-secondary bg-secondary/10 rounded-full">
-                紧凑小巧
-              </span>
-            </div>
-            <p class="text-secondary leading-relaxed mb-4">
-              由<span class="text-secondary font-medium">吴鉴泉</span>在杨式太极基础上发展而成。动作小巧紧凑，柔化为主，细腻精巧。
-            </p>
-            <div class="border-t border-border/30 pt-4 mt-4">
-              <p class="text-sm text-secondary">
-                <span class="font-medium text-ink">特点：</span>紧凑柔和、斜中寓正、细腻绵延
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 武式太极 -->
-        <div class="scroll-animate group" style="animation-delay: 0.3s">
-          <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-accent/50 h-full flex flex-col">
-            <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
-              <span class="text-3xl">⚔️</span>
-            </div>
-            <h3 class="text-2xl font-serif font-bold text-ink mb-4">
-              武式太极
-            </h3>
-            <div class="mb-4">
-              <span class="inline-block px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full">
-                注重内涵
-              </span>
-            </div>
-            <p class="text-secondary leading-relaxed mb-4">
-              由<span class="text-accent font-medium">武禹襄</span>所创，强调内功修炼。动作小巧紧凑，注重身法，强调"以意导气"。
-            </p>
-            <div class="border-t border-border/30 pt-4 mt-4">
-              <p class="text-sm text-secondary">
-                <span class="font-medium text-ink">特点：</span>内功为主、身法严谨、虚实分清
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 孙式太极 -->
-        <div class="scroll-animate group" style="animation-delay: 0.4s">
-          <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-cyan/50 h-full flex flex-col">
-            <div class="w-16 h-16 bg-cyan/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-cyan/20 transition-colors">
-              <span class="text-3xl">🏃</span>
-            </div>
-            <h3 class="text-2xl font-serif font-bold text-ink mb-4">
-              孙式太极
-            </h3>
-            <div class="mb-4">
-              <span class="inline-block px-3 py-1 text-xs font-medium text-cyan bg-cyan/10 rounded-full">
-                开合相济
-              </span>
-            </div>
-            <p class="text-secondary leading-relaxed mb-4">
-              由<span class="text-cyan font-medium">孙禄堂</span>融合形意拳、八卦掌创编。动作灵活多变，进退相随，舒展圆活。
-            </p>
-            <div class="border-t border-border/30 pt-4 mt-4">
-              <p class="text-sm text-secondary">
-                <span class="font-medium text-ink">特点：</span>开合相济、灵活多变、步法灵活
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 和式太极 -->
-        <div class="scroll-animate group" style="animation-delay: 0.5s">
-          <div class="bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-secondary/50 h-full flex flex-col">
-            <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-secondary/20 transition-colors">
-              <span class="text-3xl">☯️</span>
-            </div>
-            <h3 class="text-2xl font-serif font-bold text-ink mb-4">
-              和式太极
-            </h3>
-            <div class="mb-4">
-              <span class="inline-block px-3 py-1 text-xs font-medium text-secondary bg-secondary/10 rounded-full">
-                古朴传统
-              </span>
-            </div>
-            <p class="text-secondary leading-relaxed mb-4">
-              由<span class="text-secondary font-medium">和兆元</span>所创，保留了较多传统特色。动作古朴无华，朴实无华，注重实用。
-            </p>
-            <div class="border-t border-border/30 pt-4 mt-4">
-              <p class="text-sm text-secondary">
-                <span class="font-medium text-ink">特点：</span>古朴传统、朴实无华、技击性强
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 常见套路介绍 -->
+  <!-- 四、李雅轩 - 四川奠基人 -->
   <section class="py-24 bg-mist/20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16 scroll-animate">
         <span class="inline-block px-3 py-1 text-sm font-medium text-accent bg-accent/10 rounded-full mb-4">
-          经典套路
+          第四章
         </span>
         <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
-          太极拳法
+          李雅轩：四川杨式太极拳奠基人
         </h2>
-        <div class="w-32 h-1 bg-cyan/50 mx-auto mb-6"></div>
-        <p class="text-lg text-secondary max-w-2xl mx-auto">
-          从简到繁，循序渐进
+        <div class="w-32 h-1 bg-accent/50 mx-auto mb-6"></div>
+        <p class="text-lg text-secondary max-w-3xl mx-auto">
+          四川杨式太极拳的正宗源头
         </p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <!-- 24式简化太极 -->
-        <div class="scroll-animate">
-          <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30">
-            <div class="flex items-start justify-between mb-6">
-              <div>
-                <span class="inline-block px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full mb-3">
-                  入门首选
-                </span>
-                <h3 class="text-3xl font-serif font-bold text-ink mb-2">
-                  24式太极拳
-                </h3>
-                <p class="text-secondary">简化太极拳</p>
+      <div class="max-w-5xl mx-auto scroll-animate">
+        <div class="bg-gradient-to-br from-accent/5 to-cyan/5 rounded-2xl p-8 md:p-12 border-2 border-accent/30">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+            <div class="text-center">
+              <div class="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-3xl">👨‍🏫</span>
               </div>
-              <div class="text-right">
-                <p class="text-4xl font-serif text-accent font-bold">24</p>
-                <p class="text-sm text-secondary">个动作</p>
-              </div>
+              <h3 class="text-xl font-serif font-bold text-ink mb-2">李雅轩</h3>
+              <p class="text-sm text-secondary">1888–1965</p>
+              <p class="text-sm text-accent font-medium mt-2">杨澄甫高徒</p>
             </div>
-            <p class="text-secondary leading-relaxed mb-6">
-              1956年由国家体委组织编写，从杨式太极中精选24个动作组成。动作规范、结构合理、易学易练，是太极拳入门的最佳选择。
-            </p>
-            <div class="grid grid-cols-2 gap-4">
-              <div class="flex items-center space-x-2">
-                <div class="w-2 h-2 rounded-full bg-accent"></div>
-                <span class="text-sm text-ink">5-6分钟完成</span>
+            <div class="text-center">
+              <div class="w-20 h-20 bg-cyan/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-3xl">📍</span>
               </div>
-              <div class="flex items-center space-x-2">
-                <div class="w-2 h-2 rounded-full bg-cyan"></div>
-                <span class="text-sm text-ink">适合初学者</span>
+              <h3 class="text-xl font-serif font-bold text-ink mb-2">四川成都</h3>
+              <p class="text-sm text-secondary">传承基地</p>
+              <p class="text-sm text-cyan font-medium mt-2">西南太极重镇</p>
+            </div>
+            <div class="text-center">
+              <div class="w-20 h-20 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-3xl">🎯</span>
               </div>
-              <div class="flex items-center space-x-2">
-                <div class="w-2 h-2 rounded-full bg-secondary"></div>
-                <span class="text-sm text-ink">动作舒展大方</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <div class="w-2 h-2 rounded-full bg-accent"></div>
-                <span class="text-sm text-ink">国家推广套路</span>
-              </div>
+              <h3 class="text-xl font-serif font-bold text-ink mb-2">奠基人</h3>
+              <p class="text-sm text-secondary">历史地位</p>
+              <p class="text-sm text-secondary font-medium mt-2">正宗源头</p>
             </div>
           </div>
-        </div>
 
-        <!-- 42式竞赛套路 -->
-        <div class="scroll-animate" style="animation-delay: 0.1s">
-          <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30">
-            <div class="flex items-start justify-between mb-6">
-              <div>
-                <span class="inline-block px-3 py-1 text-xs font-medium text-cyan bg-cyan/10 rounded-full mb-3">
-                  竞赛标准
+          <div class="space-y-6">
+            <div class="bg-paper rounded-xl p-6">
+              <h4 class="text-xl font-serif font-bold text-ink mb-4 flex items-center">
+                <span class="w-8 h-8 bg-accent/10 rounded-full flex items-center justify-center mr-3">
+                  <span class="text-accent text-sm">✓</span>
                 </span>
-                <h3 class="text-3xl font-serif font-bold text-ink mb-2">
-                  42式太极拳
-                </h3>
-                <p class="text-secondary">综合竞赛套路</p>
-              </div>
-              <div class="text-right">
-                <p class="text-4xl font-serif text-cyan font-bold">42</p>
-                <p class="text-sm text-secondary">个动作</p>
-              </div>
+                传承脉络
+              </h4>
+              <p class="text-secondary leading-relaxed">
+                四川最具影响力的杨式体系源自 <span class="text-accent font-medium">李雅轩 → 林墨根</span> 的传承链。资料明确显示：林墨根是李雅轩弟子。
+              </p>
             </div>
-            <p class="text-secondary leading-relaxed mb-6">
-              综合了陈、杨、吴、孙式太极的特点创编而成，动作编排科学合理，技术含量高，是各类太极拳比赛的竞赛套路。
-            </p>
-            <div class="grid grid-cols-2 gap-4">
-              <div class="flex items-center space-x-2">
-                <div class="w-2 h-2 rounded-full bg-accent"></div>
-                <span class="text-sm text-ink">6-7分钟完成</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <div class="w-2 h-2 rounded-full bg-cyan"></div>
-                <span class="text-sm text-ink">需要一定基础</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <div class="w-2 h-2 rounded-full bg-secondary"></div>
-                <span class="text-sm text-ink">融合多流派</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <div class="w-2 h-2 rounded-full bg-cyan"></div>
-                <span class="text-sm text-ink">比赛指定套路</span>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <!-- 48式太极 -->
-        <div class="scroll-animate" style="animation-delay: 0.2s">
-          <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30">
-            <div class="flex items-start justify-between mb-6">
-              <div>
-                <span class="inline-block px-3 py-1 text-xs font-medium text-secondary bg-secondary/10 rounded-full mb-3">
-                  进阶提升
+            <div class="bg-paper rounded-xl p-6">
+              <h4 class="text-xl font-serif font-bold text-ink mb-4 flex items-center">
+                <span class="w-8 h-8 bg-cyan/10 rounded-full flex items-center justify-center mr-3">
+                  <span class="text-cyan text-sm">📌</span>
                 </span>
-                <h3 class="text-3xl font-serif font-bold text-ink mb-2">
-                  48式太极拳
-                </h3>
-                <p class="text-secondary">杨式进阶套路</p>
+                李雅轩在四川的历史地位
+              </h4>
+              <p class="text-secondary mb-4">他为四川带来了杨澄甫体系的核心内容：</p>
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <div class="bg-mist/50 rounded-lg px-4 py-3 text-center text-sm text-secondary">
+                  松沉落胯
+                </div>
+                <div class="bg-mist/50 rounded-lg px-4 py-3 text-center text-sm text-secondary">
+                  虚灵顶劲
+                </div>
+                <div class="bg-mist/50 rounded-lg px-4 py-3 text-center text-sm text-secondary">
+                  身法中正
+                </div>
+                <div class="bg-mist/50 rounded-lg px-4 py-3 text-center text-sm text-secondary">
+                  圆活劲路
+                </div>
               </div>
-              <div class="text-right">
-                <p class="text-4xl font-serif text-secondary font-bold">48</p>
-                <p class="text-sm text-secondary">个动作</p>
-              </div>
-            </div>
-            <p class="text-secondary leading-relaxed mb-6">
-              在杨式太极基础上创编，动作内容丰富，技术全面，既保留了传统特色，又有创新发展，适合有一定基础的练习者。
-            </p>
-            <div class="grid grid-cols-2 gap-4">
-              <div class="flex items-center space-x-2">
-                <div class="w-2 h-2 rounded-full bg-accent"></div>
-                <span class="text-sm text-ink">7-8分钟完成</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <div class="w-2 h-2 rounded-full bg-cyan"></div>
-                <span class="text-sm text-ink">适合进阶练习</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <div class="w-2 h-2 rounded-full bg-secondary"></div>
-                <span class="text-sm text-ink">杨式风格</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <div class="w-2 h-2 rounded-full bg-accent"></div>
-                <span class="text-sm text-ink">技术更全面</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 传统套路 -->
-        <div class="scroll-animate" style="animation-delay: 0.3s">
-          <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30">
-            <div class="flex items-start justify-between mb-6">
-              <div>
-                <span class="inline-block px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full mb-3">
-                  传统传承
-                </span>
-                <h3 class="text-3xl font-serif font-bold text-ink mb-2">
-                  传统108式
-                </h3>
-                <p class="text-secondary">完整传统套路</p>
-              </div>
-              <div class="text-right">
-                <p class="text-4xl font-serif text-accent font-bold">108</p>
-                <p class="text-sm text-secondary">个动作</p>
-              </div>
-            </div>
-            <p class="text-secondary leading-relaxed mb-6">
-              传统杨式太极的完整套路，动作全面，内涵丰富，包含了太极的核心理念和技法，是深入学习太极拳的经典选择。
-            </p>
-            <div class="grid grid-cols-2 gap-4">
-              <div class="flex items-center space-x-2">
-                <div class="w-2 h-2 rounded-full bg-accent"></div>
-                <span class="text-sm text-ink">20-25分钟完成</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <div class="w-2 h-2 rounded-full bg-cyan"></div>
-                <span class="text-sm text-ink">适合长期练习</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <div class="w-2 h-2 rounded-full bg-secondary"></div>
-                <span class="text-sm text-ink">传统杨式</span>
-              </div>
-              <div class="flex items-center space-x-2">
-                <div class="w-2 h-2 rounded-full bg-cyan"></div>
-                <span class="text-sm text-ink">内涵最丰富</span>
-              </div>
+              <p class="text-sm text-secondary/80 mt-4 italic">
+                这些元素构成了今日四川杨式太极拳的技术基础。
+              </p>
             </div>
           </div>
         </div>
@@ -722,368 +295,315 @@ const currentLocale = (Astro.currentLocale || 'nl') as 'nl' | 'en' | 'zh';
     </div>
   </section>
 
-  <!-- 太极养生功效 -->
+  <!-- 五、林墨根 - 四川传播大师 -->
   <section class="py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16 scroll-animate">
         <span class="inline-block px-3 py-1 text-sm font-medium text-cyan bg-cyan/10 rounded-full mb-4">
-          健康养生
+          第五章
         </span>
         <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
-          养生功效
-        </h2>
-        <div class="w-32 h-1 bg-accent/50 mx-auto mb-6"></div>
-        <p class="text-lg text-secondary max-w-2xl mx-auto">
-          科学验证，效果显著
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- 心肺功能 -->
-        <div class="scroll-animate">
-          <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-accent/50 transition-all duration-300 h-full flex flex-col">
-            <div class="w-20 h-20 bg-gradient-to-br from-accent/20 to-accent/10 rounded-2xl flex items-center justify-center mb-6">
-              <span class="text-4xl">❤️</span>
-            </div>
-            <h3 class="text-2xl font-serif font-bold text-ink mb-4">
-              改善心肺功能
-            </h3>
-            <p class="text-secondary leading-relaxed mb-4">
-              太极拳的有氧运动特性可以增强心肺耐力，提高血液循环效率，降低心血管疾病风险。
-            </p>
-            <div class="space-y-2">
-              <div class="flex items-center space-x-2 text-sm text-secondary">
-                <div class="w-1.5 h-1.5 rounded-full bg-accent"></div>
-                <span>增强心肌收缩力</span>
-              </div>
-              <div class="flex items-center space-x-2 text-sm text-secondary">
-                <div class="w-1.5 h-1.5 rounded-full bg-accent"></div>
-                <span>提高肺活量</span>
-              </div>
-              <div class="flex items-center space-x-2 text-sm text-secondary">
-                <div class="w-1.5 h-1.5 rounded-full bg-accent"></div>
-                <span>促进血液循环</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 平衡能力 -->
-        <div class="scroll-animate" style="animation-delay: 0.1s">
-          <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-cyan/50 transition-all duration-300 h-full flex flex-col">
-            <div class="w-20 h-20 bg-gradient-to-br from-cyan/20 to-cyan/10 rounded-2xl flex items-center justify-center mb-6">
-              <span class="text-4xl">⚖️</span>
-            </div>
-            <h3 class="text-2xl font-serif font-bold text-ink mb-4">
-              增强平衡能力
-            </h3>
-            <p class="text-secondary leading-relaxed mb-4">
-              太极拳的缓慢动作和重心转移训练，显著提高身体的平衡能力和稳定性，特别适合中老年人。
-            </p>
-            <div class="space-y-2">
-              <div class="flex items-center space-x-2 text-sm text-secondary">
-                <div class="w-1.5 h-1.5 rounded-full bg-cyan"></div>
-                <span>提高身体稳定性</span>
-              </div>
-              <div class="flex items-center space-x-2 text-sm text-secondary">
-                <div class="w-1.5 h-1.5 rounded-full bg-cyan"></div>
-                <span>减少跌倒风险</span>
-              </div>
-              <div class="flex items-center space-x-2 text-sm text-secondary">
-                <div class="w-1.5 h-1.5 rounded-full bg-cyan"></div>
-                <span>改善步态协调</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 肌肉力量 -->
-        <div class="scroll-animate" style="animation-delay: 0.2s">
-          <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-secondary/50 transition-all duration-300 h-full flex flex-col">
-            <div class="w-20 h-20 bg-gradient-to-br from-secondary/20 to-secondary/10 rounded-2xl flex items-center justify-center mb-6">
-              <span class="text-4xl">💪</span>
-            </div>
-            <h3 class="text-2xl font-serif font-bold text-ink mb-4">
-              增强肌肉力量
-            </h3>
-            <p class="text-secondary leading-relaxed mb-4">
-              虽然动作缓慢，但太极拳需要持续的肌肉控制，能有效增强下肢力量和核心稳定性。
-            </p>
-            <div class="space-y-2">
-              <div class="flex items-center space-x-2 text-sm text-secondary">
-                <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-                <span>增强下肢力量</span>
-              </div>
-              <div class="flex items-center space-x-2 text-sm text-secondary">
-                <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-                <span>改善核心稳定</span>
-              </div>
-              <div class="flex items-center space-x-2 text-sm text-secondary">
-                <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-                <span>提高关节灵活度</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 缓解压力 -->
-        <div class="scroll-animate" style="animation-delay: 0.3s">
-          <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-accent/50 transition-all duration-300 h-full flex flex-col">
-            <div class="w-20 h-20 bg-gradient-to-br from-accent/20 to-accent/10 rounded-2xl flex items-center justify-center mb-6">
-              <span class="text-4xl">🧘</span>
-            </div>
-            <h3 class="text-2xl font-serif font-bold text-ink mb-4">
-              缓解压力焦虑
-            </h3>
-            <p class="text-secondary leading-relaxed mb-4">
-              太极拳结合冥想和运动，能有效降低压力激素水平，缓解焦虑和抑郁情绪，提升心理健康。
-            </p>
-            <div class="space-y-2">
-              <div class="flex items-center space-x-2 text-sm text-secondary">
-                <div class="w-1.5 h-1.5 rounded-full bg-accent"></div>
-                <span>降低皮质醇水平</span>
-              </div>
-              <div class="flex items-center space-x-2 text-sm text-secondary">
-                <div class="w-1.5 h-1.5 rounded-full bg-accent"></div>
-                <span>提升心理状态</span>
-              </div>
-              <div class="flex items-center space-x-2 text-sm text-secondary">
-                <div class="w-1.5 h-1.5 rounded-full bg-accent"></div>
-                <span>改善睡眠质量</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 免疫力 -->
-        <div class="scroll-animate" style="animation-delay: 0.4s">
-          <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-cyan/50 transition-all duration-300 h-full flex flex-col">
-            <div class="w-20 h-20 bg-gradient-to-br from-cyan/20 to-cyan/10 rounded-2xl flex items-center justify-center mb-6">
-              <span class="text-4xl">🛡️</span>
-            </div>
-            <h3 class="text-2xl font-serif font-bold text-ink mb-4">
-              提升免疫力
-            </h3>
-            <p class="text-secondary leading-relaxed mb-4">
-              长期练习太极拳可以增强免疫系统功能，提高身体抵抗力，减少疾病发生。
-            </p>
-            <div class="space-y-2">
-              <div class="flex items-center space-x-2 text-sm text-secondary">
-                <div class="w-1.5 h-1.5 rounded-full bg-cyan"></div>
-                <span>增强免疫细胞活性</span>
-              </div>
-              <div class="flex items-center space-x-2 text-sm text-secondary">
-                <div class="w-1.5 h-1.5 rounded-full bg-cyan"></div>
-                <span>提高抗病能力</span>
-              </div>
-              <div class="flex items-center space-x-2 text-sm text-secondary">
-                <div class="w-1.5 h-1.5 rounded-full bg-cyan"></div>
-                <span>促进身体康复</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 延缓衰老 -->
-        <div class="scroll-animate" style="animation-delay: 0.5s">
-          <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-secondary/50 transition-all duration-300 h-full flex flex-col">
-            <div class="w-20 h-20 bg-gradient-to-br from-secondary/20 to-secondary/10 rounded-2xl flex items-center justify-center mb-6">
-              <span class="text-4xl">✨</span>
-            </div>
-            <h3 class="text-2xl font-serif font-bold text-ink mb-4">
-              延缓衰老进程
-            </h3>
-            <p class="text-secondary leading-relaxed mb-4">
-              太极拳的综合锻炼效果有助于延缓身体机能衰退，保持年轻活力，提高生活质量。
-            </p>
-            <div class="space-y-2">
-              <div class="flex items-center space-x-2 text-sm text-secondary">
-                <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-                <span>延缓骨质疏松</span>
-              </div>
-              <div class="flex items-center space-x-2 text-sm text-secondary">
-                <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-                <span>改善身体柔韧性</span>
-              </div>
-              <div class="flex items-center space-x-2 text-sm text-secondary">
-                <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-                <span>保持认知功能</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 太极练习方法 -->
-  <section class="py-24 bg-mist/20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16 scroll-animate">
-        <span class="inline-block px-3 py-1 text-sm font-medium text-accent bg-accent/10 rounded-full mb-4">
-          练习指南
-        </span>
-        <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
-          练习要领
+          林墨根：四川杨式太极拳传播大师
         </h2>
         <div class="w-32 h-1 bg-cyan/50 mx-auto mb-6"></div>
-        <p class="text-lg text-secondary max-w-2xl mx-auto">
-          掌握正确方法，事半功倍
-        </p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <!-- 左侧：核心要领 -->
-        <div class="space-y-6">
-          <!-- 要领1 -->
-          <div class="scroll-animate">
-            <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-accent/50 transition-all duration-300">
-              <div class="flex items-start space-x-6">
-                <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span class="text-2xl font-serif text-accent font-bold">一</span>
-                </div>
-                <div>
-                  <h3 class="text-2xl font-serif font-bold text-ink mb-3">
-                    身法中正
-                  </h3>
-                  <p class="text-secondary leading-relaxed">
-                    保持身体中正自然，头部正直，颈部放松，脊柱保持自然伸展。身体各部位协调一致，不偏不倚，如立身中正，如钟悬。
-                  </p>
-                </div>
-              </div>
+      <div class="max-w-4xl mx-auto scroll-animate">
+        <div class="bg-paper rounded-2xl shadow-xl p-8 md:p-12 border-2 border-cyan/30">
+          <div class="flex items-start space-x-4 mb-6">
+            <div class="w-12 h-12 bg-cyan/10 rounded-full flex items-center justify-center flex-shrink-0">
+              <span class="text-2xl">🌟</span>
             </div>
-          </div>
-
-          <!-- 要领2 -->
-          <div class="scroll-animate" style="animation-delay: 0.1s">
-            <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-cyan/50 transition-all duration-300">
-              <div class="flex items-start space-x-6">
-                <div class="w-16 h-16 bg-cyan/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span class="text-2xl font-serif text-cyan font-bold">二</span>
-                </div>
-                <div>
-                  <h3 class="text-2xl font-serif font-bold text-ink mb-3">
-                    虚实分明
-                  </h3>
-                  <p class="text-secondary leading-relaxed">
-                    明确身体的虚实转换，重心转移清晰。两脚分清虚实，身体重量分配得当，动作转换时虚实变化要自然流畅。
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 要领3 -->
-          <div class="scroll-animate" style="animation-delay: 0.2s">
-            <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-secondary/50 transition-all duration-300">
-              <div class="flex items-start space-x-6">
-                <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span class="text-2xl font-serif text-secondary font-bold">三</span>
-                </div>
-                <div>
-                  <h3 class="text-2xl font-serif font-bold text-ink mb-3">
-                    意气相随
-                  </h3>
-                  <p class="text-secondary leading-relaxed">
-                    以意导气，以气运身。心意为主导，呼吸配合动作，意到气到，气到力到。内外合一，形神兼备。
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 要领4 -->
-          <div class="scroll-animate" style="animation-delay: 0.3s">
-            <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-accent/50 transition-all duration-300">
-              <div class="flex items-start space-x-6">
-                <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span class="text-2xl font-serif text-accent font-bold">四</span>
-                </div>
-                <div>
-                  <h3 class="text-2xl font-serif font-bold text-ink mb-3">
-                    连贯圆活
-                  </h3>
-                  <p class="text-secondary leading-relaxed">
-                    动作要连贯圆活，如行云流水，连绵不断。动作之间衔接自然，没有停顿和断续，周身协调，上下相随。
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 右侧：练习建议 -->
-        <div class="scroll-animate" style="animation-delay: 0.2s">
-          <div class="bg-paper rounded-2xl shadow-xl p-8 border border-border/30 sticky top-24">
-            <div class="mb-8">
-              <h3 class="text-3xl font-serif font-bold text-ink mb-4">
-                练习建议
+            <div>
+              <h3 class="text-2xl font-serif font-bold text-ink mb-4">
+                历史定位
               </h3>
-              <div class="w-16 h-1 bg-accent/50"></div>
+            </div>
+          </div>
+
+          <div class="space-y-6">
+            <div class="bg-mist/50 rounded-lg p-6">
+              <p class="text-lg text-secondary leading-relaxed mb-4">
+                虽然四川杨式太极拳的根在李雅轩，但<span class="text-cyan font-medium">真正使其在四川广泛普及</span>的是他的弟子：
+              </p>
+              <p class="text-2xl font-serif text-cyan font-bold text-center">
+                林墨根（李雅轩弟子）
+              </p>
             </div>
 
-            <div class="space-y-6">
-              <!-- 频率 -->
-              <div class="border-b border-border/30 pb-6">
-                <div class="flex items-center space-x-3 mb-3">
-                  <span class="text-2xl">📅</span>
-                  <h4 class="text-xl font-serif font-bold text-ink">练习频率</h4>
-                </div>
-                <p class="text-secondary leading-relaxed">
-                  建议每周练习3-5次，每次30-60分钟。坚持长期练习，效果更佳。初学者可从每次15-20分钟开始。
+            <div class="space-y-4">
+              <h4 class="text-xl font-serif font-bold text-ink">他的历史定位是：</h4>
+              <div class="bg-gradient-to-r from-cyan/10 to-transparent rounded-lg p-6">
+                <p class="text-lg text-secondary">
+                  <span class="text-cyan font-bold">四川杨式太极拳的大师级传播者</span>，而非奠基人。
                 </p>
               </div>
+            </div>
 
-              <!-- 时间 -->
-              <div class="border-b border-border/30 pb-6">
-                <div class="flex items-center space-x-3 mb-3">
-                  <span class="text-2xl">⏰</span>
-                  <h4 class="text-xl font-serif font-bold text-ink">最佳时间</h4>
-                </div>
-                <p class="text-secondary leading-relaxed">
-                  早晨5-7点或傍晚4-6点最佳，此时空气清新，身体状态良好。避免饭后立即练习。
-                </p>
+            <div>
+              <h4 class="text-xl font-serif font-bold text-ink mb-4">他奠定的影响包括：</h4>
+              <ul class="space-y-3">
+                <li class="flex items-start space-x-3">
+                  <div class="w-2 h-2 rounded-full bg-cyan mt-2 flex-shrink-0"></div>
+                  <span class="text-secondary">让四川具备系统、完整的杨式教学体系</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <div class="w-2 h-2 rounded-full bg-cyan mt-2 flex-shrink-0"></div>
+                  <span class="text-secondary">形成川内最大的杨式太极传承群体</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <div class="w-2 h-2 rounded-full bg-cyan mt-2 flex-shrink-0"></div>
+                  <span class="text-secondary">培养大批优秀弟子，使四川成为西南太极重镇</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 六、何绍君 - 现代代表人物 -->
+  <section class="py-24 bg-mist/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 scroll-animate">
+        <span class="inline-block px-3 py-1 text-sm font-medium text-accent bg-accent/10 rounded-full mb-4">
+          第六章
+        </span>
+        <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
+          何绍君：四川杨式太极拳的现代代表人物
+        </h2>
+        <div class="w-32 h-1 bg-accent/50 mx-auto mb-6"></div>
+      </div>
+
+      <div class="max-w-5xl mx-auto scroll-animate">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-accent/50 transition-all">
+            <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-6">
+              <span class="text-3xl">🎓</span>
+            </div>
+            <h3 class="text-2xl font-serif font-bold text-ink mb-4">
+              师承背景
+            </h3>
+            <p class="text-secondary leading-relaxed">
+              杨氏太极拳第六代宗脉传承人，师承林墨根近三十年。
+            </p>
+            <div class="mt-4 p-4 bg-mist/50 rounded-lg">
+              <p class="text-sm text-secondary/80">
+                担任四川省武术协会太极研究会副会长、四川大学太极拳协会教练。
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-cyan/50 transition-all">
+            <div class="w-16 h-16 bg-cyan/10 rounded-full flex items-center justify-center mb-6">
+              <span class="text-3xl">💡</span>
+            </div>
+            <h3 class="text-2xl font-serif font-bold text-ink mb-4">
+              创新贡献
+            </h3>
+            <p class="text-secondary leading-relaxed">
+              创建"太极揉推功法"，系统化太极推手训练。
+            </p>
+            <div class="mt-4 p-4 bg-mist/50 rounded-lg">
+              <p class="text-sm text-secondary/80">
+                推动四川太极拳进入现代化、系统化阶段。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 bg-gradient-to-br from-accent/5 to-cyan/5 rounded-2xl p-8 border border-accent/20">
+          <h3 class="text-2xl font-serif font-bold text-ink mb-6 text-center">
+            他的贡献
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="text-center">
+              <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <span class="text-accent">1</span>
               </div>
-
-              <!-- 场地 -->
-              <div class="border-b border-border/30 pb-6">
-                <div class="flex items-center space-x-3 mb-3">
-                  <span class="text-2xl">🌳</span>
-                  <h4 class="text-xl font-serif font-bold text-ink">练习场地</h4>
-                </div>
-                <p class="text-secondary leading-relaxed">
-                  选择空气清新、环境安静的场地。公园、庭院、湖边等皆可。地面平整，避免在过硬或过软地面练习。
-                </p>
+              <p class="text-secondary">使四川杨式太极拳进入现代化、系统化阶段</p>
+            </div>
+            <div class="text-center">
+              <div class="w-12 h-12 bg-cyan/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <span class="text-cyan">2</span>
               </div>
+              <p class="text-secondary">推动四川高校与社会广泛练习杨式太极</p>
+            </div>
+            <div class="text-center">
+              <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <span class="text-secondary">3</span>
+              </div>
+              <p class="text-secondary">培养了大量川籍与海外弟子</p>
+            </div>
+          </div>
+          <p class="text-center text-accent font-medium mt-6">
+            他是当代四川杨式太极拳的标志性人物之一。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-              <!-- 注意事项 -->
-              <div>
-                <div class="flex items-center space-x-3 mb-3">
-                  <span class="text-2xl">⚠️</span>
-                  <h4 class="text-xl font-serif font-bold text-ink">注意事项</h4>
+  <!-- 七、陶莉 - 国际传播者 -->
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 scroll-animate">
+        <span class="inline-block px-3 py-1 text-sm font-medium text-secondary bg-secondary/10 rounded-full mb-4">
+          第七章
+        </span>
+        <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
+          陶莉：四川杨式太极拳的国际传播者
+        </h2>
+        <div class="w-32 h-1 bg-secondary/50 mx-auto mb-6"></div>
+      </div>
+
+      <div class="max-w-4xl mx-auto scroll-animate">
+        <div class="bg-gradient-to-br from-secondary/5 to-accent/5 rounded-2xl p-8 md:p-12 border-2 border-secondary/30">
+          <div class="space-y-6">
+            <div class="bg-paper rounded-xl p-6">
+              <h4 class="text-xl font-serif font-bold text-ink mb-4">师承背景</h4>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="text-center p-4 bg-mist/50 rounded-lg">
+                  <p class="text-3xl font-serif text-secondary font-bold">2011</p>
+                  <p class="text-sm text-secondary mt-2">正式拜入何绍君大师门下</p>
                 </div>
-                <ul class="space-y-2 text-secondary">
-                  <li class="flex items-start space-x-2">
-                    <span class="text-accent mt-1">•</span>
-                    <span>穿着宽松舒适的运动服装</span>
-                  </li>
-                  <li class="flex items-start space-x-2">
-                    <span class="text-accent mt-1">•</span>
-                    <span>练习前做好热身运动</span>
-                  </li>
-                  <li class="flex items-start space-x-2">
-                    <span class="text-accent mt-1">•</span>
-                    <span>量力而行，循序渐进</span>
-                  </li>
-                  <li class="flex items-start space-x-2">
-                    <span class="text-accent mt-1">•</span>
-                    <span>动作要轻柔，避免用力过猛</span>
-                  </li>
-                  <li class="flex items-start space-x-2">
-                    <span class="text-accent mt-1">•</span>
-                    <span>如有不适，应立即停止练习</span>
-                  </li>
-                </ul>
+                <div class="text-center p-4 bg-mist/50 rounded-lg">
+                  <p class="text-3xl font-serif text-secondary font-bold">18+</p>
+                  <p class="text-sm text-secondary mt-2">年持续学习</p>
+                </div>
+                <div class="text-center p-4 bg-mist/50 rounded-lg">
+                  <p class="text-3xl">🌍</p>
+                  <p class="text-sm text-secondary mt-2">在荷兰及欧洲教授杨式太极拳</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-paper rounded-xl p-6">
+              <h4 class="text-xl font-serif font-bold text-ink mb-4">她将四川体系的特点带向国际：</h4>
+              <ul class="space-y-3">
+                <li class="flex items-start space-x-3">
+                  <div class="w-2 h-2 rounded-full bg-secondary mt-2 flex-shrink-0"></div>
+                  <span class="text-secondary">强调基本功（松、沉、圆、稳）</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <div class="w-2 h-2 rounded-full bg-secondary mt-2 flex-shrink-0"></div>
+                  <span class="text-secondary">注重身法结构与呼吸</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <div class="w-2 h-2 rounded-full bg-secondary mt-2 flex-shrink-0"></div>
+                  <span class="text-secondary">推行传统杨式文化与礼仪</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <div class="w-2 h-2 rounded-full bg-secondary mt-2 flex-shrink-0"></div>
+                  <span class="text-secondary">以四川体系为根基向欧洲推广太极拳</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="text-center p-6 bg-secondary/10 rounded-xl">
+              <p class="text-xl text-secondary font-medium">
+                她是四川杨式太极拳传向全球的<span class="text-secondary font-bold">重要力量</span>。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 八、传承脉络 -->
+  <section class="py-24 bg-mist/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 scroll-animate">
+        <span class="inline-block px-3 py-1 text-sm font-medium text-accent bg-accent/10 rounded-full mb-4">
+          第八章
+        </span>
+        <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
+          四川杨式太极拳的传承脉络
+        </h2>
+        <div class="w-32 h-1 bg-accent/50 mx-auto mb-6"></div>
+        <p class="text-lg text-secondary">修正版 · 最权威</p>
+      </div>
+
+      <div class="max-w-4xl mx-auto scroll-animate">
+        <div class="relative">
+          <!-- 传承链 -->
+          <div class="space-y-4">
+            <!-- 层级 1 -->
+            <div class="bg-paper rounded-xl p-6 border-2 border-accent/30 shadow-lg">
+              <div class="flex items-center justify-center">
+                <span class="text-2xl font-serif text-ink">陈家沟（陈王廷 → 陈长兴）</span>
+              </div>
+            </div>
+
+            <div class="flex justify-center">
+              <div class="w-0.5 h-8 bg-accent/30"></div>
+            </div>
+
+            <!-- 层级 2 -->
+            <div class="bg-paper rounded-xl p-6 border-2 border-accent/20 shadow-lg">
+              <div class="flex items-center justify-center">
+                <span class="text-2xl font-serif text-ink">河北永年（杨露禅创立杨式）</span>
+              </div>
+            </div>
+
+            <div class="flex justify-center">
+              <div class="w-0.5 h-8 bg-accent/30"></div>
+            </div>
+
+            <!-- 层级 3 -->
+            <div class="bg-paper rounded-xl p-6 border-2 border-accent/20 shadow-lg">
+              <div class="flex items-center justify-center">
+                <span class="text-2xl font-serif text-ink">北京（杨澄甫定型大架体系）</span>
+              </div>
+            </div>
+
+            <div class="flex justify-center">
+              <div class="w-0.5 h-8 bg-accent/30"></div>
+            </div>
+
+            <!-- 层级 4 - 突出显示 -->
+            <div class="bg-gradient-to-r from-accent/10 to-cyan/10 rounded-xl p-8 border-2 border-accent shadow-xl">
+              <div class="text-center">
+                <span class="text-3xl font-serif text-accent font-bold">★ 李雅轩</span>
+                <p class="text-lg text-secondary mt-2">四川杨式太极拳奠基人</p>
+              </div>
+            </div>
+
+            <div class="flex justify-center">
+              <div class="w-0.5 h-8 bg-accent/30"></div>
+            </div>
+
+            <!-- 层级 5 -->
+            <div class="bg-cyan/5 rounded-xl p-6 border-2 border-cyan/30 shadow-lg">
+              <div class="text-center">
+                <span class="text-2xl font-serif text-cyan font-bold">林墨根</span>
+                <p class="text-secondary mt-2">李雅轩弟子，四川传播大师之一</p>
+              </div>
+            </div>
+
+            <div class="flex justify-center">
+              <div class="w-0.5 h-8 bg-cyan/30"></div>
+            </div>
+
+            <!-- 层级 6 -->
+            <div class="bg-cyan/5 rounded-xl p-6 border-2 border-cyan/30 shadow-lg">
+              <div class="text-center">
+                <span class="text-2xl font-serif text-cyan font-bold">何绍君</span>
+                <p class="text-secondary mt-2">杨式太极第六代宗脉传承人</p>
+              </div>
+            </div>
+
+            <div class="flex justify-center">
+              <div class="w-0.5 h-8 bg-cyan/30"></div>
+            </div>
+
+            <!-- 层级 7 -->
+            <div class="bg-gradient-to-r from-cyan/10 to-secondary/10 rounded-xl p-6 border-2 border-secondary/30 shadow-lg">
+              <div class="text-center">
+                <span class="text-2xl font-serif text-secondary font-bold">陶莉</span>
+                <p class="text-secondary mt-2">四川体系的国际传播者</p>
               </div>
             </div>
           </div>
@@ -1092,27 +612,126 @@ const currentLocale = (Astro.currentLocale || 'nl') as 'nl' | 'en' | 'zh';
     </div>
   </section>
 
-  <!-- CTA Section -->
+  <!-- 九、为什么四川重要 -->
   <section class="py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 scroll-animate">
+        <span class="inline-block px-3 py-1 text-sm font-medium text-cyan bg-cyan/10 rounded-full mb-4">
+          第九章
+        </span>
+        <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
+          为什么四川是杨式太极拳的重要地区？
+        </h2>
+        <div class="w-32 h-1 bg-cyan/50 mx-auto mb-6"></div>
+      </div>
+
+      <div class="max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- 理由 1 -->
+          <div class="scroll-animate">
+            <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-accent/50 transition-all h-full">
+              <div class="flex items-center space-x-3 mb-4">
+                <div class="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center">
+                  <span class="text-accent text-xl">✔</span>
+                </div>
+                <h3 class="text-xl font-serif font-bold text-ink">
+                  源头正宗
+                </h3>
+              </div>
+              <p class="text-secondary leading-relaxed mb-2">
+                <span class="font-bold text-ink">李雅轩奠基</span>
+              </p>
+              <p class="text-secondary">
+                四川所传杨式太极拳来自杨澄甫最重要弟子的直接传承。
+              </p>
+            </div>
+          </div>
+
+          <!-- 理由 2 -->
+          <div class="scroll-animate" style="animation-delay: 0.1s">
+            <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-cyan/50 transition-all h-full">
+              <div class="flex items-center space-x-3 mb-4">
+                <div class="w-10 h-10 bg-cyan/10 rounded-full flex items-center justify-center">
+                  <span class="text-cyan text-xl">✔</span>
+                </div>
+                <h3 class="text-xl font-serif font-bold text-ink">
+                  传播广泛
+                </h3>
+              </div>
+              <p class="text-secondary leading-relaxed mb-2">
+                <span class="font-bold text-ink">林墨根授徒数十年</span>
+              </p>
+              <p class="text-secondary">
+                四川形成了全国规模最大、最系统的杨式太极拳群体之一。
+              </p>
+            </div>
+          </div>
+
+          <!-- 理由 3 -->
+          <div class="scroll-animate" style="animation-delay: 0.2s">
+            <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-secondary/50 transition-all h-full">
+              <div class="flex items-center space-x-3 mb-4">
+                <div class="w-10 h-10 bg-secondary/10 rounded-full flex items-center justify-center">
+                  <span class="text-secondary text-xl">✔</span>
+                </div>
+                <h3 class="text-xl font-serif font-bold text-ink">
+                  当代发展
+                </h3>
+              </div>
+              <p class="text-secondary leading-relaxed mb-2">
+                <span class="font-bold text-ink">何绍君推动现代化</span>
+              </p>
+              <p class="text-secondary">
+                四川太极拳的学术性、系统性、国际性持续提升。
+              </p>
+            </div>
+          </div>
+
+          <!-- 理由 4 -->
+          <div class="scroll-animate" style="animation-delay: 0.3s">
+            <div class="bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-accent/50 transition-all h-full">
+              <div class="flex items-center space-x-3 mb-4">
+                <div class="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center">
+                  <span class="text-accent text-xl">✔</span>
+                </div>
+                <h3 class="text-xl font-serif font-bold text-ink">
+                  国际影响
+                </h3>
+              </div>
+              <p class="text-secondary leading-relaxed mb-2">
+                <span class="font-bold text-ink">陶莉将其传播到欧洲</span>
+              </p>
+              <p class="text-secondary">
+                四川杨式太极拳已成为国际太极文化的重要组成部分。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-mist/20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center scroll-animate">
       <h2 class="text-4xl font-serif font-bold text-ink mb-6">
-        开启太极之旅
+        学习正宗四川杨式太极拳
       </h2>
       <p class="text-xl text-secondary mb-12">
-        亲身体验太极的魅力，感受千年智慧的现代传承
+        从根源到现代，体验传承百年的太极智慧
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
         <a
-          href={localizedPath('/courses', currentLocale)}
+          href={withBase("/me")}
           class="px-8 py-4 bg-accent hover:bg-primary text-paper hover:text-paper border-2 border-accent hover:border-primary rounded-lg font-medium text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
         >
-          查看课程
+          了解传承人
         </a>
         <a
-          href={localizedPath('/movements', currentLocale)}
+          href={withBase("/courses")}
           class="px-8 py-4 border-2 border-accent/30 text-accent hover:bg-accent/10 rounded-lg font-medium text-lg transition-all duration-300 hover:scale-105"
         >
-          了解招式
+          查看课程
         </a>
       </div>
     </div>
@@ -1120,7 +739,6 @@ const currentLocale = (Astro.currentLocale || 'nl') as 'nl' | 'en' | 'zh';
 </BaseLayout>
 
 <script>
-  // 滚动触发动画
   const observerOptions = {
     root: null,
     rootMargin: '0px',
