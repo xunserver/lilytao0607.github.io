@@ -77,7 +77,6 @@ public/
   - 集成 Vue 3 框架
   - Tailwind CSS 通过 Vite 插件集成
   - `base` 配置支持部署到子目录（通过 `ASTRO_BASE` 环境变量）
-  - `server.host` 设为 `0.0.0.0` 支持网络访问
 
 ## 开发注意事项
 
