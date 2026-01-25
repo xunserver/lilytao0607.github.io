@@ -114,6 +114,11 @@ export const courses = {
         zh: '60分钟/课时',
       },
       difficulty: '⭐⭐',
+      price: {
+        nl: '10€/les',
+        en: '10€/class',
+        zh: '10欧/每节课',
+      },
     },
     intermediate: {
       tag: {
@@ -137,11 +142,16 @@ export const courses = {
         zh: '16课时',
       },
       duration: {
-        nl: '90 min/les',
-        en: '90 min/class',
-        zh: '90分钟/课时',
+        nl: '60 min/les',
+        en: '60 min/class',
+        zh: '60分钟/课时',
       },
       difficulty: '⭐⭐⭐',
+      price: {
+        nl: '12€/les',
+        en: '12€/class',
+        zh: '12欧/每节课',
+      },
     },
     advanced: {
       tag: {
@@ -165,11 +175,16 @@ export const courses = {
         zh: '24课时',
       },
       duration: {
-        nl: '120 min/les',
-        en: '120 min/class',
-        zh: '120分钟/课时',
+        nl: '90 min/les',
+        en: '90 min/class',
+        zh: '90分钟/课时',
       },
       difficulty: '⭐⭐⭐⭐',
+      price: {
+        nl: '16€/les',
+        en: '16€/class',
+        zh: '16欧/每节课',
+      },
     },
     private: {
       tag: {
@@ -219,6 +234,44 @@ export const courses = {
         en: 'Difficulty',
         zh: '难度',
       },
+      price: {
+        nl: 'Prijs',
+        en: 'Price',
+        zh: '费用',
+      },
+    },
+  },
+  // 课程费用
+  pricing: {
+    title: {
+      nl: 'Cursuskosten',
+      en: 'Course Fees',
+      zh: '课程费用',
+    },
+    subtitle: {
+      nl: 'Kosten bepaald op basis van cursustype',
+      en: 'Fees determined based on course type',
+      zh: '费用根据课程类型定制',
+    },
+    beginner: {
+      nl: '10€/les, maandelijkse betaling (1 uur/les)',
+      en: '10€/class, monthly payment (1 hour/class)',
+      zh: '10欧/每节课，按月支付（每节课1小时）',
+    },
+    intermediate: {
+      nl: '12€/les, maandelijkse betaling (1 uur/les)',
+      en: '12€/class, monthly payment (1 hour/class)',
+      zh: '12欧/每节课，按月支付（每节课1小时）',
+    },
+    advanced: {
+      nl: '16€/les, maandelijkse betaling (1.5 uur/les)',
+      en: '16€/class, monthly payment (1.5 hours/class)',
+      zh: '16欧/每节课，按月支付（每节课1.5小时）',
+    },
+    workshop: {
+      nl: 'Workshops worden aangekondigd op basis van verschillende tijden en locaties',
+      en: 'Workshops will be announced based on different times and locations',
+      zh: 'Workshop会根据不同时间地点等进行通知',
     },
   },
   // 课程特色
@@ -238,12 +291,12 @@ export const courses = {
         title: {
           nl: 'Professionele Instructeurs',
           en: 'Professional Instructors',
-          zh: '专业教练',
+          zh: '专业师资',
         },
         desc: {
-          nl: 'Erkende professionele Tai Chi-instructeurs met landelijke coach-certificering',
-          en: 'Experienced professional Tai Chi instructors with nationally certified coaching qualifications',
-          zh: '经验丰富的专业太极拳教练，持有国家级教练资格证书',
+          nl: 'Tai Chi meesters met jaren van onderwijservaring',
+          en: 'Tai Chi masters with years of teaching experience',
+          zh: '拥有多年教学经验的太极拳师',
         },
       },
       smallClass: {
@@ -255,31 +308,31 @@ export const courses = {
         desc: {
           nl: 'Kleine klas lessen zorgen ervoor dat elke student voldoende begeleiding en aandacht krijgt',
           en: 'Small class teaching ensures every student receives adequate guidance and attention',
-          zh: '小班教学确保每位学员都能得到充分的指导和关注',
+          zh: '小班制教学，确保每位学员都能得到充分的指导和关注',
         },
       },
       flexible: {
         title: {
           nl: 'Flexibele Rooster',
           en: 'Flexible Schedule',
-          zh: '时间灵活',
+          zh: '灵活时间',
         },
         desc: {
-          nl: 'Meerdere tijds beschikbaar, doordeweekse en weekendlessen om aan verschillende behoeften te voldoen',
-          en: 'Multiple time slots available, weekday and weekend classes to meet different needs',
-          zh: '多个时间段可选，工作日和周末均有课程，满足不同需求',
+          nl: 'Meerdere tijden beschikbaar, doordeweekse avonden en weekenden om aan verschillende behoeften te voldoen',
+          en: 'Multiple time slots available, weekday evenings and weekends to meet different needs',
+          zh: '多个时间段可选，工作日晚上、周末均有课程，满足不同需求',
         },
       },
       environment: {
         title: {
           nl: 'Elegante Omgeving',
           en: 'Elegant Environment',
-          zh: '环境优雅',
+          zh: '优雅环境',
         },
         desc: {
-          nl: 'Leslocaties nabij parken met rustige omgeving en frisse lucht, ideaal voor Tai Chi-oefening',
-          en: 'Classrooms near parks with quiet surroundings and fresh air, ideal for Tai Chi practice',
-          zh: '教室位于公园附近，环境清幽空气清新，适合太极拳练习',
+          nl: 'Bij goed weer kiezen we zoveel mogelijk voor parken, met een rustige omgeving en frisse lucht, ideaal voor Tai Chi-oefening',
+          en: 'When weather is good, we choose parks as much as possible, with quiet surroundings and fresh air, ideal for Tai Chi practice',
+          zh: '天气好的情况下，尽量选择公园内，环境清幽空气清新，适合太极拳练习',
         },
       },
     },

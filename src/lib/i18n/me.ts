@@ -63,9 +63,9 @@ export const me = {
       zh: '何少林弟子',
     },
     p1: {
-      nl: 'In <span class="text-accent font-medium">2011</span> werd Lily Tao officieel aangenomen als discipel door <span class="text-accent font-medium">Meester He Shaojun</span>, en ontving systematische, complete en rigoureuze training in traditionele Yang Style Tai Chi.',
-      en: 'In <span class="text-accent font-medium">2011</span>, Lily Tao was officially accepted as a disciple by <span class="text-accent font-medium">Master He Shaojun</span>, receiving systematic, complete, and rigorous training in traditional Yang Style Tai Chi.',
-      zh: '在<span class="text-accent font-medium">2011年</span>，陶莉被<span class="text-accent font-medium">何少军老师</span>正式收为弟子，接受系统、完整、严格的传统杨式太极拳训练。',
+      nl: 'In <span class="text-accent font-medium">2008</span> begon Lily Tao te studeren onder Meester He Shaojun. Na <span class="text-accent font-medium">3 jaar</span> van begeleiding en training, werd ze in <span class="text-accent font-medium">2011</span> officieel aangenomen als discipel in de lijn van Meester He Shaojun.',
+      en: 'In <span class="text-accent font-medium">2008</span>, Lily Tao began studying under Master He Shaojun. After <span class="text-accent font-medium">3 years</span> of guidance and training, she was officially accepted as a disciple in <span class="text-accent font-medium">2011</span> into the lineage of Master He Shaojun.',
+      zh: '在<span class="text-accent font-medium">2008年</span>跟随何绍君师父学习，经过<span class="text-accent font-medium">3年</span>的考察，终于通过了师父的考察，于<span class="text-accent font-medium">2011年</span>正式排入何绍君大师门下。',
     },
     p2: {
       nl: 'Volgend de geest van haar meester, behandelt ze Tai Chi als een pad van spirituele cultivatie en ziet verspreiding als haar missie. Ze leert nu traditionele Yang Style Tai Chi in Nederland en wordt geliefd door Europese studenten.',

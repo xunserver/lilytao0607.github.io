@@ -60,23 +60,81 @@ const gt = getTranslations('global', currentLocale);
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         {t.categories.items.map((item, index) => (
           <div class="scroll-animate group h-full flex flex-col" style={`animation-delay: ${index * 0.1}s`}>
-            <div class={`bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-${item.color}/50 h-full flex flex-col`}>
+            <div class={`bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-${item.color}/50 flex-1 flex flex-col`}>
               <div class={`w-20 h-20 bg-gradient-to-br from-${item.color}/20 to-${item.color}/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                 <span class="text-4xl">{item.emoji}</span>
               </div>
               <h3 class="text-3xl font-serif font-bold text-ink mb-4">
                 {item.title}
               </h3>
-              <p class="text-secondary leading-relaxed mb-6">
+              <p class="text-secondary leading-relaxed flex-1">
                 {item.desc}
               </p>
-              <div class="space-y-3">
-                {item.movements.map((movement) => (
-                  <div class="flex items-center space-x-3">
-                    <div class={`w-2 h-2 rounded-full bg-${item.color}`}></div>
-                    <span class="text-sm text-ink">{movement}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Classic Movements Showcase -->
+  <section class="py-24 bg-mist/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 scroll-animate">
+        <span class="inline-block px-3 py-1 text-sm font-medium text-accent bg-accent/10 rounded-full mb-4">
+          {t.classicMoves.tag}
+        </span>
+        <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
+          {t.classicMoves.title}
+        </h2>
+        <div class="w-32 h-1 bg-accent/50 mx-auto mb-6"></div>
+        <p class="text-lg text-secondary max-w-2xl mx-auto">
+          {t.classicMoves.subtitle}
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {t.classicMoves.items.map((move, index) => (
+          <div class="scroll-animate h-full flex flex-col" style={`animation-delay: ${index * 0.05}s`}>
+            <div class={`bg-paper rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-border/30 hover:border-${move.color}/50 flex-1 flex flex-col`}>
+              <!-- Order Badge -->
+              <div class="mb-4">
+                <span class={`inline-block px-3 py-1 text-xs font-medium text-${move.color} bg-${move.color}/10 rounded-full`}>
+                  {move.order}
+                </span>
+              </div>
+
+              <!-- Movement Name -->
+              <h3 class="text-2xl font-serif font-bold text-ink mb-2">
+                {move.name}
+              </h3>
+              <p class={`text-sm text-${move.color} font-medium mb-4`}>
+                {move.pinyin}
+              </p>
+
+              <!-- Description -->
+              <p class="text-secondary text-sm leading-relaxed mb-6 flex-1">
+                {move.desc}
+              </p>
+
+              <!-- Keyword & Difficulty -->
+              <div class="mt-auto pt-4 border-t border-border/20">
+                <div class="flex items-center justify-between mb-2">
+                  <span class={`inline-block px-2 py-1 text-xs font-medium text-${move.color} bg-${move.color}/10 rounded`}>
+                    {move.keyword}
+                  </span>
+                  <div class="flex items-center space-x-0.5">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <svg
+                        class={`w-4 h-4 ${i < move.difficulty ? 'text-accent' : 'text-border/30'}`}
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
                   </div>
-                ))}
+                </div>
               </div>
             </div>
           </div>
@@ -86,7 +144,7 @@ const gt = getTranslations('global', currentLocale);
   </section>
 
   <!-- Practice Points -->
-  <section class="py-24 bg-mist/20">
+  <section class="py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16 scroll-animate">
         <span class="inline-block px-3 py-1 text-sm font-medium text-accent bg-accent/10 rounded-full mb-4">
@@ -104,13 +162,13 @@ const gt = getTranslations('global', currentLocale);
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div class="space-y-6">
           {t.practice.items.map((item, index) => (
-            <div class="scroll-animate" style={`animation-delay: ${index * 0.1}s`}>
-              <div class={`bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-${item.color}/50 transition-all duration-300`}>
-                <div class="flex items-start space-x-6">
+            <div class="scroll-animate h-full flex flex-col" style={`animation-delay: ${index * 0.1}s`}>
+              <div class={`bg-paper rounded-2xl shadow-lg p-8 border border-border/30 hover:border-${item.color}/50 transition-all duration-300 flex-1 flex flex-col`}>
+                <div class="flex items-start space-x-6 flex-1">
                   <div class={`w-16 h-16 bg-${item.color}/10 rounded-full flex items-center justify-center flex-shrink-0`}>
-                    <span class="text-2xl font-serif text-{item.color} font-bold">{item.num}</span>
+                    <span class={`text-2xl font-serif text-${item.color} font-bold`}>{item.num}</span>
                   </div>
-                  <div>
+                  <div class="flex-1">
                     <h3 class="text-2xl font-serif font-bold text-ink mb-3">
                       {item.title}
                     </h3>
@@ -124,7 +182,7 @@ const gt = getTranslations('global', currentLocale);
           ))}
         </div>
 
-        <div class="scroll-animate" style="animation-delay: 0.2s">
+        <div class="scroll-animate h-full flex flex-col" style="animation-delay: 0.2s">
           <div class="bg-paper rounded-2xl shadow-xl p-8 border border-border/30 sticky top-24">
             <div class="mb-8">
               <h3 class="text-3xl font-serif font-bold text-ink mb-4">
@@ -142,9 +200,24 @@ const gt = getTranslations('global', currentLocale);
                       {q.question}
                     </h4>
                   </div>
-                  <p class="text-secondary leading-relaxed text-sm">
+                  <p class="text-secondary leading-relaxed text-sm mb-4">
                     {q.answer}
                   </p>
+                  <!-- Image for stability question (index 1) -->
+                  {index === 1 && (
+                    <div class="mt-4">
+                      <div class="aspect-video rounded-xl overflow-hidden shadow-lg">
+                        <img
+                          src="/image/taichi-practice.jpg"
+                          alt="Tai Chi Practice - Stability Training"
+                          class="w-full h-full object-cover"
+                        />
+                      </div>
+                      <p class="text-xs text-secondary mt-2 text-center">
+                        {currentLocale === 'zh' ? '站桩练习 - 培养根基' : currentLocale === 'nl' ? 'Stance Practice - Building Foundation' : 'Stance Practice - Building Foundation'}
+                      </p>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>

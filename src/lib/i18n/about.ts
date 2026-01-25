@@ -1,487 +1,569 @@
 /**
- * 关于页面翻译
+ * 关于页面翻译 - 四川杨式太极拳专题
  * About page translations
  */
 export const about = {
   // SEO 元数据
   title: {
-    nl: 'Over Tai Chi - Tai Chi Cultuur',
-    en: 'About Tai Chi - Tai Chi Culture',
-    zh: '关于太极 - 太极文化',
+    nl: 'Over Tai Chi - Sichuan Yang Stijl',
+    en: 'About Tai Chi - Sichuan Yang Style',
+    zh: '关于太极 - 四川杨式太极拳专题',
   },
   description: {
-    nl: 'Leer over de rijke geschiedenis, filosofie en principes van Tai Chi. Ontdek de eeuwenoude wijsheid van deze Chinese krijgskunst.',
-    en: 'Learn about the rich history, philosophy, and principles of Tai Chi. Discover the ancient wisdom of this Chinese martial art.',
-    zh: '了解太极的丰富历史、哲学和原理。探索这项中国武术的古老智慧。',
+    nl: 'Sichuan Yang-stijl Tai Chi: van Chenjiagou naar Sichuan, gebaseerd op Li Yaxuan, een authentiek erfgoed dat tot op de dag van vandaag voortduurt.',
+    en: 'Sichuan Yang-style Tai Chi: From Chenjiagou to Sichuan, founded by Li Yaxuan, an authentic heritage continuing to this day.',
+    zh: '四川杨式太极拳：从陈家沟到四川，奠基于李雅轩，传承至今的正宗杨式体系。',
   },
+
   // Hero
   hero: {
     tag: {
-      nl: 'Eeuwen van Wijsheid',
-      en: 'Centuries of Wisdom',
-      zh: '千年智慧',
+      nl: 'Authentiek Erfgoed',
+      en: 'Authentic Heritage',
+      zh: '正宗传承',
     },
     title: {
-      nl: 'Over Tai Chi',
-      en: 'About Tai Chi',
-      zh: '关于太极',
+      nl: 'Sichuan Yang-stijl Tai Chi',
+      en: 'Sichuan Yang-Style Tai Chi',
+      zh: '四川杨式太极拳',
     },
     subtitle: {
-      nl: 'Verken de oorsprong, filosofie en praktijk van Tai Chi, en ervaar deze schat van de Chinese cultuur',
-      en: 'Explore the origins, philosophy, and practice of Tai Chi, and experience this treasure of Chinese culture',
-      zh: '探索太极的起源、哲学和实践，体验这一中华文化瑰宝',
+      nl: 'Van Chenjiagou naar Sichuan · Gebaseerd op Li Yaxuan · Een authentiek Yang-stijl systeem dat tot op de dag van vandaag wordt doorgegeven',
+      en: 'From Chenjiagou to Sichuan · Founded by Li Yaxuan · An authentic Yang-style system continuing to this day',
+      zh: '从陈家沟到四川 · 奠基于李雅轩 · 传承至今的正宗杨式体系',
+    },
+    explore: {
+      nl: 'Verken het complete erfgood van Tai Chi en ervaar het diepe erfgoed van Chinese martial arts',
+      en: 'Explore the complete lineage of Tai Chi and experience the profound heritage of Chinese martial arts',
+      zh: '探索太极拳的完整传承脉络，感受中华武术的深厚底蕴',
     },
   },
-  // 历史渊源
-  history: {
+
+  // 第一章：太极拳的起源
+  origin: {
+    chapter: {
+      nl: 'Hoofdstuk I',
+      en: 'Chapter I',
+      zh: '第一章',
+    },
     tag: {
       nl: 'Oorsprong',
-      en: 'Origins',
+      en: 'Origin',
       zh: '起源',
     },
     title: {
-      nl: 'Historische Oorsprong',
-      en: 'Historical Origins',
-      zh: '历史渊源',
+      nl: 'De Geboorteplaats van Tai Chi: Chenjiagou',
+      en: 'The Birthplace of Tai Chi: Chenjiagou',
+      zh: '太极拳的公认发源地：陈家沟',
     },
-    badge: {
-      years: {
-        nl: 'Eeuwen',
-        en: 'Centuries',
-        zh: '数百年',
-      },
-      text: {
-        nl: 'van Erfgoed',
-        en: 'of Heritage',
-        zh: '传承岁月',
-      },
-    },
-    p1: {
-      nl: 'Tai Chi Chuan ontstond in China tijdens de Ming-dynastie, gecreëerd door <span class="text-accent font-medium">Zhang Sanfeng van de Wudang-sect</span>. Het integreert Taoïstische filosofie, traditionele geneeskunde en de essentie van vechtsporten, en is een belangrijk onderdeel van de traditionele Chinese cultuur.',
-      en: 'Tai Chi Chuan originated in China during the Ming Dynasty, created by <span class="text-accent font-medium">Zhang Sanfeng of the Wudang sect</span>. It integrates Taoist philosophy, traditional medicine, and martial arts essence, serving as an important component of Chinese traditional culture.',
-      zh: '太极拳起源于中国明朝时期，由<span class="text-accent font-medium">武当派张三丰</span>所创。它融合了道家哲学、传统医学和武术精华，是中国传统文化的重要组成部分。',
-    },
-    p2: {
-      nl: 'Genoemd naar "Tai Chi" (Het Ultieme), ontleend aan het filosofische concept in de "Boek der Veranderingen": "Tai Chi genereert de Twee Machten (Yin en Yang), de Twee Machten genereren de Vier Beelden, en de Vier Beelden genereren de Acht Trigrammen." Het benadrukt Yin-Yang balans, de wisselwerking van hardheid en zachtheid, en streeft naar harmonie tussen mens en natuur.',
-      en: 'Named after "Tai Chi" (Supreme Ultimate), it draws from the philosophical concept in the "Book of Changes": "Tai Chi generates the Two Powers (Yin and Yang), the Two Powers generate the Four Images, and the Four Images generate the Eight Trigrams." It emphasizes Yin-Yang balance, the interplay of hardness and softness, pursuing harmony between humanity and nature.',
-      zh: '以"太极"（无极生太极）命名，源于《周易》中的哲学概念："太极生两仪，两仪生四象，四象生八卦"。强调阴阳平衡、刚柔相济，追求人与自然的和谐。',
-    },
-    p3: {
-      nl: 'Na eeuwen van overerving en ontwikkeling heeft Tai Chi meerdere scholen gevormd, waaronder Chen, Yang, Wu, Wu (Hao) en Sun. Elke school heeft zijn unieke stijl en kenmerken, maar ze volgen allemaal dezelfde kernfilosofie.',
-      en: 'After centuries of inheritance and development, Tai Chi has formed multiple schools including Chen, Yang, Wu, Wu (Hao), and Sun. Each school has its unique style and characteristics, yet all follow the same core philosophy.',
-      zh: '经过数百年的传承和发展，太极拳形成了陈、杨、吴、武（郝）、孙等多个流派。每个流派都有自己独特的风格和特点，但都遵循相同的核心哲学。',
+    content: {
+      nl: 'De algemeen erkende geboorteplaats van Tai Chi is Chenjiagou in Wenxian County, Henan Province, gecreëerd door <strong>Chen Wangting</strong> aan het einde van de Ming-dynastie en het begin van de Qing-dynastie. Later ontwikkelde zich verschillende belangrijke stijlen, zoals Chen-stijl, Yang-stijl, Wu-stijl en Sun-stijl. Chenjiagou is officieel erkend als "de geboorteplaats van Chinese Tai Chi" en de cultuur daarvan beïnvloedt vandaag de wereld.',
+      en: 'The generally recognized birthplace of Tai Chi is Chenjiagou in Wenxian County, Henan Province, created by <strong>Chen Wangting</strong> during the late Ming and early Qing dynasties. Later, several important styles developed, such as Chen-style, Yang-style, Wu-style, and Sun-style. Chenjiagou is officially recognized as "the birthplace of Chinese Tai Chi" and its culture influences the world today.',
+      zh: '太极拳的公认发源地是河南温县陈家沟，由<strong>陈王廷</strong>于明末清初创编。后发展出陈式、杨式、武式、吴式、孙式等重要流派。陈家沟被官方认定为"中国太极拳发源地"，其文化至今影响世界。',
     },
     tags: [
       {
-        nl: '📜 Ming-dynastie Oorsprong',
-        en: '📜 Ming Dynasty Origins',
-        zh: '📜 明朝起源',
+        nl: '📜 Laat Ming en vroege Qing oprichting',
+        en: '📜 Late Ming and early Qing founding',
+        zh: '📜 明末清初创立',
       },
       {
-        nl: '⛰️ Wudang Erfgoed',
-        en: '⛰️ Wudang Heritage',
-        zh: '⛰️ 武当传承',
+        nl: '⛰️ Chenjiagou, Wen County, Henan',
+        en: '⛰️ Chenjiagou, Wen County, Henan',
+        zh: '⛰️ 河南温县陈家沟',
       },
       {
-        nl: '🌿 Taoïstische Filosofie',
-        en: '🌿 Taoist Philosophy',
-        zh: '🌿 道家哲学',
+        nl: '🌿 De gemeenschappelijke wortel van alle stijlen',
+        en: '🌿 The common root of all styles',
+        zh: '⛰️ 所有流派的共同根',
       },
     ],
   },
-  // 核心理念
-  philosophy: {
+
+  // 第二章：杨式太极拳的创立
+  yangStyle: {
+    chapter: {
+      nl: 'Hoofdstuk II',
+      en: 'Chapter II',
+      zh: '第二章',
+    },
     tag: {
-      nl: 'Kernfilosofie',
-      en: 'Core Philosophy',
-      zh: '核心理念',
+      nl: 'Oprichter',
+      en: 'Founder',
+      zh: '创立',
     },
     title: {
-      nl: 'Tai Chi Principes',
-      en: 'Tai Chi Principles',
-      zh: '太极原理',
+      nl: 'Yang-stijl Tai Chi opgericht door Yang Luchan',
+      en: 'Yang-Style Tai Chi Founded by Yang Luchan',
+      zh: '杨式太极拳由杨露禅创立',
+    },
+    content: {
+      nl: 'Yang-stijl Tai Chi werd opgericht door <strong>Yang Luchan</strong>. Hij ging drie keer naar Chenjiagou om meer dan tien jaar te studeren bij <strong>Chen Changxing</strong> en kreeg een diep begrip van de essentie van Chen-stijl Tai Chi. Hij ontwikkelde een eigen systeem met een zachte en soepele stijl en werd bekend als "Yang de Onoverwinnelijke". Historische records geven duidelijk aan dat Yang Luchan "studeerde bij Chen Changxing".',
+      en: 'Yang-style Tai Chi was founded by <strong>Yang Luchan</strong>. He entered Chenjiagou three times to study for over ten years under <strong>Chen Changxing</strong>, gaining deep understanding of the essence of Chen-style Tai Chi. He developed his own system with a gentle and graceful style, earning the title "Yang the Invincible". Historical records clearly state that Yang Luchan "studied under Chen Changxing".',
+      zh: '杨式太极拳由<strong>杨露禅</strong>创立。他三次进入陈家沟，向<strong>陈长兴</strong>学习十余年，深得陈式太极拳要领。他以柔和、舒展的风格自成体系，被誉为"杨无敌"。史料明确记载杨露禅"就学于陈长兴"。',
+    },
+    // 杨式太极拳特色
+    characteristics: {
+      title: {
+        nl: 'Kenmerken van Yang-stijl',
+        en: 'Yang-Style Characteristics',
+        zh: '杨式太极拳特色',
+      },
+      intro: {
+        nl: 'Yang-stijl Tai Chi wordt wereldwijd gewaardeerd om zijn elegante bewegingen en gezondheidsvoordelen. De belangrijkste kenmerken zijn:',
+        en: 'Yang-style Tai Chi is appreciated worldwide for its graceful movements and health benefits. Its main characteristics include:',
+        zh: '杨式太极拳以其舒展大方的动作和显著的健身功效而深受世界各地太极拳爱好者的喜爱。其主要特色包括：',
+      },
+      items: [
+        {
+          nl: 'Acties zijn uitgebreid, natuurlijk en ontspannen, met ritmische-ups en downs, soepel en vloeiend als bewegende wolken en stromend water.',
+          en: 'Movements are extended, natural, and relaxed, with rhythmic rises and falls, smooth and flowing like moving clouds and flowing water.',
+          zh: '动作舒展大方，中正圆满，松柔沉稳，有节奏感，连绵不断，如行云流水。',
+        },
+        {
+          nl: 'Nadruk op "geest leidt qi, qi beweegt lichaam", met eenheid van intern en extern, coördinatie van boven en onder.',
+          en: 'Emphasizes "mind leads breath, breath moves body", unity of internal and external, coordination of upper and lower body.',
+          zh: '注重"意领气，气运身"，内外合一，上下相随，周身协调。',
+        },
+        {
+          nl: 'Bewegingen zijn rond en vol, met duidelijke onderscheid tussen ledigheid en volheid, zachtheid vermengd met hardheid.',
+          en: 'Movements are circular and full, with clear distinction between emptiness and fullness, softness mixed with firmness.',
+          zh: '动作圆活，虚实分明，刚柔相济，柔中寓刚，以柔克刚。',
+        },
+        {
+          nl: 'Ademhaling is natuurlijk en diep, gecoördineerd met bewegingen, bevordert de bloedsomloop en versterkt het lichaam.',
+          en: 'Breathing is natural and deep, coordinated with movements, promoting blood circulation and strengthening the body.',
+          zh: '呼吸自然深长，与动作协调配合，促进气血运行，达到强身健体的效果。',
+        },
+        {
+          nl: 'Geschikt voor mensen van alle leeftijden en fysieke condities, een uitstekende keuze voor gezondheid en fitness.',
+          en: 'Suitable for people of all ages and physical conditions, an excellent choice for health and wellness.',
+          zh: '适合不同年龄和体质的人群练习，是养生保健、修身养性的绝佳选择。',
+        },
+      ],
+    },
+  },
+
+  // 第三章：杨澄甫的标准化
+  yangChengfu: {
+    chapter: {
+      nl: 'Hoofdstuk III',
+      en: 'Chapter III',
+      zh: '第三章',
+    },
+    tag: {
+      nl: 'Standardisatie',
+      en: 'Standardization',
+      zh: '标准化',
+    },
+    title: {
+      nl: 'Yang Chengfu: De vormgever van het moderne Yang-stijl systeem',
+      en: 'Yang Chengfu: The Shaper of Modern Yang-Style System',
+      zh: '杨澄甫：现代杨式体系的塑造者',
+    },
+    content: {
+      nl: '<strong>Yang Chengfu</strong>, de kleinzoon van Yang Luchan, standardiseerde het systeem, maakte het systematischer en verzachtte het, waardoor het schema beter geschikt werd voor gewone mensen om te oefenen. Hij gaf openbaar les in Peking, Shanghai, Nanjing en andere plaatsen en was een sleutelfiguur in de vorming en verspreiding van het moderne Yang-stijl grote schema.',
+      en: '<strong>Yang Chengfu</strong>, the grandson of Yang Luchan, standardized the Yang-style Tai Chi system, making it more systematic and gentle, making the form more suitable for ordinary people to practice. He taught openly in Beijing, Shanghai, Nanjing, and other places, and was a key figure in the formation and spread of the modern Yang-style large frame.',
+      zh: '<strong>杨澄甫</strong>（杨露禅之孙）将杨式太极拳标准化、系统化、柔化，使拳架更加适合普通群众练习。他在北京、上海、南京等地公开授拳，是现代杨式大架形成和传播的关键人物。',
+    },
+    contributions: {
+      title: {
+        nl: 'Historische Bijdrage',
+        en: 'Historical Contribution',
+        zh: '历史贡献',
+      },
+      items: [
+        {
+          nl: 'Standardiseerde het systeem van Yang-stijl Tai Chi',
+          en: 'Standardized the Yang-style Tai Chi system',
+          zh: '标准化杨式太极拳体系',
+        },
+        {
+          nl: 'Verzachtte het schema, geschikt voor massa-oefening',
+          en: 'Softened the form, suitable for mass practice',
+          zh: '柔化拳架，适合大众练习',
+        },
+        {
+          nl: 'Verspreidde op nationaal niveau',
+          en: 'Spread nationwide',
+          zh: '全国范围传播推广',
+        },
+      ],
+    },
+  },
+
+  // 第四章：李雅轩 - 四川杨式太极拳奠基人
+  liYaxuan: {
+    chapter: {
+      nl: 'Hoofdstuk IV',
+      en: 'Chapter IV',
+      zh: '第四章',
+    },
+    tag: {
+      nl: 'Stichter van Sichuan Yang-stijl',
+      en: 'Founder of Sichuan Yang-Style',
+      zh: '四川杨式太极拳奠基人',
+    },
+    title: {
+      nl: 'Li Yaxuan: De stichter van Sichuan Yang-stijl Tai Chi',
+      en: 'Li Yaxuan: The Founder of Sichuan Yang-Style Tai Chi',
+      zh: '李雅轩：四川杨式太极拳奠基人',
     },
     subtitle: {
-      nl: 'Harmonie van Yin en Yang, Beweging en Rust, Hardheid en Zachtheid',
-      en: 'Harmony of Yin and Yang, Movement and Stillness, Hardness and Softness',
-      zh: '阴阳调和，动静相宜，刚柔并济',
+      nl: 'De authentieke bron van Sichuan Yang-stijl Tai Chi',
+      en: 'The authentic source of Sichuan Yang-Style Tai Chi',
+      zh: '四川杨式太极拳的正宗源头',
     },
-    cards: [
-      {
-        key: 'yinyang',
-        emoji: '☯️',
-        color: 'accent',
-        title: {
-          nl: 'Yin-Yang Balans',
-          en: 'Yin-Yang Balance',
-          zh: '阴阳平衡',
-        },
-        desc: {
-          nl: 'De kern van Tai Chi is Yin-Yang balans. Door Yin-Yang overgangen in beweging, harmonie van lichaam en geest bereiken.',
-          en: 'The core of Tai Chi is Yin-Yang balance. Through Yin-Yang transitions in movement, achieve harmony of body and mind.',
-          zh: '太极的核心是阴阳平衡。通过动作中的阴阳转换，达到身心的和谐统一。',
-        },
-      },
-      {
-        key: 'movement',
-        emoji: '⚡',
-        color: 'cyan',
-        title: {
-          nl: 'Beweging en Rust',
-          en: 'Movement and Stillness',
-          zh: '动静结合',
-        },
-        desc: {
-          nl: 'Beweging binnenin stilstand, stilstand binnenin beweging. Tai Chi benadrukt continue beweging en innerlijke rust.',
-          en: 'Movement within stillness, stillness within movement. Tai Chi emphasizes continuous movement and inner tranquility.',
-          zh: '动中有静，静中有动。太极拳强调动作连绵不断，内心宁静。',
-        },
-      },
-      {
-        key: 'hardsoft',
-        emoji: '💪',
-        color: 'secondary',
-        title: {
-          nl: 'Hardheid en Zachtheid',
-          en: 'Hardness and Softness',
-          zh: '刚柔相济',
-        },
-        desc: {
-          nl: 'Hardheid met zachtheid, zachtheid met hardheid. De wisselwerking van hard en zacht is een sleutelkenmerk van Tai Chi bewegingen.',
-          en: 'Hardness with softness, softness with hardness. The interplay of hard and soft is a key characteristic of Tai Chi movements.',
-          zh: '刚中带柔，柔中带刚。刚柔的相互配合是太极拳动作的关键特点。',
-        },
-      },
-      {
-        key: 'mindbreath',
-        emoji: '🧘',
-        color: 'accent',
-        title: {
-          nl: 'Geest en Adem Eenheid',
-          en: 'Mind and Breath Unity',
-          zh: '意气相合',
-        },
-        desc: {
-          nl: 'Geest leidt adem, adem beweegt lichaam. Perfecte coördinatie van intentie, adem en beweging.',
-          en: 'Mind leads breath, breath moves body. Perfect coordination of intention, breath, and movement.',
-          zh: '意领气，气运身。意、气、形的完美配合。',
-        },
-      },
-    ],
-  },
-  // 主要特点
-  characteristics: {
-    tag: {
-      nl: 'Belangrijkste Kenmerken',
-      en: 'Key Features',
-      zh: '主要特点',
+    intro: {
+      nl: 'Li Yaxuan (1894-1976), geboren in Hebei, was een belangrijke leerling van Yang Chengfu. In de jaren 1930 vestigde hij zich in Sichuan, waar hij Yang-stijl Tai Chi systematisch onderwees en een enorme bijdrage leverde aan de verspreiding en ontwikkeling ervan in de regio.',
+      en: 'Li Yaxuan (1894-1976), born in Hebei, was a prominent disciple of Yang Chengfu. In the 1930s, he settled in Sichuan, where he systematically taught Yang-style Tai Chi and made tremendous contributions to its spread and development in the region.',
+      zh: '李雅轩（1894-1976），河北人，是杨澄甫的重要弟子。20世纪30年代定居四川，系统传授杨式太极拳，为杨式太极拳在西南地区的传播和发展做出了巨大贡献。',
     },
-    title: {
-      nl: 'Tai Chi Kenmerken',
-      en: 'Tai Chi Characteristics',
-      zh: '太极特点',
-    },
-    items: [
-      {
-        color: 'accent',
-        num: '1',
-        title: {
-          nl: 'Langzaam en Soepel',
-          en: 'Slow and Smooth',
-          zh: '缓慢柔和',
-        },
-        desc: {
-          nl: 'Bewegingen zijn traag, continu en cirkelvormig, als stromende wolken en water, ononderbroken',
-          en: 'Movements are slow, continuous, and circular, like flowing clouds and water, uninterrupted',
-          zh: '动作缓慢、连续、圆活，如行云流水，连绵不断',
-        },
-      },
-      {
-        color: 'cyan',
-        num: '2',
-        title: {
-          nl: 'Natuurlijke Ademhaling',
-          en: 'Natural Breathing',
-          zh: '呼吸自然',
-        },
-        desc: {
-          nl: 'Gecoördineerd met beweging, gebruik van ademhaling om interne en externe cultivatie te bereiken',
-          en: 'Coordinated with movement, using abdominal breathing to achieve internal and external cultivation',
-          zh: '与动作协调配合，运用腹式呼吸，达到内外兼修',
-        },
-      },
-      {
-        color: 'secondary',
-        num: '3',
-        title: {
-          nl: 'Geest Kalm, Lichaam Ontspannen',
-          en: 'Mind Calm, Body Relaxed',
-          zh: '心静体松',
-        },
-        desc: {
-          nl: 'Focus geest, ontspan lichaam, interne concentratie, elimineer afleidende gedachten',
-          en: 'Focus mind, relax body, internal concentration, eliminate distracting thoughts',
-          zh: '精神集中，身体放松，内守精神，排除杂念',
-        },
-      },
-      {
-        color: 'accent',
-        num: '4',
-        title: {
-          nl: 'Heel Lichaam Coördinatie',
-          en: 'Whole Body Coordination',
-          zh: '周身协调',
-        },
-        desc: {
-          nl: 'Bovenste en onderste lichaam volgen elkaar, links en rechts verbonden, intern en extern één, heel lichaam coördinatie',
-          en: 'Upper and lower body follow each other, left and right connected, internal and external unity, whole body coordination',
-          zh: '上下相随，左右相连，内外合一，周身协调',
-        },
-      },
-    ],
-  },
-  // 现代应用
-  modern: {
-    tag: {
-      nl: 'Moderne Waarde',
-      en: 'Modern Value',
-      zh: '现代价值',
-    },
-    title: {
-      nl: 'Tai Chi en Moderne Levensstijl',
-      en: 'Tai Chi and Modern Life',
-      zh: '太极与现代生活',
-    },
-    p1: {
-      nl: 'In het snelle moderne leven van vandaag wordt Tai Chi steeds meer gewaardeerd om zijn unieke fitness- en gezondheidsvoordelen.',
-      en: "In today's fast-paced modern life, Tai Chi is increasingly loved and valued for its unique fitness and health benefits.",
-      zh: '在当今快节奏的现代生活中，太极拳以其独特的健身养生功效而越来越受到人们的喜爱和重视。',
-    },
-    p2: {
-      nl: '<span class="text-accent font-medium">Wetenschappelijk onderzoek bevestigt</span> dat langdurige Tai Chi beoefening de hart- en longfunctie kan verbeteren, de immuniteit kan verhogen, stress en angst kan verlichten, de slaapkwaliteit kan verbeteren en het verouderingsproces kan vertragen.',
-      en: '<span class="text-accent font-medium">Scientific research confirms</span> that long-term Tai Chi practice can improve cardiopulmonary function, enhance immunity, relieve stress and anxiety, improve sleep quality, and delay aging.',
-      zh: '<span class="text-accent font-medium">科学研究证实</span>，长期练习太极拳可以改善心肺功能、增强免疫力、缓解压力和焦虑、改善睡眠质量、延缓衰老。',
-    },
-    p3: {
-      nl: 'Tai Chi is niet alleen een oefening, maar een levensstijl. Het leert ons om innerlijke rust te behouden te midden van drukte en gebalanceerde geesten te midden van verandering.',
-      en: 'Tai Chi is not just an exercise, but a lifestyle. It teaches us to maintain inner tranquility amidst busyness and balanced minds amidst change.',
-      zh: '太极拳不仅仅是一项运动，更是一种生活方式。它教导我们在忙碌中保持内心的宁静，在变化中保持平和的心境。',
-    },
-    benefits: [
-      {
-        color: 'accent',
-        text: {
-          nl: 'Lichamelijke Fitness',
-          en: 'Physical Fitness',
-          zh: '强身健体',
-        },
-      },
-      {
-        color: 'cyan',
-        text: {
-          nl: 'Geest Cultivatie',
-          en: 'Mind Cultivation',
-          zh: '修身养性',
-        },
-      },
-      {
-        color: 'secondary',
-        text: {
-          nl: 'Anti-Veroudering',
-          en: 'Anti-Aging',
-          zh: '延缓衰老',
-        },
-      },
-      {
-        color: 'accent',
-        text: {
-          nl: 'Stressverlichting',
-          en: 'Stress Relief',
-          zh: '缓解压力',
-        },
-      },
-    ],
-    badge: {
+    disciples: {
       title: {
-        nl: 'Globale Verspreiding',
-        en: 'Global Spread',
-        zh: '全球传播',
+        nl: 'Leerlingen in Sichuan',
+        en: 'Teaching in Sichuan',
+        zh: '桃李满园·薪火相传',
       },
-      subtitle: {
-        nl: 'Culturele schat over vijf continenten',
-        en: 'Cultural treasure across five continents',
-        zh: '跨越五大洲的文化瑰宝',
+      content: {
+        nl: 'Tijdens zijn verblijf in Sichuan accepteerde Li Yaxuan talloze leerlingen. Samen met zijn vele leerlingen werkten ze gezamenlijk aan de promotie van Yang-stijl Tai Chi in Sichuan, waarna het zich verder ontwikkelde naar andere delen van het land.',
+      en: 'During his time in Sichuan, Li Yaxuan accepted numerous disciples. Together with his many disciples, they worked collaboratively to promote Yang-style Tai Chi throughout Sichuan, which then further developed to other parts of the country.',
+      zh: '在四川期间，李雅轩收徒众多，桃李满园。他与众多弟子齐心协力，让杨氏太极拳在四川得到广泛推广，并进一步向全国发展，使杨式太极的火种在中华大地上燎原。',
       },
+      highlights: [
+        {
+          nl: 'Talloze leerlingen gezamenlijk werken aan promotie',
+          en: 'Numerous disciples working together for promotion',
+          zh: '众多弟子齐心协力推广太极',
+        },
+        {
+          nl: 'Yang-stijl Tai Chi wijdverspreid in Sichuan',
+          en: 'Yang-style Tai Chi widely spread in Sichuan',
+          zh: '杨氏太极拳在四川得到广泛普及',
+        },
+        {
+          nl: 'Ontwikkeling naar andere delen van het land',
+          en: 'Expansion to other parts of the country',
+          zh: '进一步向全国发展',
+        },
+      ],
+    },
+    heritageTitle: {
+      nl: 'Erfgoedlijn',
+      en: 'Heritage Lineage',
+      zh: '传承脉络',
+    },
+    heritageContent: {
+      nl: 'De meest invloedrijke Yang-stijl systeem in Sichuan stamt af van de erfenisketen van <strong>Li Yaxuan → Lin Mogen</strong>. Gegevens tonen duidelijk aan: Lin Mogen is een leerling van Li Yaxuan.',
+      en: 'The most influential Yang-style system in Sichuan originates from the lineage chain of <strong>Li Yaxuan → Lin Mogen</strong>. Data clearly shows: Lin Mogen is a disciple of Li Yaxuan.',
+      zh: '四川最具影响力的杨式体系源自 <strong>李雅轩 → 林墨根</strong> 的传承链。资料明确显示：林墨根是李雅轩弟子。',
+    },
+    positionTitle: {
+      nl: 'Historische positie in Sichuan',
+      en: 'Historical Position in Sichuan',
+      zh: '李雅轩在四川的历史地位',
+    },
+    positionContent: {
+      nl: 'Hij bracht de kerninhoud van het systeem van Yang Chengfu naar Sichuan: volledige methoden van stootduwen (push hands), bewegingsmethoden met speciale charme, interne kracht trainingsmethoden. Deze elementen vormen de technische basis van het huidige Sichuan Yang-stijl Tai Chi.',
+      en: 'He brought the core content of Yang Chengfu\'s system to Sichuan: complete push hands methods, movement methods with special charm, internal power training methods. These elements constitute the technical foundation of today\'s Sichuan Yang-style Tai Chi.',
+      zh: '他为四川带来了杨澄甫体系的核心内容：完整的推手方法、独具特色的运动方法、内功训练方法。这些元素构成了今日四川杨式太极拳的技术基础。',
+    },
+    characteristics: {
+      title: {
+        nl: 'Kenmerken van Sichuan Yang-stijl',
+        en: 'Characteristics of Sichuan Yang-Style',
+        zh: '四川杨式太极拳特点',
+      },
+      items: [
+        {
+          nl: 'Behoudt de authentieke essentie van Yang-stijl grote schema, met uitgebreide en elegante bewegingen',
+          en: 'Preserves the authentic essence of Yang-style large frame, with extended and graceful movements',
+          zh: '保留了杨式大架的正宗精髓，动作舒展大方，中正圆满',
+        },
+        {
+          nl: 'Nadruk op interne kracht training, met diepe gongfu en subtiele toepassingen',
+          en: 'Emphasizes internal power training, with deep gongfu and subtle applications',
+          zh: '注重内功修炼，功架深厚，用法精妙',
+        },
+        {
+          nl: 'Unieke push hands methode, praktisch en effectief in combat toepassingen',
+          en: 'Unique push hands method, practical and effective in combat applications',
+          zh: '推手方法独特，实战性强，技击效果好',
+        },
+      ],
     },
   },
-  // 练习要领
-  practice: {
+
+  // 第五章：林墨根 - 四川杨式太极拳的传播者
+  linMogen: {
+    chapter: {
+      nl: 'Hoofdstuk V',
+      en: 'Chapter V',
+      zh: '第五章',
+    },
     tag: {
-      nl: 'Oefengids',
-      en: 'Practice Guide',
-      zh: '练习指南',
+      nl: 'Verspreider',
+      en: 'Spreader',
+      zh: '传播者',
     },
     title: {
-      nl: 'Oefening Essentials',
-      en: 'Practice Essentials',
-      zh: '练习要领',
+      nl: 'Lin Mogen: De grote verspreider van Sichuan Yang-stijl',
+      en: 'Lin Mogen: The Great Spreader of Sichuan Yang-Style',
+      zh: '林墨根：四川杨式太极拳的大师级传播者',
     },
     subtitle: {
-      nl: 'Meester de juiste methode, bereik tweemaal het resultaat met de helft van de inspanning',
-      en: 'Master the correct method, achieve twice the result with half the effort',
-      zh: '掌握正确方法，达到事半功倍',
+      nl: 'De opvolger van Li Yaxuan',
+      en: 'The Successor of Li Yaxuan',
+      zh: '李雅轩的弟子',
     },
-    essentials: [
-      {
-        num: 'I',
-        color: 'accent',
-        title: {
-          nl: 'Rechte Houding',
-          en: 'Upright Posture',
-          zh: '身型端正',
-        },
-        desc: {
-          nl: 'Houd het lichaam natuurlijk rechtop, hoofd recht, nek ontspannen, wervelkolom natuurlijk uitgerekt. Alle lichaamsdelen gecoördineerd, gecentreerd, als een klok hangend.',
-          en: "Keep the body naturally upright, head straight, neck relaxed, spine naturally extended. All body parts coordinated, centered, like a bell hanging.",
-          zh: '保持身体自然端正，头正颈松，脊柱自然伸展。各部位协调一致，中心端正，如钟悬系。',
-        },
-      },
-      {
-        num: 'II',
-        color: 'cyan',
-        title: {
-          nl: 'Duidelijk Onderscheid van Ledigheid en Volheid',
-          en: 'Clear Distinction of Emptiness and Fullness',
-          zh: '虚实分明',
-        },
-        desc: {
-          nl: 'Onderscheid duidelijk ledigheid en volheid in het lichaam, gewichtsoverdracht moet duidelijk zijn. Scheid ledigheid en volheid in beide voeten, juiste gewichtsverdeling, natuurlijke en soepele overgangen.',
-          en: "Clearly distinguish emptiness and fullness in the body, weight transfer should be clear. Separate emptiness and fullness in both feet, proper weight distribution, natural and smooth transitions.",
-          zh: '身体虚实要分明，重心转移要清晰。两脚分清虚实，重心分配得当，过渡自然流畅。',
-        },
-      },
-      {
-        num: 'III',
-        color: 'secondary',
-        title: {
-          nl: 'Geest en Adem Samen',
-          en: 'Mind and Breath Together',
-          zh: '意气相合',
-        },
-        desc: {
-          nl: 'Geest leidt adem, adem beweegt lichaam. Geest als gids, adem coördineert met beweging, waar geest gaat, gaat adem, waar adem gaat, gaat kracht. Eenheid van intern en extern, vorm en geest.',
-          en: "Mind leads breath, breath moves body. Mind as the guide, breath coordinates with movement, where mind goes, breath goes, where breath goes, strength goes. Unity of internal and external, form and spirit.",
-          zh: '意领气，气运身。以意为主导，气与动作配合，意到气到，气到力到。内外合一，形神兼备。',
-        },
-      },
-      {
-        num: 'IV',
-        color: 'accent',
-        title: {
-          nl: 'Continu en Cirkelvormig',
-          en: 'Continuous and Circular',
-          zh: '连绵圆活',
-        },
-        desc: {
-          nl: 'Bewegingen moeten continu en cirkelvormig zijn, als stromende wolken en water, ononderbroken. Natuurlijke overgangen tussen bewegingen, geen pauzes of onderbrekingen, heel lichaam coördinatie, bovenste en onderste lichaam volgen elkaar.',
-          en: "Movements should be continuous and circular, like flowing clouds and water, uninterrupted. Natural transitions between movements, no pauses or breaks, whole body coordination, upper and lower body following each other.",
-          zh: '动作要连绵不断、圆活流畅，如行云流水，毫无滞涩。动作之间过渡自然，无停顿无断续，周身协调，上下相随。',
-        },
-      },
-    ],
-    recommendations: {
+    content: {
+      nl: 'Hoewel de wortel van Sichuan Yang-stijl Tai Chi ligt in Li Yaxuan, is het de persoon die het echt populair maakte in Sichuan: <strong>Lin Mogen</strong> (leerling van Li Yaxuan).',
+      en: 'Although the root of Sichuan Yang-style Tai Chi lies in Li Yaxuan, the person who truly made it popular throughout Sichuan was: <strong>Lin Mogen</strong> (disciple of Li Yaxuan).',
+      zh: '虽然四川杨式太极拳的根在李雅轩，但真正使其在四川广泛普及的是他的弟子：<strong>林墨根</strong>（李雅轩弟子）。',
+    },
+    positioning: {
       title: {
-        nl: 'Oefeningsaanbevelingen',
-        en: 'Practice Recommendations',
-        zh: '练习建议',
+        nl: 'Historische positionering',
+        en: 'Historical Positioning',
+        zh: '历史定位',
       },
-      frequency: {
-        emoji: '📅',
-        title: {
-          nl: 'Oefeningsfrequentie',
-          en: 'Practice Frequency',
-          zh: '练习频率',
-        },
-        desc: {
-          nl: 'Aanbevolen om 3-5 keer per week te oefenen, 30-60 minuten per sessie. Langdurig consistente beoefening levert betere resultaten op. Beginners kunnen beginnen met 15-20 minuten per sessie.',
-          en: "Recommend practicing 3-5 times per week, 30-60 minutes each session. Long-term consistent practice yields better results. Beginners can start with 15-20 minutes per session.",
-          zh: '建议每周练习3-5次，每次30-60分钟。长期坚持练习效果更好。初学者可以从每次15-20分钟开始。',
-        },
+      content: {
+        nl: 'Een meesters niveau verspreider van Sichuan Yang-stijl Tai Chi, niet de stichter.',
+        en: 'A master-level spreader of Sichuan Yang-style Tai Chi, not the founder.',
+        zh: '四川杨式太极拳的大师级传播者，而非奠基人。',
       },
-      time: {
-        emoji: '⏰',
-        title: {
-          nl: 'Beste Tijd',
-          en: 'Best Time',
-          zh: '最佳时间',
-        },
-        desc: {
-          nl: "Vroeg in de ochtend 5-7 uur of 's avonds 4-6 uur is optimaal, wanneer de lucht fris is en de lichaamsconditie goed is. Vermijd onmiddellijk na maaltijden te oefenen.",
-          en: "Early morning 5-7 AM or evening 4-6 PM is optimal, when air is fresh and body condition is good. Avoid practicing immediately after meals.",
-          zh: '早晨5-7点或下午4-6点为最佳，此时空气清新、身体状态良好。避免饭后立即练习。',
-        },
+    },
+    contributions: {
+      title: {
+        nl: 'Zijn invloed omvat:',
+        en: 'His influence includes:',
+        zh: '他奠定的影响包括：',
       },
-      location: {
-        emoji: '🌳',
-        title: {
-          nl: 'Oefeningslocatie',
-          en: 'Practice Location',
-          zh: '练习场所',
+      items: [
+        {
+          nl: 'Sichuan voorzien van een systematisch, compleet Yang-stijl onderwijssysteem',
+          en: 'Providing Sichuan with a systematic, complete Yang-style teaching system',
+          zh: '让四川具备系统、完整的杨式教学体系',
         },
-        desc: {
-          nl: 'Kies locaties met frisse lucht en stille omgeving. Parken, binnenplaatsen, meerzijden zijn allemaal geschikt. Grond moet vlak zijn, vermijd oppervlakken die te hard of te zacht zijn.',
-          en: "Choose locations with fresh air and quiet environment. Parks, courtyards, lakesides are all suitable. Ground should be level, avoid surfaces that are too hard or too soft.",
-          zh: '选择空气清新、环境安静的场所。公园、庭院、湖边都适合。地面要平坦，避免过硬或过软的表面。',
+        {
+          nl: 'De grootste Yang-stijl erfgroep in de provincie gevormd',
+          en: 'Forming the largest Yang-style lineage group in the province',
+          zh: '形成川内最大的杨式太极传承群体',
         },
+        {
+          nl: 'Tal van excellente leerlingen opgeleid, waardoor Sichuan een zwaartepunt van Tai Chi in het zuidwesten werd',
+          en: 'Training many excellent disciples, making Sichuan a Tai Chi center in the southwest',
+          zh: '培养大批优秀弟子，使四川成为西南太极重镇',
+        },
+      ],
+    },
+  },
+
+  // 第六章：何绍君 - 当代四川杨式太极拳的重要人物
+  heShaojun: {
+    chapter: {
+      nl: 'Hoofdstuk VI',
+      en: 'Chapter VI',
+      zh: '第六章',
+    },
+    tag: {
+      nl: 'Moderne Meester',
+      en: 'Modern Master',
+      zh: '当代大师',
+    },
+    title: {
+      nl: 'He Shaojun: Een belangrijk figuur in het hedendaagse Sichuan Yang-stijl',
+      en: 'He Shaojun: An Important Figure in Contemporary Sichuan Yang-Style',
+      zh: '何绍君：当代四川杨式太极拳的重要人物',
+    },
+    background: {
+      title: {
+        nl: 'Opleidingsachtergrond',
+        en: 'Training Background',
+        zh: '师承背景',
       },
-      precautions: {
-        emoji: '⚠️',
-        title: {
-          nl: 'Voorzorgsmaatregelen',
-          en: 'Precautions',
-          zh: '注意事项',
-        },
-        items: [
-          {
-            nl: 'Draag losse, comfortabele sportkleding',
-            en: 'Wear loose, comfortable exercise clothing',
-            zh: '穿着宽松舒适的运动服',
-          },
-          {
-            nl: 'Warm up goed voor oefening',
-            en: 'Warm up properly before practice',
-            zh: '练习前做好充分热身',
-          },
-          {
-            nl: 'Oefen volgens uw vermogen, ga geleidelijk vooruit',
-            en: 'Practice according to your ability, progress gradually',
-            zh: '量力而行，循序渐进',
-          },
-          {
-            nl: 'Bewegingen moeten zacht zijn, vermijd overdreven kracht',
-            en: 'Movements should be gentle, avoid excessive force',
-            zh: '动作要柔和，避免用力过猛',
-          },
-          {
-            nl: 'Stop onmiddellijk als u ongemak voelt',
-            en: 'Stop immediately if you feel discomfort',
-            zh: '如感不适立即停止',
-          },
-        ],
+      content: {
+        nl: 'Zesde generatie erflater van Yang-stijl Tai Chi, studeerde bijna dertig jaar onder Lin Mogen. Dient als vice-president van de Tai Chi Research Association van de Sichuan Martial Arts Association en coach van de Sichuan University Tai Chi Association.',
+        en: 'Sixth-generation lineage holder of Yang-style Tai Chi, studied under Lin Mogen for nearly thirty years. Serves as Vice President of the Tai Chi Research Association of the Sichuan Martial Arts Association and coach of the Sichuan University Tai Chi Association.',
+        zh: '杨氏太极拳第六代宗脉传承人，师承林墨根近三十年。担任四川省武术协会太极研究会副会长、四川大学太极拳协会教练。',
+      },
+    },
+    innovation: {
+      title: {
+        nl: 'Innovatieve bijdrage',
+        en: 'Innovative Contribution',
+        zh: '创新贡献',
+      },
+      content: {
+        nl: 'Creëerde "Tai Chi Rubbing and Pushing Gong Method", systemiseerde Tai Chi push hand training. Duwde Sichuan Tai Chi naar modernisering en systematisering.',
+        en: 'Created "Tai Chi Rubbing and Pushing Gong Method", systematized Tai Chi push hands training. Pushed Sichuan Tai Chi toward modernization and systematization.',
+        zh: '创建"太极揉推功法"，系统化太极推手训练。推动四川太极拳进入现代化、系统化阶段。',
+      },
+    },
+    contribution: {
+      title: {
+        nl: 'Zijn bijdrage',
+        en: 'His Contribution',
+        zh: '他的贡献',
+      },
+      content: {
+        nl: 'Hij is een van de representatieve figuren van het hedendaagse Sichuan Yang-stijl Tai Chi.',
+        en: 'He is one of the representative figures of contemporary Sichuan Yang-style Tai Chi.',
+        zh: '他是当代四川杨式太极拳的标志性人物之一。',
       },
     },
   },
+
+  // 第七章：陶莉 - 将四川杨式太极拳带向世界
+  taoLi: {
+    chapter: {
+      nl: 'Hoofdstuk VII',
+      en: 'Chapter VII',
+      zh: '第七章',
+    },
+    tag: {
+      nl: 'Internationale Ambassadeur',
+      en: 'International Ambassador',
+      zh: '国际传播者',
+    },
+    title: {
+      nl: 'Tao Li: Brengt Sichuan Yang-stijl naar de wereld',
+      en: 'Tao Li: Bringing Sichuan Yang-Style to the World',
+      zh: '陶莉：将四川杨式太极拳传向全球',
+    },
+    background: {
+      title: {
+        nl: 'Opleidingsachtergrond',
+        en: 'Training Background',
+        zh: '师承背景',
+      },
+      content: {
+        nl: 'Leerling van He Shaojun, erfgenaam van de directe overdracht van het Sichuan-systeem.',
+        en: 'Disciple of He Shaojun, inheritor of the direct transmission of the Sichuan system.',
+        zh: '师承何绍君，四川体系直接传承的继承者。',
+      },
+    },
+    contributions: {
+      title: {
+        nl: 'Ze bracht de kenmerken van het Sichuan-systeem internationaal:',
+        en: 'She brought the characteristics of the Sichuan system internationally:',
+        zh: '她将四川体系的特点带向国际：',
+      },
+      items: [
+        {
+          nl: 'Benadrukt basisvaardigheden (ontspanning, zinking, rondheid, stabiliteit)',
+          en: 'Emphasizes basic skills (relaxation, sinking, roundness, stability)',
+          zh: '强调基本功（松、沉、圆、稳）',
+        },
+        {
+          nl: 'Let op lichaamsstructuur en ademhaling',
+          en: 'Focuses on body structure and breathing',
+          zh: '注重身法结构与呼吸',
+        },
+        {
+          nl: 'Bevordert traditionele Yang-stijl cultuur en etiquette',
+          en: 'Promotes traditional Yang-style culture and etiquette',
+          zh: '推行传统杨式文化与礼仪',
+        },
+        {
+          nl: 'Verspreidt Tai Chi naar Europa op basis van het Sichuan-systeem',
+          en: 'Spreads Tai Chi to Europe based on the Sichuan system',
+          zh: '以四川体系为根基向欧洲推广太极拳',
+        },
+      ],
+    },
+    conclusion: {
+      nl: 'Ze is een belangrijke kracht in de verspreiding van Sichuan Yang-stijl Tai Chi naar de wereld.',
+      en: 'She is an important force in spreading Sichuan Yang-style Tai Chi to the world.',
+      zh: '她是四川杨式太极拳传向全球的重要力量。',
+    },
+  },
+
+  // 第八章：四川杨式太极拳的传承脉络
+  lineage: {
+    chapter: {
+      nl: 'Hoofdstuk VIII',
+      en: 'Chapter VIII',
+      zh: '第八章',
+    },
+    tag: {
+      nl: 'Erfgoedlijn',
+      en: 'Lineage',
+      zh: '传承脉络',
+    },
+    title: {
+      nl: 'Sichuan Yang-stijl Tai Chi erfenislijn',
+      en: 'Sichuan Yang-Style Tai Chi Lineage',
+      zh: '四川杨式太极拳的传承脉络',
+    },
+    subtitle: {
+      nl: 'Gecorrigeerde editie · Meest autoritatief',
+      en: 'Revised Edition · Most Authoritative',
+      zh: '修正版 · 最权威',
+    },
+    stages: [
+      {
+        title: {
+          nl: 'Li Yaxuan als basis',
+          en: 'Founded by Li Yaxuan',
+          zh: '李雅轩奠基',
+        },
+        content: {
+          nl: 'De Yang-stijl die in Sichuan wordt overgeleverd komt van de directe overdracht van een van de belangrijkste leerlingen van Yang Chengfu.',
+          en: 'The Yang-style transmitted in Sichuan comes from the direct transmission of one of Yang Chengfu\'s most important disciples.',
+          zh: '四川所传杨式太极拳来自杨澄甫最重要弟子的直接传承。',
+        },
+      },
+      {
+        title: {
+          nl: 'Lin Mogen leerde decennialang',
+          en: 'Lin Mogen taught for decades',
+          zh: '林墨根授徒数十年',
+        },
+        content: {
+          nl: 'Sichuan vormde een van de grootste en meest systematische Yang-stijl Tai Chi-groepen in het land.',
+          en: 'Sichuan formed one of the largest and most systematic Yang-style Tai Chi communities in the country.',
+          zh: '四川形成了全国规模最大、最系统的杨式太极拳群体之一。',
+        },
+      },
+      {
+        title: {
+          nl: 'He Shaojun bevordert modernisering',
+          en: 'He Shaojun promotes modernization',
+          zh: '何绍君推动现代化',
+        },
+        content: {
+          nl: 'De academische, systematische en internationale aard van Sichuan Tai Chi blijft verbeteren.',
+          en: 'The academic, systematic, and international nature of Sichuan Tai Chi continues to improve.',
+          zh: '四川太极拳的学术性、系统性、国际性持续提升。',
+        },
+      },
+      {
+        title: {
+          nl: 'Tao Li verspreidt naar Europa',
+          en: 'Tao Li spreads to Europe',
+          zh: '陶莉将其传播到欧洲',
+        },
+        content: {
+          nl: 'Sichuan Yang-stijl Tai Chi is een belangrijk onderdeel geworden van de internationale Tai Chi-cultuur.',
+          en: 'Sichuan Yang-style Tai Chi has become an important part of international Tai Chi culture.',
+          zh: '四川杨式太极拳已成为国际太极文化的重要组成部分。',
+        },
+      },
+    ],
+  },
+
   // CTA
   cta: {
     title: {
-      nl: 'Begin Uw Tai Chi Reis',
-      en: 'Begin Your Tai Chi Journey',
-      zh: '开启您的太极之旅',
+      nl: 'Leer authentiek Sichuan Yang-stijl Tai Chi',
+      en: 'Learn Authentic Sichuan Yang-Style Tai Chi',
+      zh: '学习正宗四川杨式太极拳',
     },
     subtitle: {
-      nl: 'Ervaar de charme van Tai Chi uit de eerste hand en ontdek de moderne erfenis van eeuwenoude wijsheid',
-      en: 'Experience the charm of Tai Chi firsthand and discover the modern heritage of centuries-old wisdom',
-      zh: '亲身体验太极的魅力，发现千年智慧的现代传承',
+      nl: 'Van de wortels tot het heden, ervaar de eeuwenoude wijsheid van Tai Chi',
+      en: 'From roots to present, experience centuries of Tai Chi wisdom',
+      zh: '从根源到现代，体验传承百年的太极智慧',
     },
     meButton: {
       nl: 'Over Mij',

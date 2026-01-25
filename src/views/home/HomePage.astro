@@ -108,19 +108,19 @@ const quoteCards = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {quoteCards.map((card, index) => (
-          <div class="scroll-animate group relative h-full" style={`animation-delay: ${index * 0.15}s`}>
-            <div class="relative bg-paper rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 p-8 border border-border/30 hover:border-accent/50 overflow-hidden h-full flex flex-col">
+          <div class="scroll-animate group relative h-full flex flex-col" style={`animation-delay: ${index * 0.15}s`}>
+            <div class="relative bg-paper rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 p-8 border border-border/30 hover:border-accent/50 overflow-hidden flex-1 flex flex-col">
               <div class="absolute top-6 right-6 w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center group-hover:bg-accent/20 transition-colors duration-300">
                 <span class="text-accent text-2xl font-serif">{t.quotes[card.key].char}</span>
               </div>
 
               <div class="text-6xl text-accent/20 font-serif leading-none mb-4">"</div>
 
-              <blockquote class="relative z-10">
-                <p class="text-xl md:text-2xl font-serif text-ink leading-relaxed mb-6">
+              <blockquote class="relative z-10 flex-1 flex flex-col">
+                <p class="text-xl md:text-2xl font-serif text-ink leading-relaxed mb-6 flex-1">
                   {t.quotes[card.key].quote}
                 </p>
-                <footer class="flex items-center space-x-3">
+                <footer class="flex items-center space-x-3 mt-auto">
                   <div class="w-12 h-0.5 bg-accent/50"></div>
                   <cite class="text-secondary not-italic font-medium">— {t.quotes[card.key].source}</cite>
                 </footer>
@@ -245,7 +245,7 @@ const quoteCards = [
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="scroll-animate bg-paper rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 border border-border/50">
+        <div class="scroll-animate h-full flex flex-col bg-paper rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 border border-border/50">
           <div class="w-16 h-16 bg-accent/10 rounded-lg flex items-center justify-center mb-6">
             <svg class="w-8 h-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
@@ -254,12 +254,12 @@ const quoteCards = [
           <h3 class="text-xl font-serif font-bold text-ink mb-3">
             {t.benefits.card1.title}
           </h3>
-          <p class="text-secondary">
+          <p class="text-secondary flex-1">
             {t.benefits.card1.desc}
           </p>
         </div>
 
-        <div class="scroll-animate bg-paper rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 border border-border/50" style="animation-delay: 0.2s">
+        <div class="scroll-animate h-full flex flex-col bg-paper rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 border border-border/50" style="animation-delay: 0.2s">
           <div class="w-16 h-16 bg-accent/10 rounded-lg flex items-center justify-center mb-6">
             <svg class="w-8 h-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -268,12 +268,12 @@ const quoteCards = [
           <h3 class="text-xl font-serif font-bold text-ink mb-3">
             {t.benefits.card2.title}
           </h3>
-          <p class="text-secondary">
+          <p class="text-secondary flex-1">
             {t.benefits.card2.desc}
           </p>
         </div>
 
-        <div class="scroll-animate bg-paper rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 border border-border/50" style="animation-delay: 0.4s">
+        <div class="scroll-animate h-full flex flex-col bg-paper rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 border border-border/50" style="animation-delay: 0.4s">
           <div class="w-16 h-16 bg-accent/10 rounded-lg flex items-center justify-center mb-6">
             <svg class="w-8 h-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -282,7 +282,7 @@ const quoteCards = [
           <h3 class="text-xl font-serif font-bold text-ink mb-3">
             {t.benefits.card3.title}
           </h3>
-          <p class="text-secondary">
+          <p class="text-secondary flex-1">
             {t.benefits.card3.desc}
           </p>
         </div>
