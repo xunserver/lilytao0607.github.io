@@ -94,14 +94,14 @@ export const courses = {
         zh: '入门课程',
       },
       title: {
-        nl: '24-vorm Tai Chi',
-        en: '24-Form Tai Chi',
-        zh: '24式太极拳',
+        nl: 'Beginners Tai Chi',
+        en: 'Beginner Tai Chi',
+        zh: '初级太极课程',
       },
       desc: {
-        nl: 'Geschikt voor beginners zonder ervaring. Start vanaf de basis en leer systematisch de vereenvoudigde 24-vorm Tai Chi, beheers de basis essentials en ademhalingstechnieken.',
-        en: 'Suitable for beginners with zero experience. Start from basics and systematically learn the 24-form simplified Tai Chi, mastering fundamental essentials and breathing techniques.',
-        zh: '适合零基础初学者。从基础开始，系统学习24式简化太极拳，掌握基本要领和呼吸技巧。',
+        nl: 'Geschikt voor beginners zonder ervaring. Start vanaf de basis en leer systematisch de basisprincipes van Tai Chi, beheers de essentiële bewegingen en ademhalingstechnieken.',
+        en: 'Suitable for beginners with zero experience. Start from basics and systematically learn the fundamental principles of Tai Chi, mastering essential movements and breathing techniques.',
+        zh: '适合零基础初学者。从基础开始，系统学习太极拳的基本原理，掌握基本要领和呼吸技巧。',
       },
       sessions: {
         nl: '12 lessen',
@@ -127,14 +127,14 @@ export const courses = {
         zh: '进阶课程',
       },
       title: {
-        nl: '42-vorm Tai Chi',
-        en: '42-Form Tai Chi',
-        zh: '42式太极拳',
+        nl: 'Gevorderd Tai Chi',
+        en: 'Intermediate Tai Chi',
+        zh: '中级太极课程',
       },
       desc: {
-        nl: 'Geschikt voor studenten met enige basis. Leer de 42-vorm competitieroutine, integreert kenmerken van meerdere scholen met hogere technische inhoud.',
-        en: 'Suitable for students with some foundation. Learn the 42-form competition routine, integrating characteristics from multiple schools with higher technical content.',
-        zh: '适合有一定基础的学员。学习42式竞赛套路，融合多家流派特色，技术含量更高。',
+        nl: 'Geschikt voor studenten met enige basis. Verdiep uw techniek met meer geavanceerde bewegingen en flows, integreert kenmerken van meerdere scholen met hogere technische inhoud.',
+        en: 'Suitable for students with some foundation. Deepen your technique with more advanced movements and flows, integrating characteristics from multiple schools with higher technical content.',
+        zh: '适合有一定基础的学员。深入学习更复杂的动作和套路，融合多家流派特色，技术含量更高。',
       },
       sessions: {
         nl: '16 lessen',
@@ -160,14 +160,14 @@ export const courses = {
         zh: '高级课程',
       },
       title: {
-        nl: 'Traditionele 108-vorm',
-        en: 'Traditional 108-Form',
-        zh: '传统108式',
+        nl: 'Traditioneel Tai Chi',
+        en: 'Traditional Tai Chi',
+        zh: '高级太极课程',
       },
       desc: {
-        nl: 'Geschikt voor langdurige beoefenaars. Diepe studie van traditionele Yang-stijl 108-vorm, verken de diepe betekenis en interne praktijken van Tai Chi.',
-        en: 'Suitable for long-term practitioners. Deep study of traditional Yang-style 108-form, exploring profound meanings and internal practices of Tai Chi.',
-        zh: '适合长期练习者。深入研究传统杨式108式，探索太极的深层内涵和内功心法。',
+        nl: 'Geschikt voor langdurige beoefenaars. Diepe studie van traditionele Tai Chi, verken de diepe betekenis en interne praktijken van de kunst.',
+        en: 'Suitable for long-term practitioners. Deep study of traditional Tai Chi, exploring profound meanings and internal practices of the art.',
+        zh: '适合长期练习者。深入研究传统太极拳，探索太极的深层内涵和内功心法。',
       },
       sessions: {
         nl: '24 lessen',
