@@ -3,7 +3,7 @@
  * Students Page Route - 学员风采路由
  * Displays student stories and experiences
  */
-import BlogPage from '../../views/blog/BlogPage.astro';
+import StudentsPage from '../../views/students/StudentsPage.astro';
 import { getLocalePaths, type Locale } from '@/lib/locales';
 
 export const getStaticPaths = getLocalePaths;
@@ -11,4 +11,4 @@ export const getStaticPaths = getLocalePaths;
 const { lang } = Astro.params;
 const locale = lang as Locale;
 ---
-<BlogPage page="students" locale={locale} />
+<StudentsPage page="students" locale={locale} />

@@ -10,7 +10,7 @@ export const global = {
     me: { nl: 'Over Mij', en: 'About Me', zh: '关于我' },
     movements: { nl: 'Bewegingen', en: 'Movements', zh: '招式展示' },
     courses: { nl: 'Cursussen', en: 'Courses', zh: '课程' },
-    blog: { nl: 'Leerlingen', en: 'Students', zh: '学员风采' },
+    students: { nl: 'Leerlingen', en: 'Students', zh: '学员风采' },
   },
   siteName: {
     nl: 'Yang Style Tai Chi * Lily Tao',

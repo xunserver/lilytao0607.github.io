@@ -1,8 +1,8 @@
 /**
  * 学员页面翻译
- * Blog/Students page translations
+ * Students page translations
  */
-export const blog = {
+export const students = {
   // SEO 元数据
   seoTitle: {
     nl: 'Leerlingen Presentatie - Tai Chi Ervaringen',

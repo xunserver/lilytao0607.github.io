@@ -1,6 +1,6 @@
 ---
 /**
- * BlogPage - 共享的学员风采页面组件
+ * StudentsPage - 共享的学员风采页面组件
  * @param locale - 语言代码 ('nl' | 'en' | 'zh')
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
@@ -13,11 +13,11 @@ interface Props {
 
 const { locale } = Astro.props;
 const currentLocale = locale;
-const t = getTranslations('blog', currentLocale);
+const t = getTranslations('students', currentLocale);
 const gt = getTranslations('global', currentLocale);
 ---
 
-<BaseLayout page="blog" locale={currentLocale}>
+<BaseLayout page="students" locale={currentLocale}>
   <!-- Hero Section -->
   <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 -z-10">
