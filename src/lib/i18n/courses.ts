@@ -119,6 +119,11 @@ export const courses = {
         en: '10€/class',
         zh: '10欧/每节课',
       },
+      outline: {
+        nl: 'Bekijk cursusoverzicht',
+        en: 'View Outline',
+        zh: '查看课程',
+      },
     },
     intermediate: {
       tag: {
@@ -152,6 +157,11 @@ export const courses = {
         en: '12€/class',
         zh: '12欧/每节课',
       },
+      outline: {
+        nl: 'Bekijk cursusoverzicht',
+        en: 'View Outline',
+        zh: '查看课程',
+      },
     },
     advanced: {
       tag: {
@@ -184,6 +194,11 @@ export const courses = {
         nl: '16€/les',
         en: '16€/class',
         zh: '16欧/每节课',
+      },
+      outline: {
+        nl: 'Bekijk cursusoverzicht',
+        en: 'View Outline',
+        zh: '查看课程',
       },
     },
     private: {
@@ -272,6 +287,66 @@ export const courses = {
       nl: 'Workshops worden aangekondigd op basis van verschillende tijden en locaties',
       en: 'Workshops will be announced based on different times and locations',
       zh: 'Workshop会根据不同时间和地点进行通知',
+    },
+  },
+  workshopsSection: {
+    title: {
+      nl: 'Workshops & 企业体验',
+      en: 'Workshops & Corporate Experiences',
+      zh: '工作坊与企业体验',
+    },
+    subtitle: {
+      nl: '短期焕活体验 · 直接服务企业与团队 · 全程零基础友好',
+      en: 'Short-format revitalizing sessions for teams and organizations—fully beginner friendly.',
+      zh: '短期焕活体验 · 面向企业与团队 · 全程零基础友好',
+    },
+    items: {
+      corporate: {
+        tag: {
+          nl: 'Corporate Wellness',
+          en: 'Corporate Wellness',
+          zh: '企业焕活',
+        },
+        title: {
+          nl: '企业活力焕新工作坊',
+          en: 'Corporate Wellness Workshop',
+          zh: '企业活力焕新工作坊',
+        },
+        desc: {
+          nl: '1.5–2 小时的太极体验，帮助团队释放压力、恢复专注与协作。',
+          en: 'A 1.5–2 hour Tai Chi session that relieves stress and recharges teams instantly.',
+          zh: '1.5–2 小时太极体验，帮助团队释放压力、恢复专注与协作。',
+        },
+        duration: '1.5–2h',
+        cta: {
+          nl: '查看详情',
+          en: 'View Details',
+          zh: '查看详情',
+        },
+      },
+      advanced: {
+        tag: {
+          nl: 'Workshop II',
+          en: 'Workshop II',
+          zh: 'Workshop II',
+        },
+        title: {
+          nl: '高级太极专业提升工作坊',
+          en: 'Advanced Tai Chi Professional Intensive',
+          zh: '高级太极专业提升工作坊',
+        },
+        desc: {
+          nl: '2–3 周高密度训练，拳架、身法、推手与教学全方位提升。',
+          en: 'A 2–3 week immersive program that upgrades forms, body method, push hands, and teaching.',
+          zh: '2–3 周高密度训练，拳架、身法、推手与教学全方位提升。',
+        },
+        duration: '2–3 周 · 每日 2h',
+        cta: {
+          nl: '查看详情',
+          en: 'View Details',
+          zh: '查看详情',
+        },
+      },
     },
   },
   // 课程特色

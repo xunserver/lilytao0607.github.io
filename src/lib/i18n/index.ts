@@ -14,6 +14,10 @@ import { me } from './me';
 import { movements } from './movements';
 import { students } from './students';
 import { courses } from './courses';
+import { courseOutline } from './courseOutline';
+import { courseOutlineIntermediate } from './courseOutlineIntermediate';
+import { courseOutlineAdvanced } from './courseOutlineAdvanced';
+import { workshops } from './workshops';
 
 // 重新组合成 i18n 对象（保持与原文件相同的结构）
 export const i18n = {
@@ -24,6 +28,10 @@ export const i18n = {
   movements,
   students,
   courses,
+  courseOutline,
+  courseOutlineIntermediate,
+  courseOutlineAdvanced,
+  workshops,
 };
 
 // ==================== 类型定义 ====================

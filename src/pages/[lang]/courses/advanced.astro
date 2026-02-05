@@ -1,0 +1,10 @@
+---
+import AdvancedOutlinePage from '../../../views/courses/AdvancedOutlinePage.astro';
+import { getLocalePaths, type Locale } from '@/lib/locales';
+
+export const getStaticPaths = getLocalePaths;
+
+const { lang } = Astro.params;
+const locale = lang as Locale;
+---
+<AdvancedOutlinePage locale={locale} />

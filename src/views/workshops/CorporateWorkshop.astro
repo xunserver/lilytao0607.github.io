@@ -1,0 +1,177 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../lib/i18n';
+import { localizedPath } from '../../lib/paths';
+
+interface Props {
+  locale: 'nl' | 'en' | 'zh';
+}
+
+const { locale } = Astro.props;
+const currentLocale = locale;
+const t = getTranslations('workshops', currentLocale).corporate;
+const contactHref = localizedPath('/courses', currentLocale) + '#registration-form';
+---
+
+<BaseLayout page="courses" locale={currentLocale} title={t.meta.title} description={t.meta.description}>
+  <section class="relative pt-32 pb-20 overflow-hidden">
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute inset-0 bg-gradient-to-br from-paper via-mist/40 to-paper"></div>
+      <div class="absolute top-16 left-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-[140px]"></div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-10 lg:grid-cols-2 items-center">
+      <div class="scroll-animate">
+        <span class="inline-block px-4 py-2 text-sm font-medium text-accent bg-accent/10 rounded-full mb-6">{t.hero.badge}</span>
+        <h1 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">{t.hero.title}</h1>
+        <p class="text-xl text-secondary mb-2">{t.hero.duration}</p>
+        <p class="text-secondary leading-relaxed mb-8">{t.hero.subtitle}</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href={contactHref}
+            class="w-full sm:w-auto inline-flex justify-center items-center px-8 py-4 bg-accent text-paper border-2 border-accent rounded-lg font-medium text-lg transition-all duration-300 hover:bg-primary hover:border-primary hover:scale-105 hover:shadow-xl"
+          >
+            {t.hero.primary}
+          </a>
+          <a
+            href="#structure"
+            class="w-full sm:w-auto inline-flex justify-center items-center px-8 py-4 border-2 border-accent/40 text-accent rounded-lg font-medium text-lg transition-all duration-300 hover:bg-accent/10 hover:scale-105"
+          >
+            {t.hero.secondary}
+          </a>
+        </div>
+      </div>
+      <div class="scroll-animate" style="animation-delay: 0.15s">
+        <div class="bg-paper rounded-3xl border border-border/30 shadow-xl p-8 space-y-4">
+          {t.intro.benefits.map((benefit) => (
+            <div class="flex items-start gap-3">
+              <span class="text-accent text-xl">✓</span>
+              <p class="text-secondary leading-relaxed">{benefit}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-mist/20">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="scroll-animate">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-ink mb-4">{t.intro.title}</h2>
+        <p class="text-lg text-secondary leading-relaxed">{t.intro.desc}</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="structure" class="py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 scroll-animate">
+        <h2 class="text-4xl font-serif font-bold text-ink">{t.structure.title}</h2>
+      </div>
+      <div class="space-y-6">
+        {t.structure.items.map((item, index) => (
+          <div class="scroll-animate" style={`animation-delay: ${index * 0.05}s`}>
+            <div class="bg-paper rounded-2xl border border-border/30 p-6 shadow-lg flex flex-col md:flex-row md:items-center gap-4">
+              <div class="w-14 h-14 rounded-full bg-accent/10 text-accent font-serif font-bold text-lg flex items-center justify-center">
+                {index + 1}
+              </div>
+              <div>
+                <h3 class="text-xl font-serif font-bold text-ink mb-2">{item.title}</h3>
+                <p class="text-secondary leading-relaxed">{item.desc}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-mist/20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 scroll-animate">
+        <h2 class="text-4xl font-serif font-bold text-ink">{t.outcomes.title}</h2>
+      </div>
+      <div class="grid gap-6 md:grid-cols-3">
+        {t.outcomes.categories.map((category, index) => (
+          <div class="scroll-animate" style={`animation-delay: ${index * 0.05}s`}>
+            <div class="bg-paper rounded-2xl border border-border/30 p-6 shadow-lg h-full">
+              <h3 class="text-2xl font-serif font-bold text-ink mb-4">{category.title}</h3>
+              <ul class="space-y-3 text-secondary">
+                {category.items.map((item) => (
+                  <li class="flex items-start gap-2">
+                    <span class="text-accent mt-1">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 scroll-animate">
+        <h2 class="text-4xl font-serif font-bold text-ink">{t.audience.title}</h2>
+      </div>
+      <div class="grid gap-6 md:grid-cols-2">
+        {t.audience.items.map((item) => (
+          <div class="scroll-animate">
+            <div class="bg-paper rounded-2xl border border-border/20 p-5 shadow-lg flex items-start gap-3">
+              <span class="text-accent text-xl">◆</span>
+              <p class="text-secondary leading-relaxed">{item}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-mist/20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center scroll-animate">
+      <h2 class="text-4xl font-serif font-bold text-ink mb-6">{t.contact.title}</h2>
+      <p class="text-lg text-secondary mb-10">{t.contact.desc}</p>
+      <a
+        href={contactHref}
+        class="inline-flex items-center justify-center px-10 py-4 bg-accent text-paper border-2 border-accent rounded-lg font-medium text-lg transition-all duration-300 hover:bg-primary hover:border-primary hover:scale-105 hover:shadow-xl"
+      >
+        {t.contact.button}
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  function observeAnimations() {
+    const animatedElements = document.querySelectorAll('.scroll-animate');
+    animatedElements.forEach((el) => observer.observe(el));
+  }
+
+  observeAnimations();
+  document.addEventListener('astro:page-load', observeAnimations);
+</script>
+
+<style>
+  .scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .scroll-animate.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>

@@ -1,0 +1,207 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslations } from '../../lib/i18n';
+import { localizedPath } from '../../lib/paths';
+
+interface Props {
+  locale: 'nl' | 'en' | 'zh';
+}
+
+const { locale } = Astro.props;
+const currentLocale = locale;
+const t = getTranslations('courseOutlineAdvanced', currentLocale);
+const coursesPath = localizedPath('/courses', currentLocale);
+const registrationHref = `${coursesPath}#registration-form`;
+---
+
+<BaseLayout page="courses" locale={currentLocale} title={t.meta.title} description={t.meta.description}>
+  <section class="relative pt-32 pb-20 overflow-hidden">
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute inset-0 bg-gradient-to-br from-paper via-mist/40 to-paper"></div>
+      <div class="absolute top-12 left-8 w-80 h-80 bg-accent/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-[140px]"></div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-10 lg:grid-cols-2 items-center">
+      <div class="scroll-animate">
+        <span class="inline-block px-4 py-2 text-sm font-medium text-accent bg-accent/10 rounded-full mb-6">
+          {t.hero.tag}
+        </span>
+        <h1 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">{t.hero.title}</h1>
+        <p class="text-xl text-secondary mb-4">{t.hero.subtitle}</p>
+        <p class="text-secondary leading-relaxed mb-8">{t.hero.description}</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href={registrationHref}
+            class="w-full sm:w-auto inline-flex justify-center items-center px-8 py-4 bg-accent text-paper border-2 border-accent rounded-lg font-medium text-lg transition-all duration-300 hover:bg-primary hover:border-primary hover:scale-105 hover:shadow-xl"
+          >
+            {t.hero.primaryCta}
+          </a>
+          <a
+            href="#foundation"
+            class="w-full sm:w-auto inline-flex justify-center items-center px-8 py-4 border-2 border-accent/40 text-accent rounded-lg font-medium text-lg transition-all duration-300 hover:bg-accent/10 hover:scale-105"
+          >
+            {t.hero.secondaryCta}
+          </a>
+        </div>
+      </div>
+      <div class="scroll-animate" style="animation-delay: 0.15s">
+        <div class="bg-paper rounded-3xl border border-border/40 shadow-xl p-8 grid gap-6">
+          {t.overview.cards.map((card, index) => (
+            <div class="border border-border/30 rounded-2xl p-5 bg-mist/10" style={`animation-delay: ${index * 0.05}s`}>
+              <p class="text-sm uppercase tracking-wide text-secondary mb-1">{card.label}</p>
+              <p class="text-2xl font-serif font-bold text-ink">{card.value}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="foundation" class="py-24 bg-mist/20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 scroll-animate">
+        <span class="inline-block px-4 py-2 text-sm font-medium text-accent bg-accent/10 rounded-full mb-4">{t.foundation.tag}</span>
+        <h2 class="text-4xl font-serif font-bold text-ink mb-4">{t.foundation.title}</h2>
+      </div>
+      <div class="grid gap-6 md:grid-cols-2">
+        {t.foundation.items.map((item, index) => (
+          <div class="scroll-animate" style={`animation-delay: ${(index % 3) * 0.06}s`}>
+            <div class="h-full bg-paper rounded-2xl border border-border/40 p-6 shadow-lg">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="w-12 h-12 rounded-full bg-secondary/10 text-secondary flex items-center justify-center font-serif font-bold text-lg">
+                  {index + 1 < 10 ? `0${index + 1}` : index + 1}
+                </div>
+                <h3 class="text-xl font-serif font-bold text-ink">{item.title}</h3>
+              </div>
+              <p class="text-secondary leading-relaxed">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 scroll-animate">
+        <span class="inline-block px-4 py-2 text-sm font-medium text-secondary bg-secondary/10 rounded-full mb-4">{t.forms.tag}</span>
+        <h2 class="text-4xl font-serif font-bold text-ink mb-4">{t.forms.title}</h2>
+      </div>
+      <div class="grid gap-6 md:grid-cols-2">
+        {t.forms.points.map((point, index) => (
+          <div class="scroll-animate" style={`animation-delay: ${(index % 2) * 0.08}s`}>
+            <div class="h-full bg-paper rounded-2xl border border-border/40 p-6 shadow-lg flex items-start gap-4">
+              <span class="text-accent text-2xl">☯</span>
+              <p class="text-secondary leading-relaxed">{point}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-gradient-to-br from-paper via-mist/20 to-paper">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-12 lg:grid-cols-2 items-start">
+      <div class="scroll-animate">
+        <span class="inline-block px-4 py-2 text-sm font-medium text-accent bg-accent/10 rounded-full mb-4">{t.pushHands.tag}</span>
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-ink mb-4">{t.pushHands.title}</h2>
+        <p class="text-lg text-secondary mb-8">{t.pushHands.subtitle}</p>
+        <div class="space-y-4">
+          {t.pushHands.items.map((item) => (
+            <div class="flex items-start gap-3 bg-paper/90 border border-border/30 rounded-2xl p-5">
+              <span class="text-accent text-xl">◯</span>
+              <p class="text-secondary leading-relaxed">{item}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div class="scroll-animate" style="animation-delay: 0.2s">
+        <div class="bg-paper rounded-3xl border border-secondary/40 p-8 shadow-2xl">
+          <div class="w-16 h-16 rounded-full bg-secondary/10 text-secondary flex items-center justify-center text-2xl mb-6">30′</div>
+          <p class="text-secondary text-lg leading-relaxed">{t.pushHands.note}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 scroll-animate">
+        <span class="inline-block px-4 py-2 text-sm font-medium text-accent bg-accent/10 rounded-full mb-4">{t.outcomes.tag}</span>
+        <h2 class="text-4xl font-serif font-bold text-ink mb-4">{t.outcomes.title}</h2>
+        <p class="text-lg text-secondary">{t.outcomes.subtitle}</p>
+      </div>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {t.outcomes.categories.map((category, index) => (
+          <div class="scroll-animate" style={`animation-delay: ${index * 0.1}s`}>
+            <div class="h-full bg-paper rounded-2xl border border-border/40 p-6 shadow-lg flex flex-col">
+              <h3 class="text-2xl font-serif font-bold text-ink mb-4">{category.title}</h3>
+              <ul class="space-y-3 text-secondary flex-1">
+                {category.items.map((item) => (
+                  <li class="flex items-start gap-2">
+                    <span class="text-accent mt-1">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-mist/20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center scroll-animate">
+      <h2 class="text-4xl font-serif font-bold text-ink mb-6">{t.cta.title}</h2>
+      <p class="text-xl text-secondary mb-10">{t.cta.subtitle}</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href={registrationHref}
+          class="w-full sm:w-auto inline-flex justify-center items-center px-8 py-4 bg-accent text-paper border-2 border-accent rounded-lg font-medium text-lg transition-all duration-300 hover:bg-primary hover:border-primary hover:scale-105 hover:shadow-xl"
+        >
+          {t.cta.primary}
+        </a>
+        <a
+          href={coursesPath}
+          class="w-full sm:w-auto inline-flex justify-center items-center px-8 py-4 border-2 border-accent/40 text-accent rounded-lg font-medium text-lg transition-all duration-300 hover:bg-accent/10 hover:scale-105"
+        >
+          {t.cta.secondary}
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  function observeAnimations() {
+    const animatedElements = document.querySelectorAll('.scroll-animate');
+    animatedElements.forEach((el) => observer.observe(el));
+  }
+
+  observeAnimations();
+  document.addEventListener('astro:page-load', observeAnimations);
+</script>
+
+<style>
+  .scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .scroll-animate.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>

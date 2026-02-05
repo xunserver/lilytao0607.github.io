@@ -1,0 +1,10 @@
+---
+import CorporateWorkshop from '../../../views/workshops/CorporateWorkshop.astro';
+import { getLocalePaths, type Locale } from '@/lib/locales';
+
+export const getStaticPaths = getLocalePaths;
+
+const { lang } = Astro.params;
+const locale = lang as Locale;
+---
+<CorporateWorkshop locale={locale} />

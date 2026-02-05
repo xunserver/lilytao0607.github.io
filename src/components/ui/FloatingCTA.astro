@@ -12,9 +12,10 @@ const getLocaleFromPath = (path: string): 'nl' | 'en' | 'zh' => {
 
 const currentLocale = getLocaleFromPath(currentPath);
 const coursesPath = localizedPath('/courses', currentLocale);
-const anchor = currentLocale === 'zh' ? '#报名表单' : (currentLocale === 'en' ? '#registration-form' : '#inschrijvingsformulier');
+const anchor = '#registration-form';
 const ctaHref = coursesPath + anchor;
-const shouldShow = !currentPath.includes('/courses');
+const registrationPattern = /^(?:\/(en|zh))?\/courses\/?$/;
+const shouldShow = !registrationPattern.test(currentPath);
 ---
 
 <!-- Floating CTA Button -->

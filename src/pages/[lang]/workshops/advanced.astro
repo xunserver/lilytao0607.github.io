@@ -1,0 +1,10 @@
+---
+import AdvancedWorkshop from '../../../views/workshops/AdvancedWorkshop.astro';
+import { getLocalePaths, type Locale } from '@/lib/locales';
+
+export const getStaticPaths = getLocalePaths;
+
+const { lang } = Astro.params;
+const locale = lang as Locale;
+---
+<AdvancedWorkshop locale={locale} />
