@@ -46,7 +46,7 @@
       <!-- 电话（可选） -->
       <div>
         <label for="phone" class="block text-sm font-medium text-ink mb-2">
-          {{ t.phoneLabel }} <span class="text-secondary">({{ props.locale === 'zh' ? '可选' : props.locale === 'nl' ? 'optioneel' : 'optional' }})</span>
+          {{ t.phoneLabel }} <span class="text-secondary">({{ props.locale === 'zh' ? '可选' : props.locale === 'nl' ? 'optioneel' : props.locale === 'pl' ? 'opcjonalnie' : 'optional' }})</span>
         </label>
         <input
           id="phone"
@@ -81,7 +81,7 @@
       <!-- 备注 -->
       <div>
         <label for="message" class="block text-sm font-medium text-ink mb-2">
-          {{ t.messageLabel }} <span class="text-secondary">({{ props.locale === 'zh' ? '可选' : props.locale === 'nl' ? 'optioneel' : 'optional' }})</span>
+          {{ t.messageLabel }} <span class="text-secondary">({{ props.locale === 'zh' ? '可选' : props.locale === 'nl' ? 'optioneel' : props.locale === 'pl' ? 'opcjonalnie' : 'optional' }})</span>
         </label>
         <textarea
           id="message"
@@ -135,7 +135,7 @@ const props = defineProps({
   locale: {
     type: String,
     default: 'zh',
-    validator: (value) => ['nl', 'en', 'de', 'zh'].includes(value)
+    validator: (value) => ['nl', 'en', 'de', 'pl', 'zh'].includes(value)
   }
 });
 
@@ -225,6 +225,34 @@ const translations = {
       private: 'Einzelunterricht'
     }
   },
+  pl: {
+    title: 'Rejestracja na kurs',
+    subtitle: 'Wypelnij ponizsze informacje, a skontaktujemy sie z Toba tak szybko, jak to mozliwe',
+    nameLabel: 'Twoje imie',
+    emailLabel: 'Adres email',
+    phoneLabel: 'Numer telefonu (opcjonalnie)',
+    courseLabel: 'Wybrany kurs',
+    messageLabel: 'Wiadomosc (opcjonalnie)',
+    namePlaceholder: 'Wpisz swoje imie',
+    emailPlaceholder: 'Wpisz swoj adres email',
+    phonePlaceholder: 'Wpisz numer telefonu',
+    coursePlaceholder: 'Wybierz kurs',
+    messagePlaceholder: 'Powiedz nam o swoich celach nauki lub innych potrzebach...',
+    submitButton: 'Wyslij',
+    submittingButton: 'Wysylanie...',
+    privacyText: 'Wysylajac formularz, akceptujesz nasza polityke prywatnosci. Chronimy Twoje dane osobowe.',
+    successMessage: '✓ Rejestracja zakonczona pomyslnie! Otrzymalismy Twoje dane i skontaktujemy sie w ciagu 24 godzin.',
+    errorMessage: '✗ Nie udalo sie wyslac formularza. Sprobuj ponownie pozniej lub skontaktuj sie z nami bezposrednio. Blad:',
+    noPhone: 'Nie podano',
+    noMessage: 'Brak',
+    fromName: 'Strona Tai Chi Culture',
+    courses: {
+      beginner: 'Kurs podstawowy Tai Chi',
+      intermediate: 'Kurs sredniozaawansowany Tai Chi',
+      advanced: 'Kurs zaawansowany Tai Chi',
+      private: 'Prywatna lekcja indywidualna'
+    }
+  },
   zh: {
     title: '课程报名',
     subtitle: '填写下方信息，我们将尽快与您联系',
@@ -256,7 +284,7 @@ const translations = {
 };
 
 // 计算当前语言的翻译
-const t = computed(() => translations[props.locale] || translations.zh);
+const t = computed(() => translations[props.locale] || translations.en);
 
 // 表单数据
 const formData = reactive({

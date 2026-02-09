@@ -4,7 +4,7 @@ import { getTranslations } from '../../lib/i18n';
 import { localizedPath } from '../../lib/paths';
 
 interface Props {
-  locale?: 'nl' | 'en' | 'de' | 'zh';
+  locale?: 'nl' | 'en' | 'de' | 'pl' | 'zh';
 }
 
 const { locale = 'nl' } = Astro.props;
@@ -27,6 +27,7 @@ const buttonLabels: Record<string, { menu: string; logo: string }> = {
   nl: { menu: 'Open menu', logo: 'Tai Chi Cultuur' },
   en: { menu: 'Open menu', logo: 'Tai Chi Culture' },
   de: { menu: 'Menü öffnen', logo: 'Tai-Chi-Kultur' },
+  pl: { menu: 'Otworz menu', logo: 'Kultura Tai Chi' },
   zh: { menu: '打开菜单', logo: '太极文化' },
 };
 

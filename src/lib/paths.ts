@@ -37,7 +37,7 @@ export function withBase(path: string): string {
 /**
  * Generate a localized URL with base path
  * @param path - The path without locale prefix (e.g., '/about')
- * @param locale - The locale ('nl', 'en', 'de', 'zh')
+ * @param locale - The locale ('nl', 'en', 'de', 'pl', 'zh')
  * @returns Full localized path with base prefix
  */
 export function localizedPath(path: string, locale: string): string {
@@ -66,11 +66,11 @@ export function parsePath(fullPath: string): { basePath: string; pathWithoutLoca
   }
 
   // Remove locale prefix if present
-  const localeMatch = pathWithoutBase.match(/^\/(nl|en|de|zh)(\/|$)/);
+  const localeMatch = pathWithoutBase.match(/^\/(nl|en|de|pl|zh)(\/|$)/);
   if (localeMatch) {
     return {
       basePath: base,
-      pathWithoutLocale: pathWithoutBase.replace(/^\/(nl|en|de|zh)/, '') || '/'
+      pathWithoutLocale: pathWithoutBase.replace(/^\/(nl|en|de|pl|zh)/, '') || '/'
     };
   }
 
@@ -83,7 +83,7 @@ export function parsePath(fullPath: string): { basePath: string; pathWithoutLoca
 /**
  * Build a full path with base and locale
  * @param pathWithoutLocale - Path without locale (e.g., '/about')
- * @param locale - The locale ('nl', 'en', 'de', 'zh')
+ * @param locale - The locale ('nl', 'en', 'de', 'pl', 'zh')
  * @returns Full path with base and locale
  */
 export function buildPath(pathWithoutLocale: string, locale: string): string {

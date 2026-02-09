@@ -6,6 +6,7 @@ const locales = [
   { code: 'nl', name: 'Nederlands', flag: '🇳🇱' },
   { code: 'en', name: 'English', flag: '🇬🇧' },
   { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+  { code: 'pl', name: 'Polski', flag: '🇵🇱' },
   { code: 'zh', name: '中文', flag: '🇨🇳' },
 ];
 
@@ -19,7 +20,7 @@ onMounted(() => {
   const possibleLocale = localeMatch ? localeMatch[1] : '';
 
   // Check if the first segment is a valid locale
-  if (possibleLocale && ['nl', 'en', 'de', 'zh'].includes(possibleLocale)) {
+  if (possibleLocale && ['nl', 'en', 'de', 'pl', 'zh'].includes(possibleLocale)) {
     currentLocale.value = possibleLocale;
   } else {
     currentLocale.value = 'nl';

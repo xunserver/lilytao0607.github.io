@@ -35,13 +35,13 @@ export const i18n = {
 };
 
 // ==================== 类型定义 ====================
-export type Locale = 'nl' | 'en' | 'de' | 'zh';
+export type Locale = 'nl' | 'en' | 'de' | 'pl' | 'zh';
 export type PageKey = keyof typeof i18n;
 
 // 提取翻译值的类型
 type TranslationValue<T> = T extends { [key: string]: any }
   ? { [K in keyof T]: TranslationValue<T[K]> }
-  : { nl: string; en: string; de: string; zh: string };
+  : { nl: string; en: string; de: string; pl?: string; zh: string };
 
 // 将嵌套的翻译对象扁平化为单语言对象
 type FlattenTranslations<T, L extends Locale> = T extends Record<string, any>
@@ -94,7 +94,7 @@ export function getTranslation<Page extends PageKey>(
     value = value?.[k];
   }
 
-  // 如果值是翻译对象，提取对应语言（de 缺失时回退到 en/nl/zh）
+  // 如果值是翻译对象，提取对应语言（缺失时回退到 en/nl/zh/de）
   if (isLocaleMap(value)) {
     const localizedValue = resolveLocaleValue(value, locale);
     return typeof localizedValue === 'string' ? localizedValue : key;
@@ -138,11 +138,11 @@ function isLocaleMap(value: unknown): value is Record<string, any> {
   }
 
   const record = value as Record<string, any>;
-  return 'nl' in record || 'en' in record || 'de' in record || 'zh' in record;
+  return 'nl' in record || 'en' in record || 'de' in record || 'pl' in record || 'zh' in record;
 }
 
 function resolveLocaleValue(map: Record<string, any>, locale: Locale) {
-  return map[locale] ?? map.en ?? map.nl ?? map.zh ?? map.de ?? map;
+  return map[locale] ?? map.en ?? map.nl ?? map.zh ?? map.de ?? map.pl ?? map;
 }
 
 // ==================== 兼容性导出 ====================
@@ -152,6 +152,7 @@ export const translations = {
   nl: getTranslations('home', 'nl'),
   en: getTranslations('home', 'en'),
   de: getTranslations('home', 'de'),
+  pl: getTranslations('home', 'pl'),
   zh: getTranslations('home', 'zh'),
 };
 
