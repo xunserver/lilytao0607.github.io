@@ -50,9 +50,9 @@ export const students = {
     items: [
       {
         name: {
-          nl: 'Mevrouw Zhang',
-          en: 'Ms. Zhang',
-          zh: '张女士',
+          nl: 'Vincent',
+          en: 'Vincent',
+          zh: '文森特',
         },
         info: {
           nl: 'Studeren 2 jaar · Tai Chi Middelbaar Cursus',
@@ -96,9 +96,9 @@ export const students = {
       },
       {
         name: {
-          nl: 'Meneer Li',
-          en: 'Mr. Li',
-          zh: '李先生',
+          nl: 'Paul',
+          en: 'Paul',
+          zh: '保罗',
         },
         info: {
           nl: 'Studeren 5 jaar · Tai Chi Gevorderd Cursus',
@@ -198,9 +198,9 @@ export const students = {
       },
       {
         name: {
-          nl: 'Mevrouw Zhang',
-          en: 'Ms. Zhang',
-          zh: '张女士',
+          nl: 'Vincent',
+          en: 'Vincent',
+          zh: '文森特',
         },
         course: {
           nl: 'Middelbaar · 2 jaar',
@@ -216,9 +216,9 @@ export const students = {
       },
       {
         name: {
-          nl: 'Meneer Li',
-          en: 'Mr. Li',
-          zh: '李先生',
+          nl: 'Paul',
+          en: 'Paul',
+          zh: '保罗',
         },
         course: {
           nl: 'Gevorderd · 5 jaar',

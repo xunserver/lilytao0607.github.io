@@ -41,62 +41,6 @@ const gt = getTranslations('global', currentLocale);
     </div>
   </section>
 
-  <!-- Featured Student Stories -->
-  <section class="py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16 scroll-animate">
-        <span class="inline-block px-3 py-1 text-sm font-medium text-cyan bg-cyan/10 rounded-full mb-4">
-          {t.stories.tag}
-        </span>
-        <h2 class="text-4xl md:text-5xl font-serif font-bold text-ink mb-6">
-          {t.stories.title}
-        </h2>
-        <div class="w-32 h-1 bg-accent/50 mx-auto mb-6"></div>
-        <p class="text-lg text-secondary max-w-2xl mx-auto">
-          {t.stories.subtitle}
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {t.stories.items.map((story, index) => (
-          <div class="scroll-animate h-full flex flex-col" style={`animation-delay: ${index * 0.1}s`}>
-            <div class="bg-paper rounded-2xl shadow-xl overflow-hidden border border-border/30 hover:shadow-2xl transition-all duration-300 flex-1 flex flex-col">
-              <div class="aspect-[16/9] overflow-hidden">
-                <img
-                  src={story.image}
-                  alt={story.name}
-                  class="w-full h-full object-cover"
-                />
-              </div>
-              <div class="p-8 flex-1 flex flex-col">
-                <div class="flex items-center space-x-4 mb-6">
-                  <div class={`w-16 h-16 bg-gradient-to-br from-${story.color}/20 to-${story.color}/10 rounded-full flex items-center justify-center`}>
-                    <span class="text-2xl">{story.emoji}</span>
-                  </div>
-                  <div>
-                    <h3 class="text-xl font-serif font-bold text-ink">{story.name}</h3>
-                    <p class="text-sm text-secondary">{story.info}</p>
-                  </div>
-                </div>
-                <blockquote class="text-secondary leading-relaxed mb-6 flex-1">
-                  "{story.quote}"
-                </blockquote>
-                <div class="flex items-center space-x-4 text-sm mt-auto">
-                  {story.tags.map((tag) => (
-                    <div class="flex items-center space-x-2">
-                      <div class={`w-2 h-2 rounded-full bg-${tag.color}`}></div>
-                      <span class="text-secondary">{tag.text}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
   <!-- Student Testimonials -->
   <section class="py-24 bg-mist/20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
