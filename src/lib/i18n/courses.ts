@@ -14,31 +14,6 @@ export const courses = {
     en: 'Explore our Tai Chi courses for beginners and advanced practitioners. Learn 24-form, 42-form, and 108-form Tai Chi from experienced instructors.',
     zh: '探索我们的太极课程，适合初学者和进阶练习者。从经验丰富的教练那里学习24式、42式和108式太极。',
   },
-  title: {
-    nl: 'Tai Chi Cursussen',
-    en: 'Tai Chi Courses',
-    zh: '太极课程',
-  },
-  subtitle: {
-    nl: 'Begin uw reis naar harmonie',
-    en: 'Begin your journey to harmony',
-    zh: '开启您的和谐之旅',
-  },
-  basic: {
-    nl: 'Basis: 24 Vormen',
-    en: 'Basic: 24 Forms',
-    zh: '基础：24式',
-  },
-  intermediate: {
-    nl: 'Intermediate: 42 Vormen',
-    en: 'Intermediate: 42 Forms',
-    zh: '中级：42式',
-  },
-  advanced: {
-    nl: 'Gevorderd: 108 Vormen',
-    en: 'Advanced: 108 Forms',
-    zh: '高级：108式',
-  },
   private: {
     nl: 'Privélessen',
     en: 'Private Lessons',
@@ -67,24 +42,6 @@ export const courses = {
       zh: '专业太极拳指导，助您掌握身心和谐之智慧',
     },
   },
-  // 课程系统
-  system: {
-    tag: {
-      nl: 'Curculussysteem',
-      en: 'Course System',
-      zh: '课程体系',
-    },
-    title: {
-      nl: 'Onze Cursussen',
-      en: 'Our Courses',
-      zh: '我们的课程',
-    },
-    subtitle: {
-      nl: 'Van basis tot gevorderd, stap voor stap leren, geschikt voor studenten van alle niveaus',
-      en: 'From basics to advanced, step-by-step learning suitable for students of all levels',
-      zh: '从基础到高级，循序渐进，适合各个水平的学员',
-    },
-  },
   // 课程卡片
   cards: {
     beginner: {
@@ -98,26 +55,10 @@ export const courses = {
         en: 'Beginner Tai Chi',
         zh: '初级太极课程',
       },
-      desc: {
-        nl: 'Geschikt voor beginners zonder ervaring. Start vanaf de basis en leer systematisch de basisprincipes van Tai Chi, beheers de essentiële bewegingen en ademhalingstechnieken.',
-        en: 'Suitable for beginners with zero experience. Start from basics and systematically learn the fundamental principles of Tai Chi, mastering essential movements and breathing techniques.',
-        zh: '适合零基础初学者。从基础开始，系统学习太极拳的基本原理，掌握基本要领和呼吸技巧。',
-      },
-      sessions: {
-        nl: '12 lessen',
-        en: '12 classes',
-        zh: '12课时',
-      },
       duration: {
         nl: '60 min/les',
         en: '60 min/class',
         zh: '60分钟/课时',
-      },
-      difficulty: '⭐⭐',
-      price: {
-        nl: '10€/les',
-        en: '10€/class',
-        zh: '10欧/每节课',
       },
       outline: {
         nl: 'Bekijk cursusoverzicht',
@@ -136,26 +77,10 @@ export const courses = {
         en: 'Intermediate Tai Chi',
         zh: '中级太极课程',
       },
-      desc: {
-        nl: 'Geschikt voor studenten met enige basis. Diepe studie van complexere bewegingen en routines, integreren van kenmerken van meerdere stijlen, met hogere technische inhoud.',
-        en: 'Suitable for students with some foundation. In-depth study of more complex movements and routines, integrating characteristics from multiple schools, with higher technical content.',
-        zh: '适合有一定基础的学员。深入学习更复杂的动作和套路，融合多家流派特色，技术含量更高。',
-      },
-      sessions: {
-        nl: '16 lessen',
-        en: '16 classes',
-        zh: '16课时',
-      },
       duration: {
         nl: '60 min/les',
         en: '60 min/class',
         zh: '60分钟/课时',
-      },
-      difficulty: '⭐⭐⭐',
-      price: {
-        nl: '12€/les',
-        en: '12€/class',
-        zh: '12欧/每节课',
       },
       outline: {
         nl: 'Bekijk cursusoverzicht',
@@ -174,85 +99,15 @@ export const courses = {
         en: 'Traditional Tai Chi',
         zh: '高级太极课程',
       },
-      desc: {
-        nl: 'Geschikt voor langdurige beoefenaars. Diepe studie van traditionele Tai Chi, verken de diepe betekenis en interne praktijken van de kunst.',
-        en: 'Suitable for long-term practitioners. Deep study of traditional Tai Chi, exploring profound meanings and internal practices of the art.',
-        zh: '适合长期练习者。深入研究传统太极拳，探索太极的深层内涵和内功心法。',
-      },
-      sessions: {
-        nl: '24 lessen',
-        en: '24 classes',
-        zh: '24课时',
-      },
       duration: {
         nl: '90 min/les',
         en: '90 min/class',
         zh: '90分钟/课时',
       },
-      difficulty: '⭐⭐⭐⭐',
-      price: {
-        nl: '16€/les',
-        en: '16€/class',
-        zh: '16欧/每节课',
-      },
       outline: {
         nl: 'Bekijk cursusoverzicht',
         en: 'View Outline',
         zh: '查看课程',
-      },
-    },
-    private: {
-      tag: {
-        nl: 'Aangepaste Cursus',
-        en: 'Custom Course',
-        zh: '定制课程',
-      },
-      title: {
-        nl: 'Eén-op-één Privéles',
-        en: 'One-on-One Private',
-        zh: '一对一私教',
-      },
-      desc: {
-        nl: 'Gepersonaliseerde lesplannen op basis van individuele omstandigheden, gerichte oplossingen voor oefenproblemen, snelle verbetering van Tai Chi-vaardigheden.',
-        en: 'Customized teaching plans based on individual conditions, targeted solutions for practice issues, rapid improvement of Tai Chi skills.',
-        zh: '根据个人情况定制教学方案，针对性解决练习问题，快速提升太极拳水平。',
-      },
-      sessions: {
-        nl: 'Flexibel',
-        en: 'Flexible',
-        zh: '灵活安排',
-      },
-      duration: {
-        nl: '60-90 min',
-        en: '60-90 min',
-        zh: '60-90分钟',
-      },
-      difficulty: {
-        nl: 'Aangepast',
-        en: 'Customized',
-        zh: '按需定制',
-      },
-    },
-    labels: {
-      sessions: {
-        nl: 'Sessies',
-        en: 'Sessions',
-        zh: '课时',
-      },
-      duration: {
-        nl: 'Duur',
-        en: 'Duration',
-        zh: '时长',
-      },
-      difficulty: {
-        nl: 'Moeilijkheid',
-        en: 'Difficulty',
-        zh: '难度',
-      },
-      price: {
-        nl: 'Prijs',
-        en: 'Price',
-        zh: '费用',
       },
     },
   },
@@ -567,44 +422,6 @@ export const courses = {
       nl: 'Nu Inschrijven',
       en: 'Register Now',
       zh: '立即报名',
-    },
-  },
-  // 表单
-  form: {
-    title: {
-      nl: 'Inschrijfformulier',
-      en: 'Registration Form',
-      zh: '报名表单',
-    },
-    name: {
-      nl: 'Naam',
-      en: 'Name',
-      zh: '姓名',
-    },
-    email: {
-      nl: 'E-mail',
-      en: 'Email',
-      zh: '邮箱',
-    },
-    phone: {
-      nl: 'Telefoon',
-      en: 'Phone',
-      zh: '电话',
-    },
-    course: {
-      nl: 'Kies Cursus',
-      en: 'Select Course',
-      zh: '选择课程',
-    },
-    message: {
-      nl: 'Bericht',
-      en: 'Message',
-      zh: '留言',
-    },
-    submit: {
-      nl: 'Indienen',
-      en: 'Submit',
-      zh: '提交',
     },
   },
 };

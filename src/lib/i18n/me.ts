@@ -14,11 +14,6 @@ export const me = {
     en: 'Meet your Tai Chi instructor. Learn about my background, experience, and passion for teaching Tai Chi.',
     zh: '认识您的太极教练。了解我的背景、经验和教授太极的热情。',
   },
-  title: {
-    nl: 'Over Mij',
-    en: 'About Me',
-    zh: '关于我',
-  },
   // Hero
   hero: {
     tag: {

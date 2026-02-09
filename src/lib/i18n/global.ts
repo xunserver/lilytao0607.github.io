@@ -61,15 +61,5 @@ export const global = {
       en: (year: string) => `© ${year} Yang Style Tai Chi * Lily Tao. All rights reserved.`,
       zh: (year: string) => `© ${year} 杨氏太极 * 陶莉. 保留所有权利.`,
     },
-    privacy: {
-      nl: 'Privacybeleid',
-      en: 'Privacy Policy',
-      zh: '隐私政策',
-    },
-    terms: {
-      nl: 'Gebruiksvoorwaarden',
-      en: 'Terms of Service',
-      zh: '使用条款',
-    },
   },
 };
