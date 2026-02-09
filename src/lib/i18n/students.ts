@@ -161,6 +161,43 @@ export const students = {
     items: [
       {
         name: {
+          nl: 'Andy Stewart',
+          en: 'Andy Stewart',
+          zh: '安迪·斯图尔特',
+        },
+        course: {
+          nl: 'Training · 6 maanden',
+          en: 'Training · 6 months',
+          zh: '学习 · 半年',
+        },
+        text: {
+          nl: 'Sinds ik Tai Chi volg bij Lily, merk ik een duidelijke positieve verandering in mijn lichamelijke welzijn. Mijn balans en corekracht zijn verbeterd, en ik voel me veel stabieler in mijn dagelijkse bewegingen. Nog belangrijker is dat de chronische spierspanning die ik altijd meedroeg begint af te nemen. Lily heeft me geleerd hoe ik met ontspannen kracht kan bewegen, iets waarvan ik niet wist dat het mogelijk was. Na elke Tai Chi-les voel ik me opgeladen en vol energie. Haar begeleiding heeft me sterker en wendbaarder gemaakt, en ik waardeer de deskundigheid en zorg die ze in elke sessie brengt enorm.',
+          en: "Since starting Tai Chi with Lily, I have noticed a positive change in my physical well-being. My balance and core strength have improved, and I feel much more stable in my daily movements. More importantly, the chronic tension I used to carry in my muscles has started to ease. Lily has taught me how to move with a relaxed power that I didn't know was possible. Lily's Tai Chi class always leaves me feeling energized and recharged. Her teaching has empowered me to become stronger and more agile, and I deeply appreciate the skill and care she brings to every session.",
+          zh: '自从跟随 Lily 学习太极以来，我明显感受到身体状态的积极变化。我的平衡能力和核心力量都提升了，日常动作也稳定了许多。更重要的是，过去长期积累在肌肉里的紧张感开始慢慢缓解。Lily 教会了我如何以放松而有力的方式运动，这是我以前无法想象的。每次上完 Lily 的太极课，我都感到充满能量、身心焕然一新。她的教学让我变得更强壮、更灵活，我由衷感谢她在每一节课中展现的专业与用心。',
+        },
+        rating: 5,
+        featured: true,
+      },
+      {
+        name: {
+          nl: 'DORIS',
+          en: 'DORIS',
+          zh: 'DORIS',
+        },
+        course: {
+          nl: 'Ervaringsles · Feedback',
+          en: 'Trial Session · Feedback',
+          zh: '体验课 · 课后反馈',
+        },
+        text: {
+          nl: 'De bewegingen van Tai Chi zijn langzaam en zacht, maar ze helpen mijn qi- en bloedsomloop te verbeteren. Het is een ervaring van balans en harmonie met mezelf.',
+          en: 'Tai Chi movements are slow and gentle, yet they help my qi and blood circulation flow more smoothly. It is an experience of balance and harmony with myself.',
+          zh: '太极的动作缓慢而柔和，但能让我的气血更通畅。这是一种平衡与自我和谐的体验。',
+        },
+        rating: 5,
+      },
+      {
+        name: {
           nl: 'Mevrouw Zhang',
           en: 'Ms. Zhang',
           zh: '张女士',
@@ -192,186 +229,6 @@ export const students = {
           nl: 'Tai Chi heeft me geholpen innerlijke rust te vinden. Een levenslange reis.',
           en: "Tai Chi helped me find inner peace. A lifelong journey.",
           zh: '太极帮我找到了内心的平静。一辈子的修行。',
-        },
-        rating: 5,
-      },
-      {
-        name: {
-          nl: 'Mevrouw Wang',
-          en: 'Ms. Wang',
-          zh: '王女士',
-        },
-        course: {
-          nl: 'Middelbaar · 3 jaar',
-          en: 'Intermediate · 3 years',
-          zh: '中级 · 3年',
-        },
-        text: {
-          nl: 'Instructor Tao is professioneel en geduldig. Ik leer elke les iets nieuws.',
-          en: "Instructor Tao is professional and patient. I learn something new every class.",
-          zh: '陶教练专业又耐心。每节课都能学到新东西。',
-        },
-        rating: 5,
-      },
-      {
-        name: {
-          nl: 'Meneer Chen',
-          en: 'Mr. Chen',
-          zh: '陈先生',
-        },
-        course: {
-          nl: 'Beginner · 1.5 jaar',
-          en: 'Beginner · 1.5 years',
-          zh: '初级 · 1.5年',
-        },
-        text: {
-          nl: 'Mijn stress is aanzienlijk verminderd. Ik kan nu kalm blijven op drukke werkdagen.',
-          en: "My stress has significantly decreased. I can now stay calm on busy workdays.",
-          zh: '我的压力明显减少了。现在在忙碌的工作日也能保持平静。',
-        },
-        rating: 5,
-      },
-      {
-        name: {
-          nl: 'Mevrouw Liu',
-          en: 'Ms. Liu',
-          zh: '刘女士',
-        },
-        course: {
-          nl: 'Gevorderd · 4 jaar',
-          en: 'Advanced · 4 years',
-          zh: '高级 · 4年',
-        },
-        text: {
-          nl: 'De sfeer in de klas is geweldig. Ik heb veel vrienden gemaakt.',
-          en: "The class atmosphere is wonderful. I've made many friends.",
-          zh: '课堂氛围很棒。我交了很多朋友。',
-        },
-        rating: 5,
-      },
-      {
-        name: {
-          nl: 'Meneer Yang',
-          en: 'Mr. Yang',
-          zh: '杨先生',
-        },
-        course: {
-          nl: 'Middelbaar · 2.5 jaar',
-          en: 'Intermediate · 2.5 years',
-          zh: '中级 · 2.5年',
-        },
-        text: {
-          nl: 'Tai Chi is een diepe kunst. Hoe meer ik leer, hoe meer ik wil leren.',
-          en: "Tai Chi is a profound art. The more I learn, the more I want to learn.",
-          zh: '太极是门深奥艺术。越学越想学。',
-        },
-        rating: 5,
-      },
-      {
-        name: {
-          nl: 'Mevrouw Zhao',
-          en: 'Ms. Zhao',
-          zh: '赵女士',
-        },
-        course: {
-          nl: 'Beginner · 1 jaar',
-          en: 'Beginner · 1 year',
-          zh: '初级 · 1年',
-        },
-        text: {
-          nl: 'Mijn slapeloosheid is verbeterd. Ik slaap veel beter na Tai Chi oefeningen.',
-          en: "My insomnia has improved. I sleep much better after Tai Chi practice.",
-          zh: '我的失眠改善了。练习太极后睡得好多了。',
-        },
-        rating: 5,
-      },
-      {
-        name: {
-          nl: 'Mevrouw Wu',
-          en: 'Ms. Wu',
-          zh: '吴女士',
-        },
-        course: {
-          nl: 'Middelbaar · 2 jaar',
-          en: 'Intermediate · 2 years',
-          zh: '中级 · 2年',
-        },
-        text: {
-          nl: 'Mijn nekpijn is verdwenen. Tai Chi is echt effectief.',
-          en: "My neck pain is gone. Tai Chi really works.",
-          zh: '我的颈痛消失了。太极真的很有效。',
-        },
-        rating: 5,
-      },
-      {
-        name: {
-          nl: 'Meneer Zhou',
-          en: 'Mr. Zhou',
-          zh: '周先生',
-        },
-        course: {
-          nl: 'Beginner · 1 jaar',
-          en: 'Beginner · 1 year',
-          zh: '初级 · 1年',
-        },
-        text: {
-          nl: 'Geweldige leraar, geweldige gemeenschap. Ik ben erg blij dat ik ben begonnen.',
-          en: "Great teacher, great community. So glad I started.",
-          zh: '优秀的老师，温暖的社群。很高兴我开始学太极。',
-        },
-        rating: 5,
-      },
-      {
-        name: {
-          nl: 'Mevrouw Xu',
-          en: 'Ms. Xu',
-          zh: '徐女士',
-        },
-        course: {
-          nl: 'Gevorderd · 3 jaar',
-          en: 'Advanced · 3 years',
-          zh: '高级 · 3年',
-        },
-        text: {
-          nl: 'Tai Chi heeft mijn kwaliteit van leven verbeterd. Ik voel me jonger en energieker.',
-          en: "Tai Chi has improved my quality of life. I feel younger and more energetic.",
-          zh: '太极提高了我的生活质量。感觉更年轻、更有活力了。',
-        },
-        rating: 5,
-      },
-      {
-        name: {
-          nl: 'Meneer Sun',
-          en: 'Mr. Sun',
-          zh: '孙先生',
-        },
-        course: {
-          nl: 'Middelbaar · 1.5 jaar',
-          en: 'Intermediate · 1.5 years',
-          zh: '中级 · 1.5年',
-        },
-        text: {
-          nl: 'De basics zijn zo belangrijk. Ik begrijp nu waarom we zoveel aandacht besteden aan basisvaardigheden.',
-          en: "The basics are so important. I now understand why we focus so much on foundational skills.",
-          zh: '基本功太重要了。我现在明白为什么这么注重基本功。',
-        },
-        rating: 5,
-      },
-      {
-        name: {
-          nl: 'Mevrouw Ma',
-          en: 'Ms. Ma',
-          zh: '马女士',
-        },
-        course: {
-          nl: 'Beginner · 8 maanden',
-          en: 'Beginner · 8 months',
-          zh: '初级 · 8个月',
-        },
-        text: {
-          nl: 'Ik was angstig en depressief. Tai Chi heeft me geholpen mezelf te vinden.',
-          en: "I was anxious and depressed. Tai Chi helped me find myself.",
-          zh: '我曾焦虑抑郁。太极帮了我找回自己。',
         },
         rating: 5,
       },
