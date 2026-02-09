@@ -4,8 +4,9 @@ import { localizedPath } from '../../lib/paths';
 const currentPath = Astro.url.pathname;
 
 // Determine current locale from path
-const getLocaleFromPath = (path: string): 'nl' | 'en' | 'zh' => {
+const getLocaleFromPath = (path: string): 'nl' | 'en' | 'de' | 'zh' => {
   if (path.startsWith('/en/')) return 'en';
+  if (path.startsWith('/de/')) return 'de';
   if (path.startsWith('/zh/')) return 'zh';
   return 'nl'; // default locale
 };
@@ -14,8 +15,17 @@ const currentLocale = getLocaleFromPath(currentPath);
 const coursesPath = localizedPath('/courses', currentLocale);
 const anchor = '#registration-form';
 const ctaHref = coursesPath + anchor;
-const registrationPattern = /^(?:\/(en|zh))?\/courses\/?$/;
+const registrationPattern = /^\/(?:(?:nl|en|de|zh)\/)?courses\/?$/;
 const shouldShow = !registrationPattern.test(currentPath);
+
+const ctaLabelMap = {
+  nl: 'Direct Inschrijven',
+  en: 'Register Now',
+  de: 'Jetzt anmelden',
+  zh: '立即报名',
+};
+
+const ctaLabel = ctaLabelMap[currentLocale];
 ---
 
 <!-- Floating CTA Button -->
@@ -24,7 +34,7 @@ const shouldShow = !registrationPattern.test(currentPath);
     <a
       href={ctaHref}
       class="group block relative"
-      aria-label={currentLocale === 'zh' ? '立即报名' : (currentLocale === 'en' ? 'Register Now' : 'Direct Inschrijven')}
+      aria-label={ctaLabel}
     >
       <!-- Tai Chi Logo Container -->
       <div class="w-16 h-16 border-accent/30 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 flex items-center justify-center">
@@ -40,7 +50,7 @@ const shouldShow = !registrationPattern.test(currentPath);
 
       <!-- Tooltip -->
       <div class="absolute right-full mr-3 top-1/2 -translate-y-1/2 px-3 py-1 text-sm font-medium rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
-        {currentLocale === 'zh' ? '立即报名' : (currentLocale === 'en' ? 'Register Now' : 'Direct Inschrijven')}
+        {ctaLabel}
       </div>
     </a>
   </div>

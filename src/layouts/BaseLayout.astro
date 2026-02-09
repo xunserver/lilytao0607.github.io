@@ -20,7 +20,7 @@ const {
   page = 'home' // 默认是首页
 } = Astro.props;
 
-const currentLocale = locale as 'nl' | 'en' | 'zh';
+const currentLocale = locale as 'nl' | 'en' | 'de' | 'zh';
 
 // 获取指定页面的翻译（用于 SEO 元数据）
 const pageT = getTranslations(page, currentLocale);
@@ -43,6 +43,7 @@ const pageDescription = description || (() => {
 const localeLangMap: Record<string, string> = {
   nl: 'nl',
   en: 'en',
+  de: 'de',
   zh: 'zh-CN',
 };
 

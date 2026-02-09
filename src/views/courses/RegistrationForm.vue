@@ -135,7 +135,7 @@ const props = defineProps({
   locale: {
     type: String,
     default: 'zh',
-    validator: (value) => ['nl', 'en', 'zh'].includes(value)
+    validator: (value) => ['nl', 'en', 'de', 'zh'].includes(value)
   }
 });
 
@@ -195,6 +195,34 @@ const translations = {
       intermediate: 'Tai Chi Intermediate Course',
       advanced: 'Tai Chi Advanced Course',
       private: 'One-on-One Private Lesson'
+    }
+  },
+  de: {
+    title: 'Kursanmeldung',
+    subtitle: 'Füllen Sie die Informationen unten aus, wir kontaktieren Sie so schnell wie möglich',
+    nameLabel: 'Ihr Name',
+    emailLabel: 'E-Mail-Adresse',
+    phoneLabel: 'Telefonnummer (optional)',
+    courseLabel: 'Gewünschter Kurs',
+    messageLabel: 'Nachricht (optional)',
+    namePlaceholder: 'Geben Sie Ihren Namen ein',
+    emailPlaceholder: 'Geben Sie Ihre E-Mail-Adresse ein',
+    phonePlaceholder: 'Geben Sie Ihre Telefonnummer ein',
+    coursePlaceholder: 'Wählen Sie einen Kurs aus',
+    messagePlaceholder: 'Teilen Sie uns Ihre Lernziele oder weitere Anforderungen mit...',
+    submitButton: 'Absenden',
+    submittingButton: 'Wird gesendet...',
+    privacyText: 'Mit dem Absenden stimmen Sie unserer Datenschutzrichtlinie zu. Wir schützen Ihre persönlichen Daten.',
+    successMessage: '✓ Anmeldung erfolgreich! Wir haben Ihre Informationen erhalten und kontaktieren Sie innerhalb von 24 Stunden.',
+    errorMessage: '✗ Senden fehlgeschlagen. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns direkt. Fehler:',
+    noPhone: 'Nicht angegeben',
+    noMessage: 'Keine',
+    fromName: 'Tai-Chi-Kultur Webseite',
+    courses: {
+      beginner: 'Tai-Chi-Anfängerkurs',
+      intermediate: 'Tai-Chi-Mittelkurs',
+      advanced: 'Tai-Chi-Fortgeschrittenenkurs',
+      private: 'Einzelunterricht'
     }
   },
   zh: {

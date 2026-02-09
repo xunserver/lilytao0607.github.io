@@ -35,13 +35,13 @@ export const i18n = {
 };
 
 // ==================== 类型定义 ====================
-export type Locale = 'nl' | 'en' | 'zh';
+export type Locale = 'nl' | 'en' | 'de' | 'zh';
 export type PageKey = keyof typeof i18n;
 
 // 提取翻译值的类型
 type TranslationValue<T> = T extends { [key: string]: any }
   ? { [K in keyof T]: TranslationValue<T[K]> }
-  : { nl: string; en: string; zh: string };
+  : { nl: string; en: string; de: string; zh: string };
 
 // 将嵌套的翻译对象扁平化为单语言对象
 type FlattenTranslations<T, L extends Locale> = T extends Record<string, any>
@@ -94,9 +94,10 @@ export function getTranslation<Page extends PageKey>(
     value = value?.[k];
   }
 
-  // 如果值是翻译对象，提取对应语言
-  if (value && typeof value === 'object' && locale in value) {
-    return value[locale] || key;
+  // 如果值是翻译对象，提取对应语言（de 缺失时回退到 en/nl/zh）
+  if (isLocaleMap(value)) {
+    const localizedValue = resolveLocaleValue(value, locale);
+    return typeof localizedValue === 'string' ? localizedValue : key;
   }
 
   return value || key;
@@ -117,9 +118,9 @@ function flattenTranslations<T>(obj: T, locale: Locale): any {
     return obj.map(item => flattenTranslations(item, locale));
   }
 
-  // 检查是否是翻译对象（包含 nl/en/zh）
-  if ('nl' in obj || 'en' in obj || 'zh' in obj) {
-    return (obj as any)[locale] || obj;
+  // 检查是否是翻译对象（包含任意 locale key）
+  if (isLocaleMap(obj)) {
+    return resolveLocaleValue(obj, locale);
   }
 
   // 递归处理嵌套对象
@@ -131,12 +132,26 @@ function flattenTranslations<T>(obj: T, locale: Locale): any {
   return result;
 }
 
+function isLocaleMap(value: unknown): value is Record<string, any> {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) {
+    return false;
+  }
+
+  const record = value as Record<string, any>;
+  return 'nl' in record || 'en' in record || 'de' in record || 'zh' in record;
+}
+
+function resolveLocaleValue(map: Record<string, any>, locale: Locale) {
+  return map[locale] ?? map.en ?? map.nl ?? map.zh ?? map.de ?? map;
+}
+
 // ==================== 兼容性导出 ====================
 // 保持旧的 API 兼容（如果有的话）
 // 注意：这只是为了向后兼容，新代码应该使用 getTranslations()
 export const translations = {
   nl: getTranslations('home', 'nl'),
   en: getTranslations('home', 'en'),
+  de: getTranslations('home', 'de'),
   zh: getTranslations('home', 'zh'),
 };
 

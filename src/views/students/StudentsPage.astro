@@ -1,20 +1,27 @@
 ---
 /**
  * StudentsPage - 共享的学员风采页面组件
- * @param locale - 语言代码 ('nl' | 'en' | 'zh')
+ * @param locale - 语言代码 ('nl' | 'en' | 'de' | 'zh')
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getTranslations } from '../../lib/i18n';
 import { localizedPath } from '../../lib/paths';
 
 interface Props {
-  locale: 'nl' | 'en' | 'zh';
+  locale: 'nl' | 'en' | 'de' | 'zh';
 }
 
 const { locale } = Astro.props;
 const currentLocale = locale;
 const t = getTranslations('students', currentLocale);
 const gt = getTranslations('global', currentLocale);
+const featuredLabelMap = {
+  nl: 'Uitgelichte Ervaring',
+  en: 'Featured Story',
+  de: 'Hervorgehobene Geschichte',
+  zh: '重点分享',
+};
+const featuredLabel = featuredLabelMap[currentLocale];
 ---
 
 <BaseLayout page="students" locale={currentLocale}>
@@ -89,11 +96,7 @@ const gt = getTranslations('global', currentLocale);
                 </div>
                 {item.featured && (
                   <span class="px-3 py-1 text-xs font-semibold tracking-wide text-accent bg-accent/10 rounded-full">
-                    {currentLocale === 'zh'
-                      ? '重点分享'
-                      : currentLocale === 'en'
-                        ? 'Featured Story'
-                        : 'Uitgelichte Ervaring'}
+                    {featuredLabel}
                   </span>
                 )}
               </div>

@@ -3,9 +3,9 @@
  * 用于动态路由 [lang] 参数的静态生成
  */
 
-export type Locale = 'nl' | 'en' | 'zh';
+export type Locale = 'nl' | 'en' | 'de' | 'zh';
 
-export const locales: Locale[] = ['nl', 'en', 'zh'];
+export const locales: Locale[] = ['nl', 'en', 'de', 'zh'];
 
 /**
  * 获取所有语言路由的静态路径配置

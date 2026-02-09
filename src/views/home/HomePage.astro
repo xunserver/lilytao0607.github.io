@@ -1,14 +1,14 @@
 ---
 /**
  * HomePage - 共享的首页组件
- * @param locale - 语言代码 ('nl' | 'en' | 'zh')
+ * @param locale - 语言代码 ('nl' | 'en' | 'de' | 'zh')
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getTranslations } from '../../lib/i18n';
 import { localizedPath } from '../../lib/paths';
 
 interface Props {
-  locale: 'nl' | 'en' | 'zh';
+  locale: 'nl' | 'en' | 'de' | 'zh';
 }
 
 const { locale } = Astro.props;
