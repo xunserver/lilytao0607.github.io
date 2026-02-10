@@ -1,0 +1,80 @@
+{
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
+  "tmux": {
+    "enabled": true,
+    "layout": "main-vertical",
+    "main_pane_size": 60,
+    "main_pane_min_width": 120,
+    "agent_pane_min_width": 40
+  },
+  "agents": {
+    "sisyphus": {
+      "model": "codexfor/gpt-5.3-codex",
+      "prompt_append": "使用中文",
+      "variant": "high"
+    },
+    "hephaestus": {
+      "model": "codexfor/gpt-5.3-codex",
+      "prompt_append": "使用中文",
+      "variant": "high"
+    },
+    "prometheus": {
+      "model": "codexfor/gpt-5.3-codex",
+      "prompt_append": "使用中文",
+      "variant": "high"
+    },
+    "atlas": {
+      "model": "codexfor/gpt-5.3-codex"
+    },
+    "oracle": {
+      "model": "codexfor/gpt-5.3-codex",
+      "variant": "high"
+    },
+    "librarian": {
+      "model": "codexfor/gpt-5.3-codex"
+    },
+    "explore": {
+      "model": "zhipuai-coding-plan/glm-4.7"
+    },
+    "multimodal-looker": {
+      "model": "zhipuai-coding-plan/glm-4.7"
+    },
+    "metis": {
+      "model": "codexfor/gpt-5.3-codex",
+      "variant": "high"
+    },
+    "momus": {
+      "model": "codexfor/gpt-5.3-codex",
+      "variant": "high"
+    }
+  },
+  "categories": {
+    "visual-engineering": {
+      "model": "codexfor/gpt-5.3-codex"
+    },
+    "ultrabrain": {
+      "model": "codexfor/gpt-5.3-codex",
+      "variant": "high"
+    },
+    "deep": {
+      "model": "codexfor/gpt-5.3-codex",
+      "variant": "high"
+    },
+    "artistry": {
+      "model": "codexfor/gpt-5.3-codex",
+      "variant": "high"
+    },
+    "quick": {
+      "model": "zhipuai-coding-plan/glm-4.7"
+    },
+    "unspecified-low": {
+      "model": "codexfor/gpt-5.3-codex"
+    },
+    "unspecified-high": {
+      "model": "codexfor/gpt-5.3-codex"
+    },
+    "writing": {
+      "model": "zhipuai-coding-plan/glm-4.7"
+    }
+  }
+}
