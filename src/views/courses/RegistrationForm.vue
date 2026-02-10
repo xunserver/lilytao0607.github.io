@@ -46,7 +46,7 @@
       <!-- 电话（可选） -->
       <div>
         <label for="phone" class="block text-sm font-medium text-ink mb-2">
-          {{ t.phoneLabel }} <span class="text-secondary">({{ props.locale === 'zh' ? '可选' : props.locale === 'nl' ? 'optioneel' : props.locale === 'pl' ? 'opcjonalnie' : 'optional' }})</span>
+          {{ t.phoneLabel }} <span class="text-secondary">({{ props.locale === 'zh' ? '可选' : props.locale === 'nl' ? 'optioneel' : props.locale === 'pl' ? 'opcjonalnie' : props.locale === 'fr' ? 'facultatif' : 'optional' }})</span>
         </label>
         <input
           id="phone"
@@ -81,7 +81,7 @@
       <!-- 备注 -->
       <div>
         <label for="message" class="block text-sm font-medium text-ink mb-2">
-          {{ t.messageLabel }} <span class="text-secondary">({{ props.locale === 'zh' ? '可选' : props.locale === 'nl' ? 'optioneel' : props.locale === 'pl' ? 'opcjonalnie' : 'optional' }})</span>
+          {{ t.messageLabel }} <span class="text-secondary">({{ props.locale === 'zh' ? '可选' : props.locale === 'nl' ? 'optioneel' : props.locale === 'pl' ? 'opcjonalnie' : props.locale === 'fr' ? 'facultatif' : 'optional' }})</span>
         </label>
         <textarea
           id="message"
@@ -135,7 +135,7 @@ const props = defineProps({
   locale: {
     type: String,
     default: 'zh',
-    validator: (value) => ['nl', 'en', 'de', 'pl', 'zh'].includes(value)
+    validator: (value) => ['nl', 'en', 'de', 'pl', 'fr', 'zh'].includes(value)
   }
 });
 
@@ -251,6 +251,34 @@ const translations = {
       intermediate: 'Kurs średnio zaawansowany Tai Chi',
       advanced: 'Kurs zaawansowany Tai Chi',
       private: 'Prywatna lekcja indywidualna'
+    }
+  },
+  fr: {
+    title: 'Inscription au cours',
+    subtitle: 'Remplissez les informations ci-dessous, nous vous contacterons rapidement',
+    nameLabel: 'Votre nom',
+    emailLabel: 'Adresse e-mail',
+    phoneLabel: 'Numéro de téléphone (facultatif)',
+    courseLabel: 'Cours souhaité',
+    messageLabel: 'Message (facultatif)',
+    namePlaceholder: 'Entrez votre nom',
+    emailPlaceholder: 'Entrez votre adresse e-mail',
+    phonePlaceholder: 'Entrez votre numéro de téléphone',
+    coursePlaceholder: 'Sélectionnez un cours',
+    messagePlaceholder: 'Parlez-nous de vos objectifs d\'apprentissage ou d\'autres besoins...',
+    submitButton: 'Envoyer',
+    submittingButton: 'Envoi en cours...',
+    privacyText: 'En envoyant, vous acceptez notre politique de confidentialité. Nous protégeons vos données personnelles.',
+    successMessage: '✓ Inscription réussie ! Nous avons reçu vos informations et vous contacterons sous 24 heures.',
+    errorMessage: '✗ Échec de l\'envoi, veuillez réessayer plus tard ou nous contacter directement. Erreur :',
+    noPhone: 'Non fourni',
+    noMessage: 'Aucun',
+    fromName: 'Site Culture Tai Chi',
+    courses: {
+      beginner: 'Cours débutant de Tai Chi',
+      intermediate: 'Cours intermédiaire de Tai Chi',
+      advanced: 'Cours avancé de Tai Chi',
+      private: 'Cours privé individuel'
     }
   },
   zh: {

@@ -4,6 +4,8 @@ import Header from '../components/layout/Header.astro';
 import Footer from '../components/layout/Footer.astro';
 import FloatingCTA from '../components/ui/FloatingCTA.astro';
 import { getTranslations } from '../lib/i18n';
+import { locales } from '../lib/locales';
+import { parsePath, buildPath } from '../lib/paths';
 import '../styles/global.css';
 
 interface Props {
@@ -20,7 +22,7 @@ const {
   page = 'home' // 默认是首页
 } = Astro.props;
 
-const currentLocale = locale as 'nl' | 'en' | 'de' | 'pl' | 'zh';
+const currentLocale = locale as 'nl' | 'en' | 'de' | 'pl' | 'fr' | 'zh';
 
 // 获取指定页面的翻译（用于 SEO 元数据）
 const pageT = getTranslations(page, currentLocale);
@@ -45,10 +47,17 @@ const localeLangMap: Record<string, string> = {
   en: 'en',
   de: 'de',
   pl: 'pl',
+  fr: 'fr',
   zh: 'zh-CN',
 };
 
 const htmlLang = localeLangMap[currentLocale] || 'en';
+
+const { pathWithoutLocale } = parsePath(Astro.url.pathname);
+const alternateLinks = locales.map((lang) => ({
+  lang,
+  href: buildPath(pathWithoutLocale, lang),
+}));
 ---
 
 <!doctype html>
@@ -57,6 +66,11 @@ const htmlLang = localeLangMap[currentLocale] || 'en';
     <meta charset="UTF-8" />
     <meta name="description" content={pageDescription} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {alternateLinks.map((link) => (
+      <link rel="alternate" hreflang={link.lang} href={link.href} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={buildPath(pathWithoutLocale, 'nl')} />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />

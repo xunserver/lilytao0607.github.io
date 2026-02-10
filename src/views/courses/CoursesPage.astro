@@ -1,7 +1,7 @@
 ---
 /**
  * CoursesPage - 共享的课程报名页面组件
- * @param locale - 语言代码 ('nl' | 'en' | 'de' | 'pl' | 'zh')
+ * @param locale - 语言代码 ('nl' | 'en' | 'de' | 'pl' | 'fr' | 'zh')
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import RegistrationForm from './RegistrationForm.vue';
@@ -9,7 +9,7 @@ import { getTranslations } from '../../lib/i18n';
 import { localizedPath } from '../../lib/paths';
 
 interface Props {
-  locale: 'nl' | 'en' | 'de' | 'pl' | 'zh';
+  locale: 'nl' | 'en' | 'de' | 'pl' | 'fr' | 'zh';
 }
 
 const { locale } = Astro.props;

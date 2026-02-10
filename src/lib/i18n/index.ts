@@ -34,17 +34,18 @@ const rawI18n = {
   workshops,
 };
 
-// 自动补齐 pl 语言键：优先使用现有 pl，否则使用 en/nl/de/zh 作为占位
-export const i18n = hydrateLocaleMaps(rawI18n, 'pl', ['en', 'nl', 'de', 'zh']);
+// 自动补齐 pl / fr 语言键：优先使用现有键，否则使用后备语言作为占位
+const i18nWithPl = hydrateLocaleMaps(rawI18n, 'pl', ['en', 'nl', 'de', 'fr', 'zh']);
+export const i18n = hydrateLocaleMaps(i18nWithPl, 'fr', ['en', 'nl', 'de', 'pl', 'zh']);
 
 // ==================== 类型定义 ====================
-export type Locale = 'nl' | 'en' | 'de' | 'pl' | 'zh';
+export type Locale = 'nl' | 'en' | 'de' | 'pl' | 'fr' | 'zh';
 export type PageKey = keyof typeof i18n;
 
 // 提取翻译值的类型
 type TranslationValue<T> = T extends { [key: string]: any }
   ? { [K in keyof T]: TranslationValue<T[K]> }
-  : { nl: string; en: string; de: string; pl?: string; zh: string };
+  : { nl: string; en: string; de: string; pl?: string; fr?: string; zh: string };
 
 // 将嵌套的翻译对象扁平化为单语言对象
 type FlattenTranslations<T, L extends Locale> = T extends Record<string, any>
@@ -141,11 +142,11 @@ function isLocaleMap(value: unknown): value is Record<string, any> {
   }
 
   const record = value as Record<string, any>;
-  return 'nl' in record || 'en' in record || 'de' in record || 'pl' in record || 'zh' in record;
+  return 'nl' in record || 'en' in record || 'de' in record || 'pl' in record || 'fr' in record || 'zh' in record;
 }
 
 function resolveLocaleValue(map: Record<string, any>, locale: Locale) {
-  return map[locale] ?? map.en ?? map.nl ?? map.zh ?? map.de ?? map.pl ?? map;
+  return map[locale] ?? map.en ?? map.nl ?? map.fr ?? map.zh ?? map.de ?? map.pl ?? map;
 }
 
 function hydrateLocaleMaps<T>(
@@ -190,6 +191,7 @@ export const translations = {
   en: getTranslations('home', 'en'),
   de: getTranslations('home', 'de'),
   pl: getTranslations('home', 'pl'),
+  fr: getTranslations('home', 'fr'),
   zh: getTranslations('home', 'zh'),
 };
 

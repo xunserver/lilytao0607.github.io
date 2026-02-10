@@ -4,10 +4,11 @@ import { localizedPath } from '../../lib/paths';
 const currentPath = Astro.url.pathname;
 
 // Determine current locale from path
-const getLocaleFromPath = (path: string): 'nl' | 'en' | 'de' | 'pl' | 'zh' => {
+const getLocaleFromPath = (path: string): 'nl' | 'en' | 'de' | 'pl' | 'fr' | 'zh' => {
   if (path.startsWith('/en/')) return 'en';
   if (path.startsWith('/de/')) return 'de';
   if (path.startsWith('/pl/')) return 'pl';
+  if (path.startsWith('/fr/')) return 'fr';
   if (path.startsWith('/zh/')) return 'zh';
   return 'nl'; // default locale
 };
@@ -16,7 +17,7 @@ const currentLocale = getLocaleFromPath(currentPath);
 const coursesPath = localizedPath('/courses', currentLocale);
 const anchor = '#registration-form';
 const ctaHref = coursesPath + anchor;
-const registrationPattern = /^\/(?:(?:nl|en|de|pl|zh)\/)?courses\/?$/;
+const registrationPattern = /^\/(?:(?:nl|en|de|pl|fr|zh)\/)?courses\/?$/;
 const shouldShow = !registrationPattern.test(currentPath);
 
 const ctaLabelMap = {
@@ -24,6 +25,7 @@ const ctaLabelMap = {
   en: 'Register Now',
   de: 'Jetzt anmelden',
   pl: 'Zapisz się teraz',
+  fr: "S'inscrire",
   zh: '立即报名',
 };
 
