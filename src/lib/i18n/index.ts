@@ -20,7 +20,7 @@ import { courseOutlineAdvanced } from './courseOutlineAdvanced';
 import { workshops } from './workshops';
 
 // 重新组合成 i18n 对象（保持与原文件相同的结构）
-export const i18n = {
+const rawI18n = {
   global,
   home,
   about,
@@ -33,6 +33,9 @@ export const i18n = {
   courseOutlineAdvanced,
   workshops,
 };
+
+// 自动补齐 pl 语言键：优先使用现有 pl，否则使用 en/nl/de/zh 作为占位
+export const i18n = hydrateLocaleMaps(rawI18n, 'pl', ['en', 'nl', 'de', 'zh']);
 
 // ==================== 类型定义 ====================
 export type Locale = 'nl' | 'en' | 'de' | 'pl' | 'zh';
@@ -143,6 +146,40 @@ function isLocaleMap(value: unknown): value is Record<string, any> {
 
 function resolveLocaleValue(map: Record<string, any>, locale: Locale) {
   return map[locale] ?? map.en ?? map.nl ?? map.zh ?? map.de ?? map.pl ?? map;
+}
+
+function hydrateLocaleMaps<T>(
+  source: T,
+  targetLocale: Locale,
+  fallbackOrder: Locale[]
+): T {
+  if (source === null || typeof source !== 'object') {
+    return source;
+  }
+
+  if (Array.isArray(source)) {
+    return source.map(item => hydrateLocaleMaps(item, targetLocale, fallbackOrder)) as T;
+  }
+
+  if (isLocaleMap(source)) {
+    const localeMap = { ...(source as Record<string, any>) };
+    if (!(targetLocale in localeMap)) {
+      for (const locale of fallbackOrder) {
+        if (localeMap[locale] !== undefined) {
+          localeMap[targetLocale] = localeMap[locale];
+          break;
+        }
+      }
+    }
+    return localeMap as T;
+  }
+
+  const result: Record<string, any> = {};
+  for (const [key, value] of Object.entries(source as Record<string, any>)) {
+    result[key] = hydrateLocaleMaps(value, targetLocale, fallbackOrder);
+  }
+
+  return result as T;
 }
 
 // ==================== 兼容性导出 ====================
