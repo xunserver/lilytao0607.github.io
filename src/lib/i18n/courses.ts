@@ -171,13 +171,13 @@ export const courses = {
   },
   workshopsSection: {
     title: {
-      nl: 'Workshops & 企业体验',
+      nl: 'Workshops & Corporate Experiences',
       en: 'Workshops & Corporate Experiences',
       fr: 'Workshops & Corporate Experiences',
       de: 'Workshops und Unternehmenserlebnisse',pl: 'Warsztaty i doświadczenia korporacyjne', zh: '工作坊与企业体验',
     },
     subtitle: {
-      nl: '短期焕活体验 · 直接服务企业与团队 · 全程零基础友好',
+      nl: 'Short-format revitalizing sessions for teams and organizations—fully beginner friendly.',
       en: 'Short-format revitalizing sessions for teams and organizations—fully beginner friendly.',
       fr: 'Short-format revitalizing sessions for teams and organizations—fully beginner friendly.',
       de: 'Revitalisierungssitzungen im Kurzformat für Teams und Organisationen – absolut anfängerfreundlich.',pl: 'Sesje rewitalizujące w krótkim formacie dla zespołów i organizacji – w pełni przyjazne dla początkujących.', zh: '短期焕活体验 · 面向企业与团队 · 全程零基础友好',
@@ -191,20 +191,20 @@ export const courses = {
           de: 'Firmenwellness',pl: 'Wellness korporacyjny', zh: '企业焕活',
         },
         title: {
-          nl: '企业活力焕新工作坊',
+          nl: 'Corporate Wellness Workshop',
           en: 'Corporate Wellness Workshop',
           fr: 'Corporate Wellness Workshop',
           de: 'Corporate Wellness-Workshop',pl: 'Warsztaty Wellness w Firmie', zh: '企业活力焕新工作坊',
         },
         desc: {
-          nl: '1.5–2 小时的太极体验，帮助团队释放压力、恢复专注与协作。',
+          nl: 'A 1.5–2 hour Tai Chi session that relieves stress and recharges teams instantly.',
           en: 'A 1.5–2 hour Tai Chi session that relieves stress and recharges teams instantly.',
           fr: 'A 1.5–2 hour Tai Chi session that relieves stress and recharges teams instantly.',
           de: 'Eine 1,5–2-stündige Tai-Chi-Sitzung, die Stress abbaut und Teams sofort wieder auflädt.',pl: '1,5–2-godzinna sesja Tai Chi, która łagodzi stres i natychmiastowo regeneruje siły.', zh: '1.5–2 小时太极体验，帮助团队释放压力、恢复专注与协作。',
         },
         duration: '1.5–2h',
         cta: {
-          nl: '查看详情',
+          nl: 'View Details',
           en: 'View Details',
           fr: 'View Details',
           de: 'Details anzeigen',pl: 'Zobacz szczegóły', zh: '查看详情',
@@ -218,20 +218,20 @@ export const courses = {
           de: 'Workshop II',pl: 'Warsztat II', zh: 'Workshop II',
         },
         title: {
-          nl: '高级太极专业提升工作坊',
+          nl: 'Advanced Tai Chi Professional Intensive',
           en: 'Advanced Tai Chi Professional Intensive',
           fr: 'Advanced Tai Chi Professional Intensive',
           de: 'Fortgeschrittener Tai Chi Professional Intensivkurs',pl: 'Zaawansowany Profesjonalny Intensywny Tai Chi', zh: '高级太极专业提升工作坊',
         },
         desc: {
-          nl: '2–3 周高密度训练，拳架、身法、推手与教学全方位提升。',
+          nl: 'A 2–3 week immersive program that upgrades forms, body method, push hands, and teaching.',
           en: 'A 2–3 week immersive program that upgrades forms, body method, push hands, and teaching.',
           fr: 'A 2–3 week immersive program that upgrades forms, body method, push hands, and teaching.',
           de: 'Ein 2–3-wöchiges immersives Programm, das Formen, Körpertechnik, Push-Hands und Unterricht verbessert.',pl: '2–3-tygodniowy, wciągający program, który ulepsza formy, metodę ciała, pchające ręce i nauczanie.', zh: '2–3 周高密度训练，拳架、身法、推手与教学全方位提升。',
         },
         duration: '2–3 周 · 每日 2h',
         cta: {
-          nl: '查看详情',
+          nl: 'View Details',
           en: 'View Details',
           fr: 'View Details',
           de: 'Details anzeigen',pl: 'Zobacz szczegóły', zh: '查看详情',
